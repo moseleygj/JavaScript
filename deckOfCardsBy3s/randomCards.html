@@ -1,0 +1,95 @@
+<html>
+<title>Cards - The workouts</title>
+<head>
+
+<style type="text/css">
+body{background-color:#FAFAFA; }
+#holder{margin-right:10px;height:390px;width:290px;box-shadow:0.5px 1px 3px 1px lightgrey;background-color:white;border-radius:5px;float:left}
+#holderB{margin-right:10px;float:left;height:390px;width:290px;box-shadow:0.5px 1px 3px 1px lightgrey;background-color:white;border-radius:5px;}
+#caption{font-size:32px;font-weight:bolder;}
+#topLeft{font-size:32px;font-weight:bolder;margin-left: 5px;}
+#bottomRight{font-size:32px;font-weight:bolder;bottom:3px;right:0;text-align: right; margin-right:5px;-webkit-transform: rotateX(180deg);  transform: rotateX(180deg); }
+#topLeftA{font-size:32px;font-weight:bolder;margin-left: 5px;}
+#bottomRightA{font-size:32px;font-weight:bolder;bottom:3px;right:0;text-align: right; margin-right:5px;-webkit-transform: rotateX(180deg);  transform: rotateX(180deg); }
+#centerIcon{width:290px; height:312px;}
+#total{font-weight:bolder;}
+#topLeftB{font-size:32px;font-weight:bolder;margin-left: 5px;}
+#bottomRightB{font-size:32px;font-weight:bolder;bottom:3px;right:0;text-align: right; margin-right:5px;-webkit-transform: rotateX(180deg);  transform: rotateX(180deg); }
+
+</style>
+</head>
+
+<body>
+
+
+<div id="holder">
+
+<div id="topLeft">-</div>
+<div id="centerIcon"></div>
+<div id="bottomRight">-</div>
+
+<!--card ends here 2-10 , 4 of each 4(aces4) jacks, 4queens, 4kings -->
+</div>
+</div>
+
+<div id="holderB">
+
+<div id="topLeftA">-</div>
+<div id="centerIcon"></div>
+<div id="bottomRightA">-</div>
+
+</div>
+</div>
+<!-- nice blue #26beff.  green #5ecc3a-->
+
+</div>
+</div>
+
+<div id="holderB">
+
+<div id="topLeftB">-</div>
+<div id="centerIcon"></div>
+<div id="bottomRightB">-</div>
+
+
+</div>
+
+
+</div>
+<!-- nice blue #26beff.  green #5ecc3a-->
+<br>
+
+
+<br>
+Card Total:<div id="total">--</div>
+Reps Total:<div id="repTotal">--</div>
+<input type="button" id="newcards"value="Random Cards"  onclick="randCard()">
+<script>
+cards=52;
+function randCard() 
+{
+var x = Math.floor((Math.random()*10)+1);
+var y = Math.floor((Math.random()*10)+1);
+var z = Math.floor((Math.random()*10)+1);
+	document.getElementById("topLeft").innerHTML = x;
+	document.getElementById("bottomRight").innerHTML = x;
+	
+	document.getElementById("topLeftA").innerHTML = y;
+	document.getElementById("bottomRightA").innerHTML = y;
+	
+	document.getElementById("topLeftB").innerHTML = z;
+	document.getElementById("bottomRightB").innerHTML = z;
+	var cardTotal= parseInt(x+y+z);
+	
+	document.getElementById("total").innerHTML = cardTotal; 
+
+
+	document.getElementById("repTotal").innerHTML = cards; 
+	cards -= 3;
+	if (cards == 1){	document.getElementById("holderB").setAttribute('style', 'display:none'); }
+
+}
+</script>	
+</body>
+
+</html>
