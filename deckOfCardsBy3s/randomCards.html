@@ -3,67 +3,92 @@
 <head>
 
 <style type="text/css">
-body{background-color:#FAFAFA; }
+.btn {
+  background: #4ab2f7;
+  background-image: -webkit-linear-gradient(top, #4ab2f7, #2980b9);
+  background-image: -moz-linear-gradient(top, #4ab2f7, #2980b9);
+  background-image: -ms-linear-gradient(top, #4ab2f7, #2980b9);
+  background-image: -o-linear-gradient(top, #4ab2f7, #2980b9);
+  background-image: linear-gradient(to bottom, #4ab2f7, #2980b9);
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #1f628d 1px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+  box-shadow:0.5px 1px 3px 1px grey
+}
+body{background-color:#FAFAFA;height:auto;width:auto; }
+.container{width:900px;height:550px;}
+
 #holder{margin-right:10px;height:390px;width:290px;box-shadow:0.5px 1px 3px 1px lightgrey;background-color:white;border-radius:5px;float:left}
 #holderB{margin-right:10px;float:left;height:390px;width:290px;box-shadow:0.5px 1px 3px 1px lightgrey;background-color:white;border-radius:5px;}
+
 #caption{font-size:32px;font-weight:bolder;}
 #topLeft{font-size:32px;font-weight:bolder;margin-left: 5px;}
 #bottomRight{font-size:32px;font-weight:bolder;bottom:3px;right:0;text-align: right; margin-right:5px;-webkit-transform: rotateX(180deg);  transform: rotateX(180deg); }
 #topLeftA{font-size:32px;font-weight:bolder;margin-left: 5px;}
 #bottomRightA{font-size:32px;font-weight:bolder;bottom:3px;right:0;text-align: right; margin-right:5px;-webkit-transform: rotateX(180deg);  transform: rotateX(180deg); }
 #centerIcon{width:290px; height:312px;}
-#total{font-weight:bolder;}
+#total{font-weight:bolder;height:14px;width:100px;}
+.counter1{width:40px;height:14px;}
 #topLeftB{font-size:32px;font-weight:bolder;margin-left: 5px;}
-#bottomRightB{font-size:32px;font-weight:bolder;bottom:3px;right:0;text-align: right; margin-right:5px;-webkit-transform: rotateX(180deg);  transform: rotateX(180deg); }
+#bottomRightB{font-size:32px;font-weight:bolder;bottom:3px;right:0;text-align: right; margin-right:5px;-webkit-transform: rotateX(180deg);  transform: rotateX(180deg);}
+#reptotal{width:100px;height:14px;float:left;font-weight:bolder;margin-top: 12px;}
+#countH{width:200px;height:200px;}
+.count{margin-top:20px;height:50px;}
+.cardHolder{width:900px;height:415px;}
 
 </style>
 </head>
 
 <body>
 
+<div class="container">
+<div class="cardHolder">
 
 <div id="holder">
-
 <div id="topLeft">-</div>
 <div id="centerIcon"></div>
 <div id="bottomRight">-</div>
-
 <!--card ends here 2-10 , 4 of each 4(aces4) jacks, 4queens, 4kings -->
-</div>
 </div>
 
 <div id="holderB">
-
 <div id="topLeftA">-</div>
 <div id="centerIcon"></div>
 <div id="bottomRightA">-</div>
+</div>
 
-</div>
-</div>
 <!-- nice blue #26beff.  green #5ecc3a-->
 
-</div>
-</div>
-
 <div id="holderB">
-
 <div id="topLeftB">-</div>
 <div id="centerIcon"></div>
 <div id="bottomRightB">-</div>
-
-
 </div>
-
-
 </div>
 <!-- nice blue #26beff.  green #5ecc3a-->
-<br>
+<div class="count">
+<div id="total">--</div>
+<div id="repTotal">--</div>
+</div>
+<br/>
+<input type="button" class="btn" id="newcards" value="Random Cards"  onclick="randCard()">
 
-
-<br>
-Card Total:<div id="total">--</div>
-Reps Total:<div id="repTotal">--</div>
-<input type="button" id="newcards"value="Random Cards"  onclick="randCard()">
 <script>
 cards=52;
 function randCard() 
@@ -81,13 +106,13 @@ var z = Math.floor((Math.random()*10)+1);
 	document.getElementById("bottomRightB").innerHTML = z;
 	var cardTotal= parseInt(x+y+z);
 	
-	document.getElementById("total").innerHTML = cardTotal; 
+	document.getElementById("total").innerHTML = "Total :"+cardTotal ; 
 
-
-	document.getElementById("repTotal").innerHTML = cards; 
+	document.getElementById("repTotal").innerHTML = "Cards: "+cards ; 
 	cards -= 3;
-	if (cards == 1){	document.getElementById("holderB").setAttribute('style', 'display:none'); }
-/*adjust logic to stop counting after two cards remain*/
+	if (cards == 1){	
+		document.getElementById("holderB").setAttribute('style', 'display:none'); 
+					}
 }
 </script>	
 </body>
