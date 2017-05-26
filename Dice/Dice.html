@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Dice</title>
+<meta charset="UTF-8">
+<style>
+	.container{height:300px;width:80%;min-height: ;min-width: ;float:;margin:0 auto 0;}
+	.dice1{height:200px;width:20%;min-height: ;min-width: ;float:;}
+	.dice2{height:200px;width:20%min-height: ;min-width: ;float:;}
+	.dice3{height:200px;width:20%:;min-height: ;min-width: ;float:;}
+	.equal{height:200px;width:20%;min-height: ;min-width: ;float:;}
+	.right{height:200px;width:20%;min-height: ;min-width: ;float:;}
+	.btn{margin: 0 auto 0;display:block;}
+</style>
+</head>
+<body>
+	
+	<div class="container">
+	<img class="dice1" id="dice1" src="Lol_question_mark.png"></img>
+	<img class="dice2" id="dice2" src="Lol_question_mark.png"></img>
+	<img class="dice3" id="dice3" src="Lol_question_mark.png"></img>
+	<img class="equal" src="Blue_equals.png"></img>
+	<img class="right" id="result" src="Lol_question_mark.png"></img>
+	</div>
+	<label><button class="btn" onclick="go()">Go!</button></label>
+
+<script>
+	
+
+//		var optionOne=Math.floor(Math.random()*3)+1;
+//var optTwo=Math.floor(Math.random()*3)+1;
+function rand(){
+var myArray=[1,2,3]
+return myArray[Math.floor(Math.random() * myArray.length)];
+}
+var optTwo;
+var optOne;
+function go(){
+var optTwo=rand();
+var optOne=rand();
+//rock> Scissors
+//scissors>paper
+//paper>rock->
+if (optOne == 1)
+	{
+		alert("");
+		document.getElementById("").src="";
+	}
+else if (optOne == 2)
+	{
+		alert("");
+		document.getElementById("").src="";
+	}
+else {
+		alert("");
+		document.getElementById("").src="";
+	}
+
+if (optTwo 	== 1)
+	{
+		alert("");
+		document.getElementById("").src="";
+	}
+else if (optTwo == 2)
+	{
+		alert("");
+		document.getElementById("").src="";
+	}
+else 
+	{
+		alert("");
+		document.getElementById("").src="";
+	}
+result();
+}
+function result()
+{
+	alert(optOne);
+	
+if ((optOne == "") && (optTwo == "")){
+	alert("");}
+else if ((document.getElementById("").src == "") &&(		document.getElementById("").src =="")) {
+		alert("");
+}
+else if((document.getElementById("").src=="") &&(		document.getElementById("").src=="")) {
+		alert("");}
+
+else
+{alert("");
+}
+	//document.getElementById("result").src="roc.png";
+
+}
+</script>
+</body>
+</html>
