@@ -3,13 +3,41 @@
 <title>Dice</title>
 <meta charset="UTF-8">
 <style>
-	.container{height:300px;width:80%;min-height: ;min-width: ;float:;margin:0 auto 0;}
-	.dice1{height:200px;width:20%;min-height: ;min-width: ;float:;}
-	.dice2{height:200px;width:20%min-height: ;min-width: ;float:;}
-	.dice3{height:200px;width:20%:;min-height: ;min-width: ;float:;}
-	.equal{height:200px;width:20%;min-height: ;min-width: ;float:;}
-	.right{height:200px;width:20%;min-height: ;min-width: ;float:;}
-	.btn{margin: 0 auto 0;display:block;}
+	.container{height:300px;width:80%;min-height: ;min-width:768px ;float:;margin:0 auto 0;}
+	.dice1{height:30%;width:15%;min-height: ;min-width: ;float:;}
+	.dice2{height:30%;width:15%;min-height: ;min-width: ;float:;}
+	.dice3{height:30%;width:15%;min-height: ;min-width: ;float:;}
+	.equal{height:30%;width:15%;min-height: ;min-width: ;float:;}
+	.right{height:30%;width:15%;min-height: ;min-width: ;float:;}
+
+	.btn {
+  margin:0 auto 0;display:block;clear:left;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 13;
+  -moz-border-radius: 13;
+  border-radius: 13px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
 </style>
 </head>
 <body>
@@ -25,67 +53,125 @@
 
 <script>
 	
-
 //		var optionOne=Math.floor(Math.random()*3)+1;
 //var optTwo=Math.floor(Math.random()*3)+1;
 function rand(){
-var myArray=[1,2,3]
+var myArray=[1,2,3,4,5,6]
 return myArray[Math.floor(Math.random() * myArray.length)];
 }
 var optTwo;
 var optOne;
+var optThree;
+
 function go(){
 var optTwo=rand();
 var optOne=rand();
+var optThree=rand();
 //rock> Scissors
 //scissors>paper
 //paper>rock->
-if (optOne == 1)
-	{
-		alert("");
-		document.getElementById("").src="";
-	}
-else if (optOne == 2)
-	{
-		alert("");
-		document.getElementById("").src="";
-	}
-else {
-		alert("");
-		document.getElementById("").src="";
-	}
 
-if (optTwo 	== 1)
-	{
-		alert("");
-		document.getElementById("").src="";
-	}
-else if (optTwo == 2)
-	{
-		alert("");
-		document.getElementById("").src="";
-	}
-else 
-	{
-		alert("");
-		document.getElementById("").src="";
-	}
-result();
-}
-function result()
+//use a case statement
+
+switch ( optThree )
 {
-	alert(optOne);
-	
-if ((optOne == "") && (optTwo == "")){
-	alert("");}
-else if ((document.getElementById("").src == "") &&(		document.getElementById("").src =="")) {
-		alert("");
+case 1:
+document.getElementById("dice3").src="dice-1-hi.png";
+break;
+case 2:
+document.getElementById("dice3").src="dice-2-hi.png";
+break;
+case 3:
+document.getElementById("dice3").src="dice-3-hi.png";
+break;
+case 4:
+document.getElementById("dice3").src="dice-4-hi.png";
+break;
+case 5:
+document.getElementById("dice3").src="dice-5-hi.png";
+break;
+case 6:
+document.getElementById("dice3").src="dice-6-hi.png";
+break;
+default: 
+console.log("error");
 }
-else if((document.getElementById("").src=="") &&(		document.getElementById("").src=="")) {
-		alert("");}
+
+switch ( optTwo )
+{
+case 1:
+document.getElementById("dice2").src="dice-1-hi.png";
+break;
+case 2:
+document.getElementById("dice2").src="dice-2-hi.png";
+break;
+case 3:
+document.getElementById("dice2").src="dice-3-hi.png";
+break;
+case 4:
+document.getElementById("dice2").src="dice-4-hi.png";
+break;
+case 5:
+document.getElementById("dice2").src="dice-5-hi.png";
+break;
+case 6:
+document.getElementById("dice2").src="dice-6-hi.png";
+break;
+default: 
+console.log("error");
+}
+
+switch ( optOne )
+{
+case 1:
+document.getElementById("dice1").src="dice-1-hi.png";
+break;
+case 2:
+document.getElementById("dice1").src="dice-2-hi.png";
+break;
+case 3:
+document.getElementById("dice1").src="dice-3-hi.png";
+break;
+case 4:
+document.getElementById("dice1").src="dice-4-hi.png";
+break;
+case 5:
+document.getElementById("dice1").src="dice-5-hi.png";
+break;
+case 6:
+document.getElementById("dice1").src="dice-6-hi.png";
+break;
+default: 
+console.log("error");
+}
+result(optOne, optTwo,optThree);
+}
+
+function result(optOne, optTwo, optThree)
+{
+	
+
+if(optOne == 1 && optTwo == 2 && optThree == 3){
+	alert("lose");
+}
+else if (optOne == 1 && optTwo == 3 && optThree == 2){
+	alert("lose");
+}
+else if (optOne == 3 && optTwo == 2 && optThree == 1){
+	alert("lose");
+}
+else if (optOne == 3 && optTwo == 1 && optThree == 2){
+	alert("lose");
+}
+else if (optOne == 2 && optTwo == 1 && optThree == 3){
+	alert("lose");
+}
+else if (optOne == 2 && optTwo == 3 && optThree == 1){
+	alert("lose");
+}
 
 else
-{alert("");
+{alert("good");
 }
 	//document.getElementById("result").src="roc.png";
 
