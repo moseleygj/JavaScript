@@ -53,6 +53,16 @@
 
 <script>
 	
+	function clr(){
+document.getElementById("dice1").src="Lol_question_mark.png";
+document.getElementById("dice2").src="Lol_question_mark.png";
+document.getElementById("dice3").src="Lol_question_mark.png";
+document.getElementById("result").src="Lol_question_mark.png";
+document.body.style.backgroundColor = "white"; 
+
+
+
+	}
 //		var optionOne=Math.floor(Math.random()*3)+1;
 //var optTwo=Math.floor(Math.random()*3)+1;
 function rand(){
@@ -152,26 +162,80 @@ function result(optOne, optTwo, optThree)
 	
 
 if(optOne == 1 && optTwo == 2 && optThree == 3){
+	document.getElementById("result").src="dead.png";
+ document.body.style.backgroundColor = "red"; 
 	alert("lose");
+	clr();
 }
 else if (optOne == 1 && optTwo == 3 && optThree == 2){
+		document.getElementById("result").src="dead.png";
+ document.body.style.backgroundColor = "red"; 
 	alert("lose");
+		clr();
+
 }
 else if (optOne == 3 && optTwo == 2 && optThree == 1){
+	document.getElementById("result").src="dead.png";
+ document.body.style.backgroundColor = "red"; 
 	alert("lose");
+		clr();
+
 }
 else if (optOne == 3 && optTwo == 1 && optThree == 2){
+	document.getElementById("result").src="dead.png";
+ document.body.style.backgroundColor = "red"; 
 	alert("lose");
+		clr();
+
 }
 else if (optOne == 2 && optTwo == 1 && optThree == 3){
+	document.getElementById("result").src="dead.png";
+ document.body.style.backgroundColor = "red"; 
 	alert("lose");
+		clr();
+
 }
 else if (optOne == 2 && optTwo == 3 && optThree == 1){
+	document.getElementById("result").src="dead.png";
+ document.body.style.backgroundColor = "red"; 
 	alert("lose");
+		clr();
+
 }
 
 else
-{alert("good");
+{return null;
+}
+
+if(optOne == 4 && optTwo == 5 && optThree == 6){
+	document.getElementById("result").src="Trophy.png";
+ document.body.style.backgroundColor = "limegreen"; 
+clr();}
+else if (optOne == 4 && optTwo == 6 && optThree == 5){
+		document.getElementById("result").src="Trophy.png";
+ document.body.style.backgroundColor = "limegreen"; 
+clr();}
+else if (optOne == 6 && optTwo == 5 && optThree == 4){
+	document.getElementById("result").src="Trophy.png";
+ document.body.style.backgroundColor = "limegreen"; 
+clr();}
+else if (optOne == 6 && optTwo == 4 && optThree == 5){
+	document.getElementById("result").src="Trophy.png";
+ document.body.style.backgroundColor = "limegreen"; 
+clr();}
+else if (optOne == 5 && optTwo == 4 && optThree == 6){
+	document.getElementById("result").src="Trophy.png";
+ document.body.style.backgroundColor = "limegreen"; 
+clr();}
+else if (optOne == 5 && optTwo == 6 && optThree == 4){
+	document.getElementById("result").src="Trophy.png";
+ document.body.style.backgroundColor = "limegreen"; 
+clr();
+}
+else
+{
+	return null;
+
 }
 	//document.getElementById("result").src="roc.png";
 
