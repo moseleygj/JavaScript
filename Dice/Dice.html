@@ -77,11 +77,6 @@ function go(){
 var optTwo=rand();
 var optOne=rand();
 var optThree=rand();
-//rock> Scissors
-//scissors>paper
-//paper>rock->
-
-//use a case statement
 
 switch ( optThree )
 {
@@ -107,6 +102,7 @@ default:
 console.log("error");
 }
 
+
 switch ( optTwo )
 {
 case 1:
@@ -131,6 +127,7 @@ default:
 console.log("error");
 }
 
+
 switch ( optOne )
 {
 case 1:
@@ -154,90 +151,106 @@ break;
 default: 
 console.log("error");
 }
+
 result(optOne, optTwo,optThree);
+
 }
+
 
 function result(optOne, optTwo, optThree)
-{
-	
-
+{	
 if(optOne == 1 && optTwo == 2 && optThree == 3){
-	document.getElementById("result").src="dead.png";
- document.body.style.backgroundColor = "red"; 
-	alert("lose");
-	clr();
+document.getElementById("result").src="dead.png";
+document.body.style.backgroundColor = "red"; 
+alert("lose");
+clr();
 }
+
 else if (optOne == 1 && optTwo == 3 && optThree == 2){
-		document.getElementById("result").src="dead.png";
- document.body.style.backgroundColor = "red"; 
-	alert("lose");
-		clr();
-
+document.getElementById("result").src="dead.png";
+document.body.style.backgroundColor = "red"; 
+alert("lose");
+clr();
 }
+
 else if (optOne == 3 && optTwo == 2 && optThree == 1){
-	document.getElementById("result").src="dead.png";
- document.body.style.backgroundColor = "red"; 
-	alert("lose");
-		clr();
-
+document.getElementById("result").src="dead.png";
+document.body.style.backgroundColor = "red"; 
+alert("lose");
+clr();
 }
+
 else if (optOne == 3 && optTwo == 1 && optThree == 2){
-	document.getElementById("result").src="dead.png";
- document.body.style.backgroundColor = "red"; 
-	alert("lose");
-		clr();
-
+document.getElementById("result").src="dead.png";
+document.body.style.backgroundColor = "red"; 
+alert("lose");
+clr();
 }
+
 else if (optOne == 2 && optTwo == 1 && optThree == 3){
-	document.getElementById("result").src="dead.png";
- document.body.style.backgroundColor = "red"; 
-	alert("lose");
-		clr();
-
+document.getElementById("result").src="dead.png";
+document.body.style.backgroundColor = "red"; 
+alert("lose");
+clr();
 }
+
 else if (optOne == 2 && optTwo == 3 && optThree == 1){
-	document.getElementById("result").src="dead.png";
- document.body.style.backgroundColor = "red"; 
-	alert("lose");
-		clr();
+document.getElementById("result").src="dead.png";
+document.body.style.backgroundColor = "red"; 
+alert("lose");
+clr();
+}
+else if(optOne == 4 && optTwo == 5 && optThree == 6){
+document.getElementById("result").src="Trophy.png";
+document.body.style.backgroundColor = "limegreen"; 
+alert("win");
 
+clr();
 }
 
-else
-{return null;
-}
-
-if(optOne == 4 && optTwo == 5 && optThree == 6){
-	document.getElementById("result").src="Trophy.png";
- document.body.style.backgroundColor = "limegreen"; 
-clr();}
 else if (optOne == 4 && optTwo == 6 && optThree == 5){
-		document.getElementById("result").src="Trophy.png";
- document.body.style.backgroundColor = "limegreen"; 
-clr();}
+document.getElementById("result").src="Trophy.png";
+document.body.style.backgroundColor = "limegreen"; 
+alert("win");
+
+clr();
+}
+
 else if (optOne == 6 && optTwo == 5 && optThree == 4){
-	document.getElementById("result").src="Trophy.png";
- document.body.style.backgroundColor = "limegreen"; 
-clr();}
+document.getElementById("result").src="Trophy.png";
+document.body.style.backgroundColor = "limegreen"; 
+alert("win");
+
+clr();
+}
+
 else if (optOne == 6 && optTwo == 4 && optThree == 5){
-	document.getElementById("result").src="Trophy.png";
- document.body.style.backgroundColor = "limegreen"; 
-clr();}
+document.getElementById("result").src="Trophy.png";
+document.body.style.backgroundColor = "limegreen"; 
+alert("win");
+
+clr();
+}
+
 else if (optOne == 5 && optTwo == 4 && optThree == 6){
-	document.getElementById("result").src="Trophy.png";
- document.body.style.backgroundColor = "limegreen"; 
-clr();}
+document.getElementById("result").src="Trophy.png";
+document.body.style.backgroundColor = "limegreen"; 
+alert("win");
+
+clr();
+}
+
 else if (optOne == 5 && optTwo == 6 && optThree == 4){
-	document.getElementById("result").src="Trophy.png";
- document.body.style.backgroundColor = "limegreen"; 
+document.getElementById("result").src="Trophy.png";
+document.body.style.backgroundColor = "limegreen"; 
+alert("win");
+
 clr();
 }
 else
 {
-	return null;
-
+	rand();
 }
-	//document.getElementById("result").src="roc.png";
 
 }
 </script>
