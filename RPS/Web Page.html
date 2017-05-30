@@ -25,17 +25,19 @@
 	<label><button class="btn" onclick="go()">Go!</button></label>
 
 <script>
-	
-
 //		var optionOne=Math.floor(Math.random()*3)+1;
 //var optTwo=Math.floor(Math.random()*3)+1;
-function rand(){
-var myArray=[1,2,3]
+function rand()
+{
+var myArray=[1,2,3];
 return myArray[Math.floor(Math.random() * myArray.length)];
 }
+
 var optTwo;
 var optOne;
-function go(){
+
+function go()
+{
 var optTwo=rand();
 var optOne=rand();
 //rock> Scissors
@@ -43,56 +45,72 @@ var optOne=rand();
 //paper>rock->
 if (optOne == 1)
 	{
-		alert("scissors");
 		document.getElementById("opt1").src="scissors_PNG27.png";
 	}
 else if (optOne == 2)
 	{
-		alert("paper");document.getElementById("opt1").src="paper.png";
+		document.getElementById("opt1").src="paper.png";
 	}
 else {
-		alert("rock");
+		
 		document.getElementById("opt1").src="rock.png";
 	}
 
 if (optTwo 	== 1)
 	{
-		alert("scissors");
 		document.getElementById("opt2").src="scissors_PNG27.png";
 	}
 else if (optTwo == 2)
 	{
-		alert("paper");
 		document.getElementById("opt2").src="paper.png";
 	}
 else 
 	{
-		alert("rock");
 		document.getElementById("opt2").src="rock.png";
 	}
-result();
+
+result(optOne,optTwo);
 }
-function result()
+
+function result(a,b)
 {
-	alert(optOne);
 	
-if ((optOne == "rock.png") && (optTwo == "rock.png")){
-	alert("draw!!!!!!!!");}
-else if ((document.getElementById("opt2").src == "paper.png") &&(		document.getElementById("opt1").src =="paper.png")) {
-		alert("draw!!!!!!!!");
+//1=scissor
+if (a == 1 && b==1)
+{
+	alert("Scissors: draw!!!!!!!!");
 }
-else if((document.getElementById("opt2").src=="scissors_PNG27.png") &&(		document.getElementById("opt1").src=="scissors_PNG27.png")) {
-		alert("draw!!!!!!!!");}
-
+//2=paper
+else if (a == 2 && b == 2){
+		alert("Paper: draw!!!!!!!!");
+}
+//3=rock
+else if(a==3&& 
+	b==3) 
+{
+		alert("Rock: draw!!!!!!!!");
+}
 else
-{alert("Not Draw!");
+{
+	return null;}
+
+
+if (a ==1 && b==2)
+{
+
+}
+else if (a==1 && b==3){}
+else if (b==1 && a==3){}
+	else if (a==2 && b==1){}
+		else if (a==1 && b==2){}
+			else if (a==2 && b==3){}
+				else if(b==2 && a==3){}
+	//document.getElementById("result").src="roc.png";
+}
+}
 }
 
 
-	//document.getElementById("result").src="roc.png";
-
-//why wont val refresh when var global, 
-	//local, refreshes but cant compare
 }
 </script>
 </body>
