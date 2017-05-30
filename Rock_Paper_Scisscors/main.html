@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>Rock Paper Scissors</title>
+<meta charset="UTF-8">
+<style>
+	
+	.container{height:300px;width:80%;min-height: ;min-width: ;float:;margin:0 auto 0;}
+	.left{height:200px;width:20%;min-height: ;min-width: ;float:;}
+	.versus{height:200px;width:15%min-height: ;min-width: ;float:;}
+	.middle{height:200px;width:20%:;min-height: ;min-width: ;float:;}
+	.equal{height:200px;width:20%;min-height: ;min-width: ;float:;}
+	.right{height:200px;width:20%;min-height: ;min-width: ;float:;}
+	.btn{margin: 0 auto 0;display:block;}
+</style>
+</head>
+<body>
+	
+	<div class="container">
+	<img class="left" id="opt1" src="Lol_question_mark.png"></img>
+	<img class="versus" src="Personal_N7_vs.png"></img>
+	<img class="middle" id="opt2" src="Lol_question_mark.png"></img>
+	<img class="equal" src="Blue_equals.png"></img>
+	<img class="right" id="result" src="Lol_question_mark.png"></img>
+	</div>
+	<label><button class="btn" onclick="go()">Go!</button></label>
+
+<script>
+//		var optionOne=Math.floor(Math.random()*3)+1;
+//var optTwo=Math.floor(Math.random()*3)+1;
+function rand()
+{
+var myArray=[1,2,3];
+return myArray[Math.floor(Math.random() * myArray.length)];
+}
+
+var optTwo;
+var optOne;
+
+function go()
+{
+var optTwo=rand();
+var optOne=rand();
+//rock> Scissors
+//scissors>paper
+//paper>rock->
+if (optOne == 1)
+	{
+		document.getElementById("opt1").src="scissors_PNG27.png";
+	}
+else if (optOne == 2)
+	{
+		document.getElementById("opt1").src="paper.png";
+	}
+else {
+		
+		document.getElementById("opt1").src="rock.png";
+	}
+
+if (optTwo 	== 1)
+	{
+		document.getElementById("opt2").src="scissors_PNG27.png";
+	}
+else if (optTwo == 2)
+	{
+		document.getElementById("opt2").src="paper.png";
+	}
+else 
+	{
+		document.getElementById("opt2").src="rock.png";
+	}
+
+result(optOne,optTwo);
+}
+
+function result(a,b)
+{
+	
+//1=scissor
+if (a == 1 && b==1)
+{
+	alert("Scissors: draw!!!!!!!!");
+	document.getElementById("result").src="scissors_PNG27.png";
+}
+//2=paper
+else if (a == 2 && b == 2){
+		alert("Paper: draw!!!!!!!!");
+		document.getElementById("result").src="paper.png";
+}
+//3=rock
+else if(a==3&& 	b==3) 
+{
+		alert("Rock: draw!!!!!!!!");
+		document.getElementById("result").src="rock.png";
+}
+
+else if (a==3 && b==1){alert("Rock:Wins!");		document.getElementById("result").src="rock.png";
+}
+else if (b==1 && a==3){alert("Rock:Wins!");document.getElementById("result").src="rock.png";}
+else if (a==1 && b==3){alert("Rock:Wins!");document.getElementById("result").src="rock.png";}
+
+else if (a==2 && b==1){alert("Scissors:Wins!");document.getElementById("result").src="scissors_PNG27.png";}
+else if (a==1 && b==2){alert("Scissors:Wins!");document.getElementById("result").src="scissors_PNG27.png";}
+else if (a==2 && b==3){alert("Paper :Wins!");document.getElementById("result").src="paper.png";}
+else if (b==2 && a==3){alert("Paper:Wins!");document.getElementById("result").src="paper.png";}
+else {	return null;}
+
+	//document.getElementById("result").src="roc.png";
+
+
+}
+</script>
+</body>
+</html>
