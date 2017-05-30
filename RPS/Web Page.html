@@ -79,25 +79,29 @@ function result(a,b)
 if (a == 1 && b==1)
 {
 	alert("Scissors: draw!!!!!!!!");
+	document.getElementById("result").src="scissors_PNG27.png";
 }
 //2=paper
 else if (a == 2 && b == 2){
 		alert("Paper: draw!!!!!!!!");
+		document.getElementById("result").src="paper.png";
 }
 //3=rock
 else if(a==3&& 	b==3) 
 {
 		alert("Rock: draw!!!!!!!!");
+		document.getElementById("result").src="rock.png";
 }
 
-else if (a==3 && b==1){alert("Rock:Wins!");}
-else if (b==1 && a==3){alert("Rock:Wins!");}
-else if (a==1 && b==3){alert("Rock:Wins!");}
+else if (a==3 && b==1){alert("Rock:Wins!");		document.getElementById("result").src="rock.png";
+}
+else if (b==1 && a==3){alert("Rock:Wins!");document.getElementById("result").src="rock.png";}
+else if (a==1 && b==3){alert("Rock:Wins!");document.getElementById("result").src="rock.png";}
 
-else if (a==2 && b==1){alert("Scissors:Wins!");}
-else if (a==1 && b==2){alert("Scissors:Wins!");}
-else if (a==2 && b==3){alert("Paper :Wins!");}
-else if (b==2 && a==3){alert("Paper:Wins!");}
+else if (a==2 && b==1){alert("Scissors:Wins!");document.getElementById("result").src="scissors_PNG27.png";}
+else if (a==1 && b==2){alert("Scissors:Wins!");document.getElementById("result").src="scissors_PNG27.png";}
+else if (a==2 && b==3){alert("Paper :Wins!");document.getElementById("result").src="paper.png";}
+else if (b==2 && a==3){alert("Paper:Wins!");document.getElementById("result").src="paper.png";}
 else {	return null;}
 
 	//document.getElementById("result").src="roc.png";
