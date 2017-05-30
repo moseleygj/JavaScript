@@ -85,30 +85,22 @@ else if (a == 2 && b == 2){
 		alert("Paper: draw!!!!!!!!");
 }
 //3=rock
-else if(a==3&& 
-	b==3) 
+else if(a==3&& 	b==3) 
 {
 		alert("Rock: draw!!!!!!!!");
 }
-else
-{
-	return null;}
 
+else if (a==3 && b==1){alert("Rock:Wins!");}
+else if (b==1 && a==3){alert("Rock:Wins!");}
+else if (a==1 && b==3){alert("Rock:Wins!");}
 
-if (a ==1 && b==2)
-{
+else if (a==2 && b==1){alert("Scissors:Wins!");}
+else if (a==1 && b==2){alert("Scissors:Wins!");}
+else if (a==2 && b==3){alert("Paper :Wins!");}
+else if (b==2 && a==3){alert("Paper:Wins!");}
+else {	return null;}
 
-}
-else if (a==1 && b==3){}
-else if (b==1 && a==3){}
-	else if (a==2 && b==1){}
-		else if (a==1 && b==2){}
-			else if (a==2 && b==3){}
-				else if(b==2 && a==3){}
 	//document.getElementById("result").src="roc.png";
-}
-}
-}
 
 
 }
