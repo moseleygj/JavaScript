@@ -30,21 +30,20 @@ var specialChars = ["!","@","#","$","%","^","&","*","(",")","_","-","+","=","[",
 
 var a = randchar();
 
-function randchar(){
-	return Math.floor(Math.random()* specialChars.length+1);
+function randchar()
+{
+return Math.floor(Math.random()* specialChars.length+1);
 }
 
 function doMagic()
 {
-
 var pw=document.getElementById("pwSize").value;
 var dynamicArray=[];
 dynamicArray[pw]="DULCE";
 
-
-for (var i= 0;i<dynamicArray.length;i++)
+for (var i= 1;i<dynamicArray.length;i++)
 {
-dynamicArray[i]=noSpecialChars[a];
+dynamicArray[i]=noSpecialChars[randchar()];
 }
 
 alert(dynamicArray);
