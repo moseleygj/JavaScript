@@ -2,57 +2,73 @@
 <head>
 <title>Password  Generator 1.0</title>
 <meta charset="UTF-8">
-
-</head>
-<style type="text/css">
-body{margin:0;padding:0;}
-#container{
-	height:1024px;width:768px;margin:;margin: 0 auto 0;
-}
-.btn{    background: linear-gradient(#ededed, #f9f9f9);padding:0; }
+<style>
+		body *{
+		border :1px solid red;
+	}
+	.img{margin:0 auto 0;height:180px;width:200px;display:block;}
+	.holder{height:;width:700px;margin: 0 auto 0}
+	.top{height:200px;width:100%;clear:both;margin: 0 auto 0;}
+	.left{height:auto;width:35%;float:left;}
+	.left-cell{height:35px;width:100%;line-height: 2;}
+	.right{height:auto;width:64%;float:right;}
+	.right-cell{height:35px;width:100%;line-height: 2;}
+	.tb{font-size:18px;font-weight: bold;margin-left:5px;color:;}
+	.bottom{height:60px;width:100%;clear:both;margin: 0 auto 0;}
+	input[type="textbox"]{line-height: 27px;background-color: yellow;margin-top:1px;}
 </style>
-
+</head>
 <body>
 
+<div class="holder">
+<div class="top"><img class="img" src="lock-icon-png-11.png"></div>
+<div class="left">
+<div class="left-cell"><div class="tb">Password:</div>
+</div>
+<div class="left-cell"><div class="tb">Special Characters:</div>
+</div>
+<div class="left-cell"><div class="tb">Password Length:</div>
+</div>
 
-<div id="container">
-Password	<input type="textbox" id="pw" placeholder="Random Password" title="" text="" readonly><br/>
-Password Length<input type="" id="pwSize" placeholder="8" maxlength="2" min="4" size="2" required><br/>
-Special Characters: Yes<input type="radio" name="toggle" id="specialChar">No<input type="radio" name="toggle" id="specialChar"></br>
-	<input class="btn" type="button" id="generate" value="Genertate Password" onclick="doMagic();" >
+</div>
+<div class="right">
+<div class="right-cell">
+<div class="tb"><input type="textbox" id="pw" placeholder="Random Password" title="" text="" readonly style="width:350px"></div>
+</div>
+<div class="right-cell"><div class="tb"> Yes<input type="radio" name="toggle" id="specialChar">No<input type="radio" name="toggle" id="specialChar"></div>
+</div>
+<div class="right-cell"><div class="tb"><input type="textbox" id="pwSize" placeholder="8" maxlength="2" min="4" size="2" required></div>
+</div>
+
 
 
 </div>
+<div class="bottom"><input type="button" value="Generate Password" style="margin:5px auto 0;display:block" onclick="doMagic();""></input></div>
+
+</div>
+
 <script>
 var noSpecialChars = 
 ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
-
 var specialChars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9","!","@","#","$","%","^","&","*","(",")","_","-","+","=","[","]","{","}","\\","|",":",";","\"","<",">","?",",",".","/","~","`"];
-
 var a = randchar();
-
 function randchar()
 {
 return Math.floor(Math.random()* noSpecialChars.length+1);
 }
-
 function doMagic()
 {
 	document.getElementById("pw").value="";
 var pw=document.getElementById("pwSize").value;
 var dynamicArray=[];
 dynamicArray[pw]="";
-
 for (var i= 1;i<dynamicArray.length;i++)
 {
 	dynamicArray[i] = noSpecialChars[randchar()];
 document.getElementById("pw").value+=dynamicArray[i];
-
 }
 //alert(dynamicArray);
 }
-
 </script>
-
 </body>
 </html>
