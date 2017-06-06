@@ -11,13 +11,14 @@
 	.holder{height:;width:700px;margin: 20px auto 0;background-color:white;}
 	.top{height:200px;width:100%;clear:both;margin: 0 auto 0;}
 	.left{height:auto;width:35%;float:left;}
-	.left-cell{height:35px;width:100%;line-height: 2;}
+	.left-cell{height:35px;width:100%;line-height: 2;margin-left:10px;}
 	.right{height:auto;width:64%;float:right;}
 	.right-cell{height:35px;width:100%;line-height: 2;}
-	.tb{font-size:18px;font-weight: bold;margin-left:5px;color:;}
+	.tb{font-size:18px;font-weight: bold;margin-left:5px;color:#434343;}
 	.bottom{height:60px;width:100%;clear:both;margin: 0 auto 0;}
 	.titlebar{height:60px;width:100%;clear:both;margin: 0 auto 0;text-align:center;font-size :30 ;font-weight:bold;}
-	input[type="textbox"]{line-height: 27px;background-color: yellow;margin-top:1px;}
+	input[type="textbox"]{line-height: 27px;background-color: white;margin-top:1px;border-width:2px; border-color:#cccccc; border-style:solid; padding:0px; font-size:22px; border-radius:3px; color:red; text-align :center;}
+} 
 </style>
 </head>
 <body>
@@ -38,7 +39,7 @@
 <div class="right-cell">
 <div class="tb"><input type="textbox" id="pw" placeholder="Random Password" title="" text="" readonly style="width:350px"></div>
 </div>
-<div class="right-cell"><div class="tb"> Yes<input type="radio" name="toggle" id="specialChar">No<input type="radio" name="toggle" id="specialChar"></div>
+<div class="right-cell"><div class="tb"> Yes<input type="radio" name="toggle" id="specialChar">&nbsp No<input type="radio" name="toggle" id="specialChar"></div>
 </div>
 <div class="right-cell"><div class="tb"><input type="textbox" id="pwSize" value="8" maxlength="2" min="4" size="2" required></div>
 </div>
@@ -53,7 +54,9 @@
 <script>
 var noSpecialChars = 
 ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
+
 var specialChars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9","!","@","#","$","%","^","&","*","(",")","_","-","+","=","[","]","{","}","\\","|",":",";","\"","<",">","?",",",".","/","~","`"];
+
 var a = randchar();
 
 
@@ -64,14 +67,11 @@ return Math.floor(Math.random()* noSpecialChars.length+1);
 
 function doMagic()
 {
-
 if (document.getElementById("pwSize").value == ""){
-	alert("Password length not set")
+	alert("Password length not set");
+	return null;
 }
 
-if (!isnan(document.getElementById("pwSize").value)=="true"){
-	alert("good number");
-}
 document.getElementById("pw").value="";
 var pw=document.getElementById("pwSize").value;
 var dynamicArray=[];
