@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Planet Fitness TV</title>
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+<style type="text/css">
+body{margin:5%;padding:0;background-color:#171717;}
+#container{margin:0 auto 0;height:720px;width:1280px; background-image:url('background2.jpg'); border:black 1px solid;}
+#vid{float:left;height:70%;width:1000px;background-color: black;margin-top:50px;margin-left:40px;margin-bottom:118px}
+#logo{color:white;height:160px;width:170px;;float:left;margin-top:20px;margin-left:40px;}
+#time{text-align:center; color:white; font-size: 36px; ;height:40px;width: 170px;margin-top:10px;position:relative;float:left;margin-left:40px;}
+#banner{border:1px black;font:white 20px bold; background-color:#434343;height:410px;width: 170px;margin-top:10px;position:relative;float:left;margin-left:40px;}
+#footer{height:45px;width:1280px;bottom:0; background-color: white;clear:both;display:block;line-height: 1.3;font-size:30px; font-weight:bolder;}
+a:active{color:lightgreen;}
+a:hover{color:white;}
+a:visited{color:lightgreen;}
+a{color:lightgreen}
+
+
+</style>
+</head>
+<body onload="startTime()">
+<div id ="container">
+<div id ="vid"><iframe src='http://abcnews.go.com/video/embed?id=20969244' width='1000px' height='100%' scrolling='no' style='border:none;'></iframe><br/><a href="http://abcnews.go.com/">ABC Breaking News</a> | <a href="http://abcnews.go.com/Video">Latest News Videos</a></div>
+
+<div ><img id="logo" src="unnamed.png"></div>
+<div id ="time" >Time</div>
+<div id="banner">Banner</div>
+<div id="footer">    
+<marquee behavior="scroll" direction="left" 
+        onmouseover="this.stop();" 
+        onmouseout="this.start();">
+ The more muscle you have, the more energy your body uses at rest.
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+You can lose fat and still gain muscle, so you can gain weight but lose fat.
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+There’s a high correlation between the fitness level of the people close to you, and your own physical fitness.
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+It takes twice as long to lose muscle as it does to build it, muscle builds fast. 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+Regular exercise is linked to a better sex life. 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ Sleep is the most important factor is fat burning.
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    </marquee></div>
+</div>
+
+</body>
+</html>
