@@ -1,0 +1,97 @@
+<html>
+
+<head>
+<title>ReSize Image Preview</title>
+<meta charset="UTF-8">
+<style type="text/css">
+button{width:100px;}
+</style>
+</head>
+
+<body>
+<div style="text-align: center;">
+<button id="" onclick="size1();">150x180</button>
+<button id="" onclick="size2();">240x240</button>
+<button id="" onclick="size3();">250x250</button>
+<button id="" onclick="size4();">250x300</button>
+<button id="" onclick="size5();">320x320</button>
+<br/>
+<button id="" onclick="size7();">334x500 Flikr</button>
+<button id="" onclick="size6();">355x455 Youtube</button>
+<button id="" onclick="size9();">460x460</button>
+<button id="" onclick="size10();">500x500</button>
+<button id="" onclick="size11();">428x640 Picassa</button>
+</div>
+
+
+
+
+<br>
+<br><center><input type="text" id="imgExternal" placeholder="Add link to External Image"><button onclick="loadIMG()">submit</button></center>
+<br>
+<br>
+<center><img src="iu.jpg" id="MainIMG"></center>
+<br>
+<script type="text/javascript" >
+x=document.getElementById("MainIMG").style;
+function size1(){
+x.height="150";
+x.width="180";
+}
+
+function size2(){
+x.height="240";
+x.width="240";
+}
+function size3(){
+x.height="250";
+x.width="250";
+}
+function size4(){
+x.height="250";
+x.width="300";
+}
+function size5(){
+x.height="320";
+x.width="320";
+}
+function size6(){
+x.height="355";
+x.width="425";
+}
+function size7(){
+x.height="450";
+x.width="450";
+}
+
+
+function size9(){
+x.height="460";
+x.width="460";
+}
+
+function size10(){
+x.height="500";
+x.width="500";
+}
+function size11(){
+x.height="428";
+x.width="640";
+}
+
+
+function loadIMG(){
+if (document.getElementById("imgExternal").value == ''){
+alert("Enter a valid link to an image in the textbox!");}
+else if (document.getElementById("imgExternal").value == *'.jpg'){
+alert("Enter a valid link to an image in the textbox!");}
+else{
+
+document.getElementById("MainIMG").src=
+document.getElementById("imgExternal").value;
+}
+}
+</script>
+</body>
+
+</html>
