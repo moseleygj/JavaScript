@@ -1,3 +1,3 @@
 This a simple JS <b>random password generator</b>. 
 
-![alt text](/PWGen.png)
+![alt text](https://github.com/moseleygj/JavaScript/blob/master/Crypto/PWGen.png)
