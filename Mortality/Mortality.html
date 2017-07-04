@@ -36,15 +36,13 @@ var y = new Date();
 alert(whatMonth( y.getMonth() ) +" "+ y.getDate() +" "+ y.getFullYear());
 
 function numbox(){
-	if (document.getElementById("dob").innerHTML=="")
-	{
-		alert("Please fill in the DOB box:empty");
-		document.getElementById("death").innerHTML="-";
-	}
+var a = document.getElementById("dob").value;
+alert("Date in original form: "+ a );
+a.split('-'); 
+alert(a[1]);
 				}	
 var n;
 var day;
-
 function whatMonth(n)
 {
 	alert("I am n: "+n);
@@ -92,13 +90,23 @@ function whatMonth(n)
 }
 /*var from = startTime.value.split("/");
 var newDate = newDate(from[2], from[1] - 1, from[0]);
-
 .. assuming time included ...
-
 var date_only = startTime.value.split("");
 var from = date_only[0].split("/");
-var newDate = newDate(from[2], from[1] - 1, from[0]);*/	
+var newDate = newDate(from[2], from[1] - 1, from[0]);
+
+
+
+
+	if (document.getElementById("dob").innerHTML=="")
+	{
+		alert("Please fill in the DOB box:empty");
+		document.getElementById("death").innerHTML="-";
+	}
+*/	
 </script>
 
 </body>
 </html>
+
+  
