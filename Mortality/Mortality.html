@@ -33,80 +33,32 @@ input[type="textbox"]{margin: 0 auto 0;position:relative;display:block;margin-to
 </div>
 <script>
 var y = new Date();
-alert(whatMonth( y.getMonth() ) +" "+ y.getDate() +" "+ y.getFullYear());
+var Months = ["Jan","Feb","Mar","Apr","May","jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var sp = document.getElementById("dob").value.split("-");
+
+
+alert(Months[y.getMonth()] +" "+ y.getDate() +" "+ y.getFullYear());
+var remYears= 79 -(y.getFullYear() - sp[0]);
+alert(document.getElementById("dob").value);
+alert("sp = " + sp[0]);
+alert(remYears);
 
 function numbox(){
-var a = document.getElementById("dob").value;
-alert("Date in original form: "+ a );
-a.split('-'); 
-alert(a[1]);
-				}	
-var n;
-var day;
-function whatMonth(n)
-{
-	alert("I am n: "+n);
-	switch (n)
-	{
-	case 0:
-		day = "January";
-		break;
-	case 1:
-		day = "Feburary";
-		break;
-	case 2:
-		day = "March";
-		break;
-	case 3:
-		day = "April";
-		break;
-	case 4:
-		day = "May";
-		break;
-	case 5:
-		day = "June";
-		break;
-	case 6:
-		day = "July";
-		break;
-	case 7:
-		day = "August";
-		break;
-	case 8:
-		day = "September";
-		break;
-	case 9:
-		day = "October";
-		break;
-	case 10:
-		day = "November";
-		break;
-	case 11:
-		day = "December";
-		break;
-	default:
-		return;
-	}
-}
-/*var from = startTime.value.split("/");
-var newDate = newDate(from[2], from[1] - 1, from[0]);
-.. assuming time included ...
-var date_only = startTime.value.split("");
-var from = date_only[0].split("/");
-var newDate = newDate(from[2], from[1] - 1, from[0]);
-
-
-
-
-	if (document.getElementById("dob").innerHTML=="")
+	if (document.getElementById("dob").value==null)
 	{
 		alert("Please fill in the DOB box:empty");
 		document.getElementById("death").innerHTML="-";
+
 	}
-*/	
+	else{
+	document.getElementById("death").innerHTML="≈ "+remYears+" years remaining.";
+				}
+			}	
+
+
+
 </script>
 
 </body>
 </html>
-
-  
