@@ -38,18 +38,26 @@ var Months = ["Janurary","Feburary","March","April","May","june","July","August"
 var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 var sp = document.getElementById("dob").value.split("-");
-
 var aa=Months[sp[1]]+" "+sp[2]+" "+sp[0];
-alert(aa);
 var cv = Date.parse(aa);
 alert(cv);
 
 
 alert(Months[y.getMonth()] +" "+ y.getDate() +" "+ y.getFullYear());
 var remYears= 79 -(y.getFullYear() - sp[0]);
-alert(document.getElementById("dob").value);
-alert("sp = " + sp[0]);
+
 alert(remYears);
+//ms in seconds
+var year = 31449600000;
+var month= 2620800000;
+var week = 604800000; //*[number of weeks]
+var day  = 86400000;//*[number of days]
+var hour = 360000; //*[number of hours]
+var min  = 60000;//*[number of mis]
+var seconds = 1000;//*[number of weeks]
+var testresult= (year*70)+cv;
+var n = new Date(testresult);
+alert(n);
 
 function numbox(){
 	if (document.getElementById("dob").value==null)
