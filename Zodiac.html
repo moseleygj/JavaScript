@@ -8,7 +8,7 @@
 body{
 	margin:0;
 	padding:0;
-	background-color:;
+	background-color:grey;
 	}
 
 #container{
@@ -28,7 +28,7 @@ body{
 #content-area{
 	height:80%;
 	width:100%;
-	margin:;
+	margin:0;
 	background-color:blue;
 	}
 
@@ -49,10 +49,10 @@ select{margin: 0 auto 0;display:block;}
 </div>
 <div id="content-area">
 
-<select name="DOBMonth">
+<select name="DOBMonth" id="month" onchange="monthCheck()">
 	<option> - Month - </option>
 	<option value="January">January</option>
-	<option value="Febuary">Febuary</option>
+	<option value="February">Febuary</option>
 	<option value="March">March</option>
 	<option value="April">April</option>
 	<option value="May">May</option>
@@ -65,7 +65,7 @@ select{margin: 0 auto 0;display:block;}
 	<option value="December">December</option>
 </select>
 
-<select name="DOBDay">
+<select name="DOBDay" id="day" onchange="dayCheck()">
 	<option> - Day - </option>
 	<option value="1">1</option>
 	<option value="2">2</option>
@@ -100,7 +100,7 @@ select{margin: 0 auto 0;display:block;}
 	<option value="31">31</option>
 </select>
 
-<select name="DOBYear">
+<select name="DOBYear" id="year" onchange="monthCheck()">
 	<option> - Year - </option>
 	<option value="1993">1993</option>
 	<option value="1992">1992</option>
@@ -151,6 +151,235 @@ select{margin: 0 auto 0;display:block;}
 	<option value="1947">1947</option>
 </select>
 </div>
+<script>
+	var y = document.getElementById("year");
+	var m = document.getElementById("month");
+	var d = document.getElementById("day");
+	function monthCheck()
+	{
+		if (m.value == "January")
+		{
+			alert("Month is January!");
+		}
+		else if (m.value == "February")
+		{
+			alert("Month is February");
+		}
+		else
+		{
+			alert("Some month after February");
+		}
+	}
+	function dayCheck()
+	{
+		//Aquarius Horoscope Dates (January 20 to February 18)
+		if ((m.value == "January") && (d.value < 20))
+		{
+			alert("Capricorn");
+
+		}
+//
+
+		else if (m.value == "January")
+		{
+			  if ((d.value >= 20) && (d.value <= 31))
+			  {
+			  	alert("Aquarius");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+		else if ((m.value == "February") && (d.value < 18))
+		{
+			alert("Aquarius");
+
+		}
+
+		//Pisces Horoscope Dates (February 19 to March 20)
+
+		else if (m.value == "February")
+		{
+			  if ((d.value >= 19) && (d.value <= 28))
+			  {
+			  	alert("Pisces");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+//
+	else if ((m.value == "March") && (d.value < 18))
+		{
+			alert("Pisces");
+
+		}
+
+		//Aries Horoscope Dates (March 21-April 19)
+
+		else if (m.value == "March")
+		{
+			  if ((d.value >= 21) && (d.value <= 31))
+			  {
+			  	alert("Aries");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+ 		//Taurus Horoscope Dates (April 20-May 20)
+
+else if ((m.value == "April") && (d.value < 20))
+		{
+			alert("Pisces");
+
+		}
+//
+		else if (m.value == "April")
+		{
+			  if ((d.value >=20 ) && (d.value <=31 ))
+			  {
+			  	alert("Taurus");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+ 		//Gemini Horoscope Dates May 21-June 20)
+else if ((m.value == "March") && (d.value < 21))
+		{
+			alert("Taurus");
+
+		}
+//
+ 		else if (m.value == "May")
+		{
+			  if ((d.value >=21 ) && (d.value <= 31))
+			  {
+			  	alert("Gemini");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+ 		//Cancer Horoscope Dates June 21-July 22)
+
+else if ((m.value == "June") && (d.value < 21))
+		{
+			alert("Pisces");
+
+		}
+//
+ 		else if (m.value == "June")
+		{
+			  if ((d.value >=21 ) && (d.value <=31 ))
+			  {
+			  	alert("Cancer");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+ 		//Leo Horoscope Dates (July 23-August 22)
+		else if ((m.value == "July") && (d.value < 23))
+		{
+			alert("Pisces");
+
+		}
+		//
+ 		else if (m.value == "July")
+		{
+			  if ((d.value >= 23) && (d.value <= 31))
+			  {
+			  	alert("Leo");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+ 		//Virgo Horoscope Dates (August 23-September 22)
+		else if ((m.value == "August") && (d.value < 23))
+		{
+			alert("Leo");
+
+		}
+//
+ 		else if (m.value == "August")
+		{
+			  if ((d.value >= 23) && (d.value <= 31))
+			  {
+			  	alert("Virgo");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+ 		//Libra Horoscope Dates (September 23-October 22)
+else if ((m.value == "September") && (d.value < 23))
+		{
+			alert("Virgo");
+
+		}
+ 		//
+
+ 		else if (m.value == "September")
+		{
+			  if ((d.value >= 23) && (d.value <= 31))
+			  {
+			  	alert("Libra");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+ 		//Scorpio Horoscope Dates (October 23-November 21)
+else if ((m.value == "October") && (d.value < 23))
+		{
+			alert("Libra");
+
+		}
+//
+ 		else if (m.value == "October")
+		{
+			  if ((d.value >= 23) && (d.value <= 31))
+			  {
+			  	alert("Scorpio");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+ 		//Sagittarius Horoscope Dates (November 22-December 21)
+
+else if ((m.value == "November") && (d.value < 22))
+		{
+			alert("Scorpio");
+		}
+	//
+
+
+ 		else if (m.value == "November")
+		{
+			  if ((d.value >= 22) && (d.value <= 31))
+			  {
+			  	alert("Sagittarius");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+ 		//Capricorn Horoscope Dates (December 22-January 19)
+else if ((m.value == "December") && (d.value < 22))
+		{
+			alert("Sagittarius");
+
+		}
+//
+ 		else if (m.value == "December")
+		{
+			  if ((d.value >=22) && (d.value <= 31))
+			  {
+			  	alert("Capricorn");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+	}
+</script>
+<!-- 
+
+-->
 </body>
 
 </html>
