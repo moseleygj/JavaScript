@@ -3,7 +3,9 @@
 <head>
 <title>Zodica Reading</title>
 <meta charset="UTF-8">
+<link rel="shortcut icon" href="astrology-ring.png" type="image/png">
 </head>
+
 <style type="text/css">
 body{
 	margin:0;
@@ -16,39 +18,54 @@ body{
 	width:768px;
 	min-height:480px;
 	min-width:320px;
-	margin:20px auto;
+	margin:0px auto;
+	background-color: white;
 	}
 
 #top{
-	height:20%;
+	height:250px;
 	width:100%;
-	background-color:orange
-	}
+	background: linear-gradient(#ededed, #f9f9f9);
+}
 
 #content-area{
 	height:80%;
 	width:100%;
 	margin:0;
-	background-color:blue;
+	background-color:white;
 	}
 
 #main-img{
 	height:200px;
 	width:200px;
-	margin:3px auto 0;
+	margin:0px auto 0;
 	display:block;
+	border-radius: 50%
 }
-select{margin: 0 auto 0;display:block;}
+
+#dates{height:35px; width:100%;margin-top:5px;}
+#data-Info{margin: 0 auto 0;width:80%;height:756px;background-color:grey;}
+
+#titleInfo{
+				height:30px;width:100%;
+				margin-top:10px;
+				text-align:center;
+				font-weight:bolder;font-size:25px;
+				line-height:1;
+			}
 
 </style>
 <body>
 
 <div id="container">
+<!--top-->
 <div id="top">
-<img src="profile-placeholder.png" id="main-img">
+<div style="margin-top:0px"><img src="profile-placeholder.png" id="main-img"></div>
+<div id="titleInfo">Unknown</div>
 </div>
+<!--bottom-->
 <div id="content-area">
-
+<div id="dates" align="center">
 <select name="DOBMonth" id="month" onchange="monthCheck()">
 	<option> - Month - </option>
 	<option value="January">January</option>
@@ -150,7 +167,11 @@ select{margin: 0 auto 0;display:block;}
 	<option value="1948">1948</option>
 	<option value="1947">1947</option>
 </select>
-</div>
+</div><!--dates-->
+
+<div id="data-Info"></div>
+</div><!--bottom-->
+</div><!--container-->
 <script>
 	var y = document.getElementById("year");
 	var m = document.getElementById("month");
@@ -178,8 +199,7 @@ select{margin: 0 auto 0;display:block;}
 			alert("Capricorn");
 
 		}
-//
-
+		//
 		else if (m.value == "January")
 		{
 			  if ((d.value >= 20) && (d.value <= 31))
