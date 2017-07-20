@@ -1,0 +1,578 @@
+
+<html>
+<head>
+<title>Zodica Reading</title>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="astrology-ring.png" type="image/png">
+</head>
+
+<style type="text/css">
+body{
+	margin:0;
+	padding:0;
+	background-color:grey;
+	}
+
+#container{
+	height:1024px;
+	width:768px;
+	min-height:480px;
+	min-width:320px;
+	margin:0px auto;
+	background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	}
+
+#top{
+	height:290px;
+	width:100%;
+	background: linear-gradient(#ededed, #f9f9f9);
+}
+
+#content-area{
+	height:80%;
+	width:100%;
+	margin:0;
+	background-color:white;
+	}
+
+#main-img{
+	height:200px;
+	width:200px;
+	margin:0px auto 0;
+	display:block;
+	border-radius: 50%
+}
+
+#dates{
+	height:35px; width:100%;
+	margin-top:5px;
+}
+
+#data-Info{
+	margin: 0 auto 0;
+	width:95%;height:756px;
+	background-color:white;
+}
+
+#titleInfo{
+				height:30px;width:100%;
+				margin-top:10px;
+				text-align:center;
+				font-weight:bolder;font-size:25px;
+				line-height:1.2;
+				color:#434343;
+				clear:both;
+			}
+#titleDetails{
+				height:30px;width:100%;
+				margin-top:10px;
+				text-align:center;
+				font-weight:bold;font-size:15px;
+				line-height:1.2;
+				color:#434343;
+			}
+
+</style>
+<body>
+
+<div id="container">
+<!--top-->
+<div id="top"><br>
+<div style="margin-top:0px"><img src="profile-placeholder.png" id="main-img"></div>
+<div id="titleInfo">UNKNOWN</div>
+<div id="titleDetails">Month 00 - Month 00</div>
+
+</div>
+<!--bottom-->
+<div id="content-area">
+<div id="dates" align="center">
+<select name="DOBMonth" id="month" onchange="monthCheck()">
+	<option> - Month - </option>
+	<option value="January">January</option>
+	<option value="February">Febuary</option>
+	<option value="March">March</option>
+	<option value="April">April</option>
+	<option value="May">May</option>
+	<option value="June">June</option>
+	<option value="July">July</option>
+	<option value="August">August</option>
+	<option value="September">September</option>
+	<option value="October">October</option>
+	<option value="November">November</option>
+	<option value="December">December</option>
+</select>
+
+<select name="DOBDay" id="day" onchange="dayCheck()">
+	<option> - Day - </option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+	<option value="29">29</option>
+	<option value="30">30</option>
+	<option value="31">31</option>
+</select>
+
+<select name="DOBYear" id="year" onchange="monthCheck()">
+	<option> - Year - </option>
+	<option value="1993">1993</option>
+	<option value="1992">1992</option>
+	<option value="1991">1991</option>
+	<option value="1990">1990</option>
+	<option value="1989">1989</option>
+	<option value="1988">1988</option>
+	<option value="1987">1987</option>
+	<option value="1986">1986</option>
+	<option value="1985">1985</option>
+	<option value="1984">1984</option>
+	<option value="1983">1983</option>
+	<option value="1982">1982</option>
+	<option value="1981">1981</option>
+	<option value="1980">1980</option>
+	<option value="1979">1979</option>
+	<option value="1978">1978</option>
+	<option value="1977">1977</option>
+	<option value="1976">1976</option>
+	<option value="1975">1975</option>
+	<option value="1974">1974</option>
+	<option value="1973">1973</option>
+	<option value="1972">1972</option>
+	<option value="1971">1971</option>
+	<option value="1970">1970</option>
+	<option value="1969">1969</option>
+	<option value="1968">1968</option>
+	<option value="1967">1967</option>
+	<option value="1966">1966</option>
+	<option value="1965">1965</option>
+	<option value="1964">1964</option>
+	<option value="1963">1963</option>
+	<option value="1962">1962</option>
+	<option value="1961">1961</option>
+	<option value="1960">1960</option>
+	<option value="1959">1959</option>
+	<option value="1958">1958</option>
+	<option value="1957">1957</option>
+	<option value="1956">1956</option>
+	<option value="1955">1955</option>
+	<option value="1954">1954</option>
+	<option value="1953">1953</option>
+	<option value="1952">1952</option>
+	<option value="1951">1951</option>
+	<option value="1950">1950</option>
+	<option value="1949">1949</option>
+	<option value="1948">1948</option>
+	<option value="1947">1947</option>
+</select>
+</div><!--dates-->
+
+<div id="data-Info"></div>
+</div><!--bottom-->
+</div><!--container-->
+<script>
+	var y = document.getElementById("year");
+	var m = document.getElementById("month");
+	var d = document.getElementById("day");
+	function monthCheck()
+	{
+		if (m.value == "January")
+		{
+			alert("Month is January!");
+		}
+		else if (m.value == "February")
+		{
+			alert("Month is February");
+		}
+		else
+		{
+			alert("Some month after February");
+		}
+	}
+
+
+	function dayCheck()
+	{
+//Capricorn Horoscope Dates (December 22-January 19)
+		if ((m.value == "January") && (d.value < 20))
+		{
+			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Capricorn";//changeMe
+			document.getElementById("titleDetails").innerHTML="December 22 - January 19";//changeMe
+			document.getElementById("main-img").src="Capricorn-icon.png";
+		}
+//Aquarius Horoscope Dates (January 20 to February 18)
+
+		else if (m.value == "January")
+		{
+			  if ((d.value >= 20) && (d.value <= 31))
+			  {
+			 // 	alert("Aquarius");
+			document.getElementById("top").style.background = "linear-gradient(#DAf0f8,#98d5ed)"; 
+			document.getElementById("titleInfo").style.color="navy";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Aquarius";//changeMe
+			document.getElementById("titleDetails").innerHTML="January 20 - February 18";//changeMe
+			document.getElementById("main-img").src="Aquarius-icon.png";
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+		else if ((m.value == "February") && (d.value < 18))
+		{
+			alert("Aquarius");
+			document.getElementById("top").style.background = "linear-gradient(#DAf0f8,#98d5ed)"; 
+			document.getElementById("titleInfo").style.color="navy";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Aquarius";//changeMe
+			document.getElementById("titleDetails").innerHTML="January 20 - February 18";//changeMe
+			document.getElementById("main-img").src="Aquarius-icon.png";
+
+		}
+//-------------------------------------------------------------------------------------------//
+//Pisces Horoscope Dates (February 19 to March 20)
+
+		else if (m.value == "February")
+		{
+			  if ((d.value >= 19) && (d.value <= 28))
+			  {
+//			  	alert("Pisces");
+			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)"; 		
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Pisces";//changeMe
+			document.getElementById("titleDetails").innerHTML="February 19 - March 20";//changeMe
+			document.getElementById("main-img").src="Pisces-icon.png";
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+	else if ((m.value == "March") && (d.value < 18))
+		{
+		//	alert("Pisces");
+			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)"; 			
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Pisces";//changeMe
+			document.getElementById("titleDetails").innerHTML="February 19 - March 20";//changeMe
+			document.getElementById("main-img").src="Pisces-icon.png";
+
+		}
+//-------------------------------------------------------------------------------------------//
+		//Aries Horoscope Dates (March 21-April 19)
+
+		else if (m.value == "March")
+		{
+			  if ((d.value >= 21) && (d.value <= 31))
+			  {
+			 // 	alert("Aries");
+			document.getElementById("top").style.background = "linear-gradient(red,#BD0000)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Aries";//changeMe
+			document.getElementById("titleDetails").innerHTML="March 21-April 19";//changeMe
+			document.getElementById("main-img").src="Aries-icon.ico";
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+else if ((m.value == "April") && (d.value < 20))
+		{
+			//alert("Aries");
+			document.getElementById("top").style.background = "linear-gradient(red,#BD0000)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Aries";//changeMe
+			document.getElementById("titleDetails").innerHTML="March 21-April 19";//changeMe
+			document.getElementById("main-img").src="Aries-icon.ico";
+
+		}
+//-------------------------------------------------------------------------------------------//
+//Taurus Horoscope Dates (April 20-May 20)
+
+		else if (m.value == "April")
+		{
+			  if ((d.value >=20 ) && (d.value <=30 ))
+			  {
+			  	//alert("Taurus");
+			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Taurus";//changeMe
+			document.getElementById("titleDetails").innerHTML="April 20-May 20";//changeMe
+			document.getElementById("main-img").src="Taurus-icon.png";
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+else if ((m.value == "May") && (d.value < 21))
+		{
+			//alert("Taurus");
+		  	document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Taurus";//changeMe
+			document.getElementById("titleDetails").innerHTML="April 20-May 20";//changeMe
+			document.getElementById("main-img").src="Taurus-icon.png";
+		}
+ 		
+
+//-------------------------------------------------------------------------------------------//
+//Gemini Horoscope Dates May 21-June 20)
+else if ((m.value == "June") && (d.value < 21))
+	{
+		//alert("Gemini");
+		  	document.getElementById("top").style.background = "linear-gradient(#DAf0f8,#98d5ed)"; 
+			document.getElementById("titleInfo").style.color="navy";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Gemini";//changeMe
+			document.getElementById("titleDetails").innerHTML="May 21 - June 20";//changeMe
+			document.getElementById("main-img").src="Gemini-icon.png";
+	}
+				
+
+
+else if (m.value == "May")
+	{
+	  if ((d.value >=21 ) && (d.value <= 31))
+		  {
+			  //	alert("Gemini");
+		  	document.getElementById("top").style.background = "linear-gradient(#DAf0f8,#98d5ed)"; 
+			document.getElementById("titleInfo").style.color="navy";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Gemini";//changeMe
+			document.getElementById("titleDetails").innerHTML="May 21 - June 20";//changeMe
+			document.getElementById("main-img").src="Gemini-icon.png";
+		  } 
+			  
+	  else{
+			  	alert("Oops! Somethings not right...");	  
+		}
+	}
+
+//-------------------------------------------------------------------------------------------//
+//Cancer Horoscope Dates June 21-July 22)
+ 		else if (m.value == "June")
+		{
+			  if ((d.value >=21 ) && (d.value <=30 ))
+			  {
+			//alert("Cancer");
+			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Cancer";//changeMe
+			document.getElementById("titleDetails").innerHTML="June 21-July 22";//changeMe
+			document.getElementById("main-img").src="Cancer-icon.png";
+			  } 
+			  else{
+			  	alert("Oops! Somethings not right...");}
+		}
+
+		else if ((m.value == "July") && (d.value < 23))
+		{
+			//alert("Cancer");
+			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Cancer";//changeMe
+			document.getElementById("titleDetails").innerHTML="June 21-July 22";//changeMe
+			document.getElementById("main-img").src="Cancer-icon.png";
+
+		}
+//-------------------------------------------------------------------------------------------//
+//Leo Horoscope Dates (July 23-August 22)
+
+ 		else if (m.value == "July")
+		{
+			  if ((d.value >= 23) && (d.value <= 31))
+			  {
+			//alert("Leo");
+			document.getElementById("top").style.background = "linear-gradient(red,#BD0000)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Leo";//changeMe
+			document.getElementById("titleDetails").innerHTML="July 23-August 22";//changeMe
+			document.getElementById("main-img").src="Leo-icon.png";
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+		else if ((m.value == "August") && (d.value < 23))
+		{
+			//alert("Leo");
+			document.getElementById("top").style.background = "linear-gradient(red,#BD0000)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Leo";//changeMe
+			document.getElementById("titleDetails").innerHTML="July 23-August 22";//changeMe
+			document.getElementById("main-img").src="Leo-icon.png";
+
+		}
+//-------------------------------------------------------------------------------------------//
+//Virgo Horoscope Dates (August 23-September 22)
+ 
+ 		else if (m.value == "August")
+		{
+			  if ((d.value >= 23) && (d.value <= 31))
+			  {
+			  	//alert("Virgo");
+			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Virgo";//changeMe
+			document.getElementById("titleDetails").innerHTML="August 23-September 22";//changeMe
+			document.getElementById("main-img").src="Virgo-icon.png";
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+else if ((m.value == "September") && (d.value < 23))
+		{
+			//alert("Virgo");
+			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)";
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Virgo";//changeMe
+			document.getElementById("titleDetails").innerHTML="August 23-September 22";//changeMe
+			document.getElementById("main-img").src="Virgo-icon.png";
+
+		}
+//-------------------------------------------------------------------------------------------//
+//Libra Horoscope Dates (September 23-October 22)
+//Air
+ 		else if (m.value == "September")
+		{
+			  if ((d.value >= 23) && (d.value <= 30))
+			  {
+			  	alert("Libra");
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+else if ((m.value == "October") && (d.value < 23))
+		{
+			alert("Libra");
+
+		}
+//-------------------------------------------------------------------------------------------//
+//Scorpio Horoscope Dates (October 23-November 21)
+//Water
+ 		else if (m.value == "October")
+		{
+			  if ((d.value >= 23) && (d.value <= 31))
+			  {
+			  	//alert("Scorpio");
+			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)"; 			
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Scorpio";//changeMe
+			document.getElementById("titleDetails").innerHTML="October 23 - November 21";//changeMe
+			document.getElementById("main-img").src="Scorpio-icon.png";
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+else if ((m.value == "November") && (d.value < 22))
+		{
+			//alert("Scorpio");
+			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)"; 			
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Scorpio";//changeMe
+			document.getElementById("titleDetails").innerHTML="October 23 - November 21";//changeMe
+			document.getElementById("main-img").src="Scorpio-icon.png";
+		}
+//-------------------------------------------------------------------------------------------//
+//Sagittarius Horoscope Dates (November 22-December 21)
+
+ 		else if ((m.value == "November") && (d.value > 21))
+		{
+			//alert("Sagittarius");
+			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Sagittarius";//changeMe
+			document.getElementById("titleDetails").innerHTML="November 22-December 21";//changeMe
+			document.getElementById("main-img").src="Sagittarius-icon.png";
+}
+ 		else if ((m.value == "December")&&(d.value < 21))
+		{
+			  
+			//alert("Sagittarius");
+			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Sagittarius";//changeMe
+			document.getElementById("titleDetails").innerHTML="November 22-December 21";//changeMe
+			document.getElementById("main-img").src="Sagittarius-icon.png";
+		} 
+//-------------------------------------------------------------------------------------------//
+//Capricorn Horoscope Dates (December 22-January 19)
+
+	else if ((m.value == "December") && (d.value >= 22))
+		{
+			//alert("Capricorn");
+			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Capricorn";//changeMe
+			document.getElementById("titleDetails").innerHTML="December 22 - January 19";//changeMe
+			document.getElementById("main-img").src="Capricorn-icon.png";
+
+		}
+
+ 		else if (m.value == "December")
+		{
+			  if ((d.value >=22) && (d.value <= 31))
+			  {
+			 //alert("Capricorn");
+			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Capricorn";//changeMe
+			document.getElementById("titleDetails").innerHTML="December 22 - January 19";//changeMe
+			document.getElementById("main-img").src="Capricorn-icon.png";
+			  } 
+			  else
+			  	alert("Oops! Somethings not right...")
+		}
+
+	}
+</script>
+
+</body>
+
+</html>
