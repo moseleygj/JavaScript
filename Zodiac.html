@@ -25,7 +25,7 @@ body{
 	}
 
 #top{
-	height:260px;
+	height:290px;
 	width:100%;
 	background: linear-gradient(#ededed, #f9f9f9);
 }
@@ -55,16 +55,30 @@ body{
 				font-weight:bolder;font-size:25px;
 				line-height:1.2;
 				color:#434343;
+				clear:both;
+			}
+#titleDetails{
+				height:30px;width:100%;
+				margin-top:10px;
+				text-align:center;
+				font-weight:bold;font-size:15px;
+				line-height:1.2;
+				color:#434343;
 			}
 
 </style>
 <body>
-
+<!--Fire	Aries, Leo, Sagittarius
+	Earth	Taurus, Virgo, Capricorn
+	Air	Gemini, Libra, Aquarius
+	Water	Cancer, Scorpio, Pisces-->
 <div id="container">
 <!--top-->
 <div id="top"><br>
 <div style="margin-top:0px"><img src="profile-placeholder.png" id="main-img"></div>
 <div id="titleInfo">UNKNOWN</div>
+<div id="titleDetails">Month 00 - Month 00</div>
+
 </div>
 <!--bottom-->
 <div id="content-area">
@@ -199,8 +213,12 @@ body{
 		//Aquarius Horoscope Dates (January 20 to February 18)
 		if ((m.value == "January") && (d.value < 20))
 		{
-			alert("Capricorn");
-
+			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)"; 
+			document.getElementById("titleInfo").style.color="white";
+			document.getElementById("titleDetails").style.color="whitesmoke";
+			document.getElementById("titleInfo").innerHTML="Capricorn";//changeMe
+			document.getElementById("titleDetails").innerHTML="December 22-January 19";//changeMe
+			document.getElementById("main-img").src="Capricorn-icon.png";
 		}
 		//
 		else if (m.value == "January")
@@ -385,7 +403,7 @@ else if ((m.value == "November") && (d.value < 22))
  		//Capricorn Horoscope Dates (December 22-January 19)
 else if ((m.value == "December") && (d.value < 22))
 		{
-			alert("Sagittarius");
+			alert("Capricorn");
 
 		}
 //
