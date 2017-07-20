@@ -20,10 +20,12 @@ body{
 	min-width:320px;
 	margin:0px auto;
 	background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
 	}
 
 #top{
-	height:250px;
+	height:260px;
 	width:100%;
 	background: linear-gradient(#ededed, #f9f9f9);
 }
@@ -44,14 +46,15 @@ body{
 }
 
 #dates{height:35px; width:100%;margin-top:5px;}
-#data-Info{margin: 0 auto 0;width:80%;height:756px;background-color:grey;}
+#data-Info{margin: 0 auto 0;width:95%;height:756px;background-color:white;}
 
 #titleInfo{
 				height:30px;width:100%;
 				margin-top:10px;
 				text-align:center;
 				font-weight:bolder;font-size:25px;
-				line-height:1;
+				line-height:1.2;
+				color:#434343;
 			}
 
 </style>
@@ -59,9 +62,9 @@ body{
 
 <div id="container">
 <!--top-->
-<div id="top">
+<div id="top"><br>
 <div style="margin-top:0px"><img src="profile-placeholder.png" id="main-img"></div>
-<div id="titleInfo">Unknown</div>
+<div id="titleInfo">UNKNOWN</div>
 </div>
 <!--bottom-->
 <div id="content-area">
@@ -249,7 +252,7 @@ body{
 
 else if ((m.value == "April") && (d.value < 20))
 		{
-			alert("Pisces");
+			alert("Aries");
 
 		}
 //
