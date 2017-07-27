@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Allura|Bowlby+One|Bungee+Inline|Candal|Clicker+Script|Nothing+You+Could+Do|Permanent+Marker|Rochester|Satisfy" rel="stylesheet"> 
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Contact-Info</title>
+<script> 
+$(document).ready(function(){
+    
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+        $("#panel").css("border-top","none");
+        $(".dataCell").fadeIn(3000);
+        $("#right").fadeIn(1000);
+    });
+
+
+});
+</script>
+ 
+<style> 
+a:link{margin-left:5px;font-size:15px;margin-top:5px;margin-bottom:5px;text-decoration:none;color:#434343;}
+a:active{margin-top:5px;margin-bottom:5px;}
+a:visited{margin-top:5px;margin-bottom:5px;text-decoration:none;color:navy}
+a:hover{margin-top:5px;margin-bottom:5px;}
+a{margin-top:5px;margin-bottom:5px;}
+#infoContainer{width:400px;}
+#left{width:50%;float:left;}
+#right{width:50%;float:right;display:none;}
+.dataCell{width:80%;height:24px;margin-bottom:7px;float:right;clear:right;font-weight:bold; display:none;}
+.dataCellLogo{width:20%;height:24px;margin-bottom:7px;float:left;text-align: center;}
+ #flip {
+    padding: 5px;
+    text-align: center;
+    /*background-color: #e5eecc;*/
+    background-color: #475c4d;color:white;
+            border: solid 1px #c3c3c3;
+
+                        /*border: solid 1px #e5eecc;*/
+
+   /* border-bottom:none;*/
+    width:400px;
+    font-size:20px;
+    font-weight:bold;
+      /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
+    box-shadow: 5px 5px 12px #888888;
+
+}
+
+#panel {
+    width:400px;
+    padding-top:30px;
+    padding-bottom:50px;
+    display: none;
+        background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+           /* border: solid 1px #e5eecc;*/
+
+            
+                padding: 5px;
+                height:150px;
+                background: linear-gradient(#e5eecc,#d4deba);
+
+                    border-top:none;
+                        box-shadow: 5px 5px 12px #888888;
+
+
+  /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
+
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip" style="
+    font-family: 'Bungee Inline', cursive;
+">CONTACT</div>
+<div id="panel" style="">
+<div id="infoContainer">
+
+<div id="left">
+
+<div class="dataCell" style="text-align:center;width:100%;font-weight:bolder;color:#475c4d;font-family:;margin-top:2px;">GORDON MOSELEY</div>
+
+<div class="dataCellLogo"><img src="email.png" height="24"></div><div class="dataCell"><a href="mailto:moseleygj@gmail.com">Send E-Mail</a></div>
+
+<div class="dataCellLogo"><img src="github-icon.png" height="24"></div><div class="dataCell"><a href="https://github.com/moseleygj/">GitHub Profile</a></div>
+
+<div class="dataCellLogo"><img src="phone2.png" height="24"></div><div class="dataCell" style="color:#337287;font-weight:bold">646 377 5325</div>
+</div>
+<div id="right"><img src="il_340x270.896650703_ke8n.jpg" width="200" height="150px"></div>
+</div>
+
+</body>
+</html>
