@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+ 
+<style> 
+a:link{margin-top:5px;margin-bottom:5px;text-decoration:none;color:#434343;text-shadow: 2px 2px 3px grey}
+a:active{margin-top:5px;margin-bottom:5px;}
+a:visited{margin-top:5px;margin-bottom:5px;text-decoration:none;color:navy}
+a:hover{margin-top:5px;margin-bottom:5px;}
+a{margin-top:5px;margin-bottom:5px;}
+
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+    width:400px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+#panel {
+    width:400px;
+    padding-top:30px;
+    padding-bottom:50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Contact</div>
+<div id="panel">Gordon Moseley
+<br><a href="mailto:moseleygj@gmail.com">Send Email</a>
+<br><a href="https://github.com/moseleygj/">GitHub Profile</a>
+<br><a href="">646 377 5325</a>
+
+
+</div>
+
+</body>
+</html>
