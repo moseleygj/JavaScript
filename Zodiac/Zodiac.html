@@ -8,9 +8,20 @@
 
 <script>
 $(document).ready(function(){
-$("#day").hover(function(){
-	$("#data-Info").load("Aquarius.html")
+
+$("#day").change(function(){
+	if ($("#titleInfo").html() =="Aquarius"){
+	$("#data-Info").load("Aquarius.html");}
+	else {
+		alert("Not Aquirius");
+	}
 		});
+
+$("#month").change(function()
+{
+	alert($("#titleInfo").html());
+});
+
 });
 </script>
 </head>
