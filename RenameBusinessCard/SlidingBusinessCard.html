@@ -6,16 +6,34 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <title>Contact-Info</title>
 <script> 
+//var x=0;
 $(document).ready(function(){
-    
-    $("#flip").click(function(){
+    var x=0;
+
+    $("#flip").click(
+    function(){
+if(x==0){
         $("#panel").slideToggle("slow");
         $("#panel").css("border-top","none");
         $(".dataCell").fadeIn(3000);
         $("#right").fadeIn(1000);
-    });
+        $(".dataCellLogo").fadeIn("slow");
 
+        x=1;
+        }
 
+else if(x==1)
+        {  
+        $(".dataCell").fadeOut("fast");
+        $("#right").fadeOut("slow");
+        $("#panel").css("border-top","none");
+        $(".dataCellLogo").fadeOut("fast");
+        $("#panel").slideToggle(900);
+
+        x=0;
+}
+
+        });
 });
 </script>
  
