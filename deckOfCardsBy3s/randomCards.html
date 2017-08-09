@@ -123,6 +123,30 @@ var z = Math.floor((Math.random()*10)+1);
 	//Ace,2,3,4,5,6,7,8,9,10,j,q,k
 	
 	//set up counters
+	
+	var clubB = ["j","q","k","a",2,3,4,5,6,7,8,9,10];
+var spadeB = ["j","q","k","a",2,3,4,5,6,7,8,9,10];
+var diamondR = ["j","q","k","a",2,3,4,5,6,7,8,9,10];
+var heartsR = ["j","q","k","a",2,3,4,5,6,7,8,9,10];
+
+//Aces
+clubB[3]=spadeB[3]=diamondR[3]=heartsR[3];
+
+//Kings
+clubB[2]=spadeB[2]=diamondR[2]=heartsR[2];
+
+//Queens
+clubB[1]=spadeB[1]=diamondR[1]=heartsR[1];
+
+//Jacks
+clubB[0]=spadeB[0]=diamondR[0]=heartsR[0];
+
+heartsR[0]=prompt("Please enter the value for Jack: ", 15);
+heartsR[1]=prompt("Please enter the value for Queen: ", 20);
+heartsR[2]=prompt("Please enter the value for King: ", 25);
+heartsR[3]=prompt("Please enter the value for Ace: ", 30);
+
+console.log(heartsR[0]);
 </script>	
 </body>
 
