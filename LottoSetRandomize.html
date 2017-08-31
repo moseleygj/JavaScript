@@ -114,7 +114,7 @@ AM: Monday
 		<br>
 		</div><div class="divFontBoxes"><div class="numberSet">Number Set 2:</div>
 	<br/>
-		<input type="text" maxlength="4" tabindex="16" class="ansBox"><br/>
+		<input type="text" maxlength="4" tabindex="16" class="ansBox" id="result2"><br/>
 		<button tabindex="17" style="margin: 0px auto 0;display: block; " onClick="testing();">Randomize</button><br/>
 		<img src="LOTTO.jpg" height="120px" width="120px">
 		</div>
@@ -151,19 +151,25 @@ function testing()
 		var boxes=[bx1,bx2,bx3,bx4,bx5,
 		   bx6,bx7,bx8,bx9,bx10,
 		   bx11,bx12,bx13,bx14];
-		   alert(boxes[0]);
+		    var numbers = /^[0-9]+$/; 
 		   for (var i=0;i<boxes.length;i++)
 		{
 		
 			if (boxes[i] == ""){
-			alert("Ooops! Please fill in Box: "+i+"!");
+			alert("Ooops! Box: "+ (parseInt(i)+parseInt(1))+" empty!");
 		}
 		
+else if (boxes[i].match(numbers))
+	{}
+
 		else if (boxes[i] != ""){
-			alert("Boxes Element "+i+" contains: " +boxes[i]);
+			alert("NUMBERS ONLY buddy... Fill in box: "+(parseInt(i)+parseInt(1)));
 		}
-else{alert("Good to go!");}
-		}
+
+		
+		else
+			{alert("No!");
+		}}
 		   var bs = boxes.length;
 		   
 		    result1.value=boxes[randomize(bs)];
