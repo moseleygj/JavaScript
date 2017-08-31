@@ -9,8 +9,9 @@
 	.headTitle{height:auto;width:100%;background-color:none;margin:0 auto 0;padding:0;min-width:;max-width:;font-size:32px;font:;text-align: center;color:#434343;clear:right;}
 	.boxLabel{font-weight:bold;color:#434343;font-size:14px;font-family:"Ariel";}
 	.boxLabelAnswer{font-weight:;color:;font-size:;font-family:;}
-	.inputBox{height:;width:;background-color:;margin:0px auto 1.5px;padding:0;min-width:;max-width:;font-weight:bold;font-size:12;font:;display: block;border-radius:2px; text-align:center;border:1px solid;width:65px;}
-	.inputBox:hover{height:;width:;background-color:;margin:;padding:0;min-width:;max-width:;font-size:;font:;border-radius:2px;	        box-shadow: 0 8px 6px -6px skyblue;}
+	.inputBox{height:;width:;background-color:;margin:0px auto 1.5px;padding:0;min-width:;max-width:;font-weight:bold;font-size:12;font:;display: block;border-radius:2px; text-align:center;border:1px solid #d2d2d2;width:65px;}
+	.inputBox2{height:10px;width:65px;background-color:;margin:0px auto 1.5px;padding:0;min-width:;max-width:;font-weight:bold;font-size:12;font:;display: block;border-radius:2px; text-align:center;border:1px solid;}
+	.inputBox:hover{height:;width:;background-color:;margin:;padding:0;min-width:;max-width:;font-size:;font:;border-radius:2px;border:1px solid #434343;box-shadow: 0 8px 6px -6px skyblue;}
 	.outputBox{height:;width:;background-color:;margin:;padding:;min-width:;max-width:;font-size:;font:;}
 	.outputBox:hover{height:;width:;background-color:;margin:;padding:;min-width:;max-width:;font-size:;font:;border-color: skyblue;}
 	.titleHead{height:;width:;background-color:;margin:;padding:;min-width:;max-width:;font-size:;font:;}
@@ -22,7 +23,20 @@
 	body{height:;width:;background-color:purple;margin:0;padding:0;min-width:;max-width:;font-size:;font:;}
 	html{height:;width:;background-color:;margin:0;padding:0;min-width:438px;max-width:768px;min-height:375px;font-size:;font:12px;} 
 	.numberSetR{width:100%; height:2px;}
+.divFontBoxes{text-align: center;height: 10%;font-size:10px;}
 
+.ansBox{height:40px;width:118px;font-size:30px;margin-bottom:5px}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+body{width:320px;}
+.leftSide{width:47%;}
+.rightSide{width:53%;}
+.headTitle{font-size:13px;}
+.inputBox{height:40%;width:55px}
+.numberSet{font-size:14px;color:red;}
+.divFontBoxes{height:12%;width:-23px;}
+.container{height:525px};}
+}
 		</style>
 	<body>
 		
@@ -30,78 +44,79 @@
 		<div class="headTitle"><h3>Jacqueline's Lotto Set Randomizer</h3></div>
 		<div class="leftSide">
 		<div class="dayHoldMorn">
-<div style="text-align: center;height: 10%">AM: Sunday<br/>
-<input type="text" maxlength="4" tabindex="" class="inputBox" id="box1"><br>
+<div class="divFontBoxes">AM: Sunday<br/>
+<input type="text" maxlength="4" tabindex="1" class="inputBox" id="box1"><br>
 </div>
 
-<div style="text-align: center;height: 10%">
+<div class="divFontBoxes">
 AM: Monday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box3">
+		<input type="text" maxlength="4" tabindex="3" class="inputBox" id="box3">
 		<br>
 </div>	
 
-		<div style="text-align: center;height: 10%">AM: Tuesday
+		<div class="divFontBoxes">AM: Tuesday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box5">
+		<input type="text" maxlength="4" tabindex="5" class="inputBox" id="box5">
 		<br>
 		</div>	
-		<div style="text-align: center;height: 10%">AM : Wednesday
+		<div class="divFontBoxes">AM : Wednesday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box7"><br>
-		</div>	<div style="text-align: center;height: 10%">AM : Thursday
+		<input type="text" maxlength="4" tabindex="7" class="inputBox" id="box7"><br>
+		</div>	<div class="divFontBoxes">AM : Thursday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box9"><br>
-		</div>	<div style="text-align: center;height: 10%" >AM : Friday
+		<input type="text" maxlength="4" tabindex="9" class="inputBox" id="box9"><br>
+		</div>	<div class="divFontBoxes" >AM : Friday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box11"><br>
-		</div>	<div style="text-align: center;height: 10%">AM : Saturday
+		<input type="text" maxlength="4" tabindex="11" class="inputBox" id="box11"><br>
+		</div>	<div class="divFontBoxes">AM : Saturday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box13"><br>
+		<input type="text" maxlength="4" tabindex="13" class="inputBox" id="box13"><br>
 		</div>
 </div>
 <div class="dayHoldEve">
-		<div style="text-align: center;height: 10%">PM : Sunday
+		<div class="divFontBoxes">PM : Sunday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box2">
+		<input type="text" maxlength="4" tabindex="2" class="inputBox" id="box2">
 		<br>
 </div>	
-		<div style="text-align: center;height: 10%">PM : Monday
+		<div class="divFontBoxes">PM : Monday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box4">
+		<input type="text" maxlength="4" tabindex="4" class="inputBox" id="box4">
 		<br>
 </div>	
 
-		<div style="text-align: center;height: 10%">PM : Tuesday
+		<div class="divFontBoxes">PM : Tuesday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box6">
+		<input type="text" maxlength="4" tabindex="6" class="inputBox" id="box6">
 		<br>
 		</div>	
-		<div style="text-align: center;height: 10%">PM : Wednesday
+		<div class="divFontBoxes">PM : Wednesday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box8"><br>
-		</div>	<div style="text-align: center;height: 10%">PM : Thursday
+		<input type="text" maxlength="4" tabindex="8" class="inputBox" id="box8"><br>
+		</div>	<div class="divFontBoxes">PM : Thursday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box10"><br>
-		</div>	<div style="text-align: center;height: 10%">PM : Friday
+		<input type="text" maxlength="4" tabindex="10" class="inputBox" id="box10"><br>
+		</div>	<div class="divFontBoxes">PM : Friday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box12"><br>
-		</div>	<div style="text-align: center;height: 10%">PM : Saturday
+		<input type="text" maxlength="4" tabindex="12" class="inputBox" id="box12"><br>
+		</div>	<div class="divFontBoxes">PM : Saturday
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" id="box14"><br>
+		<input type="text" maxlength="4" tabindex="14" class="inputBox" id="box14"><br>
 		</div>	</div>
 </div>
 		<div class="rightSide">
 		<div class="numberSet">
-		<div style="text-align: center;height: 10%"><div class="numberSetR">Number Set 1:</div>
+		<div class="divFontBoxes><div class="numberSet">Number Set 1:</div>
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" style="height:40px;width:200px;font-size:36px" id="result1">
+		<input type="text" maxlength="4" tabindex="15" class="ansBox" id="result1">
 </div>
 		<br>
-		</div><div style="text-align: center;height: 10%"><div class="numberSet">Number Set 2:</div>
+		</div><div class="divFontBoxes"><div class="numberSet">Number Set 2:</div>
 	<br/>
-		<input type="text" maxlength="4" tabindex="" class="inputBox" style="height:40px;width:200px;font-size:36px;margin-bottom:5px" id="result2"><br/>
-		<button style="margin: 0px auto 0;display: block; " onClick="testing();">Randomize</button>
+		<input type="text" maxlength="4" tabindex="16" class="ansBox"><br/>
+		<button tabindex="17" style="margin: 0px auto 0;display: block; " onClick="testing();">Randomize</button><br/>
+		<img src="LOTTO.jpg" height="120px" width="120px">
 		</div>
 		<br/>
 </div>
@@ -116,6 +131,8 @@ var result2 = document.getElementById("result2");
 
 function testing()
 	{
+
+
 
 		var bx1=document.getElementById("box1").value;
 		var bx2=document.getElementById("box2").value;
@@ -134,7 +151,19 @@ function testing()
 		var boxes=[bx1,bx2,bx3,bx4,bx5,
 		   bx6,bx7,bx8,bx9,bx10,
 		   bx11,bx12,bx13,bx14];
-		   
+		   alert(boxes[0]);
+		   for (var i=0;i<boxes.length;i++)
+		{
+		
+			if (boxes[i] == ""){
+			alert("Ooops! Please fill in Box: "+i+"!");
+		}
+		
+		else if (boxes[i] != ""){
+			alert("Boxes Element "+i+" contains: " +boxes[i]);
+		}
+else{alert("Good to go!");}
+		}
 		   var bs = boxes.length;
 		   
 		    result1.value=boxes[randomize(bs)];
