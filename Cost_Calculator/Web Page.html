@@ -1,30 +1,64 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title></title>
-<style></style>
+<title>Pay how much?</title>
+<style>
+	html{padding:0;margin:0;}
+	body{padding:0;margin:0;background-color:lightgrey;}
+	.container{min-width:320;min-height:; max-width:480px ;max-height: ;background-color:;color:;font-size;font-weight: ;margin:;box-shadow:;}
+	.sideL{min-width:50%;min-height:; max-width: ;max-height: ;background-color:;color:;font-size;font-weight: ;margin:;float:left;}
+	.sideLContent{height:24px;width:100%;font-size:12px;font-weight:bold ;font-color:#434343;margin-bottom:12px;line-height: 2;text-align: center;}
+	.sideR{min-width:50%;min-height:; max-width:;max-height: ;background-color:;color:;font-size;font-weight: ;margin:;float:right;}
+	.sideRContent{height:24px;width:100%;font-size:28px;font-weight:bold ;font-color:#434343 ;text-align:center;margin-bottom:12px;}
+
+</style>
 </head>
 <body>
-Amount: <input type="textbox" name="price" id="price"><br/>
-Tax: <input type="textbox" name="tax" id="tax" value=".008825"><br/>
-Tip: <input type="textbox" name="tip" id="tip" value=".15"><br/>
-Total: <input type="textbox" name="total" id="total"><br/>
+<div class="container">
 
-<button onClick="doMagic(price,tax,tip, total);">Get Total</button>
-<div></div>
+<div class="sideL">
+	<div class="sideLContent">AMOUNT:</div>
+	<div class="sideLContent">TAX %:</div>
+	<div class="sideLContent">TIP %:</div>
+	<div class="sideLContent">TOTAL:</div>
+	<div class="sideLContent"><button onClick="doMagic(price,tax,tip, total);">Get Total</button>
+</div>
+
+</div>
+<div class="sideR">
+	<div class="sideRContent"><input type="textbox" name="price" id="price" style="width:120px"><br/></div>
+	<div class="sideRContent"><input type="textbox" name="tax" id="tax" value=".08825" style="width:120px"><br/></div>
+	<div class="sideRContent"><form><select  id="tip" style="width:120px"><option value="0.10">10%</option><option value="0.15">15%</option><option value="0.20">20%</option></select></form><br/></div>
+	<div class="sideRContent"><input type="textbox" name="total" id="total" style="width:120px;font-weight: bold;color:red;"><br/></div>
+	<div class="sideRContent"></div>
+</div>
+</div>
 
 
 <script type="text/javascript">
+
 function checkForNumbers(price, tax, tip, total)
 {
 		    var numbers = /^[0-9]+$/; 
+		    //fix this regex to acces decimalshow much does an ihop cook make
+		    var arr = [price.value, tax.value, tip.value, total.value];
+
+		    for (var i=0;i<arr.length;i++)
+		    {
+		    	if (arr[i] != numbers){
+		    alert("Enter only Numbers!");
+
+		    	}
+		    }
 alert(price.value+", "+ tax.value+", "+ tip.value+", "+ total.value);
 }
 
-
+// you can turn to an actual percentage into computer equivalent by multiply or dividing by 100
 function doMagic(price, tax, tip, total)
 {
-
+	var t = document.getElementById("tip");
+	var ti = t.options[t.selectedIndex].value; //use this value
+	alert(ti);
 checkForNumbers(price, tax, tip, total);
 	//calculate Tax
 var Tax = parseFloat(tax.value)*parseFloat(price.value);
@@ -33,7 +67,7 @@ var Tip = parseFloat(tip.value)*parseFloat(price.value);
 	//calculate total
 alert("Tip: $"+Tip.toFixed(2));
 var n=parseFloat(parseFloat(Tax)+parseFloat(Tip)+parseFloat(price.value));
-total.value ="$"+ n.toFixed(2);
+total.value = n.toFixed(2);
 }
 
 </script>
