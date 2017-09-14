@@ -1,2 +1,2 @@
 # JavaScript
-I find your lack of cheer amusing :)
+Nothing special here... I find your lack of cheer amusing :)
