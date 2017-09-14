@@ -110,7 +110,7 @@ var dynamicArray=[];
 dynamicArray[pw]="";
 function randchar()
 {
-return Math.floor(Math.random()* noSpecialChars.length+1);
+return Math.floor((Math.random()* noSpecialChars.length-1)+1);
 			   //change this to  Math.floor(Math.random()* noSpecialChars.length-1)+1;
 }
 function randchar_special()
