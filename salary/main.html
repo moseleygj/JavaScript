@@ -1,0 +1,21 @@
+<html>
+<head>
+<title></title>
+<style></style>
+</head>
+<body>
+<input type="textbox" id="salary">
+<input type="button" onClick="sal()">
+<div></div>
+<script type="text/javascript">
+	
+
+
+	function sal(){
+		var total = document.getElementById("salary").value;
+		var pHr= Number(total/52/5/8);
+		document.write(pHr);
+	}
+</script>
+</body>
+</html>
