@@ -9,16 +9,28 @@
 </style>
 
 <body>
-
+<P>Enter your yearly salary in the box below:</P>
 <input type="textbox" id="sal" >
-<input type ="button" onClick="calcSal()" value="Calculate Yearly Salary per/hr">
+<input type ="button" onClick="calcSal()" value="Calculate Salary statistics">
 <p id="amount"></p>
 <script type="text/javascript">
 	function calcSal(){
+
 		var textbox_val = Number(document.getElementById("sal").value);
+		if (textbox_val < 22000.00){
+			alert ("That number isn't large enough...");
+			document.getElementById("amount").innerHTML="";
+			return 0;
+		}
+
 		/*alert(textbox_val);*/
 		var perHour = Number(textbox_val/52/5/8);
-		document.getElementById("amount").innerHTML = "$"+perHour.toFixed(2);
+		var biWeekly =Number(textbox_val/26);
+		var monthly =Number(textbox_val/12);
+
+		document.getElementById("amount").innerHTML = "$"+perHour.toFixed(2) + " Hour<br/>" + "$"+biWeekly.toFixed(2) + " Bi-Weekly<br/>"+
+		"$"+monthly.toFixed(2) + " Monthly<br/>"
+		;
 
 	}
 </script>
