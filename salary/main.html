@@ -1,21 +1,27 @@
 <html>
 <head>
-<title></title>
-<style></style>
+
+
+
 </head>
+<style type="text/css">
+
+</style>
+
 <body>
-<input type="textbox" id="salary">
-<input type="button" onClick="sal()">
-<div></div>
+
+<input type="textbox" id="sal" >
+<input type ="button" onClick="calcSal()" value="Calculate Yearly Salary per/hr">
+<p id="amount"></p>
 <script type="text/javascript">
-	
+	function calcSal(){
+		var textbox_val = Number(document.getElementById("sal").value);
+		/*alert(textbox_val);*/
+		var perHour = Number(textbox_val/52/5/8);
+		document.getElementById("amount").innerHTML = "$"+perHour.toFixed(2);
 
-
-	function sal(){
-		var total = document.getElementById("salary").value;
-		var pHr= Number(total/52/5/8);
-		document.write(pHr);
 	}
 </script>
 </body>
+
 </html>
