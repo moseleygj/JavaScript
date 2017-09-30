@@ -3,35 +3,47 @@
 <meta charset="UTF-8">
 <title></title>
 <style>
-	
-
 </style>
 </head>
-
-
 <body>
-<div class=""></div>
-<div id=""></div>
 <input type="textbox" id=tBox><br/>
-<input type="button" value="click Me" onClick="sepString()"><br/>
+<input type="button" value="click Me" onClick="vowelCheck()">
+<br/>
 <p id="result"></p>
 <script type="text/javascript">
-	function sepString()
+function vowelCheck()
+{
+	var tBoxInfo=document.getElementById("tBox").value;
+	var tBoxSplit=tBoxInfo.split("");
+	var lengthTest=new Array();
+	document.getElementById("result").innerHTML="";
+	
+for (var i=0;i<tBoxSplit.length;i++)
 	{
-var text =document.getElementById("tBox").value;
-var nText =text.split(" ");
+switch(tBoxSplit[i])
+{
+case "a":	document.getElementById("result").innerHTML+="a found in case:";
+case "A":document.getElementById("result").innerHTML+="A found in case:";
+case "e":document.getElementById("result").innerHTML+="e Found";
+case "E":alert("E found");
 
-for (var i=0 ; i<nText.length;i++)
-{/*Don't hard code*/
-	if ( i%2==1)
-	{
-			document.getElementById("result").innerHTML += "-<br/>";
-			continue;
+case "i":
+document.getElementById("result").innerHTML+="i Found";
+case "I":alert("I found");
+case "o":alert("o found");
+case "O":alert("O found");
+case "u":alert("u found");
+case "U":alert("U found");
+default:return 0;
+		}/*end of switch */	
+	/*end of for loop */
 
+	document.getElementById("result").innerHTML += 
+	tBoxSplit[i]+" : found<br/>";
+	/*add full string to new array,split, count .sort()*/
 	}
-	document.getElementById("result").innerHTML += nText[i]+"  :"+ i+"<br/>";
 }
-	}
+	
 </script>
 
 </body>
