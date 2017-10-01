@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+body{padding:0;margin:0;}
+.container{width:100%; height:100%;margin:0;padding:0;position:absolute;}
+.tbox{text-align:center;
+/*margin: 0 auto 0;
+left:50%;*/
+position:relative;
+height:80px;
+width:100%;
+border-top: 1px;
+border-bottom:1px;
+border-color: skyblue;
+background-color:skyblue;
+padding:0;
+}
+</style>
+</head>
+<body>
+<div class="center">
+<div class="tbox">
+
+<input type="textbox" id=tBox><br/>
+<input type="button" value="click Me" onClick="vowelCheck()">
+<br/>
+<p id="result"></p>
+</div>
+</div>
+<script type="text/javascript">
+function vowelCheck()
+{
+	var tBoxInfo=document.getElementById("tBox").value;
+	var tBoxSplit=tBoxInfo.split("");
+	var lengthTest=new Array();
+	document.getElementById("result").innerHTML="";
+	
+for (var i=0;i<tBoxSplit.length;i++)
+	{
+switch(tBoxSplit[i])
+{
+case "a":document.getElementById("result").innerHTML+="a found:<br/>";break;
+case "A":document.getElementById("result").innerHTML+="A found:<br/>";break;
+case "e":document.getElementById("result").innerHTML+="e Found";break;
+case "E":document.getElementById("result").innerHTML+="E Found";break;
+
+case "i":document.getElementById("result").innerHTML+="i Found";break;
+case "I":document.getElementById("result").innerHTML+="I Found";break;
+case "o":document.getElementById("result").innerHTML+="o Found";break;
+case "O":document.getElementById("result").innerHTML+="O Found";break;
+case "u":document.getElementById("result").innerHTML+="u Found";break;
+case "U":document.getElementById("result").innerHTML+="U Found";break;
+default:return 0;
+		}/*end of switch */	
+	/*end of for loop */
+
+	document.getElementById("result").innerHTML += 
+	tBoxSplit[i]+" : found<br/>";
+	/*add full string to new array,split, count .sort()*/
+	}
+}
+	
+</script>
+
+</body>
+</html>
