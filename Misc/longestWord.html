@@ -1,0 +1,37 @@
+<html>
+<head>
+<title></title>
+<style>
+	
+
+</style>
+</head>
+
+
+<body>
+<input type="textbox" id=tBox><br/>
+<input type="button" value="click Me" onClick="longWord()">
+<br/>
+<p id="result"></p>
+<script type="text/javascript">
+function longWord()
+{
+	var tbox=document.getElementById("tBox").value;
+	var tbox_split=tbox.split(" ");
+	var lengthTest=new Array();
+document.getElementById("result").innerHTML="";
+	
+	for (var i=0;i<tbox_split.length;i++)
+	{
+
+	lengthTest[i] = tbox_split[i].length;
+	document.getElementById("result").innerHTML += 
+	tbox_split[i]+":"+lengthTest[i]+"<br/>";
+	/*add full string to new array,split, count .sort()*/
+	}
+}
+	
+</script>
+
+</body>
+</html>
