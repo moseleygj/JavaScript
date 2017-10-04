@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+body{padding:0;margin:0;background-color: limegreen;color:white;}
+.container{width:100%; height:100%;margin:0;padding:0;position:absolute;}
+.tbox{text-align:center;font-size:20px;
+/*margin: 0 auto 0;
+left:50%;*/
+position:relative;
+height:80px;
+width:100%;
+border-top: 1px;
+border-bottom:1px;
+border-color: limegreen;
+background-color:skyblue;
+padding:0px;
+}
+input[type="textbox"]{margin-top:5px;text-align: center;font-size:20px;}
+input[type="button"]{margin-top:5px;
+font-weight:bold;
+color:navy;
+font-size:14px;
+}
+
+</style>
+</head>
+<body>
+<div class="center">
+<div class="tbox">
+
+<input type="textbox" id=tBox><br/>
+<input type="button" value="Click Me" onClick="longWord()">
+<br/>
+<p id="result"></p>
+</div>
+</div>
+<script type="text/javascript">
+var textb=document.getElementById("tBox").value;
+var spl = textb.split("");
+var wordLength = new Array();
+	function longWord()
+	{
+
+var res = document.getElementById("result").innerHTML="";
+
+for (var w=0; w<spl.length;w++)
+{
+	wordLength[w] = spl[w].length;
+	alert(wordLength[w] );
+var res = document.getElementById("result").innerHTML+=spl[w]+"<br/>";
+}
+var p = wordLength.sort().reverse();
+var sp = p.split(",");
+alert(sp);
+for (var i=0; i <1; i++) 
+{
+	document.getElementById("result").innerHTML+=spl[i]+
+	"</br>";
+}
+
+
+}
+</script>
+
+</body>
+</html>
