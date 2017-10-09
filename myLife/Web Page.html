@@ -1,0 +1,89 @@
+<html>
+<head>
+<title></title>
+<style>
+	body{background-color:#e8e8e8;}
+
+.card {
+min-width:;min-height:;width:240px;height:200px;
+background-color:white;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.3s cubic-bezier(.25,.8,.25,1);float:left;
+margin:10px 16px 10px 0px;
+}
+
+.card:hover {min-width:;min-height:;width:240px;height:200px;background-color:white;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);float:left;margin-right:16px;
+}
+
+#imgAdd {
+    width: 720px;
+    height: 210px;
+    padding: 10px;
+    border: 5px dashed #aaaaaa;
+    border-radius:4px;
+    clear:both;
+    margin:8px auto;
+    background-color: white;
+    
+}
+
+
+card-img{}
+card-img:hover{}
+
+
+card-audio{}
+card-audio:hover{}
+
+card-video{}
+card-video:hover{}
+
+card-text{}
+card-text:hover{}
+.dragDropContent{height:105px;width:;text-align: center;display:block;margin-left:42%;margin-top: 10px;}
+.contentArea{margin: 0 auto 0 ;}
+.container{width:100%;height:100%;max-width: 768px;}
+#addNewContent{text-align: center;
+font:24px bolder;color :#434343;}
+#addNewContentB{margin-top :50px;}
+</style>
+</head>
+
+
+<body>
+<div class="container">
+<div id="imgAdd" onmouseover="dragDropFocus()" onmouseleave="dragDropNoFocus()">
+<div id="addNewContent" >
+<img src="plus.png" class="dragDropContent">
+</div>
+<div id="addNewContent" style="margin-top:15px">Drag & Drop items to add them to your page.</div>
+<div id="addNewContent" style="margin-top:6px;font-size:14px"><a href="" >Click to upload from computer</a></div>
+
+</div>
+
+<div class="contentArea">
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+</div>
+<div class=""></div>
+
+
+</div>
+<div id=""></div>
+
+<script type="">
+	function dragDropFocus()
+	{
+document.getElementById("imgAdd").style.borderColor="#0074c4";
+
+	}
+		function dragDropNoFocus()
+	{
+document.getElementById("imgAdd").style.borderColor="#aaa";
+	}
+</script>
+
+</body>
+</html>
