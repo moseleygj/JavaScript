@@ -23,7 +23,7 @@ margin:10px 16px 10px 0px;
     border: 5px dashed #aaaaaa;
     border-radius:4px;
     clear:both;
-    margin:8px auto;
+    margin:32px auto;
     background-color: white;
     
 }
@@ -47,18 +47,33 @@ card-text:hover{}
 #addNewContent{text-align: center;
 font:24px bolder;color :#434343;}
 #addNewContentB{margin-top :50px;}
+#newNote{height:46px;width:720px;
+	background-color:white;
+	margin: 0 auto 0;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
+	.newNoteTitle{width:650px;height:44px;border:1px solid red;margin-left:20px;margin-bottom: 3px;}
+	.newNoteFooter{width:650px;height:44px;border:1px solid red;margin-left:20px;margin-bottom: 3px;}
+
 </style>
 </head>
 
 
 <body>
 <div class="container">
+<div id="newNote">
+	<input type="text" placeholder="Write a new note..." style="height:44px;margin-left:20px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px" onClick="newNoteFocus()">
+<div class="newNoteTitle"></div>
+<div class="newNoteTitle"></div>
+
+</div>
+
+
 <div id="imgAdd" onmouseover="dragDropFocus()" onmouseleave="dragDropNoFocus()">
 <div id="addNewContent" >
-<img src="plus.png" class="dragDropContent">
+<img src="plus.png" id="addIcon" class="dragDropContent">
 </div>
 <div id="addNewContent" style="margin-top:15px">Drag & Drop items to add them to your page.</div>
-<div id="addNewContent" style="margin-top:6px;font-size:14px"><a href="" >Click to upload from computer</a></div>
+<div id="addNewContent" style="margin-top:6px;font-size:14px"><a href="" style="text-decoration: none;color:skyblue">Click to upload from computer</a></div>
 
 </div>
 
@@ -77,11 +92,19 @@ font:24px bolder;color :#434343;}
 	function dragDropFocus()
 	{
 document.getElementById("imgAdd").style.borderColor="#0074c4";
+document.getElementById("addNewContent").style.color="blue";
+document.getElementById("addIcon").src="plusG.png";
 
 	}
 		function dragDropNoFocus()
 	{
 document.getElementById("imgAdd").style.borderColor="#aaa";
+document.getElementById("addIcon").src="plus.png";
+
+	}
+	function newNoteFocus()
+	{
+document.getElementById("newNote").style.height="135px";
 	}
 </script>
 
