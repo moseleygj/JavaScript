@@ -45,15 +45,37 @@ card-text:hover{}
 .contentArea{margin: 0 auto 0 ;}
 .container{width:100%;height:100%;max-width: 768px;}
 #addNewContent{text-align: center;
-font:24px bolder;color :#434343;}
+	font:24px bolder;
+	color :#434343;}
 #addNewContentB{margin-top :50px;}
 #newNote{height:46px;width:720px;
 	background-color:white;
 	margin: 0 auto 0;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
-	.newNoteTitle{width:650px;height:44px;border:1px solid red;margin-left:20px;margin-bottom: 3px;}
-	.newNoteFooter{width:650px;height:44px;border:1px solid red;margin-left:20px;margin-bottom: 3px;}
-	.icn{height:42px;width:30px;float:left;}
+	
+	.newNoteTitle{width:650px;height:44px;
+		/*border:1px solid red;*/
+		margin-left:20px;
+		margin-bottom: 3px;
+		visibility: hidden;}
+	
+	.newNoteFooter{width:650px;height:44px;
+		border:1px solid red;
+		margin-left:20px;
+		margin-bottom: 3px;}
+	
+	.icn{height:24px;width:24px;
+		margin-right:16px;
+		float:left;
+		margin-top: 5px;
+		display: block;}
+
+	.icnClose{height:24px;width:24px;
+		margin-right:0px;
+		margin-left:10px;
+		float:left;
+		margin-top: 9px;
+		display: block}
 
 </style>
 </head>
@@ -62,16 +84,21 @@ font:24px bolder;color :#434343;}
 <body>
 <div class="container">
 <div id="newNote">
-	<input type="text" placeholder="Write a new note..." style="height:44px;margin-left:20px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px" onClick="newNoteFocus()">
-<div class="newNoteTitle"><input type="text" placeholder="Write a new note..." style="height:44px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px"></div>
-<div class="newNoteTitle" style="height:36px">[Icons go here] [add image] [change color][done/save]</div>
+	<input type="text" placeholder="Write a new note..." style="height:44px;margin-left:20px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px" onClick="newNoteFocus()" id="noteTitle">
+	<div style="float:right;height:44px;width:45px;margin-left:2px;margin-right:0px"><img src="closeBlue.png" class="icnClose" id="icnClose" onclick="closeNote()"></div>
 
+<div class="newNoteTitle" id="newNoteTitle"><input type="text" placeholder="Write a new note..." style="height:44px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px"></div>
+
+<div class="newNoteTitle" style="height:36px" id="newNoteTitle1">
+<img src="photosG.png" class="icn" id="icnPhoto" onmouseover="icoImg()" onmouseleave="icoImgO()">
+<img src="paintGrey.png" class="icn" id="icnPaint" onmouseover="icoColor()" onmouseleave="icoColorO()">
+<img src="plusGrey.png" class="icn" id="icnPlus" onmouseover="icoMedia()" onmouseleave="icoMediaO()">
+<img src="save1.png" class="icn" style="float:right" id="icnSave" onmouseover="icoSave()" onmouseleave="icoSaveO()"></div>
 </div>
-
 
 <div id="imgAdd" onmouseover="dragDropFocus()" onmouseleave="dragDropNoFocus()">
 <div id="addNewContent" >
-<img src="plus.png" id="addIcon" class="dragDropContent">
+<img src="plus.png" id="addIcon" class="dragDropContent" onmouseover="" onmouseleave="">
 </div>
 <div id="addNewContent" style="margin-top:15px">Drag & Drop items to add them to your page.</div>
 <div id="addNewContent" style="margin-top:6px;font-size:16px"><a href="" style="text-decoration: none;color:skyblue">Click to upload from computer</a></div>
@@ -92,22 +119,64 @@ font:24px bolder;color :#434343;}
 <script type="">
 	function dragDropFocus()
 	{
-document.getElementById("imgAdd").style.borderColor="#0074c4";
-document.getElementById("addNewContent").style.color="blue";
-document.getElementById("addIcon").src="plusG.png";
-
+		document.getElementById("imgAdd").style.borderColor="#0074c4";
+		document.getElementById("addNewContent").style.color="blue";
+		document.getElementById("addIcon").src="plusG.png";
 	}
-		function dragDropNoFocus()
+
+	function dragDropNoFocus()
 	{
-document.getElementById("imgAdd").style.borderColor="#aaa";
-document.getElementById("addIcon").src="plus.png";
+		document.getElementById("imgAdd").style.borderColor="#aaa";
+		document.getElementById("addIcon").src="plus.png";
 
 	}
 	function newNoteFocus()
 	{
-document.getElementById("newNote").style.height="135px";
+		document.getElementById("newNote").style.height="135px";
+		document.getElementById("newNoteTitle").style.visibility="visible";
+				document.getElementById("noteTitle").value ="Title";
+
+		document.getElementById("newNoteTitle1").style.visibility="visible";
+		document.getElementById("icnClose").style.visibility="visible";
+
+	}
+
+	function icoColor(){
+		document.getElementById("icnPaint").src="paintBlue.png";
+	}
+
+	function icoColorO(){
+		document.getElementById("icnPaint").src="paintGrey.png";
+	}
+
+	function icoImg(){
+		document.getElementById("icnPhoto").src="photosBlue.png";
+	}
+	function icoImgO(){
+		document.getElementById("icnPhoto").src="photosG.png";
+	}
+
+	function icoMedia(){
+		document.getElementById("icnPlus").src="plus3.png";
+	}
+	function icoMediaO(){
+		document.getElementById("icnPlus").src="plusGrey.png";
+	}
+	function icoSave(){
+		document.getElementById("icnSave").src="save3.png";
+	}
+	function icoSaveO(){
+		document.getElementById("icnSave").src="save1.png";
+	}
+	function closeNote(){
+		document.getElementById("newNoteTitle").style.visibility="hidden";
+		document.getElementById("newNoteTitle1").style.visibility="hidden";
+		document.getElementById("newNote").style.height="44px";
+		document.getElementById("icnClose").style.visibility="hidden";
+		document.getElementById("noteTitle").value ="Write a new note...";
+
+
 	}
 </script>
-
 </body>
 </html>
