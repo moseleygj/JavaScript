@@ -1,6 +1,6 @@
 <html>
 <head>
-<title></title>
+<title>MyLife Stream</title>
 <style>
 	body{background-color:#e8e8e8;}
 
@@ -25,7 +25,7 @@ margin:10px 16px 10px 0px;
     clear:both;
     margin:32px auto;
     background-color: white;
-    
+
 }
 
 
@@ -46,18 +46,21 @@ card-text:hover{}
 .container{width:100%;height:100%;max-width: 768px;}
 #addNewContent{text-align: center;
 	font:24px bolder;
-	color :#434343;}
+	color :#434343;
+}
 #addNewContentB{margin-top :50px;}
 #newNote{height:46px;width:720px;
 	background-color:white;
 	margin: 0 auto 0;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 	
 	.newNoteTitle{width:650px;height:44px;
 		/*border:1px solid red;*/
 		margin-left:20px;
 		margin-bottom: 3px;
-		visibility: hidden;}
+		visibility: hidden;
+	}
 	
 	.newNoteFooter{width:650px;height:44px;
 		border:1px solid red;
@@ -75,7 +78,8 @@ card-text:hover{}
 		margin-left:10px;
 		float:left;
 		margin-top: 9px;
-		display: block}
+		display: block;
+		visibility:hidden;};
 
 </style>
 </head>
@@ -83,13 +87,14 @@ card-text:hover{}
 
 <body>
 <div class="container">
-<div id="newNote">
-	<input type="text" placeholder="Write a new note..." style="height:44px;margin-left:20px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px" onClick="newNoteFocus()" id="noteTitle">
+<div id="newNote" onmouseleave="newNoteNoFocus()">
+	<input type="text" placeholder="Write a new note..." style="height:44px;margin-left:20px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px" onClick="newNoteFocus()"  id="noteTitle">
 	<div style="float:right;height:44px;width:45px;margin-left:2px;margin-right:0px"><img src="closeBlue.png" class="icnClose" id="icnClose" onclick="closeNote()"></div>
 
-<div class="newNoteTitle" id="newNoteTitle"><input type="text" placeholder="Write a new note..." style="height:44px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px"></div>
+<div class="newNoteTitle" id="newNoteTitle">
+<input id="noteMsg" type="text" placeholder="Write a new note..." style="height:44px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px"></div>
 
-<div class="newNoteTitle" style="height:36px" id="newNoteTitle1">
+<div class="newNoteTitle" style="height:36px;width: 700px;" id="newNoteTitle1">
 <img src="photosG.png" class="icn" id="icnPhoto" onmouseover="icoImg()" onmouseleave="icoImgO()">
 <img src="paintGrey.png" class="icn" id="icnPaint" onmouseover="icoColor()" onmouseleave="icoColorO()">
 <img src="plusGrey.png" class="icn" id="icnPlus" onmouseover="icoMedia()" onmouseleave="icoMediaO()">
@@ -122,12 +127,14 @@ card-text:hover{}
 		document.getElementById("imgAdd").style.borderColor="#0074c4";
 		document.getElementById("addNewContent").style.color="blue";
 		document.getElementById("addIcon").src="plusG.png";
+
 	}
 
 	function dragDropNoFocus()
 	{
 		document.getElementById("imgAdd").style.borderColor="#aaa";
 		document.getElementById("addIcon").src="plus.png";
+
 
 	}
 	function newNoteFocus()
@@ -138,6 +145,17 @@ card-text:hover{}
 
 		document.getElementById("newNoteTitle1").style.visibility="visible";
 		document.getElementById("icnClose").style.visibility="visible";
+
+	}
+	function newNoteNoFocus()
+	{
+		/*document.getElementById("newNote").style.height="44px";*/
+		/*document.getElementById("newNoteTitle").style.visibility="hidden";*/
+				/*document.getElementById("noteTitle").value ="Title";*/
+
+		/*document.getElementById("newNoteTitle1").style.visibility="hidden";*/
+		/*document.getElementById("icnClose").style.visibility="hidden";*/
+
 
 	}
 
@@ -154,6 +172,7 @@ card-text:hover{}
 	}
 	function icoImgO(){
 		document.getElementById("icnPhoto").src="photosG.png";
+
 	}
 
 	function icoMedia(){
@@ -169,12 +188,14 @@ card-text:hover{}
 		document.getElementById("icnSave").src="save1.png";
 	}
 	function closeNote(){
-		document.getElementById("newNoteTitle").style.visibility="hidden";
+		document.getElementById("newNoteTitle").value="Write a new note...";
+		document.getElementById("noteMsg").value="";
+		document.getElementById("noteMsg").placeholder="Write a new note...";
 		document.getElementById("newNoteTitle1").style.visibility="hidden";
 		document.getElementById("newNote").style.height="44px";
 		document.getElementById("icnClose").style.visibility="hidden";
 		document.getElementById("noteTitle").value ="Write a new note...";
-
+		document.getElementById("newNoteTitle").style.visibility="hidden";
 
 	}
 </script>
