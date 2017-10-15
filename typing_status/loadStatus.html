@@ -1,0 +1,42 @@
+<html>
+<head>
+<title></title>
+<style>
+#dry{
+  display:none;
+  }
+</style>
+
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+Type in the text box. <br/><br/>
+The function will display an interactive icon when typing and disappear when you stop.<br/>
+<br/>
+
+<input type='text' id='tBox'>
+<br/>
+<img src="loader.gif" id="dry" height="100px" width="100px">
+
+	<script>
+	var timer = null;
+ $(document).ready(function(){
+$('#tBox').keydown(function(){
+$('#dry').show();
+});
+
+$('#tBox').keyup(function(){
+clearTimeout(timer);
+timer = setTimeout(hider, 1000);
+});
+}); 
+
+function hider()
+{
+document.getElementById('dry').style.display="none";
+}
+
+</script>
+
+</body>
+</html>
