@@ -1,7 +1,30 @@
 <html>
 <head>
 <title>MyLife Stream</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script>
+var timer = null;
+ $(document).ready(function(){
+
+$('#noteMsg').keydown(function(){
+$('#dry').show();
+});
+
+$('#noteMsg').keyup(function(){
+clearTimeout(timer);
+timer = setTimeout(hider, 1000);
+});
+});
+
+function hider()
+{
+document.getElementById('dry').style.display="none";
+}
+
+</script>
 <style>
+
 	body{background-color:#e8e8e8;}
 
 .card {
@@ -15,6 +38,11 @@ margin:10px 16px 10px 0px;
 .card:hover {min-width:;min-height:;width:240px;height:200px;background-color:white;
    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);float:left;margin-right:16px;
 }
+
+#dry{
+  display:none;
+  
+  }
 
 #imgAdd {
     width: 720px;
@@ -41,6 +69,7 @@ card-video:hover{}
 
 card-text{}
 card-text:hover{}
+
 .dragDropContent{height:105px;width:;text-align: center;display:block;margin-left:42%;margin-top: 10px;}
 .contentArea{margin: 0 auto 0 ;}
 .container{width:100%;height:100%;max-width: 768px;}
@@ -98,7 +127,9 @@ card-text:hover{}
 <img src="photosG.png" class="icn" id="icnPhoto" onmouseover="icoImg()" onmouseleave="icoImgO()">
 <img src="paintGrey.png" class="icn" id="icnPaint" onmouseover="icoColor()" onmouseleave="icoColorO()">
 <img src="plusGrey.png" class="icn" id="icnPlus" onmouseover="icoMedia()" onmouseleave="icoMediaO()">
-<img src="save1.png" class="icn" style="float:right" id="icnSave" onmouseover="icoSave()" onmouseleave="icoSaveO()"></div>
+<img src="save1.png" class="icn" style="float:right" id="icnSave" onmouseover="icoSave()" onmouseleave="icoSaveO()">
+<img src="loader.gif" id="dry" class="icn">
+</div>
 </div>
 
 <div id="imgAdd" onmouseover="dragDropFocus()" onmouseleave="dragDropNoFocus()">
