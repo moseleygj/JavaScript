@@ -9,18 +9,18 @@
 
 <body>
 <div class="container">
-<div id="newNote" onmouseleave="newNoteNoFocus()">
-	<input type="text" placeholder="Write a new note..." style="height:44px;margin-left:20px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px" onClick="newNoteFocus()"  id="noteTitle">
+<div id="newNote">
+	<input type="text" placeholder="Write a new note..." onkeyup="isTextBoxempty()" style="height:44px;margin-left:20px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px" onClick="newNoteFocus()"  id="noteTitle">
 	<div style="float:right;height:44px;width:45px;margin-left:2px;margin-right:0px"><img src="closeBlue.png" class="icnClose" id="icnClose" onclick="closeNote()"></div>
 
 <div class="newNoteTitle" id="newNoteTitle">
-<input id="noteMsg" type="text" placeholder="Write a new note..." onkeyup="isTextBoxempty()" style="height:44px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px"></div>
+<input id="noteMsg" type="text" placeholder="Write a new note..." style="height:44px;border:none;font-size:16px;color:#787878;margin-bottom: 3px;width:650px"></div>
 
 <div class="newNoteTitle" style="height:36px;width: 700px;" id="newNoteTitle1">
 <img src="photosG.png" class="icn" id="icnPhoto" onmouseover="icoImg()" onmouseleave="icoImgO()">
 <img src="paintGrey.png" class="icn" id="icnPaint" onmouseover="icoColor()" onmouseleave="icoColorO()">
 <img src="plusGrey.png" class="icn" id="icnPlus" onmouseover="icoMedia()" onmouseleave="icoMediaO()">
-<img src="save1.png" class="icn" style="float:right" id="icnSave" onmouseover="icoSave()" onmouseleave="icoSaveO()">
+<img src="save3.png" class="icn" style="float:right; visibility:hidden" id="icnSave">
 <img src="loader.gif" id="dry" class="icn">
 </div>
 </div>
@@ -34,13 +34,20 @@
 </div>
 
 <div class="contentArea">
-<div class="card"><img src="defaultPic.png" class="img-Card"></div>
-<div class="card"></div>
-<div class="card"></div>
+<div class="card"><img src="photosBlue.png" class="card-two"><div class="imgInfo">Sample Picture</div></div>
+<div class="card"><img src="photosBlue.png" class="card-two"><div class="imgInfo">Sample Picture</div></div>
+<div class="card"><img src="photosBlue.png" class="card-two"><div class="imgInfo">Sample Picture</div></div>
+<br/>
+<div class="card"><img src="photosBlue.png" class="card-two"><div class="imgInfo">Sample Picture</div></div>
+
+<video width="752" height="460" controls style="margin-top:20px">
+ <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+ <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
 </div>
 <div class=""></div>
 </div>
 
 </body>
 </html>
-/*fix info attributes*/

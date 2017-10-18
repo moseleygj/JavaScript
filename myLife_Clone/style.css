@@ -24,6 +24,7 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 float:left;
 margin-right:16px;
 }
+
 .img-card{
   height:256px;
   margin:5px 5px 0px;
@@ -45,6 +46,30 @@ margin-right:16px;
     margin:32px auto;
     background-color: white;
 }
+
+.imgInfo{
+  height:40px;
+  width:100%;
+  text-align:center;
+  margin: 0 auto 0;
+  line-height:2.5;
+  color:#434343;
+  font-family: Georgia,"Times New Roman",Times,serif;
+}
+
+.card-two{
+  height:256px;
+  margin:5px 5px 0px;
+  width:230px;
+  filter:grayscale(100%);
+  transition:0.2s ease-in-out;
+}
+.card-two:hover{
+  filter:grayscale(0%);
+}
+
+video{filter:grayscale(100%);}
+video:hover{filter:grayscale(0%);}
 
 card-img{}
 card-img:hover{}
