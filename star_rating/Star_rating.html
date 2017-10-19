@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>star Rating</title>
+<meta charset="UTF-8">
+<style>
+	
+.stars{font-size:30px;}
+.starI{float:left;}
+</style>
+</head>
+
+<body><div class="stars">
+<div class="starI"><img src="icons8-Star-26.png"  onclick="star_one()"		title="Star" width="26" height="26" id="s1"></div>
+  
+<div class="starI"><img src="icons8-Star-26.png"  onclick="star_two()"		title="Star" width="26" height="26" id="s2"></div>
+  
+<div class="starI"><img src="icons8-Star-26.png"  onclick="star_three()"	title="Star" width="26" height="26" id="s3"></div>
+  
+<div class="starI"><img src="icons8-Star-26.png"  onclick="star_four()"		title="Star" width="26" height="26" id="s4"></div>
+  
+<div class="starI"><img src="icons8-Star-26.png"  onclick="star_five()"		title="Star" width="26" height="26" id="s5"></div>
+<br/>
+<div id="rating" style="font-size:24px"> </div>
+<script type="text/javascript">
+	
+function star_one()
+{ 
+	document.getElementById("rating").innerHTML="1 Star!"; 
+
+   document.getElementById("s1").src="icons8-Star-26A.png"; 
+   document.getElementById("s2").src="icons8-Star-26.png"; 
+   document.getElementById("s3").src="icons8-Star-26.png"; 
+   document.getElementById("s4").src="icons8-Star-26.png"; 
+   document.getElementById("s5").src="icons8-Star-26.png"; 
+	
+}
+
+function star_two()
+{
+		document.getElementById("rating").innerHTML="2 Stars!"; 
+
+   document.getElementById("s1").src="icons8-Star-26A.png"; 
+   document.getElementById("s2").src="icons8-Star-26A.png"; 
+
+      document.getElementById("s3").src="icons8-Star-26.png"; 
+      document.getElementById("s4").src="icons8-Star-26.png"; 
+      document.getElementById("s5").src="icons8-Star-26.png"; 
+}
+
+function star_three()
+{
+		document.getElementById("rating").innerHTML="3 Stars!"; 
+
+	document.getElementById("s1").src="icons8-Star-26A.png"; 
+	document.getElementById("s2").src="icons8-Star-26A.png";
+    document.getElementById("s3").src="icons8-Star-26A.png"; 
+    
+      document.getElementById("s4").src="icons8-Star-26.png"; 
+      document.getElementById("s5").src="icons8-Star-26.png"; 
+}
+
+function star_four()
+{
+		document.getElementById("rating").innerHTML="4 Stars!"; 
+
+  	document.getElementById("s1").src="icons8-Star-26A.png"; 
+	document.getElementById("s2").src="icons8-Star-26A.png";
+    document.getElementById("s3").src="icons8-Star-26A.png"; 
+    document.getElementById("s4").src="icons8-Star-26A.png"; 
+    document.getElementById("s5").src="icons8-Star-26.png"; 
+}
+
+function star_five()
+{
+		document.getElementById("rating").innerHTML="5 Stars!"; 
+
+  	document.getElementById("s1").src="icons8-Star-26A.png"; 
+	document.getElementById("s2").src="icons8-Star-26A.png";
+    document.getElementById("s3").src="icons8-Star-26A.png"; 
+    document.getElementById("s4").src="icons8-Star-26A.png"; 
+	document.getElementById("s5").src="icons8-Star-26A.png";
+}
+
+</script>
+
+</body>
+</html>
