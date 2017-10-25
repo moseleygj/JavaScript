@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+	 $(document).ready(function(){
+    $("button").click(function(){
+        $(".box").hide().fadeIn("slow");
+    	 $("body").hide().fadeIn("slow");
+
+    });
+});
+</script>
+<link rel="stylesheet" type="text/css" href="mystyle.css" id="ss">
+
+
+</head>
+<style type="text/css">
+.box{height:200px;width:200px;background-color:red;display:none;margin-bottom:5px;}
+body{background-color:grey;}
+</style>
+
+<body>
+<div class="box"></div>
+<button onClick="r()">ChangeTheme</button>
+<script type="text/javascript">
+	
+
+function r()
+{
+	var RN=Math.ceil(Math.random()*3);
+	randTheme(RN);
+}
+
+function randTheme(n)
+{
+if (n==1){
+	var x = document.createElement("LINK");
+    x.setAttribute("rel", "stylesheet");
+    x.setAttribute("type", "text/css");
+    x.setAttribute("href", "style.css");
+    document.head.appendChild(x);	
+}
+else if (n==2){
+	var x = document.createElement("LINK");
+    x.setAttribute("rel", "stylesheet");
+    x.setAttribute("type", "text/css");
+    x.setAttribute("href", "style1.css");
+    document.head.appendChild(x);	
+}
+else if(n==3)
+{
+	var x = document.createElement("LINK");
+    x.setAttribute("rel", "stylesheet");
+    x.setAttribute("type", "text/css");
+    x.setAttribute("href", "style3.css");
+    document.head.appendChild(x);	
+}
+else{return 0;}
+}
+
+
+</script>
+
+
+</body>
+</html>
