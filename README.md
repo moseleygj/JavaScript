@@ -1,2 +1,2 @@
 # JavaScript
-My misc. JavaScript holster
+My miscellaneous JavaScript holster
