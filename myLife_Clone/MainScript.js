@@ -10,21 +10,7 @@ $(document).ready(function(){
   });
 
 });
-/* check if textbox is $(document).ready(function(){
-empty
-$('#noteMsg').change(function(){
-  if ($('#noteMsg').val().length >0 ){
-    isTextBoxempty();}
-});*/
 
-/*
-var inp = $("#noteMsg").val();
-if(jQuery.trim(inp).length > 0)
-{
-alert("something is there");
-}
-
-});*/
 
 var txtBox = document.getElementById("noteMsg");
 
@@ -125,3 +111,12 @@ function icoSave(){
 function icoSaveO(){
 		document.getElementById("icnSave").src="save1.png";
 	}
+
+  function iLike()
+  {/*fix with jquery*/
+if(document.getElementById("like1").src=="png/011-like.png")
+{document.getElementById("like1").src="png/010-like-1.png";}
+else {
+  return 0;
+}
+  }
