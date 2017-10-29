@@ -1,119 +1,6 @@
-<html>
-<title>Cards - The workouts</title>
-<head>
-
-<style type="text/css">
-.btn {
-  background: #4ab2f7;
-  background-image: -webkit-linear-gradient(top, #4ab2f7, #2980b9);
-  background-image: -moz-linear-gradient(top, #4ab2f7, #2980b9);
-  background-image: -ms-linear-gradient(top, #4ab2f7, #2980b9);
-  background-image: -o-linear-gradient(top, #4ab2f7, #2980b9);
-  background-image: linear-gradient(to bottom, #4ab2f7, #2980b9);
-  -webkit-border-radius: 3;
-  -moz-border-radius: 3;
-  border-radius: 3px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  border: solid #1f628d 1px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none;
-  box-shadow:0.5px 1px 3px 1px grey
-}
-body{background-color:#FAFAFA;height:auto;width:auto; }
-.container{width:900px;height:550px;}
-
-#holder{margin-right:10px;height:390px;width:290px;box-shadow:0.5px 1px 3px 1px lightgrey;background-color:white;border-radius:5px;float:left}
-#holderB{margin-right:10px;float:left;height:390px;width:290px;box-shadow:0.5px 1px 3px 1px lightgrey;background-color:white;border-radius:5px;}
-
-#caption{font-size:32px;font-weight:bolder;}
-#topLeft{font-size:32px;font-weight:bolder;margin-left: 5px;}
-#bottomRight{font-size:32px;font-weight:bolder;bottom:3px;right:0;text-align: right; margin-right:5px;-webkit-transform: rotateX(180deg);  transform: rotateX(180deg); }
-#topLeftA{font-size:32px;font-weight:bolder;margin-left: 5px;}
-#bottomRightA{font-size:32px;font-weight:bolder;bottom:3px;right:0;text-align: right; margin-right:5px;-webkit-transform: rotateX(180deg);  transform: rotateX(180deg); }
-#centerIcon{width:290px; height:312px;}
-#total{font-weight:bolder;height:14px;width:100px;}
-.counter1{width:40px;height:14px;}
-#topLeftB{font-size:32px;font-weight:bolder;margin-left: 5px;}
-#bottomRightB{font-size:32px;font-weight:bolder;bottom:3px;right:0;text-align: right; margin-right:5px;-webkit-transform: rotateX(180deg);  transform: rotateX(180deg);}
-#reptotal{width:100px;height:14px;float:left;font-weight:bolder;margin-top: 12px;}
-#countH{width:200px;height:200px;}
-.count{margin-top:20px;height:50px;}
-.cardHolder{width:900px;height:415px;}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-<div class="cardHolder">
-
-<div id="holder">
-<div id="topLeft">-</div>
-<div id="centerIcon"></div>
-<div id="bottomRight">-</div>
-<!--card ends here 2-10 , 4 of each 4(aces4) jacks, 4queens, 4kings -->
-</div>
-
-<div id="holderB">
-<div id="topLeftA">-</div>
-<div id="centerIcon"></div>
-<div id="bottomRightA">-</div>
-</div>
-
-<!-- nice blue #26beff.  green #5ecc3a-->
-
-<div id="holderB">
-<div id="topLeftB">-</div>
-<div id="centerIcon"></div>
-<div id="bottomRightB">-</div>
-</div>
-</div>
-<!-- nice blue #26beff.  green #5ecc3a-->
-<div class="count">
-<div id="total">--</div>
-<div id="repTotal">--</div>
-</div>
-<br/>
-<input type="button" class="btn" id="newcards" value="Random Cards"  onclick="randCard()">
-
-<script>
-cards=52;
-function randCard() 
-{
-var x = Math.floor((Math.random()*10)+1);
-var y = Math.floor((Math.random()*10)+1);
-var z = Math.floor((Math.random()*10)+1);
-	document.getElementById("topLeft").innerHTML = x;
-	document.getElementById("bottomRight").innerHTML = x;
-	
-	document.getElementById("topLeftA").innerHTML = y;
-	document.getElementById("bottomRightA").innerHTML = y;
-	
-	document.getElementById("topLeftB").innerHTML = z;
-	document.getElementById("bottomRightB").innerHTML = z;
-	var cardTotal= parseInt(x+y+z);
-	
-	document.getElementById("total").innerHTML = "Total :"+cardTotal ; 
-
-	document.getElementById("repTotal").innerHTML = "Cards: "+cards ; 
-	cards -= 3;
-	if (cards == 1){	
-		document.getElementById("holderB").setAttribute('style', 'display:none'); 
-					}
-}
-	
+//remove array item until their is none then goto next array if empty
+//  check if  j,q,k,a if so convert to number and complete calculation
+  
 	//organize cards by sets
 	//13 club b
 	//13 ace b
@@ -122,182 +9,83 @@ var z = Math.floor((Math.random()*10)+1);
 	//Ace,2,3,4,5,6,7,8,9,10,j,q,k
 	//write code to eleimiate cards and count down
 	
-	//set up counters
+//set up counters
 	
-	var clubB = ["j","q","k","a",2,3,4,5,6,7,8,9,10];
-var spadeB = ["j","q","k","a",2,3,4,5,6,7,8,9,10];
-var diamondR = ["j","q","k","a",2,3,4,5,6,7,8,9,10];
-var heartsR = ["j","q","k","a",2,3,4,5,6,7,8,9,10];
-
-//Aces
+//organize cards by sets
+var clubB = ["J","Q","K","A",2,3,4,5,6,7,8,9,10];
+var spadeB = ["J","Q","K","A",2,3,4,5,6,7,8,9,10];
+var diamondR = ["J","Q","K","A",2,3,4,5,6,7,8,9,10];
+var heartsR = ["J","Q","K","A",2,3,4,5,6,7,8,9,10];
+//Aces [3] position
 clubB[3]=spadeB[3]=diamondR[3]=heartsR[3];
-
-//Kings
+//Kings [2] king position
 clubB[2]=spadeB[2]=diamondR[2]=heartsR[2];
-
-//Queens
+//Queens [1] Queen position
 clubB[1]=spadeB[1]=diamondR[1]=heartsR[1];
-
-//Jacks
+//Jacks [0] Jacks position
 clubB[0]=spadeB[0]=diamondR[0]=heartsR[0];
+	//organize cards by sets
+  //remember the whole array is [13] in length
+//4 sets of cards which means you need 3 random calls that pulls from 4-sets
+//if 1= take random from array1; reduce array.pop(#); if 0 skip and goto next array
+//if 2= take random from array2
+//if 3= take random from array3
+//if 4= take random from array4
+function randomCard()
+{
+  var randNumArray = Math.floor((Math.random()*13-1)+1);
+   //check if it's a face card, if 
+  faceCheck()
+  var card_x = randNumArray;
+  var topLeftX = document.getElementById("topLeft");
+  var bottomRightX = document.getElementById("bottomRight");
+//check if club == 0 if so, run this again until all = 0 the exit  
+  if (clubB[card_x]!==0){
+  alert("clubB[card_x] = "+ card_x);
+  topLeftX.innerHTML = clubB[card_x];
+  bottomRightX.innerHTML = clubB[card_x];
+  clubB[card_x]=0;
+  }
+  //change this part
+  else if(clubB[card_x]==0)
+  {
+    //goto next part of array(loop) until all 0
+  }
+  
+  //
+  
+  else if (clubB==0){alert("whole array is empty!!!");}
+  else{
+    randomCard();
+    alert("running loop hit a :0.")
+  }
+  //clubB.splice(card_x,1);
+  alert("Result: " + clubB + " Length: "+ clubB.length + typeof(clubB[2]));
+}
 
+
+var testf = [0, 0, 0, 0];
+
+if (testForZero() === 0) {
+  alert("Congrats! You Rock :\)");
+} else {
+  alert("Nope, not all Zeros :\(  ");
+}
+
+function testForZero(n) {
+  var countAll = 0;
+  for (var i = 0; i < clubB.length; i++) {
+    countAll = +clubB[i];
+  }
+  return countAll;
+}
+
+//testForZero();
+
+
+/*
 heartsR[0]=prompt("Please enter the value for Jack: ", 15);
 heartsR[1]=prompt("Please enter the value for Queen: ", 20);
 heartsR[2]=prompt("Please enter the value for King: ", 25);
 heartsR[3]=prompt("Please enter the value for Ace: ", 30);
-
-console.log(heartsR[Math.floor(Math.random()*13)+1]);
-
-function randomCard(){
-    
-    //use number instead to randomize(coin) will pick one of cards
-    var coin = Math.floor(Math.random()*4)+1;
-    var randNum;
-    if (coin == 1){
-       randNum = clubB[Math.floor(Math.random()*13)+1];
-       if(randNum ==1)
-       {}
-       else if (randNum == 2)
-       {}
-       else if (randNum == 3)
-       {}
-       else if (randNum == 4)
-       {}
-       else if (randNum == 5)
-       {}
-       else if (randNum == 6)
-       {}
-       else if (randNum == 7)
-       {}
-       else if (randNum == 8)
-       {}
-       else if (randNum == 9)
-       {}
-       else if (randNum == 10)
-       {}
-       else if (randNum == 11)
-       {}
-       else if (randNum == 12)
-       {}
-       else if (randNum == 13)
-       {}
-       else {
-       alert("Error");
-    }
- }
-    //-- card#2:Spade
-    
-    else if (coin == 2){
-       randNum = spadeB[Math.floor(Math.random()*13)+1];
-       if(randNum ==1){}
-       else if (randNum == 2)
-       {}
-       else if (randNum == 3)
-       {}
-       else if (randNum == 4)
-       {}
-       else if (randNum == 5)
-       {}
-       else if (randNum == 6)
-       {}
-       else if (randNum == 7)
-       {}
-       else if (randNum == 8)
-       {}
-       else if (randNum == 9)
-       {}
-       else if (randNum == 10)
-       {}
-       else if (randNum == 11)
-       {}
-       else if (randNum == 12)
-       {}
-       else if (randNum == 13)
-       {}
-       else {
-       alert("Error");
-       
-    }
-}
-    //--card#3:Diamond
-    
-    else if (coin == 3){
-       randNum = diamondR[Math.floor(Math.random()*13)+1];
-       if(randNum ==1){}
-       else if (randNum == 2)
-       {}
-       else if (randNum == 3)
-       {}
-       else if (randNum == 4)
-       {}
-       else if (randNum == 5)
-       {}
-       else if (randNum == 6)
-       {}
-       else if (randNum == 7)
-       {}
-       else if (randNum == 8)
-       {}
-       else if (randNum == 9)
-       {}
-       else if (randNum == 10)
-       {}
-       else if (randNum == 11)
-       {}
-       else if (randNum == 12)
-       {}
-       else if (randNum == 13)
-       {}
-       else {
-       alert("Error");
-       
-    }
-}
-    //card#4:Hearts
-    
-    else if(coin == 4){
-      randNum =  heartsR[Math.floor(Math.random()*13)+1];
-      if(randNum ==1){}
-       else if (randNum == 2)
-       {}
-       else if (randNum == 3)
-       {}
-       else if (randNum == 4)
-       {}
-       else if (randNum == 5)
-       {}
-       else if (randNum == 6)
-       {}
-       else if (randNum == 7)
-       {}
-       else if (randNum == 8)
-       {}
-       else if (randNum == 9)
-       {}
-       else if (randNum == 10)
-       {}
-       else if (randNum == 11)
-       {}
-       else if (randNum == 12)
-       {}
-       else if (randNum == 13)
-       {}
-       else {
-       alert("Error");
-       
-    }
-}
-    
-    else{
-    alert("Error");
-    
-}
-
-
-
-    
-}
-</script>	
-</body>
-
-</html>
+*/
