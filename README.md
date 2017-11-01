@@ -1,2 +1,3 @@
 # JavaScript
-My miscellaneous JavaScript holster
+## My miscellaneous JavaScript files
+![img](java.svg)
