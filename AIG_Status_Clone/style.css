@@ -99,12 +99,12 @@ float:left;}
   }
   .leftSubBar{
     height:60px;
-    width:30%;
+    width:40%;
     float:left;
   }
   .middleSubBar{
     height:60px;
-    width:30%;
+    width:20%;
     float:left;
   }
   .rightSubBar{
@@ -124,3 +124,66 @@ float:left;}
     height:80%;
     width:100%;
   }
+
+  .RightMenuBarTitleT{
+    height:14px;
+    width:100%;
+    color:white;
+    background-color: grey;
+    font-size:12.5px;
+    font-weight: bold;
+
+  }
+  .RightMenuBarTitleB{
+    height:14px;
+    width:100%;
+    color:white;
+    background-color: skyblue;
+    font-size:12.5px;
+    font-weight: bold;
+  }
+.RightMenuTop{
+  height:50%;
+  width:100%;
+  background-color: brown;
+}
+.RightMenuBottom{
+  height:50%;
+  width:100%;
+  background-color: tan;
+}
+
+.overAllStatus{
+  height:14px;
+  width:100%;
+  color:skyblue;
+  background-color: white;
+  font-size:12.5px;
+  font-weight: bold;
+}
+.classOf{
+  height:33.3%;
+  width:100%;
+  backgroud-color:white;
+}
+.classOfTitle{
+  width:30%;
+  height:100%;
+  font-size:12.5px;
+  float:left;
+}
+
+.classOfColor{
+  width:20%;
+  height:100%;
+  float:left;
+}
+.classOfStatusDots{
+  width:50%;
+  height:100%;
+  float:left;
+}
+.statusDotRed{
+  height:20px;width:20px;border-radius:50%;background-color:red;float:left;
+}
+.statusDotGreen{}
