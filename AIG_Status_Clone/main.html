@@ -1,6 +1,7 @@
 <html>
 <head>
 <title></title>
+<meta charset="utf-8">
 <script src="main.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -11,16 +12,16 @@
 <div class="mainMenu">
 <a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/021-back.png" class="btn">Close</a>
 <a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/023-left-arrow.png" class="btn"></a>
-<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/022-play-arrow.png" class="btn"></a>
-<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/020-undo-arrow.png" class="btn"></a>
-<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/019-redo-arrow.png" class="btn"></a>
-<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/018-padlock.png" class="btn"></a>
+<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/023-right-arrowG.png" class="btn"></a>
+<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/020-undo-arrowG.png" class="btn"></a>
+<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/020-redo-arrowG.png" class="btn"></a>
+<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/018-padlockG.png" class="btn"></a>
 <a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/017-padlock-unlock.png" class="btn"></a>
-<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/015-checked.png" class="btn"></a>
-<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/013-edit.png" class="btn"></a>
-<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/012-presentation.png" class="btn"></a>
+<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/015-checkedG.png" class="btn"></a>
+<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/013-editG.png" class="btn"></a>
+<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/012-presentationG.png" class="btn"></a>
 <a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/011-add.png" class="btn"></a>
-<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/002-heart.png" class="btn"></a>
+<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/002-heartG.png" class="btn"></a>
 <a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/001-heart-1.png" class="btn"></a>
 <a href="#" style="text-decoration:none;color:#434343;float:right;">Close<img src="imgs/004-error.png" class="btn"></a>
 <!--Dropdown Menu I -->
@@ -28,11 +29,11 @@
 <option value="selectBookmark">Select Bookmark</option>
 </select>
 <!-- Dropdown Menu II -->
-<select>
+<select style="font-size:12px;display:box;margin-right:2px;margin-left:3px">
 <option value="selectReport">Select Report</option>
 </select>
 
-<select style="background-color:transparent;padding:0;">
+<select style="">
 <option value="selectMore">More</option>
 </select>
 
@@ -42,7 +43,7 @@
 <div class="leftSubBar">
 <a href="#"><img src="imgs/burger-button.png" class="burger"></a>
 <a href="#"><img src="imgs/Company-Logo-Placeholder.jpg" class="companyLogo"></a>
-<div style="float:left;font-size:20px;margin-top:20px;color:skyblue;">Operational Status</div>
+<div style="float:left;font-size:20px;margin-top:20px;color:#434343;">Operational Status</div>
 </div><!-- end leftSubBar -->
 <div class="middleSubBar">
 <!--filter
@@ -50,11 +51,11 @@
 	-->
 	<div style="width:116px;height:20px;margin-right:20px">
 	FILTERS:
-	<a href="#"><img src="imgs/008-filter-results-button.png" class="" style="height:32;width:32px;margin-top:15px"></a>
+	<a href="#"><img src="imgs/008-filter-results-buttonB.png" class="" style="height:28px;width:28px;margin-top:15px"></a>
 </div>
 
 <div style="width:100px;height:20px;margin-left:200px;">
-	<select>
+	<select style="font-size:12px;display:box;margin-right:2px;margin-left:3px">
 	<option value="selectSnapShot">Snapshot</option>
 	</select>
 </div>
@@ -65,14 +66,14 @@ top: last refreshed  TIMEZONE 20%height
 bottom:Navigation Help:[down arrow],[info icon],[email],[reset] 80% height
 -->
 <div class="rightSubBarTop" style="padding-left:40%">Last updated: date goes here</div>
-<div class="rightSubBarBottom">
+<div class="rightSubBarBottom" >
 
 
 <a href="#" style="text-decoration:none;">NAVIGATION HELP</a>
 <a href="#"><img src="imgs/005-interface.png" class="btn"></a>
 <a href="#"><img src="imgs/006-information.png" class="btn"></a>
 <a href="#"><img src="imgs/007-envelope.png" class="btn"></a>
-<a href="#">|&nbsp RESET</a></div><!--end if subBarBottom-->
+|&nbsp<a href="#" style="margin-right: 12px;">RESET</a></div><!--end if subBarBottom-->
 
 </div>
 
@@ -123,12 +124,12 @@ bottom:Navigation Help:[down arrow],[info icon],[email],[reset] 80% height
 </div>
 <div class="statusRightSectionRight">
 <div class="RightMenuTop">
-	<div class="RightMenuBarTitleT">BREAKING NEWS & UPDATES</div>
+	<div class="RightMenuBarTitleT">CURRENT SELECTIONS</div>
 	<div class="RightMenuBarTitleTText"></div>
 
 </div>
 <div class="RightMenuBottom">
-<div class="RightMenuBarTitleB">CURRENT SECTIONS</div>
+<div class="RightMenuBarTitleB">BREAKING NEWS & UPDATES</div>
 <div class="RightMenuBarTitleBText"></div>
 
 </div>
@@ -136,7 +137,27 @@ bottom:Navigation Help:[down arrow],[info icon],[email],[reset] 80% height
 </div>
 	</div><!--statusRightStatus -->
 
-	<div class="statusRightServerity"></div><!-- end of statusRightServices -->
+	<div class="statusRightServerity">
+		<div class="statusRightServerityTop">
+<div class="statusRightServerityTopTab">SERVERITY OVERVIEW</div>
+		</div>
+		<div class="statusRightServerityMiddle">
+			<div class="statusRightServerityMiddleFeilds">Severity</div>
+			<div class="statusRightServerityMiddleFeilds">Open</div>
+			<div class="statusRightServerityMiddleFeilds">Min</div>
+			<div class="statusRightServerityMiddleFeilds">Max</div>
+			<div class="statusRightServerityMiddleFeilds">Closed</div>
+
+		</div>
+		<div class="statusRightServerityBottom">
+<div class="statusRightServerityBottomFeilds">0</div>
+<div class="statusRightServerityBottomFeilds">0</div>
+<div class="statusRightServerityBottomFeilds">0d 0h 0m</div>
+<div class="statusRightServerityBottomFeilds">0d 0h 0m</div>
+<div class="statusRightServerityBottomFeilds">0</div>
+		</div>
+
+	</div><!-- end of statusRightServices -->
 
 	<div class="statusRightServices"></div><!--end of statusRightServices-->
 
