@@ -2,7 +2,7 @@
 
 <head>
 <title>AIGClone</title>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCveDGXm_ZCHx5eZWLMu5Ld_0zMRqgOUjU&callback=myMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCveDGXm_ZCHx5eZWLMu5Ld_0zMRqgOUjU&callback=mapArea" async defer></script>
 <meta charset="utf-8">
 <script src="main.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -21,7 +21,7 @@
 <a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/015-checkedG.png" class="btn"></a>
 <a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/013-editG.png" class="btn"></a>
 <a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/012-presentationG.png" class="btn"></a>
-<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/011-add.png" class="btn"></a>
+<a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/011-addG.png" class="btn"></a>
 <a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/002-heartG.png" class="btn"></a>
 <a href="#" style="text-decoration:none;color:#434343;"><img src="imgs/001-heart-1.png" class="btn"></a>
 <a href="#" style="text-decoration:none;color:#434343;float:right;">Close<img src="imgs/004-error.png" class="btn"></a>
@@ -84,9 +84,12 @@ bottom:Navigation Help:[down arrow],[info icon],[email],[reset] 80% height
 
 </div><!-- end of subMenu -->
 <div class="mainDisplay">
+<!--MAP-->
 <div class="mapArea">
- <div id="googleMap" style="width:100%;height:400px;"></div>
+ <div id="googleMap" onload="getLocation()" style="width:100%;height:100%;"></div>
 </div>
+<!--MAP END-->
+
 <div class="statusRight">
 
 	<div class="statusRightStatus">
