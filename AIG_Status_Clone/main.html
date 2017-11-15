@@ -2,7 +2,7 @@
 
 <head>
 <title>AIGClone</title>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCveDGXm_ZCHx5eZWLMu5Ld_0zMRqgOUjU&callback=mapArea" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCveDGXm_ZCHx5eZWLMu5Ld_0zMRqgOUjU" async defer></script>
 <meta charset="utf-8">
 <script src="main.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -85,8 +85,8 @@ bottom:Navigation Help:[down arrow],[info icon],[email],[reset] 80% height
 </div><!-- end of subMenu -->
 <div class="mainDisplay">
 <!--MAP-->
-<div class="mapArea">
- <div id="googleMap" onload="getLocation()" style="width:100%;height:100%;"></div>
+<div class="mapArea" onfocus="getLocation()">
+<div id="mapholder"></div>
 </div>
 <!--MAP END-->
 
