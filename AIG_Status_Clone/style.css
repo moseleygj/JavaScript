@@ -166,14 +166,60 @@ float:left;
   }
 
 
-.statusRightServicesOVLabel{
+.statusRightServicesOVLabelServ{
        height: 10%;
-    width: 32.99%;
+    width: 49%;
     float: left;
     background-color: #e8e8e8;
     border-right: 0.33px #bbb solid;
     text-align: center;
   }
+.statusRightServicesOVLabelMon{
+       height: 10%;
+    width: 30%;
+    float: left;
+    background-color: #e8e8e8;
+    border-right: 0.33px #bbb solid;
+    text-align: center;
+  }
+.statusRightServicesOVLabelStat{
+       height: 10%;
+    width: 19.9%;
+    float: left;
+    background-color: #e8e8e8;
+    border-right: 0.33px #bbb solid;
+    text-align: center;
+  }
+
+
+.statusRightServicesOVdataServ{
+    height: 7.14%;
+    width: 49%;
+    float: left;
+background-color:white;
+    border-right: 0.333px solid #bbb;
+    border-bottom: 0.333px solid #bbb;
+    text-align: center;
+  }
+  .statusRightServicesOVdataMon{
+    height: 7.14%;
+    width: 30%;
+    float: left;
+    background-color:white;
+    border-right: 0.333px solid #bbb;
+    border-bottom: 0.333px solid #bbb;
+    text-align: center;
+  }
+  .statusRightServicesOVdataStat{
+    height: 7.14%;
+    width: 19.9%;
+    float: left;
+    background-color:white;
+    border-right: 0.333px solid #bbb;
+    border-bottom: 0.333px solid #bbb;
+    text-align: center;
+  }
+
 .statusRightServicesOVdata{
     height:7.14%;
     width:32.99%;
