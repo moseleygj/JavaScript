@@ -97,12 +97,12 @@ float:left;
     background-color: white;
     border-top:3px #54b5dd solid;
     float:;
-    font-size:12px;
+    font-size:14px;
     margin-left:12px;
     border-top-left-radius:5% ;
     border-top-right-radius:5% ;
     text-align: center;
-    line-height: 2;
+    line-height: 3;
 
   }
   .statusRightServerityMiddle{
@@ -151,7 +151,7 @@ float:left;
     background-color: white;
     border-top: 3px #54b5dd solid;
     float: ;
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 12px;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
