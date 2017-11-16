@@ -136,7 +136,12 @@ float:left;
     text-align:;
     font-weight:bold;
   }
-
+ .statusRightServicesOV{
+    height:33.3%;
+    width:100%;
+    float:;
+    color:grey;
+  }
 
 .statusRightServices
   {
