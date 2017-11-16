@@ -310,6 +310,8 @@ background-color:white;
     font-size: 12.5px;
     font-weight: bold;
     line-height: 3;
+        text-indent: 5px;
+
   }
   .RightMenuBarTitleTText{
     height:80%;
@@ -318,6 +320,7 @@ background-color:white;
     background-color: white;
     font-size:12.5px;
     font-weight: bold;
+
   }
   .RightMenuBarTitleB{
     height:20%;
@@ -327,6 +330,8 @@ background-color:white;
     font-size:12.5px;
     font-weight: bold;
         line-height: 3;
+            text-indent: 5px;
+
 
   }
 
@@ -397,6 +402,8 @@ background-color:white;
   text-align: center;
   color:white;
   margin: 0 auto 0;
+      line-height: 1.4;
+    font-weight: bold;
 }
 
 .statusDotGreen{
@@ -407,6 +414,8 @@ background-color:white;
   text-align: center;
   color:white;
   margin: 0 auto 0;
+      line-height: 1.4;
+    font-weight: bold;
 }
 
 .statusDotOrange{
@@ -417,6 +426,8 @@ background-color:white;
   text-align: center;
   color:white;
   margin: 0 auto 0;
+      line-height: 1.4;
+    font-weight: bold;
 }
 
 .dotStatusCell{
