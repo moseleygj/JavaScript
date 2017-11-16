@@ -137,11 +137,48 @@ float:left;
     font-weight:bold;
   }
  .statusRightServicesOV{
-    height:33.3%;
+    height:100%;
     width:100%;
     float:;
-    color:grey;
+    background-color:#e8e8e8;
   }
+
+  .statusRightServicesOVTab{
+        height: 100%;
+    width: 40%;
+    color: #54b5dd;
+    background-color: white;
+    border-top: 3px #54b5dd solid;
+    float: ;
+    font-size: 12px;
+    margin-left: 12px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    text-align: center;
+    LINE-HEIGHT:2;
+  }
+
+  .statusRightServicesOVTabHold{
+    height:10%;
+    width:100%;
+    float:;
+    background-color:#d3d3d3;
+  }
+
+
+.statusRightServicesOVLabel{
+    height:10%;
+    width:33.3%;
+    float:left;
+    background-color:#e8e8e8;
+  }
+.statusRightServicesOVdata{
+    height:7.14%;
+    width:33.3%;
+    float:left;
+    background-color:white;
+  }
+
 
 .statusRightServices
   {
