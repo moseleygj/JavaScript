@@ -118,6 +118,7 @@ float:left;
     border-right: ;
     background-color: #e8e8e8;
     border-right:0.063em solid #bbb;
+    text-indent:5px;
   }
 
   .statusRightServerityBottom{
