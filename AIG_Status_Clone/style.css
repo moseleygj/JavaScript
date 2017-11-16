@@ -167,15 +167,26 @@ float:left;
 
 
 .statusRightServicesOVLabel{
-    height:10%;
-    width:33.3%;
-    float:left;
-    background-color:#e8e8e8;
+       height: 10%;
+    width: 32.99%;
+    float: left;
+    background-color: #e8e8e8;
+    border-right: 0.33px #bbb solid;
+    text-align: center;
   }
 .statusRightServicesOVdata{
     height:7.14%;
-    width:33.3%;
+    width:32.99%;
     float:left;
+    background-color:white;
+    border-right: 0.333px solid #bbb;
+    border-bottom: 0.333px solid #bbb;
+
+  }
+.statusRightServicesOVdataHolder{
+    height:7.14%;
+    width:100%;
+    float:;
     background-color:white;
   }
 
