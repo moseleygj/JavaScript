@@ -93,7 +93,7 @@ var	sexNum=sex();
 var	smokeNum=smokeCheck();
 var	raceNum=ethnicCheck();
 var	obeseNum=obeseCheck();
-var	total=howOld-(sexNum +smokeNum+raceNum+obeseNum);
+var	total=raceNum-(howOld+sexNum +smokeNum+obeseNum);
 document.getElementById("age").innerHTML=howOld;
 }
 
