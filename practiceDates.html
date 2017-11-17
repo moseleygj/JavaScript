@@ -39,46 +39,48 @@ obese -20yrs
 
  <form>
 <p>SEX</p>
-  <input type="radio" name="gender" id="male" value="male" onclick="sex()"> Male<br/>
+  <input type="radio" name="gender" id="male" value="male"     onclick="sex()"> Male<br/>
   <input type="radio" name="gender" id="female" value="female" onclick="sex()"> Female<br/>
 <hr/>
 <p>SMOKER</p>
-  <input type="radio" name="smoke" id="smokeY" value="-10" checked>Yes<br>
-  <input type="radio" name="smoke" id="smokeN" value="0">No<br>
+  <input type="radio" name="smoke" id="smokeY" value="-10" onclick="smokeCheck()">Yes<br>
+  <input type="radio" name="smoke" id="smokeN" value="0"   onclick="smokeCheck()">No<br>
 <hr/>
 <p>RACE</p>
-  <input type="radio" name="race" id="raceB" value="71" checked>BLACK<br>
-  <input type="radio" name="race" id="raceW" value="76"> WHITE<br>
+  <input type="radio" name="race" id="raceB" value="71" onclick="ethnicCheck()">BLACK<br>
+  <input type="radio" name="race" id="raceW" value="76" onclick="ethnicCheck()"> WHITE<br>
 
 <hr/><p>ALCHOHOL</p>
-  <input type="radio" name="alcohol" id="alcoholY" value="11.6" onclick="alcochol()" checked> YES<br>
-  <input type="radio" name="alcohol" id="alcoholN" value="0" onclick="alcochol()"> NO<br>
+  <input type="radio" name="alcohol" id="alcoholY" value="11.6" onclick="drinkerCheck()"> YES<br>
+  <input type="radio" name="alcohol" id="alcoholN" value="0"    onclick="drinkerCheck()"> NO<br>
 <hr/><p>OBESE</p>
-  <input type="radio" name="obese" id="obeseY" value="-20" checked> YES<br>
-  <input type="radio" name="obese" id="obeseN"value="0"> NO<br>
+  <input type="radio" name="obese" id="obeseY" value="-20" onclick="obeseCheck()"> YES<br>
+  <input type="radio" name="obese" id="obeseN" value="0"   onclick="obeseCheck()"> NO<br>
 <hr/>
 </form> 
 
 
 </body>
 <script type="text/javascript">
-function changeDate(){
+function changeDate()
+{
 var d = new Date();
 document.getElementById("magic").innerHTML=d;
-
 }
 
-function moreTime(){
+
+function moreTime()
+{
 var d = new Date("2016");
 d.setDate(d.getFullYear()+30);
 document.getElementById("moreTime").innerHTML=d;
-
 }
+
+
 function myAge()
 {
 var poop = new Date();
 var thisYear =  poop.getFullYear();
-
 
 var dob = new Date(document.getElementById("tb").value);
 var dobYear = dob.getUTCFullYear();
@@ -87,100 +89,99 @@ var howOld=thisYear-dobYear;
 document.getElementById("age").innerHTML=howOld;
 }
 
+
 function sex()
 {
-if (document.getElementById("male").checked)
-{
-document.getElementById("sex").innerHTML="Sex:Male";
-alert(document.getElementById("male").value);
-}
-else if (document.getElementById("female").checked) 
-{
-document.getElementById("sex").innerHTML="Sex:Female";
-alert(document.getElementById("female").value);
-}
-else
-{
-document.getElementById("sex").innerHTML="Error, No sex selected!";
-}
-
-function alcohol()
-{
-
-if (document.getElementById("alcoholY").checked)
-{
-document.getElementById("alcohol").innerHTML="Alcohol drinker - 11.6years";
-alert(document.getElementById("alcohol drinker").value);
-}
-else if (document.getElementById("alcoholN").checked) 
-{
-document.getElementById("alcohol").innerHTML="Not a Drinker - 0";
-alert(document.getElementById("alcoholN").value);
-}
-else
-{
-document.getElementById("alcohol").innerHTML="Error, No drink selected!";
-}
-}
-
-function smoker()
-{
-
-if (document.getElementById("smokeY").checked)
-{
-document.getElementById("smoke").innerHTML="Smoker - -10years";
-alert(document.getElementById("smokeY").value);
-}
-else if (document.getElementById("smokeN").checked) 
-{
-document.getElementById("smokeN").innerHTML="Not a Smoker - 0";
-alert(document.getElementById("smokeN").value);
-}
-else
-{
-document.getElementById("smoke").innerHTML="Error, No smoker status selected!";
-}
-}
-
-function race()
-{
-
-if (document.getElementById("raceB").checked)
-{
-document.getElementById("race").innerHTML="Race: Black";
-alert(document.getElementById("raceB").value);
-}
-else if (document.getElementById("raceW").checked) 
-{
-document.getElementById("race").innerHTML="Race: White";
-alert(document.getElementById("raceW").value);
-}
-else
-{
-document.getElementById("race").innerHTML="Error, No Race selected!";
-}
-}
-
-function obese()
-{
-
-if (document.getElementById("obeseY").checked)
-{
-document.getElementById("obeseY").innerHTML="Yes, I like carbs!";
-alert(document.getElementById("obese").value);
-}
-else if (document.getElementById("obeseN").checked) 
-{
-document.getElementById("obeseN").innerHTML="You've wont he genetic lottery or you're discipline..Goo job!";
-alert(document.getElementById("obese").value);
-}
-else
-{
-document.getElementById("obese").innerHTML="Error, No obese selected!";
-}
+	if (document.getElementById("male").checked)
+	{
+	document.getElementById("sex").innerHTML="Sex:Male";
+	alert(document.getElementById("male").value);
+	}
+	else if (document.getElementById("female").checked) 
+	{
+	document.getElementById("sex").innerHTML="Sex:Female";
+	alert(document.getElementById("female").value);
+	}
+	else
+	{
+	document.getElementById("sex").innerHTML="Error, No sex selected!";
+	}
 }
 
 
+function drinkerCheck()
+{
+	if (document.getElementById("alcoholY").checked)
+	{
+	document.getElementById("alcohol").innerHTML="Alcohol drinker - 11.6years";
+	alert(document.getElementById("alcoholY").value);
+	}
+	else if (document.getElementById("alcoholN").checked) 
+	{
+	document.getElementById("alcohol").innerHTML="Not a Drinker - 0";
+	alert(document.getElementById("alcoholN").value);
+	}
+	else
+	{
+	document.getElementById("alcohol").innerHTML="Error, No drink selected!";
+	}
+}
+
+
+function smokeCheck()
+{
+	if (document.getElementById("smokeY").checked)
+	{
+	document.getElementById("smoke").innerHTML="Smoker - -10years";
+	alert(document.getElementById("smokeY").value);
+	}
+	else if (document.getElementById("smokeN").checked) 
+	{
+	document.getElementById("smokeN").innerHTML="Not a Smoker - 0";
+	alert(document.getElementById("smokeN").value);
+	}
+	else
+	{
+	document.getElementById("smoke").innerHTML="Error, No smoker status selected!";
+	}
+}
+
+
+function ethnicCheck()
+{
+	if (document.getElementById("raceB").checked)
+	{
+	document.getElementById("race").innerHTML="Race: Black";
+	alert(document.getElementById("raceB").value);
+	}
+	else if (document.getElementById("raceW").checked) 
+	{
+	document.getElementById("race").innerHTML="Race: White";
+	alert(document.getElementById("raceW").value);
+	}
+	else
+	{
+	document.getElementById("race").innerHTML="Error, No Race selected!";
+	}
+}
+
+
+function obeseCheck()
+{
+	if (document.getElementById("obeseY").checked)
+	{
+	document.getElementById("obeseY").innerHTML="Yes, I like carbs!";
+	alert(document.getElementById("obeseY").value);
+	}
+	else if (document.getElementById("obeseN").checked) 
+	{
+	document.getElementById("obeseN").innerHTML="Good job!";
+	alert(document.getElementById("obeseN").value);
+	}
+	else
+	{
+	document.getElementById("obese").innerHTML="Error, No obese selected!";
+	}
 }
 </script>
 </html>
