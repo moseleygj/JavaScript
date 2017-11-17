@@ -86,8 +86,17 @@ var dob = new Date(document.getElementById("tb").value);
 var dobYear = dob.getUTCFullYear();
 
 var howOld=thisYear-dobYear;
+
+//lifespan  
+//-(sex()+drinkCheck()+smokeCheck()+ethnicCheck()+obeseCheck()) = yearOfDeath
+var	sexNum=sex();
+var	smokeNum=smokeCheck();
+var	raceNum=ethnicCheck();
+var	obeseNum=obeseCheck();
+var	total=howOld-(sexNum +smokeNum+raceNum+obeseNum);
 document.getElementById("age").innerHTML=howOld;
 }
+
 
 
 function sex()
