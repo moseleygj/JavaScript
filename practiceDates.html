@@ -32,6 +32,7 @@ obese -20yrs
 <p id="alcohol"></p>
 <p id="smoke"></p>
 <p id="obese"></p>
+<p id="deathDate"></p>
 
 
 <input type="text" id="tb"></input>
@@ -94,6 +95,7 @@ var	smokeNum=smokeCheck();
 var	raceNum=ethnicCheck();
 var	obeseNum=obeseCheck();
 var	total=raceNum-(howOld+sexNum +smokeNum+obeseNum);
+document.getElementById("deathDate").innerHTML=total;
 document.getElementById("age").innerHTML=howOld;
 }
 
