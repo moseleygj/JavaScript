@@ -1,7 +1,17 @@
 <html>
 <head>
-<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<title>Tabbing test</title>
+<script>
+$(document).ready(function(){
+    $(".tab tab1").click(function(){
+        $("p:last").removeClass("tabInactive").addClass("active");
+    });
+});
+</script>
 <style>
+
 	.container{
 		height:300px;
 		width:400px;
@@ -52,9 +62,9 @@
 <div class="container">
 	<div class="tabArea">
 		<div class="tab"></div>
-		<div class="tabInactive"></div>
-		<div class="tabInactive"></div>
-		<div class="tabInactive"></div>
+		<div class="tabInactive" id="tab1" onClick=""></div>
+		<div class="tabInactive" id="tab2" onClick=""></div>
+		<div class="tabInactive" id="tab3" onClick=""></div>
 
 	</div>
 	<div class="contentArea"></div>
@@ -62,7 +72,6 @@
 
 
 </div>
-<div id=""></div>
 
 <script type="">
 
