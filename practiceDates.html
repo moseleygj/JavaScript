@@ -93,6 +93,14 @@ var	smokeNum=smokeCheck();
 var	raceNum=ethnicCheck();
 var	obeseNum=obeseCheck();
 var sum=(smokeNum+obeseNum);
+
+
+var d = new Date();
+var year = d.getFullYear();
+var month = d.getMonth();
+var day = d.getDate();
+
+
 alert("sum: "+sum);
 var	total=sexNum-sum;
 var dateOfDeath = dobYear+total;
@@ -102,6 +110,10 @@ document.getElementById("deathDate").innerHTML="Death Date: " + dateOfDeath;
 document.getElementById("age").innerHTML=howOld;
 
 //show years from now;
+var c = new Date(dobYear + total, month, day);
+alert(c);
+document.write(c);
+
 }
 
 
