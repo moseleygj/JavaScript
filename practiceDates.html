@@ -30,6 +30,7 @@ obese -20yrs
 <p id="smoke"></p>
 <p id="obese"></p>
 <p id="deathDate"></p>
+<p id="deathAge"></p>
 
 
 <input type="text" id="tb"></input>
@@ -41,7 +42,7 @@ obese -20yrs
   <input type="radio" name="gender" id="female" value="female" onclick="sex()"> Female<br/>
 <hr/>
 <p>SMOKER</p>
-  <input type="radio" name="smoke" id="smokeY" value="-10" onclick="smokeCheck()">Yes<br>
+  <input type="radio" name="smoke" id="smokeY" value="10" onclick="smokeCheck()">Yes<br>
   <input type="radio" name="smoke" id="smokeN" value="0"   onclick="smokeCheck()">No<br>
 <hr/>
 <p>RACE</p>
@@ -52,7 +53,7 @@ obese -20yrs
   <input type="radio" name="alcohol" id="alcoholY" value="11.6" onclick="drinkerCheck()"> YES<br>
   <input type="radio" name="alcohol" id="alcoholN" value="0"    onclick="drinkerCheck()"> NO<br>
 <hr/><p>OBESE</p>
-  <input type="radio" name="obese" id="obeseY" value="-20" onclick="obeseCheck()"> YES<br>
+  <input type="radio" name="obese" id="obeseY" value="20" onclick="obeseCheck()"> YES<br>
   <input type="radio" name="obese" id="obeseN" value="0"   onclick="obeseCheck()"> NO<br>
 <hr/>
 </form> 
@@ -91,9 +92,16 @@ alert("sexNum: "+sexNum);
 var	smokeNum=smokeCheck();
 var	raceNum=ethnicCheck();
 var	obeseNum=obeseCheck();
-var	total=raceNum-(howOld+sexNum +smokeNum+obeseNum);
-document.getElementById("deathDate").innerHTML=total;
+var sum=(smokeNum+obeseNum);
+alert("sum: "+sum);
+var	total=sexNum-sum;
+var dateOfDeath = dobYear+total;
+document.getElementById("deathAge").innerHTML="Death Age: " + total;
+document.getElementById("deathDate").innerHTML="Death Date: " + dateOfDeath;
+
 document.getElementById("age").innerHTML=howOld;
+
+//show years from now;
 }
 
 
@@ -102,15 +110,17 @@ function sex()
 {
 	if (document.getElementById("male").checked)
 	{
-	document.getElementById("sex").innerHTML="Sex:Male";
+	document.getElementById("sex").innerHTML="Sex: Male - 74.6";
 	alert(document.getElementById("male").value);
-	return 74.6;
+	return 75;
+	//return 0;
 	}
 	else if (document.getElementById("female").checked) 
 	{
-	document.getElementById("sex").innerHTML="Sex:Female";
+	document.getElementById("sex").innerHTML="Sex: Female - 81.2";
 	alert(document.getElementById("female").value);
-		return 81.2;
+	//	return 0;
+	return 81;
 	}
 	else
 	{
@@ -123,14 +133,14 @@ function drinkerCheck()
 {
 	if (document.getElementById("alcoholY").checked)
 	{
-	document.getElementById("alcohol").innerHTML="Alcohol drinker - 11.6years";
+	document.getElementById("alcohol").innerHTML="Alcohol drinker: 11.6 years";
 	alert(document.getElementById("alcoholY").value);
 	return 12;
 
 	}
 	else if (document.getElementById("alcoholN").checked) 
 	{
-	document.getElementById("alcohol").innerHTML="Not a Drinker - 0";
+	document.getElementById("alcohol").innerHTML="Non-Drinker: 0";
 	alert(document.getElementById("alcoholN").value);
 		return 0;
 
@@ -146,14 +156,14 @@ function smokeCheck()
 {
 	if (document.getElementById("smokeY").checked)
 	{
-	document.getElementById("smoke").innerHTML="Smoker - -10years";
+	document.getElementById("smoke").innerHTML="Smoker: -10years";
 	alert(document.getElementById("smokeY").value);
-		return 7.5;
+		return 8;
 
 	}
 	else if (document.getElementById("smokeN").checked) 
 	{
-	document.getElementById("smokeN").innerHTML="Not a Smoker - 0";
+	document.getElementById("smokeN").innerHTML="Non-Smoker: 0";
 	alert(document.getElementById("smokeN").value);
 		return 0;
 
@@ -167,7 +177,10 @@ function smokeCheck()
 //double check here, check for sex and race
 function ethnicCheck()
 {
-	if ((document.getElementById("raceB").checked) && sex()==male))
+	return 0;
+}
+	/*
+	if (document.getElementById("raceB").checked) && sex()==male)
 	{
 	document.getElementById("race").innerHTML="Race: Black & Sex: Male";
 	alert(document.getElementById("raceB").value);
@@ -193,14 +206,13 @@ function ethnicCheck()
 	alert(document.getElementById("raceW").value);
 	return 78;
 	}
-
 	else
 	{
 	document.getElementById("race").innerHTML="Error, No Race selected!";
 	}
 }
 
-
+*/
 function obeseCheck()
 {
 	if (document.getElementById("obeseY").checked)
