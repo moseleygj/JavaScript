@@ -167,16 +167,32 @@ function smokeCheck()
 //double check here, check for sex and race
 function ethnicCheck()
 {
-	if (document.getElementById("raceB").checked)
+	if ((document.getElementById("raceB").checked) && sex()==male))
 	{
-	document.getElementById("race").innerHTML="Race: Black";
+	document.getElementById("race").innerHTML="Race: Black & Sex: Male";
 	alert(document.getElementById("raceB").value);
+	return 78;
 	}
-	else if (document.getElementById("raceW").checked) 
+	else if ((document.getElementById("raceW").checked) && sex()==male))
 	{
-	document.getElementById("race").innerHTML="Race: White";
+	document.getElementById("race").innerHTML="Race: White & Sex: Male";
+	alert(document.getElementById("raceW").value);
+	return 76.5;
+	}
+
+	else if ((document.getElementById("raceW").checked) && sex()==female)) 
+	{
+	document.getElementById("race").innerHTML="Race: White & Sex: Feamle";
+	alert(document.getElementById("raceW").value);
+	return 81.3;
+	}
+
+	else if ((document.getElementById("raceB").checked)  && sex()==female))
+	{
+	document.getElementById("race").innerHTML="Race: Black & Sex: Female";
 	alert(document.getElementById("raceW").value);
 	}
+
 	else
 	{
 	document.getElementById("race").innerHTML="Error, No Race selected!";
