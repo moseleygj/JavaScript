@@ -3,25 +3,115 @@
 <meta charset="utf-8">
 </head>
 <style type="text/css">
+.container{
+	height:900px;
+	width:768px;
+	background-color:#303030;
+color:white;}
 
+.option{
+	height:120px;
+	width:120px;
+	background-color:grey;
+	color:#c1c1c1;	
+	border-radius: 5px;
+	margin: 20px 15px;
+	float:left;
+}
+
+input[type="text"]
+{color:red;
+height:100px;
+width:300px;
+text-align:center;
+font-size: 36px;
+font-weight: bold;
+border-radius: 3px;
+}
+
+button{
+color:red;
+height:100px;
+width:300px;
+text-align:center;
+font-size: 28px;
+font-weight: bold;
+
+	-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33bdef), color-stop(1, #019ad2));
+	background:-moz-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-webkit-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-o-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:-ms-linear-gradient(top, #33bdef 5%, #019ad2 100%);
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bdef', endColorstr='#019ad2',GradientType=0);
+	background-color:#33bdef;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+
+
+
+.birthYear{
+	height:100px;
+	width:100%;
+	color:white;
+	border:2px solid grey;
+	text-align: center;
+	margin-top:10x;
+}
+
+.deathYear{
+	height:200px;
+	width:100%;
+	color:white;
+	border:2px solid grey;
+	text-align: center;
+	margin-bottom:12px;
+	font-size:28px;
+}
+.buttonSection{
+	height:100px;
+	width:100%;
+	color:white;
+	text-align: center;
+	margin-bottom:12px;
+	font-size:28px;
+}
+.stats{
+	height:175px;
+	width:100%;
+	color:white;
+	text-align: center;
+	margin-bottom: 12px;
+padding-top: 1px
+	
+}
+.options{
+
+	height:160px;
+	width:100%;
+}
+
+
+p{text-align: center;font-weight: bolder;color:white;}
 </style>
 
 <body>
-<!--subtract current year-birthday
-illness
-smoker -10years
-cancer
-race - White females have the longest life expectancy at 81.3 years, black females at 78 years, white males at 76.5 years and black males have the shortest at 71.8 years
-hazardous conditions
-male/female
-alcohol -10-12years
-obese -20yrs
--->
-<button onclick="myAge()">Click Me to find age</button>
-
-<button onclick="changeDate()">Click Me to change date</button>
-<button onclick="moreTime()">Add more Time</button>
-<button onclick="sex()">Check which value is selected</button>
+<div class="container">
+<img src="baby.png" style="height:100px;width:120px;display: block;margin: 0 auto 0;">
+<div class="stats">
 <p id="magic"></p>
 <p id="moreTime"></p>
 <p id="age"></p>
@@ -31,53 +121,56 @@ obese -20yrs
 <p id="obese"></p>
 <p id="deathDate"></p>
 <p id="deathAge"></p>
+</div>
+<div class="birthYear">
+<input type="text" id="tb" placeholder="BIRTH YEAR..."></input>
+</div>
 
-
-<input type="text" id="tb"></input>
-
-
+<div class="options">
  <form>
+ <div class="option">
+
 <p>SEX</p>
   <input type="radio" name="gender" id="male" value="male"     onclick="sex()"> Male<br/>
   <input type="radio" name="gender" id="female" value="female" onclick="sex()"> Female<br/>
-<hr/>
+  </div>
+ <div class="option">
+
 <p>SMOKER</p>
   <input type="radio" name="smoke" id="smokeY" value="10" onclick="smokeCheck()">Yes<br>
   <input type="radio" name="smoke" id="smokeN" value="0"   onclick="smokeCheck()">No<br>
-<hr/>
+   </div>
+<div class="option">
+
 <p>RACE</p>
   <input type="radio" name="race" id="raceB" value="71" onclick="ethnicCheck()">BLACK<br>
   <input type="radio" name="race" id="raceW" value="76" onclick="ethnicCheck()"> WHITE<br>
+   </div>
+<div class="option">
 
-<hr/><p>ALCHOHOL</p>
+<p>ALCHOHOL</p>
   <input type="radio" name="alcohol" id="alcoholY" value="11.6" onclick="drinkerCheck()"> YES<br>
   <input type="radio" name="alcohol" id="alcoholN" value="0"    onclick="drinkerCheck()"> NO<br>
-<hr/><p>OBESE</p>
+  </div>
+ <div class="option">
+
+<p>OBESE</p>
   <input type="radio" name="obese" id="obeseY" value="20" onclick="obeseCheck()"> YES<br>
   <input type="radio" name="obese" id="obeseN" value="0"   onclick="obeseCheck()"> NO<br>
-<hr/>
+</div>
 </form> 
+</div>
 
-
+<div class="deathYear"><p id="rip"></p>
+<img  style="height:100px;width:100px;"src="dead.png">
+</div>
+<div class="buttonSection">
+<button onclick="myAge()">What's your fate?</button></div>
+</div>
 </body>
+
 <script type="text/javascript">
-function changeDate()
-{
-var d = new Date();
-document.getElementById("magic").innerHTML=d;
-}
 
-
-function moreTime()
-{
-var d = new Date("2016");
-d.setDate(d.getFullYear()+30);
-document.getElementById("moreTime").innerHTML=d;
-}
-
-
-function myAge()
-{
 var poop = new Date();
 var thisYear =  poop.getFullYear();
 
@@ -92,6 +185,11 @@ alert("sexNum: "+sexNum);
 var	smokeNum=smokeCheck();
 var	raceNum=ethnicCheck();
 var	obeseNum=obeseCheck();
+
+
+function myAge()
+{
+
 var sum=(smokeNum+obeseNum);
 
 
@@ -107,12 +205,11 @@ var dateOfDeath = dobYear+total;
 document.getElementById("deathAge").innerHTML="Death Age: " + total;
 document.getElementById("deathDate").innerHTML="Death Date: " + dateOfDeath;
 
-document.getElementById("age").innerHTML=howOld;
+document.getElementById("age").innerHTML="Current Age: "+ howOld;
 
 //show years from now;
 var c = new Date(dobYear + total, month, day);
-alert(c);
-document.write(c);
+document.getElementById("rip").innerHTML=c.toUTCString();
 
 }
 
@@ -122,14 +219,14 @@ function sex()
 {
 	if (document.getElementById("male").checked)
 	{
-	document.getElementById("sex").innerHTML="Sex: Male - 75";
+	document.getElementById("sex").innerHTML="Sex: Male (75)";
 	//alert(document.getElementById("male").value);
 	return 75;
 	//return 0;
 	}
 	else if (document.getElementById("female").checked) 
 	{
-	document.getElementById("sex").innerHTML="Sex: Female - 81";
+	document.getElementById("sex").innerHTML="Sex: Female (81)";
 	//alert(document.getElementById("female").value);
 	//	return 0;
 	return 81;
@@ -168,7 +265,7 @@ function smokeCheck()
 {
 	if (document.getElementById("smokeY").checked)
 	{
-	document.getElementById("smoke").innerHTML="Smoker: 10years";
+	document.getElementById("smoke").innerHTML="Smoker: (-10 years)";
 	//alert(document.getElementById("smokeY").value);
 		return 8;
 
@@ -189,13 +286,7 @@ function smokeCheck()
 //double check here, check for sex and race
 function ethnicCheck()
 {
-	if (document.getElementById("raceB").checked) && sex()==male)
-	{
-	document.getElementById("race").innerHTML="Race: Black & Sex: Male";
-	alert("race= "+document.getElementById("raceB").value);
-	return 71.8;
-	}
-	else {return 0;}
+	
 	return 0;
 
 }	/*
