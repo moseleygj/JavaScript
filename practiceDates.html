@@ -13,9 +13,6 @@ smoker -10years
 cancer
 race - White females have the longest life expectancy at 81.3 years, black females at 78 years, white males at 76.5 years and black males have the shortest at 71.8 years
 hazardous conditions
-jobs
-stress
-area 
 male/female
 alcohol -10-12years
 obese -20yrs
@@ -89,8 +86,8 @@ var dobYear = dob.getUTCFullYear();
 var howOld=thisYear-dobYear;
 
 //lifespan  
-//-(sex()+drinkCheck()+smokeCheck()+ethnicCheck()+obeseCheck()) = yearOfDeath
 var	sexNum=sex();
+alert("sexNum: "+sexNum);
 var	smokeNum=smokeCheck();
 var	raceNum=ethnicCheck();
 var	obeseNum=obeseCheck();
@@ -107,11 +104,13 @@ function sex()
 	{
 	document.getElementById("sex").innerHTML="Sex:Male";
 	alert(document.getElementById("male").value);
+	return 74.6;
 	}
 	else if (document.getElementById("female").checked) 
 	{
 	document.getElementById("sex").innerHTML="Sex:Female";
 	alert(document.getElementById("female").value);
+		return 81.2;
 	}
 	else
 	{
@@ -126,11 +125,15 @@ function drinkerCheck()
 	{
 	document.getElementById("alcohol").innerHTML="Alcohol drinker - 11.6years";
 	alert(document.getElementById("alcoholY").value);
+	return 12;
+
 	}
 	else if (document.getElementById("alcoholN").checked) 
 	{
 	document.getElementById("alcohol").innerHTML="Not a Drinker - 0";
 	alert(document.getElementById("alcoholN").value);
+		return 0;
+
 	}
 	else
 	{
@@ -145,11 +148,15 @@ function smokeCheck()
 	{
 	document.getElementById("smoke").innerHTML="Smoker - -10years";
 	alert(document.getElementById("smokeY").value);
+		return 7.5;
+
 	}
 	else if (document.getElementById("smokeN").checked) 
 	{
 	document.getElementById("smokeN").innerHTML="Not a Smoker - 0";
 	alert(document.getElementById("smokeN").value);
+		return 0;
+
 	}
 	else
 	{
@@ -183,11 +190,15 @@ function obeseCheck()
 	{
 	document.getElementById("obeseY").innerHTML="Yes, I like carbs!";
 	alert(document.getElementById("obeseY").value);
+		return -20;
+
 	}
 	else if (document.getElementById("obeseN").checked) 
 	{
 	document.getElementById("obeseN").innerHTML="Good job!";
 	alert(document.getElementById("obeseN").value);
+		return 0;
+
 	}
 	else
 	{
