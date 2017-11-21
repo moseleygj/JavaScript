@@ -122,15 +122,15 @@ function sex()
 {
 	if (document.getElementById("male").checked)
 	{
-	document.getElementById("sex").innerHTML="Sex: Male - 74.6";
-	alert(document.getElementById("male").value);
+	document.getElementById("sex").innerHTML="Sex: Male - 75";
+	//alert(document.getElementById("male").value);
 	return 75;
 	//return 0;
 	}
 	else if (document.getElementById("female").checked) 
 	{
-	document.getElementById("sex").innerHTML="Sex: Female - 81.2";
-	alert(document.getElementById("female").value);
+	document.getElementById("sex").innerHTML="Sex: Female - 81";
+	//alert(document.getElementById("female").value);
 	//	return 0;
 	return 81;
 	}
@@ -145,15 +145,15 @@ function drinkerCheck()
 {
 	if (document.getElementById("alcoholY").checked)
 	{
-	document.getElementById("alcohol").innerHTML="Alcohol drinker: 11.6 years";
-	alert(document.getElementById("alcoholY").value);
+	document.getElementById("alcohol").innerHTML="Alcohol drinker: 12 years";
+	//alert(document.getElementById("alcoholY").value);
 	return 12;
 
 	}
 	else if (document.getElementById("alcoholN").checked) 
 	{
 	document.getElementById("alcohol").innerHTML="Non-Drinker: 0";
-	alert(document.getElementById("alcoholN").value);
+	//alert(document.getElementById("alcoholN").value);
 		return 0;
 
 	}
@@ -168,15 +168,15 @@ function smokeCheck()
 {
 	if (document.getElementById("smokeY").checked)
 	{
-	document.getElementById("smoke").innerHTML="Smoker: -10years";
-	alert(document.getElementById("smokeY").value);
+	document.getElementById("smoke").innerHTML="Smoker: 10years";
+	//alert(document.getElementById("smokeY").value);
 		return 8;
 
 	}
 	else if (document.getElementById("smokeN").checked) 
 	{
 	document.getElementById("smokeN").innerHTML="Non-Smoker: 0";
-	alert(document.getElementById("smokeN").value);
+	//alert(document.getElementById("smokeN").value);
 		return 0;
 
 	}
@@ -189,9 +189,16 @@ function smokeCheck()
 //double check here, check for sex and race
 function ethnicCheck()
 {
+	if (document.getElementById("raceB").checked) && sex()==male)
+	{
+	document.getElementById("race").innerHTML="Race: Black & Sex: Male";
+	alert("race= "+document.getElementById("raceB").value);
+	return 71.8;
+	}
+	else {return 0;}
 	return 0;
-}
-	/*
+
+}	/*
 	if (document.getElementById("raceB").checked) && sex()==male)
 	{
 	document.getElementById("race").innerHTML="Race: Black & Sex: Male";
@@ -230,14 +237,14 @@ function obeseCheck()
 	if (document.getElementById("obeseY").checked)
 	{
 	document.getElementById("obeseY").innerHTML="Yes, I like carbs!";
-	alert(document.getElementById("obeseY").value);
+	//alert(document.getElementById("obeseY").value);
 		return 20;
 
 	}
 	else if (document.getElementById("obeseN").checked) 
 	{
 	document.getElementById("obeseN").innerHTML="Good job!";
-	alert(document.getElementById("obeseN").value);
+	//alert(document.getElementById("obeseN").value);
 		return 0;
 
 	}
