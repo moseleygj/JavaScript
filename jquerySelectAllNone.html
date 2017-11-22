@@ -3,21 +3,23 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script>
 $(document).ready(function()
 {
   $("#selectAll").change( function(){
-if ($("#selectAll").is(':checked'))
+	if ($("#selectAll").is(':checked'))
   {
-    $("input[type='checkbox']").attr('checked',true);
-}
-else
-{
-    $("input[type='checkbox']").attr('checked',false);
-} ///end of if statment
+    $("input[type='checkbox']").prop('checked',true);
+	}
+	else
+	{
+    $("input[type='checkbox']").prop('checked',false);
+	} ///end of if statment
 });
 });//end of document.ready statment
 </script>
+
 </head>
 <input type="checkbox" value="Male"/>
 <label>male</label><br/>
