@@ -1,0 +1,55 @@
+<html>
+<head>
+
+
+
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+
+Which came first the chicken or the egg?
+<button onclick="chicken()">Guess</button>
+<p id="answer"></p>
+
+
+
+</body>
+<script>
+var Eggcounter =0;
+var Chickencounter=0;
+function chicken()
+{
+	if (Chickencounter == 4){
+		return 0;
+	}
+	else
+	{
+		document.getElementById("answer").innerHTML+="Chicken?<br/>";
+		Chickencounter++;
+		egg();
+
+	}
+
+}
+
+function egg()
+{
+	if (Eggcounter == 4)
+	{
+
+		return 0;
+			}
+			else
+			{
+	document.getElementById("answer").innerHTML+="EGG?<br/>";
+	Eggcounter++;
+	chicken();
+}
+
+}
+
+</script>
+</html>
