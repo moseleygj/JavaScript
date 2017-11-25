@@ -1,0 +1,36 @@
+<html>
+<head>
+<title></title>
+<style>
+
+
+</style>
+</head>
+
+
+<body>
+	<input type ="range" min="1" max="120" value="13" onchange="age">
+<div class=""></div>
+<div id=""></div>
+<img src="" id="ageRange">
+
+<script type="">
+	function age()
+	{
+		if (document.getElementById("ageRange").value < 13){
+		//baby
+		document.getElementById("ageRange").src="kid.png";
+	}
+	else if(document.getElementById("ageRange").value > 13 &&
+document.getElementById("ageRange").value < 19){
+		//teen
+		document.getElementById("ageRange").src="teen.png";
+	}
+		else {//adult
+		document.getElementById("ageRange").src="adult.png";
+	}
+	}
+</script>
+
+</body>
+</html>
