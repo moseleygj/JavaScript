@@ -1,34 +1,59 @@
 <html>
 <head>
-<title></title>
+	<meta charset="UTF-8">
+<title>Slide ageR pic Test</title>
 <style>
 
+#ageRangePic{
+	height:250px;
+	width:250px;
+}
+.slideMe{
 
+	height: 40px;
+	width:300px;
+}
 </style>
 </head>
 
-
 <body>
-	<input type ="range" min="1" max="120" value="13" onchange="age">
-<div class=""></div>
-<div id=""></div>
-<img src="" id="ageRange">
 
-<script type="">
+<div class="slideMe">	<input type ="range" min="1" max="122" value="13" onchange="age()" id="ageRRange"><br/>
+<p id="ageR" ></p> </div><br/>
+<img src="kid.png" id="ageRangePic"  style="clear:both">
+
+<script type="text/javascript">
+var picture=document.getElementById("ageRangePic");
+var ageR = document.getElementById("ageRRange");
 	function age()
 	{
-		if (document.getElementById("ageRange").value < 13){
-		//baby
-		document.getElementById("ageRange").src="kid.png";
+		document.getElementById("ageR").innerHTML="Age: "+
+		ageR.value;
+
+		if (ageR.value <5){
+		//baby upto ageR 4
+		picture.src="baby.png";
+		}
+
+	else if (ageR.value >4 && ageR.value < 13){
+		//kid
+		picture.src="kid.png";
 	}
-	else if(document.getElementById("ageRange").value > 13 &&
-document.getElementById("ageRange").value < 19){
+	else if(ageR.value > 12 &&
+ageR.value < 19){
 		//teen
-		document.getElementById("ageRange").src="teen.png";
-	}
-		else {//adult
-		document.getElementById("ageRange").src="adult.png";
-	}
+		picture.src="teen.png";
+}
+	else if(ageR.value > 17 &&
+ageR.value < 55){
+		//adult
+		picture.src="adults.png";
+
+}
+	else {//Senior
+	picture.src="senior.png";
+}
+
 	}
 </script>
 
