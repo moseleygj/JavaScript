@@ -9,18 +9,19 @@
 	width:250px;
 }
 .slideMe{
-
+  -webkit-appearance: slider-vertical;
 	height: 40px;
 	width:300px;
+
 }
 </style>
 </head>
 
 <body>
 
-<div class="slideMe">	<input type ="range" min="1" max="122" value="13" onchange="age()" id="ageRRange"><br/>
-<p id="ageR" ></p> </div><br/>
-<img src="kid.png" id="ageRangePic"  style="clear:both">
+<div class="slideMe">	<input type ="range" min="1" max="122" value="1" onchange="age()"  id="ageRRange" orient="vertical"><br/>
+<p id="ageR" >age: 1</p> </div><br/>
+<img src="baby.png" id="ageRangePic"  style="clear:both;margin-left:70px;">
 
 <script type="text/javascript">
 var picture=document.getElementById("ageRangePic");
@@ -40,7 +41,7 @@ var ageR = document.getElementById("ageRRange");
 		picture.src="kid.png";
 	}
 	else if(ageR.value > 12 &&
-ageR.value < 19){
+ageR.value < 18){
 		//teen
 		picture.src="teen.png";
 }
