@@ -1,0 +1,72 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+<title>Slide ageR pic Test</title>
+<style>
+
+#ageRangePic{
+	height:250px;
+	width:250px;
+}
+.slideMe{
+  -webkit-appearance: slider-vertical;
+	height: 40px;
+	width:300px;
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="slideMe">	<input type ="range" min="1" max="122" value="1" onchange="age()"  id="ageRRange" orient="vertical"><br/>
+<p id="ageR" >age: 1</p> </div><br/>
+<p id="currentDate"></p>
+<img src="baby.png" id="ageRangePic"  style="clear:both;margin-left:70px;">
+
+<script type="text/javascript">
+
+var d = new Date();
+var year = d.getFullYear();
+
+var picture=document.getElementById("ageRangePic");
+var ageR = document.getElementById("ageRRange");
+	function age()
+	{
+		alert(year);
+		 d.setFullYear(d.getFullYear() + agrR.value);
+		document.getElementById("currentDate").innerHTML=d;
+;
+
+		document.getElementById("ageR").innerHTML="Age: "+
+		ageR.value;
+
+/*		if (ageR.value <5){
+		//baby upto ageR 4
+		picture.src="baby.png";
+		}
+
+	else if (ageR.value >4 && ageR.value < 13){
+		//kid
+		picture.src="kid.png";
+	}
+	else if(ageR.value > 12 &&
+ageR.value < 18){
+		//teen
+		picture.src="teen.png";
+}
+	else if(ageR.value > 17 &&
+ageR.value < 55){
+		//adult
+		picture.src="adults.png";
+
+}
+	else {//Senior
+	picture.src="senior.png";
+}
+
+	*/}
+</script>
+
+</body>
+</html>
