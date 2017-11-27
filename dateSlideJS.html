@@ -21,19 +21,24 @@
 
 </body>
 <script type="text/javascript">
-	var d = new Date();
+var d = new Date();
 var jackson = 50;
 d.setDate(d.getDate() + 50);
 document.getElementById("demo").innerHTML = d;
 //
 function changeYear()
 {
-var d = new Date();
+var d = new Date("01/01/1930");
 
   //alert(Number(document.getElementById("rSlide").value));
 d.setFullYear(d.getUTCFullYear() + Number(document.getElementById("rSlide").value));
 document.getElementById("demo1").innerHTML = d;
-
+currentYear();
+}
+function currentYear()
+{
+  var current = new Date;
+  alert(current.getFullYear())
 }
   document.getElementById("demo1").innerHTML = d;
 //
