@@ -1,0 +1,43 @@
+<html>
+<head>
+
+
+
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<input type="range" min="1" max="31" value= "1" id="rSlide" onchange="changeYear()">
+
+
+
+
+</body>
+<script type="text/javascript">
+	var d = new Date();
+var jackson = 50;
+d.setDate(d.getDate() + 50);
+document.getElementById("demo").innerHTML = d;
+//
+function changeYear()
+{
+var d = new Date();
+
+  //alert(Number(document.getElementById("rSlide").value));
+d.setFullYear(d.getUTCFullYear() + Number(document.getElementById("rSlide").value));
+document.getElementById("demo1").innerHTML = d;
+
+}
+  document.getElementById("demo1").innerHTML = d;
+//
+document.getElementById("demo2").innerHTML = d.getFullYear();
+
+</script>
+</html>
