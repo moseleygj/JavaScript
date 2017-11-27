@@ -28,15 +28,16 @@
 
 var d = new Date();
 var year = d.getFullYear();
-
+var currDate = document.getElementById("currentDate").innerHTML;
 var picture=document.getElementById("ageRangePic");
 var ageR = document.getElementById("ageRRange");
 	function age()
 	{
-		alert(year);
-		 d.setFullYear(d.getFullYear() + agrR.value);
-		document.getElementById("currentDate").innerHTML=d;
-;
+
+		d.setFullYear(d.getFullYear() + ageR.value);
+		currDate=d;
+		alert(currDate);
+
 
 		document.getElementById("ageR").innerHTML="Age: "+
 		ageR.value;
