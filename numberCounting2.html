@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Number Counting</title>
+</head>
+<body>
+  <input type ="text" id="tB">
+  <button onclick="s()">click me </button>
+  <p id="tell"></p>
+  <p id="zeroC"></p>
+  <p id="oneC"></p>
+  <p id="twoC"></p>
+  <p id="threeC"></p>
+  <p id="fourC"></p>
+  <p id="fiveC"></p>
+  <p id="sixC"></p>
+  <p id="sevenC"></p>
+  <p id="eightC"></p>
+  <p id="nineC"></p>
+</body>
+<script type="text/javascript">
+
+function s()
+{
+  var zero=0, one=0, two=0, three=0, four=0, five=0, six=0, seven=0, eight=0, nine=0;
+  var s =  document.getElementById("tB").value;
+  var part = s.split("");
+
+for (var i=0;i< part.length;i++){
+//document.getElementById("tell").innerHTML+=part[i]+"<br/>";
+
+  switch (part[i]){
+    case "0":zero++;
+    break;
+     case "1":one++;
+    break;
+     case "2":two++;
+    break;
+     case "3":three++;
+    break;
+     case "4":four++;
+    break;
+     case "5":five++;
+    break;
+     case "6":six++;
+    break;
+     case "7":seven++;
+    break;
+     case "8":eight++;
+    break;
+     case "9":nine++;
+    break;
+     }/*
+    if (part[i] == "0")
+{Zero++;}*/
+    }
+      document.getElementById("zeroC").innerHTML+="Zero: "+zero;
+        document.getElementById("oneC").innerHTML+="One: "+one;
+
+  document.getElementById("twoC").innerHTML+="Two: "+two;
+   document.getElementById("threeC").innerHTML+="Three: "+three;
+   document.getElementById("fourC").innerHTML+="Four: "+four;
+   document.getElementById("fiveC").innerHTML+="Five: "+five;
+   document.getElementById("sixC").innerHTML+="Six: "+six;
+   document.getElementById("sevenC").innerHTML+="Seven: "+seven;
+   document.getElementById("eightC").innerHTML+="Eight: "+eight;
+   document.getElementById("nineC").innerHTML+="Nine: "+nine;
+
+
+  }
+
+
+
+</script>
+
+</html>
