@@ -18,8 +18,8 @@
 			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Capricorn";//changeMe
-			document.getElementById("titleDetails").innerHTML="December 22 - January 19";//changeMe
+			document.getElementById("titleInfo").innerHTML="Capricorn";
+			document.getElementById("titleDetails").innerHTML="December 22 - January 19";
 			document.getElementById("main-img").src="Capricorn-icon.png";
 		}
 //-------------------------------------------------------------------------------------------//
@@ -33,8 +33,8 @@
 			document.getElementById("top").style.background = "linear-gradient(#DAf0f8,#98d5ed)";
 			document.getElementById("titleInfo").style.color="navy";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Aquarius";//changeMe
-			document.getElementById("titleDetails").innerHTML="January 20 - February 18";//changeMe
+			document.getElementById("titleInfo").innerHTML="Aquarius";
+			document.getElementById("titleDetails").innerHTML="January 20 - February 18";
 			document.getElementById("main-img").src="Aquarius-icon.png";
 			load_home();
 			  }
@@ -48,8 +48,8 @@
 			document.getElementById("top").style.background = "linear-gradient(#DAf0f8,#98d5ed)";
 			document.getElementById("titleInfo").style.color="navy";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Aquarius";//changeMe
-			document.getElementById("titleDetails").innerHTML="January 20 - February 18";//changeMe
+			document.getElementById("titleInfo").innerHTML="Aquarius";
+			document.getElementById("titleDetails").innerHTML="January 20 - February 18";
 			document.getElementById("main-img").src="Aquarius-icon.png";
 
 		}
@@ -64,8 +64,8 @@
 			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Pisces";//changeMe
-			document.getElementById("titleDetails").innerHTML="February 19 - March 20";//changeMe
+			document.getElementById("titleInfo").innerHTML="Pisces";
+			document.getElementById("titleDetails").innerHTML="February 19 - March 20";
 			document.getElementById("main-img").src="Pisces-icon.png";
 			  }
 			  else
@@ -78,8 +78,8 @@
 			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Pisces";//changeMe
-			document.getElementById("titleDetails").innerHTML="February 19 - March 20";//changeMe
+			document.getElementById("titleInfo").innerHTML="Pisces";
+			document.getElementById("titleDetails").innerHTML="February 19 - March 20";
 			document.getElementById("main-img").src="Pisces-icon.png";
 
 		}
@@ -94,22 +94,22 @@
 			document.getElementById("top").style.background = "linear-gradient(red,#BD0000)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Aries";//changeMe
-			document.getElementById("titleDetails").innerHTML="March 21-April 19";//changeMe
+			document.getElementById("titleInfo").innerHTML="Aries";
+			document.getElementById("titleDetails").innerHTML="March 21-April 19";
 			document.getElementById("main-img").src="Aries-icon.ico";
 			  }
 			  else
 			  	alert("Oops! Somethings not right...")
 		}
 
-else if ((m.value == "April") && (d.value < 20))
+                else if ((m.value == "April") && (d.value < 20))
 		{
 			//alert("Aries");
 			document.getElementById("top").style.background = "linear-gradient(red,#BD0000)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Aries";//changeMe
-			document.getElementById("titleDetails").innerHTML="March 21-April 19";//changeMe
+			document.getElementById("titleInfo").innerHTML="Aries";
+			document.getElementById("titleDetails").innerHTML="March 21-April 19";
 			document.getElementById("main-img").src="Aries-icon.ico";
 
 		}
@@ -124,8 +124,8 @@ else if ((m.value == "April") && (d.value < 20))
 			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Taurus";//changeMe
-			document.getElementById("titleDetails").innerHTML="April 20-May 20";//changeMe
+			document.getElementById("titleInfo").innerHTML="Taurus";
+			document.getElementById("titleDetails").innerHTML="April 20-May 20";
 			document.getElementById("main-img").src="Taurus-icon.png";
 			  }
 			  else
@@ -138,8 +138,8 @@ else if ((m.value == "May") && (d.value < 21))
 		  	document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Taurus";//changeMe
-			document.getElementById("titleDetails").innerHTML="April 20-May 20";//changeMe
+			document.getElementById("titleInfo").innerHTML="Taurus";
+			document.getElementById("titleDetails").innerHTML="April 20-May 20";
 			document.getElementById("main-img").src="Taurus-icon.png";
 		}
 
@@ -152,8 +152,8 @@ else if ((m.value == "June") && (d.value < 21))
 		  	document.getElementById("top").style.background = "linear-gradient(#DAf0f8,#98d5ed)";
 			document.getElementById("titleInfo").style.color="navy";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Gemini";//changeMe
-			document.getElementById("titleDetails").innerHTML="May 21 - June 20";//changeMe
+			document.getElementById("titleInfo").innerHTML="Gemini";
+			document.getElementById("titleDetails").innerHTML="May 21 - June 20";
 			document.getElementById("main-img").src="Gemini-icon.png";
 	}
 
@@ -167,8 +167,8 @@ else if (m.value == "May")
 		  	document.getElementById("top").style.background = "linear-gradient(#DAf0f8,#98d5ed)";
 			document.getElementById("titleInfo").style.color="navy";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Gemini";//changeMe
-			document.getElementById("titleDetails").innerHTML="May 21 - June 20";//changeMe
+			document.getElementById("titleInfo").innerHTML="Gemini";
+			document.getElementById("titleDetails").innerHTML="May 21 - June 20";
 			document.getElementById("main-img").src="Gemini-icon.png";
 		  }
 
@@ -187,8 +187,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Cancer";//changeMe
-			document.getElementById("titleDetails").innerHTML="June 21-July 22";//changeMe
+			document.getElementById("titleInfo").innerHTML="Cancer";
+			document.getElementById("titleDetails").innerHTML="June 21-July 22";
 			document.getElementById("main-img").src="Cancer-icon.png";
 			  }
 			  else{
@@ -201,8 +201,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Cancer";//changeMe
-			document.getElementById("titleDetails").innerHTML="June 21-July 22";//changeMe
+			document.getElementById("titleInfo").innerHTML="Cancer";
+			document.getElementById("titleDetails").innerHTML="June 21-July 22";
 			document.getElementById("main-img").src="Cancer-icon.png";
 
 		}
@@ -217,8 +217,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(red,#BD0000)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Leo";//changeMe
-			document.getElementById("titleDetails").innerHTML="July 23-August 22";//changeMe
+			document.getElementById("titleInfo").innerHTML="Leo";
+			document.getElementById("titleDetails").innerHTML="July 23-August 22";
 			document.getElementById("main-img").src="Leo-icon.png";
 			  }
 			  else
@@ -231,8 +231,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(red,#BD0000)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Leo";//changeMe
-			document.getElementById("titleDetails").innerHTML="July 23-August 22";//changeMe
+			document.getElementById("titleInfo").innerHTML="Leo";
+			document.getElementById("titleDetails").innerHTML="July 23-August 22";
 			document.getElementById("main-img").src="Leo-icon.png";
 
 		}
@@ -247,8 +247,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Virgo";//changeMe
-			document.getElementById("titleDetails").innerHTML="August 23-September 22";//changeMe
+			document.getElementById("titleInfo").innerHTML="Virgo";
+			document.getElementById("titleDetails").innerHTML="August 23-September 22";
 			document.getElementById("main-img").src="Virgo-icon.png";
 			  }
 			  else
@@ -261,8 +261,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Virgo";//changeMe
-			document.getElementById("titleDetails").innerHTML="August 23-September 22";//changeMe
+			document.getElementById("titleInfo").innerHTML="Virgo";
+			document.getElementById("titleDetails").innerHTML="August 23-September 22";
 			document.getElementById("main-img").src="Virgo-icon.png";
 
 		}
@@ -295,8 +295,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Scorpio";//changeMe
-			document.getElementById("titleDetails").innerHTML="October 23 - November 21";//changeMe
+			document.getElementById("titleInfo").innerHTML="Scorpio";
+			document.getElementById("titleDetails").innerHTML="October 23 - November 21";
 			document.getElementById("main-img").src="Scorpio-icon.png";
 			  }
 			  else
@@ -309,8 +309,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(#69A5d9,#022451)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Scorpio";//changeMe
-			document.getElementById("titleDetails").innerHTML="October 23 - November 21";//changeMe
+			document.getElementById("titleInfo").innerHTML="Scorpio";
+			document.getElementById("titleDetails").innerHTML="October 23 - November 21";
 			document.getElementById("main-img").src="Scorpio-icon.png";
 		}
 //-------------------------------------------------------------------------------------------//
@@ -322,8 +322,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Sagittarius";//changeMe
-			document.getElementById("titleDetails").innerHTML="November 22-December 21";//changeMe
+			document.getElementById("titleInfo").innerHTML="Sagittarius";
+			document.getElementById("titleDetails").innerHTML="November 22-December 21";
 			document.getElementById("main-img").src="Sagittarius-icon.png";
                 }
  		else if ((m.value == "December") && (d.value < 22))
@@ -333,8 +333,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Sagittarius";//changeMe
-			document.getElementById("titleDetails").innerHTML="November 22 - December 21";//changeMe
+			document.getElementById("titleInfo").innerHTML="Sagittarius";
+			document.getElementById("titleDetails").innerHTML="November 22 - December 21";
 			document.getElementById("main-img").src="Sagittarius-icon.png";
 		}
 //-------------------------------------------------------------------------------------------//
@@ -346,8 +346,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Capricorn";//changeMe
-			document.getElementById("titleDetails").innerHTML="December 22 - January 19";//changeMe
+			document.getElementById("titleInfo").innerHTML="Capricorn";
+			document.getElementById("titleDetails").innerHTML="December 22 - January 19";
 			document.getElementById("main-img").src="Capricorn-icon.png";
 
 		}
@@ -360,8 +360,8 @@ else if (m.value == "May")
 			document.getElementById("top").style.background = "linear-gradient(#00e867,#009B2C)";
 			document.getElementById("titleInfo").style.color="white";
 			document.getElementById("titleDetails").style.color="whitesmoke";
-			document.getElementById("titleInfo").innerHTML="Capricorn";//changeMe
-			document.getElementById("titleDetails").innerHTML="December 22 - January 19";//changeMe
+			document.getElementById("titleInfo").innerHTML="Capricorn";
+			document.getElementById("titleDetails").innerHTML="December 22 - January 19";
 			document.getElementById("main-img").src="Capricorn-icon.png";
 			  }
 			  else
