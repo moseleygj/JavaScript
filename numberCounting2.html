@@ -5,7 +5,7 @@
 <body>
   <input type ="text" id="tB">
   <button onclick="s()">click me </button>
-  <p id="tell"></p>
+  <p id="numOfChars"></p>
   <p id="zeroC"></p>
   <p id="oneC"></p>
   <p id="twoC"></p>
@@ -22,12 +22,13 @@
 function s()
 {
   var zero=0, one=0, two=0, three=0, four=0, five=0, six=0, seven=0, eight=0, nine=0;
+  var charCount=0;
   var s =  document.getElementById("tB").value;
   var part = s.split("");
 
 for (var i=0;i< part.length;i++){
 //document.getElementById("tell").innerHTML+=part[i]+"<br/>";
-
+charCount++;
   switch (part[i]){
     case "0":zero++;
     break;
@@ -53,18 +54,18 @@ for (var i=0;i< part.length;i++){
     if (part[i] == "0")
 {Zero++;}*/
     }
-      document.getElementById("zeroC").innerHTML+="Zero: "+zero;
-        document.getElementById("oneC").innerHTML+="One: "+one;
+   document.getElementById("numOfChars").innerHTML="Characters: "+charCount+"<hr/>";
 
-  document.getElementById("twoC").innerHTML+="Two: "+two;
-   document.getElementById("threeC").innerHTML+="Three: "+three;
-   document.getElementById("fourC").innerHTML+="Four: "+four;
-   document.getElementById("fiveC").innerHTML+="Five: "+five;
-   document.getElementById("sixC").innerHTML+="Six: "+six;
-   document.getElementById("sevenC").innerHTML+="Seven: "+seven;
-   document.getElementById("eightC").innerHTML+="Eight: "+eight;
-   document.getElementById("nineC").innerHTML+="Nine: "+nine;
-
+   document.getElementById("zeroC").innerHTML="Zero: "+zero;
+   document.getElementById("oneC").innerHTML="One: "+one;
+   document.getElementById("twoC").innerHTML="Two: "+two;
+   document.getElementById("threeC").innerHTML="Three: "+three;
+   document.getElementById("fourC").innerHTML="Four: "+four;
+   document.getElementById("fiveC").innerHTML="Five: "+five;
+   document.getElementById("sixC").innerHTML="Six: "+six;
+   document.getElementById("sevenC").innerHTML="Seven: "+seven;
+   document.getElementById("eightC").innerHTML="Eight: "+eight;
+   document.getElementById("nineC").innerHTML="Nine: "+nine;
 
   }
 
