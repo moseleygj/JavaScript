@@ -11,7 +11,7 @@ height:350px;
 
 
 <body>
-<textarea id="tb" onkeyup="showChar()" rows="10" col="50" maxlength="300" placeholder="Type here..." autofocus></textarea>
+<textarea id="tb" onkeyup="showChar()" rows="10" col="50" maxlength="300" placeholder="Type here..." autofocus></textarea> <!-- modify maxlength to match  the maxText variable Below-->
 
 <p id="chars"></p>
 <p id="charsRem"></p>
@@ -20,14 +20,14 @@ height:350px;
 
 <script type="text/javascript">
 var bg = document.getElementById("tb");
-var maxText=300;
+const maxText=300; //set number of character allowed
 
 function showChar()
 {
 var sizeOf = document.getElementById("tb");
 
-document.getElementById("chars").innerHTML ="characters: "+ sizeOf.value.length;
-document.getElementById("charsRem").innerHTML = "characters Remainding: "+countdown(sizeOf.value.length);
+document.getElementById("chars").innerHTML ="<b>characters: </b>"+ sizeOf.value.length;
+document.getElementById("charsRem").innerHTML = "<b>characters Remainding: </b>"+countdown(sizeOf.value.length);
 }
 
 
@@ -35,11 +35,10 @@ function countdown(CD)
 {
 colorChangeStatus(CD);
 
-	var remains = (300-CD);
-		//alert(remains);
-		
+	var remains = (maxText-CD);
+				
 		if (remains == 0){
-			alert("no more text left");
+			alert("You've reached the maximum allowable text!");
 			return 0;
 		}
 		else
