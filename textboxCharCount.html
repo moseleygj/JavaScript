@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<style type="text/css">
+#tb{
+width:450px;
+height:350px;
+}
+</style>
+
+
+<body>
+<textarea id="tb" onkeyup="showChar()" rows="10" col="50" maxlength="300" placeholder="Type here..." autofocus></textarea>
+
+<p id="chars"></p>
+<p id="charsRem"></p>
+</body>
+
+
+<script type="text/javascript">
+var bg = document.getElementById("tb");
+var maxText=300;
+
+function showChar()
+{
+var sizeOf = document.getElementById("tb");
+
+document.getElementById("chars").innerHTML ="characters: "+ sizeOf.value.length;
+document.getElementById("charsRem").innerHTML = "characters Remainding: "+countdown(sizeOf.value.length);
+}
+
+
+function countdown(CD)
+{
+colorChangeStatus(CD);
+
+	var remains = (300-CD);
+		//alert(remains);
+		
+		if (remains == 0){
+			alert("no more text left");
+			return 0;
+		}
+		else
+		{
+		return remains;
+		}
+}
+
+function colorChangeStatus(charCount)
+{
+				if (charCount <=49){
+					bg.style.backgroundColor="#eded00";
+				}
+				else if (( charCount>=50) && (charCount<=99)){
+					bg.style.backgroundColor="#ffc705";
+				}
+				else if ((charCount >=100) && (charCount<=149)){
+					bg.style.backgroundColor="#ff9b05";
+				}
+				else if (( charCount>=150) && (charCount<=199)){
+					bg.style.backgroundColor="#e9ffe4";
+				}
+				else if (( charCount>=200) && (charCount<=249)){
+					bg.style.backgroundColor="#d5fccd";
+				}
+				else 
+				{
+					bg.style.backgroundColor="#7be964";
+				}
+}
+</script>
+</html>
