@@ -1,0 +1,31 @@
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+<h3>Area of a  rectangle:</h3><br>
+Length:<input type="text" id="length" placeholder="length"><br>
+width:<input type="text" id="width" placeholder="width"><br>
+<p id="answer"></p>
+<button onClick="rectangle()">Get area of Rectangle</button>
+<div class=""></div>
+
+
+</body>
+
+<script type="text/javascript">
+
+length = document.getElementById("length");
+width = document.getElementById("width");
+function rectangle()
+{
+var area = length.value* width.value;
+document.getElementById("answer").innerHTML="Area: "+area;
+}
+</script>
+</html>

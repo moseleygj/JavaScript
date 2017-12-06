@@ -1,0 +1,31 @@
+<html>
+<head>
+<title></title>
+<style>
+
+
+</style>
+</head>
+
+<body>
+Height:<input type="textbox" id="height"><br>
+Base:<input type="textbox" id="base"><br>
+<button onclick="triangle()">Calculate Area</button><br>
+<p id="areaAnswer">Area:</p>
+
+<div class=""></div>
+<div id=""></div>
+
+<script type="text/javascript">
+function triangle()
+{
+	height = document.getElementById("height");
+	base = document.getElementById("base");
+ var area = Number((base.value/2)*height.value);
+ document.getElementById("areaAnswer").innerHTML="Area: "+area;
+}
+
+</script>
+
+</body>
+</html>
