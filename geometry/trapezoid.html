@@ -1,0 +1,36 @@
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+<h3>Area of Trapezoid:</h3><br>
+Base 1:<input type="text" id="base1" placeholder="base"><br>
+Base 2:<input type="text" id="base2" placeholder="base"><br>
+
+Height:<input type="text" id="height" placeholder="height"><br>
+<p id="answer"></p>
+<button onClick="trap()">Get area of trapezoid </button>
+<div class=""></div>
+
+
+</body>
+
+<script type="text/javascript">
+
+base1 =document.getElementById("base1");
+base2 =document.getElementById("base2");
+
+height = document.getElementById("height");
+
+function trap()
+{
+var area =parseInt((((Number(base1.value) + Number(base2.value))/2)*Number(height.value)));
+document.getElementById("answer").innerHTML="Area: "+area;
+}
+</script>
+</html>
