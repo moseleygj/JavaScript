@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+
+
+</style>
+</head>
+
+
+<body>
+<div class=""></div>
+<div id=""></div>
+<input type="textbox" id=tBox><br/>
+<input type="button" value="click Me" onClick="sepString()"><br/>
+<p id="result"></p>
+<script type="text/javascript">
+	function sepString()
+	{
+		var text=document.getElementById("tBox").value;
+		var nText=text.split("");
+
+for (var i=0 ; i<nText.length;i++)
+{
+	if(nText[i] % 2 == 1){
+		alert(nText[i] +" : odd");
+}
+else{
+	//alert(nText[i] +" : even");
+	continue;
+}
+document.getElementById("result").innerHTML += "Value: "+nText[i]+"  :"+i+"<br/>";
+
+	}
+}
+
+</script>
+
+</body>
+</html>
