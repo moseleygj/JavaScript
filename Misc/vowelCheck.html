@@ -3,9 +3,9 @@
 <meta charset="UTF-8">
 <title></title>
 <style>
-body{padding:0;margin:0;}
+body{padding:0;margin:0;background-color: limegreen;color:white;}
 .container{width:100%; height:100%;margin:0;padding:0;position:absolute;}
-.tbox{text-align:center;
+.tbox{text-align:center;font-size:20px;
 /*margin: 0 auto 0;
 left:50%;*/
 position:relative;
@@ -13,10 +13,17 @@ height:80px;
 width:100%;
 border-top: 1px;
 border-bottom:1px;
-border-color: skyblue;
+border-color: limegreen;
 background-color:skyblue;
-padding:0;
+padding:0px;
 }
+input[type="textbox"]{margin-top:5px;text-align: center;font-size:20px;}
+input[type="button"]{margin-top:5px;
+font-weight:bold;
+color:navy;
+font-size:14px;
+}
+
 </style>
 </head>
 <body>
@@ -24,7 +31,7 @@ padding:0;
 <div class="tbox">
 
 <input type="textbox" id=tBox><br/>
-<input type="button" value="click Me" onClick="vowelCheck()">
+<input type="button" value="Click Me" onClick="vowelCheck()">
 <br/>
 <p id="result"></p>
 </div>
@@ -41,20 +48,19 @@ for (var i=0;i<tBoxSplit.length;i++)
 	{
 switch(tBoxSplit[i])
 {
-case "a":document.getElementById("result").innerHTML+="a found:<br/>";break;
-case "A":document.getElementById("result").innerHTML+="A found:<br/>";break;
-case "e":document.getElementById("result").innerHTML+="e Found";break;
-case "E":document.getElementById("result").innerHTML+="E Found";break;
-
-case "i":document.getElementById("result").innerHTML+="i Found";break;
-case "I":document.getElementById("result").innerHTML+="I Found";break;
-case "o":document.getElementById("result").innerHTML+="o Found";break;
-case "O":document.getElementById("result").innerHTML+="O Found";break;
-case "u":document.getElementById("result").innerHTML+="u Found";break;
-case "U":document.getElementById("result").innerHTML+="U Found";break;
+case "a":document.getElementById("result").innerHTML+="a Found<br/>";break;
+case "A":document.getElementById("result").innerHTML+="A Found<br/>";break;
+case "e":document.getElementById("result").innerHTML+="e Found<br/>";break;
+case "E":document.getElementById("result").innerHTML+="E Found<br/>";break;
+case "i":document.getElementById("result").innerHTML+="i Found<br/>";break;
+case "I":document.getElementById("result").innerHTML+="I Found<br/>";break;
+case "o":document.getElementById("result").innerHTML+="o Found<br/>";break;
+case "O":document.getElementById("result").innerHTML+="O Found<br/>";break;
+case "u":document.getElementById("result").innerHTML+="u Found<br/>";break;
+case "U":document.getElementById("result").innerHTML+="U Found<br/>";break;
 default:return 0;
 		}/*end of switch */	
-	/*end of for loop */
+	/*end of for loop 
 
 	document.getElementById("result").innerHTML += 
 	tBoxSplit[i]+" : found<br/>";
