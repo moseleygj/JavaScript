@@ -10,7 +10,16 @@ body{margin:0;padding:0;}
 .rightIconArea{height:300px;width:70%;margin:;float:left;}
 .bottomStatusArea{height:auto;width:100%;margin:;clear:both;}
 .iconArea{height:58%;width:100%;margin:;}
-.selectionArea{height:40px;width:100%;margin-left:30px;margin-top:10px}
+.selectionArea{height:40px;width:100%;margin-left:30px;margin-top:10px;}
+.stats{height:300px;width:100%;}
+.statMp3{height:36px;width:100%;}
+.statDoc{height:36px;width:100%;}
+.statVid{height:36px;width:100%;}
+.statHdd{height:36px;width:100%;}
+.statPhoto{height:36px;width:100%;}
+
+
+
 </style>
 </head>
 
@@ -19,14 +28,14 @@ body{margin:0;padding:0;}
 <div class=""></div>
 <div id="container">
 	<div class="leftIconArea">
-<img src="Designbolts-Free-Multimedia-Mp3-Player.ico" class="iconArea" id="mainIcon">
+<img src="question.png" class="iconArea" id="mainIcon">
 	</div>
 
 	<div class="rightIconArea">
-<div class="selectionArea" style="margin-top:30px">
+		<div class="selectionArea" style="margin-top:30px">
 	<b>Device Type:</b>&nbsp
 
-	<select id="devSelection">
+	<select id="devSelection" onchange="devSelect()">
 			<option value="mp3">MP3</option>
 			<option value="photo">Photo</option>
 			<option value="doc">Document</option>
@@ -40,10 +49,21 @@ body{margin:0;padding:0;}
 
 		<br/>
 		<div class="selectionArea">
+<div class="stats">
+<div class="statMp3" id="statMp3"><b>Number of Songs:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statPhoto" id="statPhoto"><b>Number of photos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statDoc" id="statDoc"><b>Number of documents:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statVid" id="statVid"><b>Number of videos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statVidS" id="statVidS"><b>Size of videos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
 
-		<b>Number of Songs:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6">
+<div class="statMp3" id="statMp3"><b>Number of Songs:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
 
-</div>	</div>
+
+
+</div>
+	</div>
+	</div>
+
 	<div class="bottomStatusArea"></div>
 </div>
 </body>
@@ -54,35 +74,31 @@ function devSelect(){
 	var e = document.getElementById("devSelection");
 	var icon = document.getElementById("mainIcon");
 	var option = e.options[e.selectedIndex].value;
-	alert("option = " + option);
+
 		if (option =="mp3")
 		{
-			alert("MP3");
-			icon.src="mp3s.ico"
+		icon.src="mp3s.ico";
 		}
 		else if (option=="photo")
-		{	 alert("PHOTO");
+		{
 		icon.src="photos.png";
+		document.getElementById("statMp3").style.visibility="hidden";
 		}
 		else if(option == "doc")
 		{
-			alert("DOCUMENT");
-			icon.src="google_docs_icon.png";
+		icon.src="google_docs_icon.png";
 		}
 		else if(option =="vid")
 		{
-			alert("VIDEO");
-			icon.src="10-video-camera-png-image.png";
+		icon.src="10-video-camera-png-image.png";
 		}
 		else if(option =="hdd"){
-		alert("HardDrive");
 		icon.src="HDD.png";
-	}
+		}
 		else{
-			alert("error!");
-			icon.src="error.png";
+		alert("error!");
+		icon.src="error.png";
 		}
 	}
 </script>
-
 </html>
