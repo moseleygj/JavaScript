@@ -10,6 +10,7 @@ html{}
 .rightIconArea{height:300px;width:70%;margin:;float:left;}
 .bottomStatusArea{height:auto;width:100%;margin:;clear:both;}
 .iconArea{height:58%;width:100%;margin:;}
+.selectionArea{height:40px;width:100%;margin-left:20px;}
 </style>
 </head>
 
@@ -22,22 +23,36 @@ html{}
 <img src="Designbolts-Free-Multimedia-Mp3-Player.ico" class="iconArea">
 	</div>
 	<div class="rightIconArea">
+<div class="selectionArea">
 
-		Device Type:&nbsp<select>
-<option value="mp3" id="mp3Select">MP3</option>
-<option value="photo" id="photoSelect">Photo</option>
-<option value="doc" id="docSelect">Document</option>
-<option value="vid" id="videoSelect">Video</option>
+		Device Type:&nbsp
+	<select id="devSelect" onClick="devSelect()">
+<option value="none"  onClick="devSelect()" selected="selected">Select media type</option>
+<option value="mp3" onclick="devSelect()">MP3</option>
+<option value="photo" >Photo</option>
+<option value="doc">Document</option>
+<option value="vid">Video</option>
 		</select>
-		<br/>
-		Number of Songs:&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6">
+
 	</div>
+		<br/>
+		<div class="selectionArea">
+
+		Number of Songs:&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6">
+
+</div>	</div>
 	<div class="bottomStatusArea"></div>
 </div>
 </body>
 
 <script type="text/javascript">
-
+var e = document.getElementById("devSelect");
+var option = e.options[e.selectedIndex].value;
+function devSelect(){
+	if(option == "mp3"){
+		alert("mp3 selected");
+	}
+}
 </script>
 
 </html>
