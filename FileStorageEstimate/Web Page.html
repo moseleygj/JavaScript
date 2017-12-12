@@ -1,44 +1,47 @@
 <html>
 <head>
-	<meta charset="UTF-8">
+<meta charset="UTF-8">
 <title>Capacity Qouta</title>
 <style>
 html{}
-	body{margin:0;padding:0;}
+body{margin:0;padding:0;}
 #container{height:;width:768px;margin:0 auto 0;}
 .leftIconArea{height:300px;width:30%;margin:;float:left;}
 .rightIconArea{height:300px;width:70%;margin:;float:left;}
 .bottomStatusArea{height:auto;width:100%;margin:;clear:both;}
 .iconArea{height:58%;width:100%;margin:;}
-.selectionArea{height:40px;width:100%;margin-left:20px;}
+.selectionArea{height:40px;width:100%;margin-left:30px;margin-top:10px}
 </style>
 </head>
-
 
 <body>
 
 <div class=""></div>
 <div id="container">
 	<div class="leftIconArea">
-<img src="Designbolts-Free-Multimedia-Mp3-Player.ico" class="iconArea">
+<img src="Designbolts-Free-Multimedia-Mp3-Player.ico" class="iconArea" id="mainIcon">
 	</div>
+
 	<div class="rightIconArea">
-<div class="selectionArea">
+<div class="selectionArea" style="margin-top:30px">
+	<b>Device Type:</b>&nbsp
 
-		Device Type:&nbsp
-	<select id="devSelect" onClick="devSelect()">
-<option value="none"  onClick="devSelect()" selected="selected">Select media type</option>
-<option value="mp3" onclick="devSelect()">MP3</option>
-<option value="photo" >Photo</option>
-<option value="doc">Document</option>
-<option value="vid">Video</option>
-		</select>
+	<select id="devSelection">
+			<option value="mp3">MP3</option>
+			<option value="photo">Photo</option>
+			<option value="doc">Document</option>
+			<option value="vid">Video</option>
+			<option value="hdd">HardDrive</option>
 
-	</div>
+	</select>
+
+		<button onclick="devSelect()">click Me</button>
+</div>
+
 		<br/>
 		<div class="selectionArea">
 
-		Number of Songs:&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6">
+		<b>Number of Songs:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6">
 
 </div>	</div>
 	<div class="bottomStatusArea"></div>
@@ -46,13 +49,40 @@ html{}
 </body>
 
 <script type="text/javascript">
-var e = document.getElementById("devSelect");
-var option = e.options[e.selectedIndex].value;
+
 function devSelect(){
-	if(option == "mp3"){
-		alert("mp3 selected");
+	var e = document.getElementById("devSelection");
+	var icon = document.getElementById("mainIcon");
+	var option = e.options[e.selectedIndex].value;
+	alert("option = " + option);
+		if (option =="mp3")
+		{
+			alert("MP3");
+			icon.src="mp3s.ico"
+		}
+		else if (option=="photo")
+		{	 alert("PHOTO");
+		icon.src="photos.png";
+		}
+		else if(option == "doc")
+		{
+			alert("DOCUMENT");
+			icon.src="google_docs_icon.png";
+		}
+		else if(option =="vid")
+		{
+			alert("VIDEO");
+			icon.src="10-video-camera-png-image.png";
+		}
+		else if(option =="hdd"){
+		alert("HardDrive");
+		icon.src="HDD.png";
 	}
-}
+		else{
+			alert("error!");
+			icon.src="error.png";
+		}
+	}
 </script>
 
 </html>
