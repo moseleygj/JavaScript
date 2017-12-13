@@ -18,8 +18,6 @@ body{margin:0;padding:0;}
 .statHdd{height:36px;width:100%;}
 .statPhoto{height:36px;width:100%;}
 
-
-
 </style>
 </head>
 
@@ -41,23 +39,24 @@ body{margin:0;padding:0;}
 			<option value="doc">Document</option>
 			<option value="vid">Video</option>
 			<option value="hdd">HardDrive</option>
-
 	</select>
 
-		<button onclick="devSelect()">click Me</button>
+		<!--<button onclick="devSelect()" id="">Click Me</button>-->
+
 </div>
 
 		<br/>
 		<div class="selectionArea">
 <div class="stats">
-<div class="statMp3" id="statMp3"><b>Number of Songs:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-<div class="statPhoto" id="statPhoto"><b>Number of photos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-<div class="statDoc" id="statDoc"><b>Number of documents:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-<div class="statVid" id="statVid"><b>Number of videos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-<div class="statVidS" id="statVidS"><b>Size of videos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statMp3" id="statMp3"><b>Number of MP3s:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statPhoto" id="statPhoto"><b>Number of Photos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statDoc" id="statDoc"><b>Number of Documents:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statVid" id="statVid"><b>Number of Videos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statVidQ" id="statVidQ"><b>Quality of Videos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statDVD" id="statDVD"><b>DVD Estimate:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
 
-<div class="statMp3" id="statMp3"><b>Number of Songs:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-
+<div class="statVidS" id="statVidS"><b>Size/length of videos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statHdd" id="statHdd"><b>Harddrive:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
 
 
 </div>
@@ -69,8 +68,19 @@ body{margin:0;padding:0;}
 </body>
 
 <script type="text/javascript">
+//display="none"; doesnt utilize uneeded space;
+//visibilibility is a bad choice, it utltizes unnecessary space
+document.getElementById("statMp3").style.display="none";
+document.getElementById("statPhoto").style.display="none";
+document.getElementById("statDoc").style.display="none";
+document.getElementById("statVid").style.display="none";
+document.getElementById("statVidQ").style.display="none";
+document.getElementById("statVidS").style.display="none";
+document.getElementById("statHdd").style.display="none";
+document.getElementById("statDVD").style.display="none";
 
 function devSelect(){
+
 	var e = document.getElementById("devSelection");
 	var icon = document.getElementById("mainIcon");
 	var option = e.options[e.selectedIndex].value;
@@ -78,22 +88,59 @@ function devSelect(){
 		if (option =="mp3")
 		{
 		icon.src="mp3s.ico";
+		document.getElementById("statMp3").style.display="block";
+		document.getElementById("statPhoto").style.display="none";
+		document.getElementById("statDoc").style.display="none";
+		document.getElementById("statVid").style.display="none";
+		document.getElementById("statVidQ").style.display="none";
+		document.getElementById("statVidS").style.display="none";
+		document.getElementById("statHdd").style.display="none";
+		document.getElementById("statDVD").style.display="block";
 		}
 		else if (option=="photo")
 		{
 		icon.src="photos.png";
-		document.getElementById("statMp3").style.visibility="hidden";
+		document.getElementById("statMp3").style.display="none";
+		document.getElementById("statPhoto").style.display="block";
+		document.getElementById("statDoc").style.display="none";
+		document.getElementById("statVid").style.display="none";
+		document.getElementById("statVidQ").style.display="none";
+		document.getElementById("statVidS").style.display="none";
+		document.getElementById("statHdd").style.display="none";
 		}
 		else if(option == "doc")
 		{
 		icon.src="google_docs_icon.png";
+		document.getElementById("statMp3").style.display="none";
+		document.getElementById("statPhoto").style.display="none";
+		document.getElementById("statDoc").style.display="block";
+		document.getElementById("statVid").style.display="none";
+		document.getElementById("statVidQ").style.display="none";
+		document.getElementById("statVidS").style.display="none";
+		document.getElementById("statHdd").style.display="none";
+
 		}
 		else if(option =="vid")
 		{
 		icon.src="10-video-camera-png-image.png";
+		document.getElementById("statMp3").style.display="none";
+		document.getElementById("statPhoto").style.display="none";
+		document.getElementById("statDoc").style.display="none";
+		document.getElementById("statVid").style.display="none";
+		document.getElementById("statVidQ").style.display="block";
+		document.getElementById("statVidS").style.display="block";
+		document.getElementById("statHdd").style.display="none";
 		}
 		else if(option =="hdd"){
 		icon.src="HDD.png";
+		document.getElementById("statMp3").style.display="block";
+		document.getElementById("statPhoto").style.display="block";
+		document.getElementById("statDoc").style.display="block";
+		document.getElementById("statVid").style.display="block";
+		document.getElementById("statVidQ").style.display="block";
+		document.getElementById("statVidS").style.display="block";
+		document.getElementById("statHdd").style.display="block";
+		document.getElementById("statDVD").style.display="block";
 		}
 		else{
 		alert("error!");
