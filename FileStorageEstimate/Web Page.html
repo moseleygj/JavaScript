@@ -223,19 +223,25 @@ if(option =="none"){
 
 	function hdd(){}
 	function vid(){}
-	function photo(){}
+	function photo(){
+		alert("Minimum: "+ numberCop(Number(txtPhoto.value)*1.7)+" Maximum: "+ numberCop(Number(txtPhoto.value)*2.3));
+	}
 	function mp3(){
 		alert("Minimum(160kps): "+ numberCop((Number(txtMp3.value)*3.51))+" Medium(192kps): "+numberCop(Number(txtMp3.value*4.21))+" Medium-High(256kps): "+numberCop(Number(txtMp3.value*5.61))+" High(320kps): "+numberCop(Number(txtMp3.value*7.02)));
 	}
 	function doc(){}
+
 function numberCop(num)
 {
 	if (num > 1024)
 	{
 		num/=1024;
-return (num).toFixed(2) +" GBs";
+		return (num).toFixed(2)+" GBs";
 	}
-	else{return (num).toFixed(2)+" MBs"}
+	else
+	{
+		return (num).toFixed(2)+" MBs";
+	}
 }
 </script>
 </html>
