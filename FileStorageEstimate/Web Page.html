@@ -34,6 +34,7 @@ body{margin:0;padding:0;}
 	<b>Device Type:</b>&nbsp
 
 	<select id="devSelection" onchange="devSelect()">
+		<option value="none" selected=selected>-Select an option-</option>
 			<option value="mp3">MP3</option>
 			<option value="photo">Photo</option>
 			<option value="doc">Document</option>
@@ -48,16 +49,30 @@ body{margin:0;padding:0;}
 		<br/>
 		<div class="selectionArea">
 <div class="stats">
-<div class="statMp3" id="statMp3"><b>Number of MP3s:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-<div class="statPhoto" id="statPhoto"><b>Number of Photos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-<div class="statDoc" id="statDoc"><b>Number of Documents:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-<div class="statVid" id="statVid"><b>Number of Videos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-<div class="statVidQ" id="statVidQ"><b>Quality of Videos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-<div class="statDVD" id="statDVD"><b>DVD Estimate:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
+<div class="statMp3" id="statMp3"><b>Number of MP3s:</b>&nbsp<input type="textbox" id="txtMp3" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statPhoto" id="statPhoto"><b>Number of Photos:</b>&nbsp<input type="textbox" id="txtPhoto" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statDoc" id="statDoc"><b>Number of Documents:</b>&nbsp<input type="textbox" id="txtDoc" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statVid" id="statVid"><b>Number of Videos:</b>&nbsp<input type="textbox" id="txtVid" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statVidQ" id="statVidQ"><b>Quality of Videos:</b>&nbsp<input type="textbox" id="txtVidQ" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statDVD" id="statDVD"><b>DVD Estimate:</b>&nbsp<input type="textbox" id="txtVidDvd" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statVidS" id="statVidS"><b>Size/length of videos:</b>&nbsp<input type="textbox" id="txtVidS" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statVMW" id="statVMW"><b>Virtual Machine(Windows):</b>&nbsp<input type="textbox" id="txtVMW" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statVML" id="statVML"><b>Virtual Machine(Linux):</b>&nbsp<input type="textbox" id="txtVML" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<button onclick="photo()" id="btnPhoto">Get Photo Quota</button>
+<button onclick="mp3()" id="btnMp3">Get Mp3 Quota</button>
+<button onclick="doc()" id="btnDoc">Get Document Quota</button>
+<button onclick="vid()" id="btnVid">Get Video Quota</button>
+<button onclick="hdd()" id="btnHdd">Get Hard Drive Quota</button>
 
-<div class="statVidS" id="statVidS"><b>Size/length of videos:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-<div class="statHdd" id="statHdd"><b>Harddrive:</b>&nbsp<input type="textbox" id="quantity" maxlength="6" max="999999" size="6"></div>
-
+txtMp3
+txtPhoto
+txtVid
+txtDoc
+txtVidQ
+txtVidDvd
+txtVidS
+txtVMW
+txtWML
 
 </div>
 	</div>
@@ -76,16 +91,39 @@ document.getElementById("statDoc").style.display="none";
 document.getElementById("statVid").style.display="none";
 document.getElementById("statVidQ").style.display="none";
 document.getElementById("statVidS").style.display="none";
-document.getElementById("statHdd").style.display="none";
 document.getElementById("statDVD").style.display="none";
+document.getElementById("statVML").style.display="none";
+document.getElementById("statVMW").style.display="none";
+document.getElementById("btnPhoto").style.display="none";
+document.getElementById("btnMp3").style.display="none";
+document.getElementById("btnDoc").style.display="none";
+document.getElementById("btnVid").style.display="none";
+document.getElementById("btnHdd").style.display="none";
 
 function devSelect(){
 
 	var e = document.getElementById("devSelection");
 	var icon = document.getElementById("mainIcon");
 	var option = e.options[e.selectedIndex].value;
+if(option =="none"){
+	icon.src="question.png";
+	document.getElementById("statMp3").style.display="none";
+	document.getElementById("statPhoto").style.display="none";
+	document.getElementById("statDoc").style.display="none";
+	document.getElementById("statVid").style.display="none";
+	document.getElementById("statVidQ").style.display="none";
+	document.getElementById("statVidS").style.display="none";
+	document.getElementById("statDVD").style.display="none";
+	document.getElementById("statVML").style.display="none";
+	document.getElementById("statVMW").style.display="none";
+	document.getElementById("btnPhoto").style.display="none";
+	document.getElementById("btnMp3").style.display="none";
+	document.getElementById("btnDoc").style.display="none";
+	document.getElementById("btnVid").style.display="none";
+	document.getElementById("btnHdd").style.display="none";
 
-		if (option =="mp3")
+}
+		else if (option =="mp3")
 		{
 		icon.src="mp3s.ico";
 		document.getElementById("statMp3").style.display="block";
@@ -94,8 +132,15 @@ function devSelect(){
 		document.getElementById("statVid").style.display="none";
 		document.getElementById("statVidQ").style.display="none";
 		document.getElementById("statVidS").style.display="none";
-		document.getElementById("statHdd").style.display="none";
-		document.getElementById("statDVD").style.display="block";
+		document.getElementById("statDVD").style.display="none";
+		document.getElementById("statVML").style.display="none";
+		document.getElementById("statVMW").style.display="none";
+		document.getElementById("btnPhoto").style.display="none";
+		document.getElementById("btnMp3").style.display="block";
+		document.getElementById("btnDoc").style.display="none";
+		document.getElementById("btnVid").style.display="none";
+		document.getElementById("btnHdd").style.display="none";
+
 		}
 		else if (option=="photo")
 		{
@@ -106,8 +151,14 @@ function devSelect(){
 		document.getElementById("statVid").style.display="none";
 		document.getElementById("statVidQ").style.display="none";
 		document.getElementById("statVidS").style.display="none";
-		document.getElementById("statHdd").style.display="none";
-		}
+		document.getElementById("statVML").style.display="none";
+		document.getElementById("statVMW").style.display="none";
+		document.getElementById("btnPhoto").style.display="display";
+		document.getElementById("btnMp3").style.display="none";
+		document.getElementById("btnDoc").style.display="none";
+		document.getElementById("btnVid").style.display="none";
+		document.getElementById("btnHdd").style.display="none";
+				}
 		else if(option == "doc")
 		{
 		icon.src="google_docs_icon.png";
@@ -117,7 +168,13 @@ function devSelect(){
 		document.getElementById("statVid").style.display="none";
 		document.getElementById("statVidQ").style.display="none";
 		document.getElementById("statVidS").style.display="none";
-		document.getElementById("statHdd").style.display="none";
+		document.getElementById("statVML").style.display="none";
+		document.getElementById("statVMW").style.display="none";
+		document.getElementById("btnPhoto").style.display="none";
+		document.getElementById("btnMp3").style.display="none";
+		document.getElementById("btnDoc").style.display="display";
+		document.getElementById("btnVid").style.display="none";
+		document.getElementById("btnHdd").style.display="none";
 
 		}
 		else if(option =="vid")
@@ -129,8 +186,14 @@ function devSelect(){
 		document.getElementById("statVid").style.display="none";
 		document.getElementById("statVidQ").style.display="block";
 		document.getElementById("statVidS").style.display="block";
-		document.getElementById("statHdd").style.display="none";
-		}
+		document.getElementById("statVML").style.display="none";
+		document.getElementById("statVMW").style.display="none";
+		document.getElementById("btnPhoto").style.display="none";
+		document.getElementById("btnMp3").style.display="none";
+		document.getElementById("btnDoc").style.display="none";
+		document.getElementById("btnVid").style.display="block";
+		document.getElementById("btnHdd").style.display="none";
+				}
 		else if(option =="hdd"){
 		icon.src="HDD.png";
 		document.getElementById("statMp3").style.display="block";
@@ -139,13 +202,36 @@ function devSelect(){
 		document.getElementById("statVid").style.display="block";
 		document.getElementById("statVidQ").style.display="block";
 		document.getElementById("statVidS").style.display="block";
-		document.getElementById("statHdd").style.display="block";
 		document.getElementById("statDVD").style.display="block";
-		}
+		document.getElementById("statVML").style.display="block";
+		document.getElementById("statVMW").style.display="block";
+		document.getElementById("btnPhoto").style.display="none";
+		document.getElementById("btnMp3").style.display="none";
+		document.getElementById("btnDoc").style.display="none";
+		document.getElementById("btnVid").style.display="none";
+		document.getElementById("btnHdd").style.display="block";}
 		else{
 		alert("error!");
 		icon.src="error.png";
 		}
+		var txtMp3 = document.getElementById("txtMp3");
+		var txtPhoto = document.getElementById("txtPhoto");
+		var txtDoc = document.getElementById("txtDoc");
+		document.getElementById("txtVid");
+		document.getElementById("txtVidDvd");
+		document.getElementById("txtVidS");
+		document.getElementById("txtVMW");
+		document.getElementById("txtVML");
+		document.getElementById("");
+
+
+		function hdd(){}
+		function vid(){}
+		function photo(){}
+		function mp3(){}
+		function doc(){}
+
 	}
+
 </script>
 </html>
