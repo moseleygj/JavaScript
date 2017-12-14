@@ -6,8 +6,8 @@
 html{}
 body{margin:0;padding:0;}
 #container{height:;width:768px;margin:0 auto 0;}
-.leftIconArea{height:300px;width:30%;margin:;float:left;}
-.rightIconArea{height:300px;width:70%;margin:;float:left;}
+.leftIconArea{height:460px;width:30%;margin:;float:left;}
+.rightIconArea{height:460px;width:70%;margin:;float:left;}
 .bottomStatusArea{height:auto;width:100%;margin:;clear:both;}
 .iconArea{height:58%;width:100%;margin:;}
 .selectionArea{height:40px;width:100%;margin-left:30px;margin-top:10px;}
@@ -17,6 +17,10 @@ body{margin:0;padding:0;}
 .statVid{height:36px;width:100%;}
 .statHdd{height:36px;width:100%;}
 .statPhoto{height:36px;width:100%;}
+
+.resultHdd{height:;width:;font-weight:;font-family:;text-align:;color:;}
+.resultMin{}
+.resultRec{}
 
 </style>
 </head>
@@ -56,23 +60,14 @@ body{margin:0;padding:0;}
 <div class="statVidQ" id="statVidQ"><b>Quality of Videos:</b>&nbsp<input type="textbox" id="txtVidQ" maxlength="6" max="999999" size="6" placeholder="0"></div>
 <div class="statDVD" id="statDVD"><b>DVD Estimate:</b>&nbsp<input type="textbox" id="txtVidDvd" maxlength="6" max="999999" size="6" placeholder="0"></div>
 <div class="statVidS" id="statVidS"><b>Size/length of videos:</b>&nbsp<input type="textbox" id="txtVidS" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statVMW" id="statVMW"><b>Virtual Machine(Windows):</b>&nbsp<input type="textbox" id="txtVMW" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statVML" id="statVML"><b>Virtual Machine(Linux):</b>&nbsp<input type="textbox" id="txtVML" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statVMW" id="statVMW"><b>Virtual Machine(s)(Windows) Total:</b>&nbsp<input type="textbox" id="txtVMW" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statVML" id="statVML"><b>Virtual Machine(s)(Linux) Total:</b>&nbsp<input type="textbox" id="txtVML" maxlength="6" max="999999" size="6" placeholder="0"></div>
 <button onclick="photo()" id="btnPhoto">Get Photo Quota</button>
 <button onclick="mp3()" id="btnMp3">Get Mp3 Quota</button>
 <button onclick="doc()" id="btnDoc">Get Document Quota</button>
 <button onclick="vid()" id="btnVid">Get Video Quota</button>
 <button onclick="hdd()" id="btnHdd">Get Hard Drive Quota</button>
 
-txtMp3
-txtPhoto
-txtVid
-txtDoc
-txtVidQ
-txtVidDvd
-txtVidS
-txtVMW
-txtWML
 
 </div>
 	</div>
@@ -214,24 +209,25 @@ if(option =="none"){
 		alert("error!");
 		icon.src="error.png";
 		}
-		var txtMp3 = document.getElementById("txtMp3");
-		var txtPhoto = document.getElementById("txtPhoto");
-		var txtDoc = document.getElementById("txtDoc");
-		document.getElementById("txtVid");
-		document.getElementById("txtVidDvd");
-		document.getElementById("txtVidS");
-		document.getElementById("txtVMW");
-		document.getElementById("txtVML");
-		document.getElementById("");
-
-
-		function hdd(){}
-		function vid(){}
-		function photo(){}
-		function mp3(){}
-		function doc(){}
 
 	}
+	var txtMp3 = document.getElementById("txtMp3");
+	var txtPhoto = document.getElementById("txtPhoto");
+	var txtDoc = document.getElementById("txtDoc");
+	var txtVid = document.getElementById("txtVid");
+	var txtVidDvd = document.getElementById("txtVidDvd");
+	var txtVidS = document.getElementById("txtVidS");
+	var txtVMW = document.getElementById("txtVMW");
+	var txtVML = document.getElementById("txtVML");
+
+
+	function hdd(){}
+	function vid(){}
+	function photo(){}
+	function mp3(){
+		alert("Minimum(160kps): "+txtMp3.value*3.51+"Medium(192kps): "+txtMp3.value*4.21+"Medium-High(256kps): "+txtMp3.value*5.61+"High(320kps): "+txtMp3.value*7.02);
+	}
+	function doc(){}
 
 </script>
 </html>
