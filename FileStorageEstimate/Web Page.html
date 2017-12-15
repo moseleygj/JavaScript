@@ -59,7 +59,7 @@ body{margin:0;padding:0;}
 <div class="statVid" id="statVid"><b>Number of Videos:</b>&nbsp<input type="textbox" id="txtVid" maxlength="6" max="999999" size="6" placeholder="0"></div>
 <div class="statVidQ" id="statVidQ"><b>Quality of Videos:</b>&nbsp<input type="textbox" id="txtVidQ" maxlength="6" max="999999" size="6" placeholder="0"></div>
 <div class="statDVD" id="statDVD"><b>DVD Estimate:</b>&nbsp<input type="textbox" id="txtVidDvd" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statVidS" id="statVidS"><b>Size/length of videos:</b>&nbsp<input type="textbox" id="txtVidS" maxlength="6" max="999999" size="6" placeholder="0"></div>
+<div class="statVidS" id="statVidS"><b>Total size of all videos(GB):</b>&nbsp<input type="textbox" id="txtVidS" maxlength="6" max="999999" size="6" placeholder="0"></div>
 <div class="statVMW" id="statVMW"><b>Virtual Machine(s)(Windows) Total:</b>&nbsp<input type="textbox" id="txtVMW" maxlength="6" max="999999" size="6" placeholder="0"></div>
 <div class="statVML" id="statVML"><b>Virtual Machine(s)(Linux) Total:</b>&nbsp<input type="textbox" id="txtVML" maxlength="6" max="999999" size="6" placeholder="0"></div>
 <button onclick="photo()" id="btnPhoto">Get Photo Quota</button>
@@ -181,7 +181,7 @@ if(option =="none"){
 		document.getElementById("statPhoto").style.display="none";
 		document.getElementById("statDoc").style.display="none";
 		document.getElementById("statVid").style.display="none";
-		document.getElementById("statVidQ").style.display="block";
+		document.getElementById("statVidQ").style.display="none";
 		document.getElementById("statVidS").style.display="block";
 		document.getElementById("statVML").style.display="none";
 		document.getElementById("statVMW").style.display="none";
@@ -190,7 +190,7 @@ if(option =="none"){
 		document.getElementById("btnDoc").style.display="none";
 		document.getElementById("btnVid").style.display="block";
 		document.getElementById("btnHdd").style.display="none";
-		document.getElementById("statDVD").style.display="none";
+		document.getElementById("statDVD").style.display="block";
 
 				}
 		else if(option =="hdd"){
@@ -227,7 +227,12 @@ if(option =="none"){
 
 	function hdd(){//add them all
 	}
-	function vid(){}
+	function vid(){
+		alert("Minimum: "+ numberCop(Number(txtVidDvd.value)*4812.8)+" Video Size in GB: "+ numberCop1(Number(txtVidS.value)+" Total: "+
+		numberCop0(numCrunch(txtVidDvd.value,txtVidS.value))));
+//		numberCop(numberCop1(Number(txtVidDvd.value)*4812.8)+numberCop1(Number(txtVidS.value)*4812.8))));
+
+	}
 	function photo(){
 		alert("Minimum: "+ numberCop(Number(txtPhoto.value)*1.7)+" Maximum: "+ numberCop(Number(txtPhoto.value)*2.3));
 	}
@@ -236,16 +241,48 @@ if(option =="none"){
 	}
 	function doc(){}
 
+	function numberCop0(num)
+	{
+		if (num > 1)
+		{
+			return (num).toFixed(2)+" GBs ";
+		}
+		else
+		{
+		return "Error";
+		}
+	}
 function numberCop(num)
 {
 	if (num > 1024)
 	{
 		num/=1024;
-		return (num).toFixed(2)+" GBs";
+		return (num).toFixed(2)+" GBs ";
 	}
 	else
 	{
-		return (num).toFixed(2)+" MBs";
+		return (num).toFixed(2)+" MBs 	";
+	}
+}
+
+function numCrunch(a, b)
+{
+	var totalDVD = Number(a*4.7);
+	var totalVideoSize = Number(b);
+	var overAllTotal=Number(totalDVD + totalVideoSize);
+	alert(overAllTotal);
+	return overAllTotal;
+}
+function numberCop1(num)
+{
+	if (num > 1024)
+	{
+		num/=1024;
+		return num;
+	}
+	else
+	{
+		return num;
 	}
 }
 </script>
