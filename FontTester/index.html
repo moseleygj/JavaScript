@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Font Tester</title>
+<meta charset="UTF-8">
+</head>
+<style type="text/css">
+
+body{
+padding:0;
+margin:0;
+border:0;
+}
+
+html{
+padding:0;
+margin:0;
+border:0;
+}
+
+.A{
+height:30%;
+width:100%;
+background-color:Blue; 
+color:white;
+font-weight:bolder;
+}
+
+.B{
+height:70%;
+width:100%;
+background-color:red;
+color:white;
+}
+
+p.center{
+font-size:100px;
+text-align:center;
+display:block;
+position:relative;
+top:50px;
+}
+</style>
+
+<body>
+
+<div class="A">
+Font Type: <input type="textbox" id="fontBox">
+<button onClick="updateFont()">Test Font</button> 
+<br/>
+Background Color: <input type="textbox" id="bgColor">
+Font Size: <input type="textbox" id="bgColor"><br/>
+Font Size:<input type="range" min="1" max="128" step="1" id="fs" onchange="updateFont()"><br/><p id="showFontSize"></p> 
+</div>
+<div class="B" id="B">
+
+<center><p id="fontPreviewBox">This is just a test</p></center>
+
+</div>
+
+
+
+</body>
+
+<script type="text/javascript">
+var fontP = document.getElementById("fontPreviewBox");
+var fontB = document.getElementById("fontBox");
+
+var txtBG =  document.getElementById("bgColor");
+var pageBG = document.getElementById("B");
+
+var fontS = document.getElementById("fs");
+
+var displayFontSize = document.getElementById("showFontSize");
+
+
+function updateFont()
+{
+fontP.style.fontFamily=fontB.value;
+pageBG.style.backgroundColor=txtBG.value;
+
+fontP.style.fontSize = fontS.value;
+displayFontSize.innerHTML = fontS.value;
+
+}
+</script>
+</html>
