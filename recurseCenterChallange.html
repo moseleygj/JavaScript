@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var myArray=["Gordon Moseley","moseleygj"];
+
+function cutName(aString){
+var part = aString.split(" ");
+return part;
+}
+var myData={
+fullName:cutName(myArray[0]),
+skype:myArray[1],
+github:"moseleygj"
+};
+document.getElementById("demo").innerHTML = myData.fullName;
+</script>
+
+</body>
+</html>
