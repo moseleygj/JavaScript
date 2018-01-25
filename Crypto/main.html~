@@ -8,9 +8,7 @@
 		background:url("pof-web-header-top-bg.png");background-repeat: repeat;
 	}
 	.img{margin:0 auto 0;height:180px;width:200px;display:block;}
-	.holder{height:;width:700px;margin: 20px auto 0;background-color:white;font-family: arial;line-height: 2;border:1px #434343 solid; position: relative;
-  top: 50%;
-  transform: translateY(-50%);}
+	.holder{height:;width:700px;margin: 20px auto 0;background-color:white;font-family: arial;line-height: 2;border:1px #434343 solid;}
 	.top{height:200px;width:100%;clear:both;margin: 0 auto 0;}
 	.left{height:auto;width:35%;float:left;}
 	.left-cell{height:35px;width:100%;line-height: 2;margin-left:10px;}
