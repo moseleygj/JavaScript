@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Number Countdown</title>
+</head>
+<style><
+html{
+	padding:0;
+	margin:0;
+}
+body{
+	padding:0;
+	margin:0;
+}
+.container{
+	height:100%;
+	width:100%;
+	background-color:orange;
+}
+.numberCurrent{
+	font-size:142px;
+	font-weight:bolder;
+	margin:0 auto 0;
+	top:50%;
+    transform: translateY(-50%); 
+    color:white;
+    text-shadow: 1px 1px 3px black;
+    position: relative;
+    text-align:center;
+    }
+.numberRemain{}
+.numberTotal{}
+
+</style>
+
+<body>
+<div class="container">
+	<input type="text" id="MainNum">
+	<button onClick="doMath(document.getElementById('MainNum').text)">Submit Number</button>
+	<div class="numberCurrent" id="numCurrent">0</div>
+</div>
+</body>
+<script>
+//	var mainNumer=document.getElementById("MainNum").text;
+	var counter;
+	function doMath(A)
+	{
+		if (A==0)
+		{
+			/*put complete message here*/
+			document.getElementById("numCurrent").innerHTML=0;
+		}
+		else
+		{
+			counter +=A;
+			A--;
+		}
+	}
+		//document.getElementById("").innerHTML=
+</script>
+</html>
