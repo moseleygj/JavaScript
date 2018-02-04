@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-<title>Slide ageR pic Test</title>
+<title>JS Slider Picture Test</title>
 <style>
 
 #ageRangePic{
@@ -19,7 +19,15 @@
 
 <body>
 
-<div class="slideMe">	<input type ="range" min="1" max="122" value="1" onchange="age()"  id="ageRRange" orient="vertical"><br/>
+<div class="slideMe">	<input type ="range" min="1" max="122" value="1" onchange="age()"  id="ageRRange" orient="vertical" list="tickmarks">
+<datalist id="tickmarks">
+<option value="1">
+<option value="5">
+<option value="13">
+<option value="18">
+<option value="55">
+</datalist><!-- doesn't work on chrome  web browser-->
+<br/>
 <p id="ageR" >age: 1</p> </div><br/>
 <img src="baby.png" id="ageRangePic"  style="clear:both;margin-left:70px;">
 
