@@ -1,8 +1,9 @@
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Number Countdown</title>
 </head>
-<style><
+<style>
 html{
 	padding:0;
 	margin:0;
@@ -79,18 +80,31 @@ function doMath(mainNumber)
 		}
 	}
 var remainHolder;
-ver remain
+var remain;
+var count=0;
+var counterStarted=0;
 //get main number;
-	function remain(startNum){
+
+
+function remain(startNum)
+	{
 	remainHolder= startNum;
 	
-	//run loop here;
-	for (i=0; i<_;i++)
-{
-_+=;
---;
-}
+	if(counterStarted==1)
+	{
+	return 0;
 	}
-
+	else {
+	counterStarted=1;		
+	//check if loops been run
+	//run loop here;
+		for (var i=startNum;i>0;i--)
+		{
+		parseInt(count+=i);
+		alert("inner-loop Count: "+count);
+		}
+	alert("total:"+count);
+	}
+}
 </script>
 </html>
