@@ -35,26 +35,45 @@ body{
 <body>
 <div class="container">
 	<input type="text" id="MainNum">
-	<button onClick="doMath(document.getElementById('MainNum').text)">Submit Number</button>
+	<button onClick="magic()">Submit Number</button>
 	<div class="numberCurrent" id="numCurrent">0</div>
 </div>
 </body>
 <script>
-//	var mainNumer=document.getElementById("MainNum").text;
-	var counter;
-	function doMath(A)
+	var counter=0;
+	var A;
+
+var tog = 0;
+function magic()
+{
+
+if (tog == 0)
+	{ 
+	tog=1;
+	var numHold=parseInt(document.getElementById('MainNum').value);
+	doMath(numHold);
+	}
+
+else {
+doMath(A);
+	}
+}
+
+function doMath(mainNumber)
 	{
+		A=mainNumber;
 		if (A==0)
 		{
-			/*put complete message here*/
 			document.getElementById("numCurrent").innerHTML=0;
+			return 0;
 		}
 		else
 		{
-			counter +=A;
+			counter+=A;
 			A--;
+			document.getElementById("numCurrent").innerHTML=A;
 		}
 	}
-		//document.getElementById("").innerHTML=
+
 </script>
 </html>
