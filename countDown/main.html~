@@ -65,7 +65,7 @@ function doMath(mainNumber)
 		if (A==0)
 		{
 			document.getElementById("numCurrent").innerHTML=0;
-			alert("complete");
+			alert("Complete!");
 			return 0;
 		}
 		else
@@ -75,6 +75,15 @@ function doMath(mainNumber)
 			document.getElementById("numCurrent").innerHTML=A + "!";
 			alert(counter);
 		}
+	}
+
+	function remain(){
+	//run loop here;
+	for (i=0; i<_;i++)
+{
+_+=;
+--;
+}
 	}
 
 </script>
