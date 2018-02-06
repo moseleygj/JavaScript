@@ -43,7 +43,10 @@ body{
 <script>
 	var counter=0;
 	var A;
-
+var remainHolder;
+var remain;
+var count=0;
+var counterStarted=0;
 var tog = 0;
 function magic()
 {
@@ -79,10 +82,7 @@ function doMath(mainNumber)
 			alert("Amount Completed: "+counter);
 		}
 	}
-var remainHolder;
-var remain;
-var count=0;
-var counterStarted=0;
+
 //get main number;
 var countDownTotal;
 
@@ -112,7 +112,7 @@ function grandTotal(startNum)
 
 //get value and place it in a global variable for function countdown()) to use
 function countDown() {
-	countdownTotal-=parseInt(document.getElementById("numCurrent").innerHTML);
+	countDownTotal-=parseInt(document.getElementById("numCurrent").innerHTML);
 alert("Amount Remaining:"+countDownTotal);
 }
 </script>
