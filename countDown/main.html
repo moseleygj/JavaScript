@@ -72,11 +72,11 @@ function doMath(mainNumber)
 		else
 		{
 		//send main number to remain counter
-		remain(A);
+		grandTotal(A);
 			counter+=A;
 			A--;
-			document.getElementById("numCurrent").innerHTML=A + "!";
-			alert(counter);
+			document.getElementById("numCurrent").innerHTML=A;
+			alert("Amount Completed: "+counter);
 		}
 	}
 var remainHolder;
@@ -84,27 +84,36 @@ var remain;
 var count=0;
 var counterStarted=0;
 //get main number;
+var countDownTotal;
 
-
-function remain(startNum)
+function grandTotal(startNum)
 	{
 	remainHolder= startNum;
 	
-	if(counterStarted==1)
+	if(counterStarted==1)	//check if loop has been run. 0=no,1=yes;
 	{
-	return 0;
+	countDown();
+	//start counting (deduction)
 	}
 	else {
 	counterStarted=1;		
-	//check if loops been run
-	//run loop here;
+
+	//run counting loop here;
 		for (var i=startNum;i>0;i--)
 		{
 		parseInt(count+=i);
-		//alert("inner-loop Count: "+count);
 		}
 	alert("total:"+count);
+	//pass total to countdown function to do more math
+	countDownTotal=count;
+	
 	}
+}
+
+//get value and place it in a global variable for function countdown()) to use
+function countDown() {
+	countDownTotal-=parseInt(document.getElementById("numCurrent").innerHTML);
+alert("Amount Remaining:"+countDownTotal);
 }
 </script>
 </html>
