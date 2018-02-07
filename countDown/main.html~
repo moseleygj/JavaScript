@@ -15,10 +15,11 @@ body{
 .container{
 	height:100%;
 	width:100%;
-	background-color:orange;
+	
+	background:linear-gradient(orange,#c17321);
 }
 .numberCurrent{
-	font-size:142px;
+	font-size:400px;
 	font-weight:bolder;
 	margin:0 auto 0;
 	top:50%;
@@ -28,40 +29,53 @@ body{
     position: relative;
     text-align:center;
     }
-.numberRemain{}
-.numberTotal{}
-
+    .numberRemainCell{width:50%;height:40px;float:left;}
+.numberRemainTitle{color:white;font-weight: bold;height:55px;float:left;font-size:50px;margin:0px 10px;}
+.numberRemainAnswer{color:white;height:40px;float:left;font-size:50px;}
+	.numberTotalCell{width:50%;height:40px;float:left}
+.numberTotalTitle{color:white;font-weight: bold;height:60px;float:left;font-size:50px;margin:0px 10px;}
+.numberTotalAnswer{color:white;height:40px;float:left;font-size:50px;}
+.tallyBar{width:100%;height:120px;top:0;background:linear-gradient(#2196f3,navy);line-height:2;}
 </style>
 
 <body>
 <div class="container">
-	<input type="text" id="MainNum">
-	<button onClick="magic()">Submit Number</button>
+<div class="tallyBar">
+<div class="numberRemainCell"><div class="numberRemainTitle">Remaining: </div><div class="numberRemainAnswer" id="numberRemainAnswer">0</div></div>
+<div class="numberTotalCell"><div class="numberTotalTitle">Completed: </div><div class="numberTotalAnswer" id="numberTotalAnswer">0</div></div>
+</div>	
+	<input type="text" id="MainNum" style="height:60px;font-size:40px" value="10" autofocus>
+	<button onClick="magic()" id="btn" style="height:60px; font-size:40px" >Submit Number</button>
 	<div class="numberCurrent" id="numCurrent" onClick="magic()">0</div>
 </div>
 </body>
 <script>
-	var counter=0;
-	var A;
+var counter=0;
+var A;
 var remainHolder;
 var remain;
 var count=0;
 var counterStarted=0;
 var tog = 0;
+var countDownTotal;
+var numHold; //remove this later 
+		grandTotal(A); 																	//total of all numbers added is returned
 function magic()
 {
-
 if (tog == 0)
 	{ 
 	tog=1;
-	var numHold=parseInt(document.getElementById('MainNum').value);
+	numHold=parseInt(document.getElementById('MainNum').value); //var infront of numHold was remove here
 	doMath(numHold);
+	document.getElementById("MainNum").style.display="none";
+	document.getElementById("btn").style.display="none";
 	}
-
 else {
-doMath(A);
+	doMath(A);
 	}
 }
+
+
 
 function doMath(mainNumber)
 	{
@@ -75,45 +89,48 @@ function doMath(mainNumber)
 		else
 		{
 		//send main number to remain counter
-		grandTotal(A);
-			counter+=A;
-			A--;
-			document.getElementById("numCurrent").innerHTML=A;
-			alert("Amount Completed: "+counter);
+		//grandTotal(A); 																	//total of all numbers added is returned
+			counter+=A; 																	//counter is set to total of all numbers added
+			
+			
+			//A--; 																				//The main starting number is reduced by one
+			document.getElementById("numCurrent").innerHTML=A;					 //Displays current number we're on
+			document.getElementById("numberTotalAnswer").innerHTML=counter; //How many repetitions we currently completed.
+
 		}
 	}
 
 //get main number;
-var countDownTotal;
 
 function grandTotal(startNum)
 	{
 	remainHolder= startNum;
 	
-	if(counterStarted==1)	//check if loop has been run. 0=no,1=yes;
+	if(counterStarted==1)																//check if the loop has been run before. 0=No,1=Yes;
 	{
-	countDown();
-	//start counting (deduction)
+	countDown();																			//start counting (deduction) on remaining number
 	}
 	else {
 	counterStarted=1;		
-
-	//run counting loop here;
-		for (var i=startNum;i>0;i--)
+	
+		for (var i=startNum;i>0;i--)													//run counting loop here;
 		{
 		parseInt(count+=i);
 		}
-	alert("total:"+count);
-	//pass total to countdown function to do more math
+
 	countDownTotal=count;
-	
+	countDown(); 	//pass total to countdown function to do more math
 	}
 }
 
-//get value and place it in a global variable for function countdown()) to use
-function countDown() {
-	countDownTotal-=parseInt(document.getElementById("numCurrent").innerHTML);
-alert("Amount Remaining:"+countDownTotal);
+//get value and place it in a global variable for the function countdown() to use
+
+function countDown() 
+{
+A--;
+countDownTotal-=parseInt(document.getElementById("numCurrent").innerHTML);
+document.getElementById("numberRemainAnswer").innerHTML=countDownTotal;
 }
+
 </script>
 </html>
