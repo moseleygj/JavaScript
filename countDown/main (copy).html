@@ -1,0 +1,123 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Number Countdown</title>
+</head>
+<style>
+html{
+	padding:0;
+	margin:0;
+}
+body{
+	padding:0;
+	margin:0;
+}
+.container{
+	height:100%;
+	width:100%;
+	
+	background:linear-gradient(orange,#c17321);
+}
+.numberCurrent{
+	font-size:400px;
+	font-weight:bolder;
+	margin:0 auto 0;
+	top:50%;
+    transform: translateY(-50%); 
+    color:white;
+    text-shadow: 1px 1px 3px black;
+    position: relative;
+    text-align:center;
+    }
+    .numberRemainCell{width:50%;height:40px;float:left;}
+.numberRemainTitle{color:white;font-weight: bold;height:55px;float:left;font-size:50px;margin:0px 10px;}
+.numberRemainAnswer{color:white;height:40px;float:left;font-size:50px;}
+	.numberTotalCell{width:50%;height:40px;float:left}
+.numberTotalTitle{color:white;font-weight: bold;height:60px;float:left;font-size:50px;margin:0px 10px;}
+.numberTotalAnswer{color:white;height:40px;float:left;font-size:50px;}
+.tallyBar{width:100%;height:120px;top:0;background:linear-gradient(#2196f3,navy);line-height:2;}
+</style>
+
+<body>
+<div class="container">
+<div class="tallyBar">
+<div class="numberRemainCell"><div class="numberRemainTitle">Remaining: </div><div class="numberRemainAnswer" id="numberRemainAnswer">0</div></div>
+<div class="numberTotalCell"><div class="numberTotalTitle">Completed: </div><div class="numberTotalAnswer" id="numberTotalAnswer">0</div></div>
+</div>	
+	<input type="text" id="MainNum" style="height:60px;font-size:40px" value="10" autofocus>
+	<button onClick="magic()" id="btn" style="height:60px; font-size:40px" >Submit Number</button>
+	<div class="numberCurrent" id="numCurrent" onClick="magic()">0</div>
+</div>
+</body>
+<script>
+var counter=0;
+var A;
+var remainHolder;
+var remain;
+var count=0;
+var counterStarted=0;
+var tog = 0;
+var countDownTotal;
+var numHold; //remove this later 
+var permanentA;
+var scratch;
+var tallyCounter=0;	
+		//grandTotal(A); 																	//total of all numbers added is returned
+function magic()
+{
+if (tog == 0)
+	{ 
+	tog=1;
+	numHold=parseInt(document.getElementById('MainNum').value); //var infront of numHold was remove here
+	document.getElementById("MainNum").style.display="none";
+	document.getElementById("btn").style.display="none";
+	document.getElementById('numCurrent').innerHTML=numHold;
+	remainHolder = parseInt(grandTotal(numHold));
+	document.getElementById('numberRemainAnswer').innerHTML=remainHolder;
+A=numHold;
+	}
+else {
+	doMath(A); //give textbox number to  doMath
+	}
+}
+
+
+
+function doMath(mainNumber) 
+	{
+tallyCounter=(tallyCounter+ mainNumber);
+		//perform calculations Here
+		document.getElementById("numberTotalAnswer").innerHTML=tallyCounter;
+
+			document.getElementById('numCurrent').innerHTML--;
+				//increase tally
+			document.getElementById('numberRemainAnswer').innerHTML-=parseInt(mainNumber);
+			//reduce total by that number
+		A--;
+		numHold--; //reduce main number by 1
+	}
+		
+function grandTotal(startNum)
+	{
+	remainHolder= startNum; //send the Value of textBox
+	
+	if(counterStarted==0)																//check if the loop has been run before. 0=No,1=Yes;
+	{
+			counterStarted=1;		
+	
+		for (var i=startNum;i>0;i--)													//run counting loop here;
+		{
+		parseInt(count+=i);
+		}
+		permanentA=count;
+		countDownTotal=count; 
+		return countDownTotal;
+	}
+	else {
+	return 0;
+	}
+}
+
+</script>
+</body>
+</html>
