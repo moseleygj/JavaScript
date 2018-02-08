@@ -59,7 +59,9 @@ var counterStarted=0;
 var tog = 0;
 var countDownTotal;
 var numHold; //remove this later 
-		grandTotal(A); 																	//total of all numbers added is returned
+var permanentA;
+var scratch;	
+		//grandTotal(A); 																	//total of all numbers added is returned
 function magic()
 {
 if (tog == 0)
@@ -71,66 +73,65 @@ if (tog == 0)
 	document.getElementById("btn").style.display="none";
 	}
 else {
-	doMath(A);
+	doMath(A); //give textbox number to  doMath
 	}
 }
 
 
 
-function doMath(mainNumber)
+function doMath(mainNumber) 
 	{
-		A=mainNumber;
+		A=mainNumber;//pass mainNumber to: A=TEXTBOX# 
+			
 		if (A==0)
 		{
 			document.getElementById("numCurrent").innerHTML=0;
 			alert("Complete!");
 			return 0;
 		}
-		else
+		else /*else if(A==1){ }*/
 		{
-		//send main number to remain counter
-		//grandTotal(A); 																	//total of all numbers added is returned
-			counter+=A; 																	//counter is set to total of all numbers added
-			
-			
-			//A--; 																				//The main starting number is reduced by one
-			document.getElementById("numCurrent").innerHTML=A;					 //Displays current number we're on
-			document.getElementById("numberTotalAnswer").innerHTML=counter; //How many repetitions we currently completed.
+		
+				if(scratch==0){
+					grandTotal(A); 	//total of all numbers (A and Below added) 
+					document.getElementById("numCurrent").innerHTML=A;					 //current number we're on
+			//document.getElementById("numberTotalAnswer").innerHTML=counter; //How many repetitions we currently completed. First time No!!
+				  scratch=1; }
+				else {
+					counter+=A; 		//keep track of repetitions completed(increment)		
+					document.getElementById("numCurrent").innerHTML=A;					 //current number we're on
+					document.getElementById("numberTotalAnswer").innerHTML=counter;
+					A--;					//----> this was reduced before time. Other math should take place at the same time
+		
+		countDownTotal-=A; // -1 
 
-		}
+			document.getElementById("numberRemainAnswer").innerHTML=countDownTotal;
+					}	
 	}
-
-//get main number;
+}
 
 function grandTotal(startNum)
 	{
-	remainHolder= startNum;
+	remainHolder= startNum; //send the Value of textBox
 	
-	if(counterStarted==1)																//check if the loop has been run before. 0=No,1=Yes;
+	if(counterStarted==0)																//check if the loop has been run before. 0=No,1=Yes;
 	{
-	countDown();																			//start counting (deduction) on remaining number
-	}
-	else {
-	counterStarted=1;		
+			counterStarted=1;		
 	
 		for (var i=startNum;i>0;i--)													//run counting loop here;
 		{
 		parseInt(count+=i);
 		}
-
-	countDownTotal=count;
-	countDown(); 	//pass total to countdown function to do more math
+		permanentA=count;
+	countDownTotal=count; 
+			alert(countDownTotal);
+	//if you already have the number do something here						//start counting (deduction) on remaining number
+	}
+	else {
+	return 0;
 	}
 }
 
-//get value and place it in a global variable for the function countdown() to use
-
-function countDown() 
-{
-A--;
-countDownTotal-=parseInt(document.getElementById("numCurrent").innerHTML);
-document.getElementById("numberRemainAnswer").innerHTML=countDownTotal;
-}
-
 </script>
+</body>
 </html>
