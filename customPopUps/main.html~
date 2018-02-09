@@ -13,13 +13,11 @@ float:right;
 margin-right:20px;
 background:linear-gradient(#66b0F9,#288Af9);
 color:white;
-
-    padding: 6px 32px;
-    border: 0;
-    border-radius: 5px;
-	border: 1px solid;
-    font-weight: bolder;
-    border-color: #2567bE;
+padding: 6px 32px;
+border-radius: 5px;
+border: 1px solid;
+font-weight: bolder;
+border-color: #2567bE;
 }
 button:hover{
 float:right;
@@ -158,6 +156,7 @@ padding:0px 20px;
 word-wrap: break-word;
 font-family: proxima-nova, sans-serif;
 text-rendering: optimizeLegibility;
+text-align: center;
 }
 
 .infoRightTopHead-1{height:15%;
@@ -171,6 +170,27 @@ text-align:center;
 .infoRightBottom-1{
 height:39%;
 width:100%;
+}
+
+.btnCancel{
+float:right;
+margin-right:20px;
+background:white;
+color:#2A2A2A;
+padding: 6px 32px;
+border-radius: 5px;
+border: 1px solid #c7c7c7;
+font-weight: bolder;
+}
+.btnCancel:hover{
+float:right;
+margin-right:20px;
+background:white;
+color:#2A2A2A;
+padding: 6px 32px;
+border-radius: 5px;
+border: 1px solid #c7c7c7;
+font-weight: bolder;
 }
 </style>
 
@@ -195,11 +215,11 @@ width:100%;
 <div class="infoRightTopHead-1">Information Box</div>
 <div class="infoRightTop-1">Enter your name below:
 <br/><br/>
-<input placeholder="name" type="textbox"><div/>
+<input placeholder="name" type="textbox" autofocus><div/>
 
 </div>
 </div>
-<div class="infoRightBottom-1"><button>OK</button></div>
+<div class="infoRightBottom-1"><button>OK</button><input  class="btnCancel" type="submit" value="cancel"></div>
 
 
 </div>
