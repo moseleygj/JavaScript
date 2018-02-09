@@ -39,7 +39,7 @@ color:white;
 margin: 0 auto 0;
 height:190px;
 width:450px;
-background-color:#ECECEC;
+background-color:#EBEBEB;
 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 border: 1px solid #787878;
 border-radius: 5px;
