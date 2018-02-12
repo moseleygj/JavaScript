@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 </head>
 <style type="text/css">
-.container{background-color:skyblue;height:100%;width:100%;}
+.container{background-color:skyblue;min-height:100%;width:100%;}
 body{padding:0;margin:0;}
 html{padding:0;margin:0;}
 
@@ -31,7 +31,7 @@ color:white;
 	 border: 1px solid;
     font-weight: bolder;
     border-color: #2567bE;
-	-webkit-box-shadow: 1px 1px 10px 1px #66C8F7; 
+	-webkit-box-shadow: 1px 1px 10px 1px #66C8F7;
 	box-shadow: 1px 1px 10px 1px #66C8F7;
 }
 
@@ -43,6 +43,9 @@ background-color:#EBEBEB;
 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 border: 1px solid #787878;
 border-radius: 5px;
+margin-bottom:30px;
+display: block;
+position: relative;
 }
 
 .infoIconLeft{
@@ -80,7 +83,7 @@ padding:10px;
 word-wrap: break-word;
 font-weight:bolder;
 font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
-text-align:center; 
+text-align:center;
 }
 
 .infoRightBottom{
@@ -114,7 +117,7 @@ color:white;
 	 border: 1px solid;
     font-weight: bolder;
     border-color: #2567bE;
-	-webkit-box-shadow: 1px 1px 10px 1px #66C8F7; 
+	-webkit-box-shadow: 1px 1px 10px 1px #66C8F7;
 	box-shadow: 1px 1px 10px 1px #66C8F7;
 }
 
@@ -126,6 +129,9 @@ background-color:#ECECEC;
 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 border: 1px solid #787878;
 border-radius: 5px;
+margin-bottom:35px;
+display: block;
+position: relative;
 }
 
 .infoIconLeft-1{
@@ -164,14 +170,126 @@ padding:10px;
 word-wrap: break-word;
 font-weight:bolder;
 font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
-text-align:center; 
+text-align:center;
 }
 
 .infoRightBottom-1{
 height:39%;
 width:100%;
 }
+<!-- 2-->
+.infoBox-2{
+margin: 0 auto 0;
+height:190px;
+width:450px;
+background-color:#EBEBEB;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+border: 1px solid #787878;
+border-radius: 5px;
+margin-bottom:35px;
+display: block;
+position: relative;
+}
 
+.infoIconLeft-2{
+width:50%;
+height:105px;
+width:105px;
+display:block;
+margin-top: 18%;
+margin-left:25%
+}
+
+.infoLeft-2{
+width:30%;
+height:230px;
+float: left;
+}
+
+.infoRight-{
+width:70%;
+float:left;
+height:100%;
+}
+
+.infoRightTop-2
+{
+height:46%;
+padding:0px 20px;
+word-wrap: break-word;
+font-family: proxima-nova, sans-serif;
+text-rendering: optimizeLegibility;
+}
+
+.infoRightTopHead-2{height:15%;
+padding:10px;
+word-wrap: break-word;
+font-weight:bolder;
+font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+text-align:center;
+}
+
+.infoRightBottom-2{
+height:29%;
+width:100%;
+}
+<!-- -->
+.cautionBox{
+margin: 0 auto 0;
+height:190px;
+width:450px;
+background-color:#EBEBEB;
+box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+border: 1px solid #787878;
+border-radius: 5px;
+margin-bottom:35px;
+display: block;
+position: relative;
+}
+
+.cautionIconLeft{
+width:50%;
+height:105px;
+width:105px;
+display:block;
+margin-top: 18%;
+margin-left:25%
+}
+
+.cautionLeft{
+width:30%;
+height:230px;
+float: left;
+}
+
+.cautionRight{
+width:70%;
+float:left;
+height:100%;
+}
+
+.cautionRightTop
+{
+height:46%;
+padding:0px 20px;
+word-wrap: break-word;
+font-family: proxima-nova, sans-serif;
+text-rendering: optimizeLegibility;
+}
+
+.cautionRightTopHead{height:15%;
+padding:10px;
+word-wrap: break-word;
+font-weight:bolder;
+font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+text-align:center;
+}
+
+.cautionRightBottom{
+height:29%;
+width:100%;
+}
+<!-- -->
 .btnCancel{
 float:right;
 margin-right:20px;
@@ -191,16 +309,17 @@ padding: 6px 32px;
 border-radius: 5px;
 border: 1px solid #c7c7c7;
 font-weight: bolder;
--webkit-box-shadow: 1px 1px 10px 1px #66C8F7; 
+-webkit-box-shadow: 1px 1px 10px 1px #66C8F7;
 box-shadow: 1px 1px 10px 1px #66C8F7;
 }
 input[type=textbox]:hover{
-	-webkit-box-shadow: 1px 1px 10px 1px #66C8F7; 
+	-webkit-box-shadow: 1px 1px 10px 1px #66C8F7;
 	box-shadow: 1px 1px 10px 1px #66C8F7;
 }
 </style>
 
 <body>
+<!--dialog box 0-->
 
 <div class="container">
 <div class="infoBox">
@@ -211,26 +330,238 @@ input[type=textbox]:hover{
 <div class="infoRightBottom"><button>OK</button></div>
 </div>
 </div>
-<br/>
-<br/>
+<br/><br/>
 <!--button1 Input box-->
 
 <div class="infoBox-1">
-<div class="InfoLeft-1"><img src="info1.png" alt="infoBox" class="infoIconLeft-1"></div>
+<div class="InfoLeft-1"><img src="info4.png" alt="infoBox" class="infoIconLeft-1"></div>
 <div class="infoRight-1">
 <div class="infoRightTopHead-1">Information Box</div>
 <div class="infoRightTop-1">Enter your name below:
 <br/><br/>
-<input placeholder="name" type="textbox" autofocus><div/>
-</div>
+<input placeholder="name" type="textbox" autofocus>
 </div>
 <div class="infoRightBottom-1"><button>OK</button><input  class="btnCancel" type="submit" value="Cancel"></div>
 
+</div>
+</div>
+<br/><br/>
+<!--prompt 2 Input box-->
 
+<div class="infoBox-1">
+  <div class="InfoLeft-1"><img src="legal-case-management-software.png" alt="infoBox" class="infoIconLeft-1"></div>
+  <div class="infoRight-1">
+    <div class="infoRightTopHead-1">Information Box</div>
+    <div class="infoRightTop-1">Enter a number below:
+    <br/><br/>
+    <input placeholder="name" type="textbox" autofocus>
+  </div>
+  <div class="infoRightBottom-1"><button>OK</button><input  class="btnCancel" type="submit" value="Cancel"></div>
+
+  </div>
 </div>
 
+<br/><br/>
 
+
+<!--caution box 1-->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="caution1.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Caution</div>
+<div class="infoRightTop">Opps... You've done something wrong.?</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+<!--caution box 2-->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="face_with_no_good_gesture.1_WOMAN.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Caution</div>
+<div class="infoRightTop">No... Absolutely Not!</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+<!--caution box 3-->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="Woman_Saying_No_Emoji.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Caution</div>
+<div class="infoRightTop">No... Absolutely Not!</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+<!--caution box 2-->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="Thinking_Face_Emoji.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Caution</div>
+<div class="infoRightTop">Looks like you did something wrong...</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+<!--caution box 2-->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="idea.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Caution</div>
+<div class="infoRightTop">Looks like you did something wrong...</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+<!--infoBox Success -->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="success.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Success</div>
+<div class="infoRightTop" style="text-align:center;line-height:3">Successful!</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+
+<!--infoBox fail -->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="error-icon-4.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Failure</div>
+<div class="infoRightTop" style="text-align:center;line-height:3">Error: 000. Somthing went wrong.</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+<!--infoBox fail 1-->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="256.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Failure</div>
+<div class="infoRightTop" style="text-align:center;line-height:3">Error: 000. Somthing went wrong.</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+<!--infoBox try again -->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="monkeyEyes.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Ooops</div>
+<div class="infoRightTop" style="">Opps... It looks like you did somthing wrong, Please try again.</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+<!--infoBox try again -->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="angry kitty.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Ooops</div>
+<div class="infoRightTop" style="">Sorry, I'm unable to comply with the information you specified.</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+<!--infoBox fail -->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="error.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Failure</div>
+<div class="infoRightTop" style="text-align:center;line-height:3">Error: 000. Somthing went wrong.</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+
+<!--infoBox fail -->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="trophy.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Congratulations</div>
+<div class="infoRightTop" style="text-align:center;line-height:3">Well done!</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+
+<!--infoBox fail -->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="Approved.gif" alt="infoBox" class="infoIconLeft" style="height:155px;width:165px;"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Congratulations</div>
+<div class="infoRightTop" style="text-align:center;line-height:3">Well done!</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+<!--infoBox fail -->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="deal.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Hello!</div>
+<div class="infoRightTop" style="text-align:center;line-height:3">Welcome back, <font color="#4c9ed9">John Doe</font>!</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+
+<!--infoBox fail -->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="deal.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Terms & Conditions</div>
+<div class="infoRightTop" style="text-align:center;">Do you agree to the Terms & Conditions?</div>
+<div class="infoRightBottom"><button>Yes</button><input  class="btnCancel" type="submit" value="No"></div>
+</div>
+</div>
+<br/><br/>
+
+
+<!--infoBox fail -->
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="elephant.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Forgot Something?!</div>
+<div class="infoRightTop" style="text-align:center;line-height:3">[something here]</div>
+<div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+
+<div/>
 </body>
-
 <script type="text/javascript"></script>
 </html>
