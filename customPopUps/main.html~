@@ -528,7 +528,7 @@ input[type=textbox]:hover{
 <div class="InfoLeft"><img src="deal.png" alt="infoBox" class="infoIconLeft"></div>
 <div class="infoRight">
 <div class="infoRightTopHead">Hello!</div>
-<div class="infoRightTop" style="text-align:center;line-height:3">Welcome back, <font color="#4c9ed9">John Doe</font>!</div>
+<div class="infoRightTop" style="text-align:center;line-height:3">Welcome back, <b><font color="#4c9ed9">John Doe</font></b>!</div>
 <div class="infoRightBottom"><button>OK</button></div>
 </div>
 </div>
@@ -556,6 +556,19 @@ input[type=textbox]:hover{
 <div class="infoRightTopHead">Forgot Something?!</div>
 <div class="infoRightTop" style="text-align:center;line-height:3">[something here]</div>
 <div class="infoRightBottom"><button>OK</button></div>
+</div>
+</div>
+<br/><br/>
+
+<!--infoBox fail -->
+
+
+<div class="infoBox">
+<div class="InfoLeft"><img src="find-solution-icon.png" alt="infoBox" class="infoIconLeft"></div>
+<div class="infoRight">
+<div class="infoRightTopHead">Help?</div>
+<div class="infoRightTop" style="text-align:center;font-size:12px">I noticed you've been having technical issues. Would you like to contact the technical support team?</div>
+<div class="infoRightBottom"><button>Yes</button><input  class="btnCancel" type="submit" value="No"></div>
 </div>
 </div>
 <br/><br/>
