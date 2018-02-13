@@ -366,7 +366,7 @@ input[type=textbox]:hover{
 <br/><br/>
 
 
-<!--caution box 1-->
+<!--Caution box 1-->
 
 <div class="infoBox">
 <div class="InfoLeft"><img src="caution1.png" alt="infoBox" class="infoIconLeft"></div>
@@ -402,7 +402,7 @@ input[type=textbox]:hover{
 </div>
 <br/><br/>
 
-<!--caution box 2-->
+<!--caution box 4-->
 
 <div class="infoBox">
 <div class="InfoLeft"><img src="Thinking_Face_Emoji.png" alt="infoBox" class="infoIconLeft"></div>
@@ -414,7 +414,7 @@ input[type=textbox]:hover{
 </div>
 <br/><br/>
 
-<!--caution box 2-->
+<!--caution box 5-->
 
 <div class="infoBox">
 <div class="InfoLeft"><img src="idea.png" alt="infoBox" class="infoIconLeft"></div>
