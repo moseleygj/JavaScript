@@ -1,0 +1,55 @@
+<html>
+<head>
+
+<link href="style.css" type="text/css" rel="stylesheet">
+<link href="loginPrompt.css" type="text/css" rel="stylesheet"> 
+<script src="modal.js"></script>
+<title></title>
+<meta charset="UTF-8">
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+<span class="close" onClick="hidePic()" id="closeModal">&times;</span>
+
+
+<img class="modal-content" id="img01">
+</div>
+<!--blue #4285f4;-->
+		
+		
+<div class="loginBox" id="loginBox"><div class="sectionHeader">
+</div>
+<div class="sectionLeft">
+<img src="lock3.ico" class="icon">
+</div>
+<div class="sectionRight">
+
+<div class="textSection">
+<div class="titleText">SomeApp wants you to enter your Information.</div>
+
+<div class="subTitleText">subtitle Text</div>
+
+</div>
+<div class="userNamePassSection">
+
+<div class="cellHolder"><div class="usernameTitle">Username:&nbsp</div><input type="textbox" autofocus /></div>
+
+<div class="cellHolder"><div class="passwordTitle">Password:&nbsp</div><input type="password"/></div>
+
+</div>
+<div class="buttonsSection"><button onclick="showPic()">OK</button><input onclick="hidePic()" type="submit" class="btnCancel" value="Cancel"></div>
+</div>
+
+</div>
+<div class=""></div>
+
+
+</body>
+
+<script type="text/javascript"></script>
+</html>
