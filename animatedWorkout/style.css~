@@ -28,16 +28,17 @@ html{
 	color:#a4a4a4;
 	font-weight:bolder ;
 	font-size:64px; 
+	font-family: 'Exo 2', sans-serif;
 }
 
 .topTitleTextSub{
 	width: 100%;
 	height:50%;
-		text-align: center;
-	color:#a4a4a4;
-		color:#3e3e3e;
+	text-align: center;
+	color:#3e3e3e;
 	font-weight:bold ;
 	font-size:48px; 
+		font-family: 'Exo 2', sans-serif;
 }
 
 .leftColumn{
@@ -62,7 +63,7 @@ html{
 .cellExercise{
 	width:100%;
 	height: 30px;
-	<!-- margin:3px 0px; -->
+	margin:3px 0px;
 	color:#616161;
 	border-bottom: 1px solid #E8E8E8;
 	}
