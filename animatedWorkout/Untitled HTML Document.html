@@ -1,13 +1,24 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
 <title>Workout App</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="shortcut icon" href="Icons/dumbbell.png" type="image/png">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:900|Luckiest+Guy" rel="stylesheet"> 
+<script src="jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
-
+<script>
+	
+	$(document).ready(function(){
+$("#toggleCheck").click(){
+	alert("test");
+$(":checkbox").prop("checked", true);
+	}
+	});
+</script>
 <div class="container">
 	<div class="topTitle">
 		<div class="topTitleTextMain">MAIN SECTION</div>
@@ -23,13 +34,13 @@
 			<div class="sets" style="border-right:1px solid grey;font-size:15px">Sets</div>
 			<div class="reps"  style="border-right:1px solid grey;font-size:15px">Reps</div>
 			<div class="fitName" style="text-align:center;">Exercise</div>
-			<div class="fitCheckBox"><input type="checkbox"></div>
+			<div class="fitCheckBox"><input type="checkbox" id="toggleCheck"></div>
 		</div>
 
 		<div class="cellExercise" style="background-color:#BD0000;color:white" id="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='alert("clicked")'> Pullups </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
