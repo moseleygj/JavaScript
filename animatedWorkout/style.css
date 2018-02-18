@@ -86,7 +86,6 @@ html{
 	float:left;
 	text-indent: 14px;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
-
 	}
 
 .fitCheckBox{
@@ -94,7 +93,6 @@ html{
 	height:15px;
 	float:left;
 	font-weight: bolder;
-
 	}
 
 .sets{
@@ -104,7 +102,7 @@ html{
 	font-weight: bolder;
 	font-size:14px;
 	text-align: center;
-		font-weight: 400;
+	font-weight: 400;
 	text-rendering: optimizeLegibility;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
 	}
@@ -126,6 +124,7 @@ html{
 	background-color:#BD0000;
 	color:white;
 }
+
 .incomplete{
 	background-color:white;
 	color:#616161;
