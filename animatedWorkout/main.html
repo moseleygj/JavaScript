@@ -14,33 +14,38 @@
 var check=0;
 
 $(document).ready(function(){
+	//Group Checkboxes
 	$("#toggleCheck").click(function(){
-
-		//if function shouls be here
-
 			if (check == 0){
-
-				alert("checkboxes are checked");
 				$(":checkbox").prop("checked", true);
-		
+				$(".cellExercise").removeClass("incomplete");
+				$(".cellExercise").addClass("complete");
 				check=1;
-				alert("checked= "+check);
 	}
-
 	else{
-		//$("#toggleCheck").click(function(){
-				alert("checkboxes are un-checked");
 				$(":checkbox").prop("checked", false);
+				$(".cellExercise").removeClass("complete");
+				$(".cellExercise").addClass("incomplete");
 				check=0;
-			//});
 	}
-});
+										});
+	//Indivisual checkboxes
+$('input[type="checkbox"]').click(function() {
+    if (this.checked) {
+    	$(this).parent().parent().removeClass("incomplete");
+    	$(this).parent().parent().addClass("complete");
+    }
+        else  {
+    	$(this).parent().parent().removeClass("complete");
+    	$(this).parent().parent().addClass("incomplete");
+    }
+ });
 });
 </script>
 <div class="container">
 	<div class="topTitle">
-		<div class="topTitleTextMain">MAIN SECTION</div>
-		<div class="topTitleTextSub">SUB SECTION</div>
+		<div class="topTitleTextMain">MAIN</div>
+		<div class="topTitleTextSub">SUB</div>
 	</div>
 
 <div class="leftColumn">
@@ -55,7 +60,7 @@ $(document).ready(function(){
 			<div class="fitCheckBox"><input type="checkbox" id="toggleCheck"></div>
 		</div>
 
-		<div class="cellExercise" style="background-color:#BD0000;color:white" id="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
 			<div class="fitName" id=""><a onclick='alert("clicked")'> Pullups </a></div>
@@ -63,7 +68,7 @@ $(document).ready(function(){
 		</div>
 
 
-		<div class="cellExercise" style="background-color:#009B2C;color:white">
+		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
 			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
