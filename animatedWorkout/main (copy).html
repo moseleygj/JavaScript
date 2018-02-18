@@ -5,19 +5,32 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="shortcut icon" href="Icons/dumbbell.png" type="image/png">
-<link href="https://fonts.googleapis.com/css?family=Exo+2:900|Luckiest+Guy" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Exo+2:900|Luckiest+Guy" rel="stylesheet">
 <script src="jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
 <script>
-	
-	$(document).ready(function(){
-$("#toggleCheck").click(){
-	alert("test");
-$(":checkbox").prop("checked", true);
-	}
+var check=0;
+
+$(document).ready(function(){
+if (check == 0){
+$("#toggleCheck").click(function(){
+	alert("checkboxes are checked");
+	$(":checkbox").prop("checked", true);
 	});
+	check=1;
+	alert("checked= "+check);
+}
+else{
+	$("#toggleCheck").click(function(){
+		alert("checkboxes are un-checked");
+		$(":checkbox").prop("checked", false);
+		});
+		check=0;
+}
+
+});
 </script>
 <div class="container">
 	<div class="topTitle">
@@ -220,12 +233,12 @@ $(":checkbox").prop("checked", true);
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
-	
+
 	</div>
 
 </div>
 </body>
 <script type="text/javascript">
-	
+
 </script>
 </html>
