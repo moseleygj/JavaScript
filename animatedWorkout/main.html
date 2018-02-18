@@ -14,22 +14,27 @@
 var check=0;
 
 $(document).ready(function(){
-if (check == 0){
-$("#toggleCheck").click(function(){
-	alert("checkboxes are checked");
-	$(":checkbox").prop("checked", true);
-	});
-	check=1;
-	alert("checked= "+check);
-}
-else{
 	$("#toggleCheck").click(function(){
-		alert("checkboxes are un-checked");
-		$(":checkbox").prop("checked", false);
-		});
-		check=0;
-}
 
+		//if function shouls be here
+
+			if (check == 0){
+
+				alert("checkboxes are checked");
+				$(":checkbox").prop("checked", true);
+		
+				check=1;
+				alert("checked= "+check);
+	}
+
+	else{
+		//$("#toggleCheck").click(function(){
+				alert("checkboxes are un-checked");
+				$(":checkbox").prop("checked", false);
+				check=0;
+			//});
+	}
+});
 });
 </script>
 <div class="container">
