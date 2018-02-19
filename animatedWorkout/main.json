@@ -1,0 +1,189 @@
+exercise = [
+{
+"name":"pullups",
+"image":"pullup.gif",
+"title":"Pull up"
+},
+{
+"name":"dips",
+"image":"dip.gif",
+"title":"Dips"
+},
+{
+"name":"pushup",
+"image":"pushup.gif",
+"title":"Push up"
+},
+{
+"name":"squat",
+"image":"squat.gif",
+"title":"Body-weight Squat"
+},
+{
+"name":"squatWeighted",
+"image":"barbellSquat.gif",
+"title":"Barbell Squat"
+},
+{
+"name":"legExtensions",
+"image":"legExtension.gif",
+"title":"Leg Extensions"
+},
+{
+"name":"legPress",
+"image":"legpress.gif",
+"title":"Leg Press"
+},
+{
+"name":"calveRaises",
+"image":"Calf-Raises.gif",
+"title":"Calf Raises"
+},
+{
+"name":"gobletSquat",
+"image":"gobletsquat.gif",
+"title":"Goblet Squat"
+},
+{
+"name":"barbellCurls",
+"image":"ez-bar-curl.gif",
+"title":"Barbell Curl"
+},
+{
+"name":"DBCurls",
+"image":"bicepcurl.gif",
+"title":"Dumbbell Bicep Curl"
+},
+{
+"name":"DBCurlsAlternate",
+"image":"altDBCurl.gif",
+"title":"Alternating DB Hammer Curls"
+},
+{
+"name":"DBCurlsHammer",
+"image":"hammerCurls.gif",
+"title":"Dummbell Hammer Curls"
+},
+{
+"name":"concentrationCurls",
+"image":"concentrationCurl.gif",
+"title":"Concentration Curls"
+},
+{
+"name":"tricepPushDown",
+"image":"tricepPushdown.gif",
+"title":"Tricep Push Down"
+},
+{
+"name":"tricepPushDownRope",
+"image":"triceppulldown.gif",
+"title":"Tricep Rope Push down"
+},
+{
+"name":"tricepPushDownReverse",
+"image":"tricepPushDownReverse.gif",
+"title":"Reverse Tricep pushdown"
+},
+{
+"name":"tricepPushDownVBar",
+"image":"vBarTricepPushDown.gif",
+"title":"V-Bar Push Downs"
+},
+{
+"name":"diamondPushUp",
+"image":"diamondPushup.gif",
+"title":"Diamond Push Up"
+},
+{
+"name":"benchDips",
+"image":"Benchdips.gif",
+"title":"Bench Dip"
+},
+{
+"name":"dipsWeighted",
+"image":"weightedDips.gif",
+"title":"Weighted Dip"
+},
+{
+"name":"DBExtensionOneArm",
+"image":"standing-one-arm-dumbbell-triceps-extension.gif",
+"title":"On-Arm Dumbbell Tricep extension"
+},
+{
+"name":"skullCrusher",
+"image":"skullCrusher.gif",
+"title":"Skull Crusher"
+},
+{
+"name":"benchPressIncline",
+"image":"incline-bench-press.gif",
+"title":"Incline Bench Press"
+},{
+"name":"benchPressFlat",
+"image":"bench-press.gif",
+"title":"Bench Press"
+},
+{
+"name":"benchPressDecline",
+"image":"DeclineBenchPress.gif",
+"title":"Decline Bench Press"
+},
+{
+"name":"flyesDBIncline",
+"image":"InclineDBFlyes.gif",
+"title":"Incline Dumbbell Flyes"
+},
+{
+"name":"benchPressMachine",
+"image":"-",
+"title":"-"
+},
+{
+"name":"shoudlderPressDB",
+"image":"dbShoulderPress.gif",
+"title":"Dumbbell Shoulder Press"
+},
+{
+"name":"shoudlderPressBB",
+"image":"how-to-do-the-military-press.gif",
+"title":"Barbell Shoulder Press"
+},{
+"name":"shoulderSideLateral",
+"image":"lateralraise.gif",
+"title":"Lateral Raise"
+},
+{
+"name":"shoulderFrontLateral",
+"image":"frontraiseLAterial.gif",
+"title":"Front Lateral Raises"
+},
+{
+"name":"shoulderRearLateral",
+"image":"dumbbellreverseflyRearLAteral.gif",
+"title":"Rear Lateral Raise"
+},
+{
+"name":"shoulderUprightRows",
+"image":"uprightrow.gif",
+"title":"Upright Rows"
+},
+{
+"name":"burpees",
+"image":"burpee.gif",
+"title":"Burpees"
+},
+{
+"name":"backTBarRows",
+"image":"t-Bar Row.gif",
+"title":"T-Bar Row"
+},{
+"name":"hyperExtensions",
+"image":"hyperextention.gif",
+"title":"Hyper Extensions"
+},
+{
+"name":"",
+"image":"image.gif",
+"title":"Exercise "title":"
+}
+]
