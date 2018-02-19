@@ -12,7 +12,6 @@
 <body>
 <script>
 var check=0;
-
 $(document).ready(function(){
 	//Group Checkboxes
 	$("#toggleCheck").click(function(){
@@ -22,13 +21,13 @@ $(document).ready(function(){
 				$(".cellExercise").addClass("complete");
 				check=1;
 	}
-
 	else{
 				$(":checkbox").prop("checked", false);
 				$(".cellExercise").removeClass("complete");
 				$(".cellExercise").addClass("incomplete");
 				check=0; 
-										});
+										}});
+
 	//Indivisual checkboxes
 $('input[type="checkbox"]').click(function() {
     if (this.checked) {
@@ -42,7 +41,7 @@ $('input[type="checkbox"]').click(function() {
  });
 });
 </script>
-<div class="container">
+<div class="container" >
 	<div class="topTitle">
 		<div class="topTitleTextMain">MAIN</div>
 		<div class="topTitleTextSub">SUB</div>
