@@ -49,9 +49,9 @@ html{
 }
 
 .imgExercise{
-	width: 100%;
+	width: 99%;
 	height:400px;
-	margin: 230px 5px 0px 5px;
+	margin: 230px 0px 0px 3px;
 }
 .rightColumn{
 	width:50% ;
@@ -74,7 +74,6 @@ html{
 	margin:0px 0px;
 	color:#616161;
 background-color: #F2F2F2;
-font-weight:bolder;
 font-weight:bolder;
 
 	
