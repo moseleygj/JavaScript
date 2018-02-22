@@ -7,6 +7,7 @@
 <link rel="shortcut icon" href="Icons/dumbbell.png" type="image/png">
 <link href="https://fonts.googleapis.com/css?family=Exo+2:900|Luckiest+Guy" rel="stylesheet">
 <script src="jquery-3.3.1.min.js"></script>
+<script src="test.js"></script>
 </head>
 
 <body>
@@ -26,11 +27,9 @@ $(document).ready(function(){
 				$(":checkbox").prop("checked", false);
 				$(".cellExercise").removeClass("complete");
 				$(".cellExercise").addClass("incomplete");
-
-
-				check=0; 
-										}});
-
+				check=0;
+										}
+									});
 	//Indivisual checkboxes
 $('input[type="checkbox"]').click(function() {
     if (this.checked) {
@@ -46,16 +45,28 @@ $('input[type="checkbox"]').click(function() {
 
 
 </script>
-<script type="text/javascript">
-	var exercise =[{ 
-"pullups" :{
-"image":"pullup.gif",
-"title":"Pull up"
-}]
+<script>
+var xhttp = new XMLHttpRequest();
+var myObj;
 
-alert(exercise[0].pullups);
+xhttp.onreadystatechange = function()
+	{
+		if(xhttp.readyState == 4 && xhttp.status == 200)
+		{
+				myObj = JSON.parse(xhttp.responseText);
+				console.log(myObj.pullups.image);
+		}
+};
+xhttp.open("GET", "main.json", true);
+xhttp.send(); //go bring me the data
 
-</script>
+function showFit(exercise)
+{
+document.getElementById("exerciseImg").src="gifs/"+exercise;
+	}
+
+  </script>
+
 <div class="container" >
 	<div class="topTitle">
 		<div class="topTitleTextMain">MAIN</div>
@@ -63,7 +74,7 @@ alert(exercise[0].pullups);
 	</div>
 
 <div class="leftColumn">
-		<img src="" class="imgExercise" id="">
+		<img src="" class="imgExercise" id="exerciseImg">
 </div>
 
 <div class="rightColumn">
@@ -77,7 +88,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'> Pullups </a></div>
+			<div class="fitName" id=""><a onclick='showFit(myObj.pullups.image)'> Pullups </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -85,7 +96,15 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id="p00p"></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:10px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  exercise.image </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -93,7 +112,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  exercise.image </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -101,7 +120,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -109,7 +128,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -117,7 +136,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -125,7 +144,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -133,7 +152,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -141,7 +160,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -149,7 +168,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -157,7 +176,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -165,7 +184,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -173,7 +192,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -181,7 +200,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -189,7 +208,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -197,7 +216,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -205,7 +224,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -213,7 +232,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -221,15 +240,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -238,7 +249,7 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
@@ -246,17 +257,41 @@ alert(exercise[0].pullups);
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
 		<div class="cellExercise" style="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:10px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='alert("clicked")'>  - </a></div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
 			<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
+
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:10px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:10px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:10px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
 
 	</div>
 
