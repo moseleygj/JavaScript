@@ -53,6 +53,7 @@ html{
 	height:400px;
 	margin: 230px 0px 0px 3px;
 }
+
 .rightColumn{
 	width:50% ;
 	height:86%;
@@ -141,4 +142,11 @@ font-weight:bolder;
 .incomplete{
 	background-color:white;
 	color:#616161;
+}
+
+.leftColumnMin{
+	width:0%;
+	height:86%;
+	float:left;
+	position: relative;
 }
