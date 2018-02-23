@@ -42,24 +42,8 @@ $('input[type="checkbox"]').click(function() {
     }
  });
 });
-
 </script>
-<script>
 
-function showFit(exercise)
-{
-document.getElementById("exerciseImg").src="gifs/"+exercise;
-	}
-	function randomPlaceHolder()
-	{
-		var x= Math.floor(Math.random()* 11)+1;
-	document.getElementById("exerciseImg").src="loading/loading"+x+".gif";
-		}
-
-		function hideShowPreview(){
-			
-		}
-  </script>
 
 <div class="container" >
 	<div class="topTitle">
@@ -282,8 +266,8 @@ document.getElementById("exerciseImg").src="gifs/"+exercise;
 
 
 		<div class="settingsBar" style="">
-Hide Preview<input type="radio" name="preview" value="showPreview">
-Show Preview<input type="radio" name="preview" checked value="showPreview">
+Hide Preview<input type="radio" name="preview" value="showPreview" id="hidePreview" onclick="hideShowPreview()">
+Show Preview<input type="radio" name="preview" value="showPreview" id="showPreview" onclick="hideShowPreview()" checked>
 		</div>
 
 	</div>
