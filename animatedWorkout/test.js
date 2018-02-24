@@ -32,7 +32,6 @@ function hideShowPreview()
 	{
 		document.getElementById("exerciseImg").style.display="block";
 		//increase size of workout list;slide (left);
-
 	}
 	else if (document.getElementById("showPreview").checked == false)
 	{
