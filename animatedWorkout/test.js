@@ -42,3 +42,22 @@ function hideShowPreview()
 		alert("Error!");
 	}
 }
+$(document).ready(function(){
+
+alert("Hi");
+
+		$("input:radio").click(function()
+		{
+				if ($("#hidePreview").is(':checked'))
+				{
+					alert("Radio button #hidePreview is CHECKED!" );
+				}
+				else if ($("#ShowPreview").is(':checked'))
+				{
+					alert("Radio button #ShowPreview is CHECKED!" );
+				}
+				else{
+					alert("Error");
+				}
+		});
+});
