@@ -44,20 +44,15 @@ function hideShowPreview()
 }
 $(document).ready(function(){
 
-alert("Hi");
+$("#hidePreview").click(function()
+{
+	alert("hideButton Clicked");
+});
 
-		$("input:radio").click(function()
-		{
-				if ($("#hidePreview").is(':checked'))
-				{
-					alert("Radio button #hidePreview is CHECKED!" );
-				}
-				else if ($("#ShowPreview").is(':checked'))
-				{
-					alert("Radio button #ShowPreview is CHECKED!" );
-				}
-				else{
-					alert("Error");
-				}
-		});
+$("#showPreview").click(function()
+{
+	alert("hideButton Clicked");
+});
+
+
 });
