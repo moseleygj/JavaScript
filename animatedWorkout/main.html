@@ -19,43 +19,39 @@ $(document).ready(function(){
 	$("#toggleCheck").click(function(){
 			if (check == 0){
 				$(":checkbox").prop("checked", true);
-				$(".cellExercise").removeClass("incomplete");
-				$(".cellExercise").addClass("complete");
+				$(".cellExercise").removeClass("incomplete").addClass("complete");
 				check=1;
 	}
 	else{
 				$(":checkbox").prop("checked", false);
-				$(".cellExercise").removeClass("complete");
-				$(".cellExercise").addClass("incomplete");
+				$(".cellExercise").removeClass("complete").addClass("incomplete");
 				check=0;
 										}
 									});
 	//Indivisual checkboxes
 $('input[type="checkbox"]').click(function() {
     if (this.checked) {
-    	$(this).parent().parent().removeClass("incomplete");
-    	$(this).parent().parent().addClass("complete");
-    }
+    	$(this).parent().parent().removeClass("incomplete").addClass("complete");
+    	    }
         else  {
-    	$(this).parent().parent().removeClass("complete");
-    	$(this).parent().parent().addClass("incomplete");
-    }
+    	$(this).parent().parent().removeClass("complete").addClass("incomplete");
+    	    }
  });
 });
 </script>
 
 
-<div class="container" >
+<div class="container">
 	<div class="topTitle">
 		<div class="topTitleTextMain">MAIN</div>
 		<div class="topTitleTextSub">SUB</div>
 	</div>
 
-<div class="leftColumn">
+<div class="leftColumn"  id="leftColumn">
 		<img src="" class="imgExercise" id="exerciseImg">
 </div>
 
-<div class="rightColumn">
+<div class="rightColumn" id="rightColumn">
 		<div class="cellExercise" style="border-bottom:1px solid grey;background-color:#f5f5f5;"  id="mainRow">
 			<div class="sets" style="border-right:1px solid grey;font-size:15px">Sets</div>
 			<div class="reps"  style="border-right:1px solid grey;font-size:15px">Reps</div>
@@ -269,7 +265,6 @@ Show Preview<input type="radio" name="preview" value="showPreview" id="showPrevi
 		</div>
 
 	</div>
-
 </div>
 	</body>
 </html>

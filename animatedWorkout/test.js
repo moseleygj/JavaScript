@@ -46,12 +46,25 @@ $(document).ready(function(){
 
 $("#hidePreview").click(function()
 {
-	alert("hideButton Clicked");
+	$(".rightColumn").removeClass("rightColumn");
+	$(".rightColumn").addClass("rightColumnMax");
+	$(".leftColumn").removeClass("leftColumn");
+	$(".leftColumn").addClass("leftColumnMin");
+
 });
 
 $("#showPreview").click(function()
 {
-	alert("hideButton Clicked");
+	$(".leftColumn").removeClass("leftColumnMin");
+	$(".rightColumn").removeClass("rightColumnMax");
+	$(".leftColumn").addClass("leftColumn");
+	$(".rightColumn").addClass("rightColumn");
+
+
+	/*$(".leftColumn").removeClass("leftColumnMin");
+	$(".leftColumn").addClass("leftColumn");
+	$(".rightColumn").removeClass("rightColumnMax");
+	$(".rightColumn").addClass("rightColumn");*/
 });
 
 
