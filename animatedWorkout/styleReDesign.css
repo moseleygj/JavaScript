@@ -1,6 +1,7 @@
 body{
 	padding:0;
 	background-color: #F2F2F2;
+	position: relative;
 }
 
 html{
@@ -10,12 +11,14 @@ html, body {margin:0;padding:0;height:100%;}
 
 .container{
 	width: 100%;
-	height:1024px;
-
+	height:100%;
+	max-width:1024px;
+min-height: 100%;
 	background-color: white;
 	margin:0 auto 0;
 	border-radius: 5px;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
 }
 
 .topTitle{
@@ -46,14 +49,18 @@ html, body {margin:0;padding:0;height:100%;}
 
 
 .imgExercise{
-	width: 99%;
-	height:400px;
-	margin: 230px 0px 0px 3px;
+	width: 100%;
+	height:95%;
+	max-width:1024px;
+	margin: 0px;
+	position: absolute;
+	z-index: 1;
+	background-color:white;
 }
 
 .cellExercise{
 	width:100%;
-	height: 30px;
+	height: 65px;
 	margin:0px 0px;
 	color:#616161;
 	border-bottom: 1px solid #E8E8E8;
@@ -61,7 +68,7 @@ html, body {margin:0;padding:0;height:100%;}
 
 .cellExercise:hover{
 	width:100%;
-	height: 30px;
+	height: 65px;
 	margin:0px 0px;
 	color:#616161;
 background-color: #F2F2F2;
@@ -70,13 +77,13 @@ font-weight:bolder;
 
 .fitName{
 	width:59%;
-	height: 30px;
+	height: 65px;
 	text-align: ;
-	font-size:16px;
+	font-size:50px;
 	font-weight: 400;
 	color:;
 	float:left;
-	text-indent: 14px;
+	text-indent: 30px;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
 	}
 
@@ -89,10 +96,10 @@ font-weight:bolder;
 
 .sets{
 	width:12%;
-	height:30px;
+	height:60px;
 	float:left;
 	font-weight: bolder;
-	font-size:14px;
+	font-size:50px;
 	text-align: center;
 	font-weight: 400;
 	text-rendering: optimizeLegibility;
@@ -101,7 +108,7 @@ font-weight:bolder;
 
 .reps{
 	width:18%;
-	height:30px;
+	height:60px;
 	float:left;
 	font-weight: bolder;
 	font-size:10px;
@@ -151,7 +158,7 @@ font-weight:bolder;
 }
 
 .leftColumn{
-	width:50%;
+	width:0%;
 	height:86%;
 	float:left;
 	position: relative;
@@ -159,8 +166,25 @@ font-weight:bolder;
 }
 
 .rightColumn{
-	width:50% ;
-	height:86%;
+	width:100% ;
+	height:100%;
 	float:left;
-	position: relative;
+	position: absolute;
+	z-index: 0;
+	max-width:1024px
 }
+
+.closeImage{
+position: absolute;
+right:20px;
+top:0;
+height:40px;
+width:40px;
+font-size: 40px;
+color:red;
+z-index:2;
+text-shadow: 1px 1px 3px;
+font-weight:bolder;
+}
+
+input[type="checkbox"]{height:40px;width:40px;}
