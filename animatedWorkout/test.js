@@ -50,21 +50,14 @@ $("#hidePreview").click(function()
 	$(".rightColumn").addClass("rightColumnMax");
 	$(".leftColumn").removeClass("leftColumn");
 	$(".leftColumn").addClass("leftColumnMin");
-
 });
 
 $("#showPreview").click(function()
 {
 	$(".leftColumn").removeClass("leftColumnMin");
-	$(".rightColumn").removeClass("rightColumnMax");
 	$(".leftColumn").addClass("leftColumn");
+	$(".rightColumn").removeClass("rightColumnMax");
 	$(".rightColumn").addClass("rightColumn");
-
-
-	/*$(".leftColumn").removeClass("leftColumnMin");
-	$(".leftColumn").addClass("leftColumn");
-	$(".rightColumn").removeClass("rightColumnMax");
-	$(".rightColumn").addClass("rightColumn");*/
 });
 
 
