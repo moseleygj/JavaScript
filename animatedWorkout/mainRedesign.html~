@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Workout App</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="styleReDesign.css">
+<link rel="shortcut icon" href="Icons/dumbbell.png" type="image/png">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:900|Luckiest+Guy" rel="stylesheet">
+<script src="jquery-3.3.1.min.js"></script>
+<script src="testRedesign.js"></script>
+</head>
+
+<body onload="randomPlaceHolder()">
+<script>
+var check=0;
+$(document).ready(function(){
+	//$( ".cellExercise" ).not( ":even" ).css( "background-color", "#f5f5f5" );
+	//Group Checkboxes
+	$("#toggleCheck").click(function(){
+			if (check == 0){
+				$(":checkbox").prop("checked", true);
+				$(".cellExercise").removeClass("incomplete").addClass("complete");
+				check=1;
+	}
+	else{
+				$(":checkbox").prop("checked", false);
+				$(".cellExercise").removeClass("complete").addClass("incomplete");
+				check=0;
+										}
+									});
+	//Indivisual checkboxes
+$('input[type="checkbox"]').click(function() {
+    if (this.checked) {
+    	$(this).parent().parent().removeClass("incomplete").addClass("complete");
+    	    }
+        else  {
+    	$(this).parent().parent().removeClass("complete").addClass("incomplete");
+    	    }
+ 							});
+
+
+
+});
+
+function closeImg(){
+document.getElementById("imgExercise").style.zIndex = "-1"; 
+}
+</script>
+
+
+<div class="container">
+	<div class="topTitle">
+		<div class="topTitleTextMain">MAIN</div>
+		<div class="topTitleTextSub">SUB</div>
+	</div>
+
+<div class="imgExercise" id="imgExercise"> 
+<div class="closeImage" onClick="closeImg();" >X</div>
+<img src="" class="imgExercise" id="exerciseImg">
+</div>
+
+<div class="rightColumn" id="rightColumn">
+		<div class="cellExercise" style="border-bottom:1px solid grey;background-color:#f5f5f5;"  id="mainRow">
+			<div class="sets" style="border-right:1px solid grey;font-size:45px">Sets</div>
+			<div class="reps"  style="border-right:1px solid grey;font-size:45px">Reps</div>
+			<div class="fitName" style="text-align:center;font-size:45px">Exercise</div>
+			<div class="fitCheckBox"><input type="checkbox" id="toggleCheck"></div>
+		</div>
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">5</div>
+			<div class="reps" style="font-size:24.3px" id="">10, 20, 30, 40, 50, 60, 70, 80. </div>
+			<div class="fitName" id=""><a onclick='showFit(myObj.pullups.image)' hover="click me"> Pullups </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">5</div>
+			<div class="reps" style="font-size:24.3px" id="">30,30 30,30 ,30 ,30 </div>
+			<div class="fitName" id=""><a onclick='showFit(myObj.pushup.image)'>Pushups </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id="p00p"></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">5</div>
+			<div class="reps" style="font-size:24.3px" id="">15, 15, 15, 15, 15</div>
+			<div class="fitName" id=""><a onclick='showFit(myObj.dips.image)'>  Dips </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
+
+		<div class="cellExercise" style="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
+			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
+			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+<!--
+		<div class="settingsBar" style="">
+Hide Preview<input type="radio" name="preview" value="showPreview" id="hidePreview" onclick="hideShowPreview()">
+Show Preview<input type="radio" name="preview" value="showPreview" id="showPreview" onclick="hideShowPreview()" checked>
+		</div>
+		-->
+
+	</div>
+</div>
+	</body>
+</html>
