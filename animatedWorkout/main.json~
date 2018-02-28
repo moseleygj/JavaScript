@@ -235,19 +235,63 @@
 "title":"Jumping Jacks"
 },
 
-"chinUp":{
-"image":"chinup.gif"
-"title":"chin up"
+"kneeTuckCrunch":{
+"image":"kneeTuckCrunch.gif"
+"title":"knee-tuck Crunch"
 },
 
-"chinUp":{
-"image":"chinup.gif"
-"title":"chin up"
+"latPullDown":{
+"image":"reverseGripLatPulldown.gif"
+"title":"reverse lat pull pulldown"
 },
 
-"chinUp":{
-"image":"chinup.gif"
-"title":"chin up"
+"sideCrunch":{
+"image":"sideCrunchs.gif"
+"title":"side crunch"
 },
 
+"situps":{
+"image":"sit-ups.gif"
+"title":"situp"
+},
+
+"standingOverHeadDBExt":{
+"image":"standing-dumbbell-overhead-triceps-extension.gif"
+"title":"standing DBoverhead triceps extension"
+},
+"DBRow":{
+"image":"standingdumbbellsinglearmsupportedrow.gif"
+"title":"One-arm DB Row"
+},
+
+"tBarRow":{
+"image":"t-Bar Row.gif"
+"title":"t-Bar Row"
+},
+
+"toeTouchCrunch":{
+"image":"toeTouchCrunch.gif"
+"title":"toe touch crunch"
+},
+
+
+"DBUprightRow":{
+"image":"uprightrow.gif"
+"title":"DB upright row"
+},
+
+"weightedDips":{
+"image":"weightedDips.gif"
+"title":"Weighted Dips"
+},
+
+"WeightedPullUps":{
+"image":"Weighted Pull-Ups.gif"
+"title":"weighted Pull Ups"
+},
+
+"Cable Flyes":{
+"image":"cableFlyes.gif"
+"title":"Cable Flyes"
+}
 }
