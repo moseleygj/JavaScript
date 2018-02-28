@@ -167,7 +167,7 @@ font-weight:bolder;
 }
 
 .rightColumnMax{
-	width:100%;
+	width:100% +5px;
 	height:86%;
 	float:left;
 	position: relative;
@@ -201,22 +201,7 @@ color:#434343;
 z-index:2;
 text-shadow: 1px 1px 3px;
 font-weight:bolder;
+
 }
 
-.subSectionFitMain{
-	height:70%;
-	width:100%;
-	font-weight:bolder;
-	font-size:35px;
-	}
-	
-	.subSectionFitSub{
-	height:30%;
-	width:100%;
-	font-size:16px;
-	line-height:1.1;
-	color:#BBBABA;
-	}
 input[type="checkbox"]{height:40px;width:40px;}
-
-

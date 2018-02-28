@@ -17,7 +17,8 @@ function showFit(exercise)
 {
 document.getElementById("exerciseImg").src="gifs/"+exercise;
 document.getElementById("imgExercise").style.zIndex = "1";
-document.getElementById("imgExercise").display = "block";  
+document.getElementById("imgExercise").style.display = "block"; 
+document.getElementById("rightColumn").style.visibility = "visible";  
 }
 
 
