@@ -325,24 +325,9 @@
 "title":"Reverse Grip Pressdown"
 },
 
-
-"":{
-"image":"",
-"title":""
-},
-
-"":{
-"image":"",
-"title":""
-},
-
-"":{
-"image":"",
-"title":""
-},
-
 "reverseOneArmPressDown":{
 "image":"One-arm-cable-triceps-extension.gif",
 "title":"one-arm reverse grip press-down"
-},
+}
+
 }

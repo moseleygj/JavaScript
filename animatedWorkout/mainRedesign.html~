@@ -21,11 +21,14 @@ $(document).ready(function(){
 				$(":checkbox").prop("checked", true);
 				$(".cellExercise").removeClass("incomplete").addClass("complete");
 				check=1;
+				//fix notes section when inverted to a darker color
+
 	}
 	else{
 				$(":checkbox").prop("checked", false);
 				$(".cellExercise").removeClass("complete").addClass("incomplete");
 				check=0;
+								//fix notes section when inverted to a normal color
 										}
 									});
 	//Indivisual checkboxes
@@ -46,7 +49,6 @@ function closeImg(){
 document.getElementById("rightColumn").style.visibility = "visible"; 
 document.getElementById("imgExercise").style.zIndex = "-1"; 
 document.getElementById("imgExercise").style.display = "none"; 
-
 }
 </script>
 

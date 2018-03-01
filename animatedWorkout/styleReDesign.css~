@@ -108,7 +108,7 @@ font-weight:bolder;
 	}
 
 .sets{
-	width:12%;
+	width:12%;x
 	height:60px;
 	float:left;
 	font-weight: bolder;
@@ -215,7 +215,7 @@ font-weight:bolder;
 	width:100%;
 	font-size:16px;
 	line-height:1.1;
-	color:#BBBABA;
+	color:#999797;
 	}
 input[type="checkbox"]{height:40px;width:40px;}
 
