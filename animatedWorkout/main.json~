@@ -300,10 +300,49 @@
 "title":"Kettle-bell swing"
 },
 
-"plank":{
-"image":"plank.gif",
-"title":"Plank"
+"mountainClimber":{
+"image":"mountainclimberrunning.gif",
+"title":"Mountain Climbers"
+},
+
+"spiderManPushup":{
+"image":"spidermanpushup.gif",
+"title":"spider man pushup"
+},
+
+"deadlift":{
+"image":"deadlift.gif",
+"title":"Deadlift"
 }
 
+"vBarPullDown":{
+"image":"vbarPullDown.jpg",
+"title":"V-Bar Pull-down"
+},
 
+"reverseGripPushdown":{
+"image":"reverse-grip-cable-pushdown.jpg",
+"title":"Reverse Grip Pressdown"
+},
+
+
+"":{
+"image":"",
+"title":""
+},
+
+"":{
+"image":"",
+"title":""
+},
+
+"":{
+"image":"",
+"title":""
+},
+
+"reverseOneArmPressDown":{
+"image":"One-arm-cable-triceps-extension.gif",
+"title":"one-arm reverse grip press-down"
+},
 }
