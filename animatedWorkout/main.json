@@ -300,9 +300,19 @@
 "title":"Kettle-bell swing"
 },
 
-"plank":{
-"image":"plank.gif",
-"title":"Plank"
+"mountainClimber":{
+"image":"mountainclimberrunning.gif",
+"title":"Mountain Climbers"
+},
+
+"spiderManPushup":{
+"image":"spidermanpushup.gif",
+"title":"spider man pushup"
+},
+
+"deadlift":{
+"image":"deadlift.gif",
+"title":"Deadlift"
 }
 
 
