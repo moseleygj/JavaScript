@@ -15,10 +15,14 @@ xhttp.send(); //go bring me the data
 
 function showFit(exercise)
 {
+	if(exercise == null|| exercise == "" || exercise == "-"){
+alert("Opps!");
+reutn 0;	
+	}
 document.getElementById("exerciseImg").src="gifs/"+exercise;
 document.getElementById("imgExercise").style.zIndex = "1";
 document.getElementById("imgExercise").style.display = "block"; 
-document.getElementById("rightColumn").style.visibility = "visible";  
+document.getElementById("rightColumn").style.visibility = "hidden";  
 }
 
 
