@@ -315,5 +315,19 @@
 "title":"Deadlift"
 }
 
+"vBarPullDown":{
+"image":"vbarPullDown.jpg",
+"title":"V-Bar Pull-down"
+},
+
+"reverseGripPushdown":{
+"image":"reverse-grip-cable-pushdown.jpg",
+"title":"Reverse Grip Pressdown"
+},
+
+"reverseOneArmPressDown":{
+"image":"One-arm-cable-triceps-extension.gif",
+"title":"one-arm reverse grip press-down"
+}
 
 }
