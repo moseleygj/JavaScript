@@ -83,7 +83,7 @@ document.getElementById("imgExercise").style.display = "none";
 				<div class="subSectionFitSub">Some Small Note here</div>
 
 		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
-		   	<div class="subSectionNote"><a onClick=""><img src="note.png" height="64" width="64"></a></div>
+		   	<div class="subSectionNote"><a onClick="alert('Note should be here');"><img src="note.png" height="64" width="64"></a></div>
 				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
