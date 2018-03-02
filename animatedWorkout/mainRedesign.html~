@@ -21,7 +21,8 @@ $(document).ready(function(){
 				$(":checkbox").prop("checked", true);
 				$(".cellExercise").removeClass("incomplete").addClass("complete");
 				check=1;
-				//fix notes section when inverted to a darker color
+				//fix notes section when inverted to a darker color #f5f5f5
+
 
 	}
 	else{
@@ -69,208 +70,330 @@ document.getElementById("imgExercise").style.display = "none";
 			<div class="sets" style="border-right:1px solid grey;font-size:45px">Sets</div>
 			<div class="reps"  style="border-right:1px solid grey;font-size:45px">Reps</div>
 			<div class="fitName" style="text-align:center;font-size:45px">Exercise</div>
+			<div class="subSectionNote"></div>
 			<div class="fitCheckBox"><input type="checkbox" id="toggleCheck"></div>
 		</div>
 <!--main Menu-->
+
 		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">5</div>
 			<div class="reps" style="font-size:24.3px" id="">10, 20, 30, 40, 50, 60, 70, 80. </div>
 			<div class="fitName" id="">
-			<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> Pullups </a></div>
-			<div class="subSectionFitSub"><a href="#"><img src="note.png" height="24" width="24"></a>Notes</div>
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> Pull ups </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
 
-		</div>			<div class="fitCheckBox"><input type="checkbox" id=""></div></div>
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"><a onClick=""><img src="note.png" height="64" width="64"></a></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
 
 
-		<div class="cellExercise" style="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">5</div>
-			<div class="reps" style="font-size:24.3px" id="">30,30 30,30 ,30 ,30 </div>
-			<div class="fitName" id=""><a onclick='showFit(myObj.pushup.image)'>Pushups </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id="p00p"></div>
+			<div class="reps" style="font-size:24.3px" id="">10, 20, 30, 40, 50, 60, 70, 80. </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pushups.image)' hover="click me"> Push ups </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
 
-		<div class="cellExercise" style="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">5</div>
-			<div class="reps" style="font-size:24.3px" id="">15, 15, 15, 15, 15</div>
-			<div class="fitName" id=""><a onclick='showFit(myObj.dips.image)'>  Dips </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+			<div class="reps" style="font-size:24.3px" id="">10, 20, 30, 40, 50, 60, 70, 80. </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.dips.image)' hover="click me"> Dips </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
 
-		<div class="cellExercise" style="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
 
-		<div class="cellExercise" style="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+		
+
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+		
+
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
 
-		<div class="cellExercise" style="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 
 
-		<div class="cellExercise" style="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
+		
 
-
-		<div class="cellExercise" style="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
+		
 
-
-		<div class="cellExercise" style="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
+		
 
-
-		<div class="cellExercise" style="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
+		
+		
 
-
-		<div class="cellExercise" style="">
+		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
 
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-		<div class="cellExercise" style="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id="">, , , , </div>
-			<div class="fitName" id=""><a onclick='showFit()'>  - </a></div>
-			<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
 <!--
 		<div class="settingsBar" style="">
