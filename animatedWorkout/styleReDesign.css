@@ -224,4 +224,7 @@ height:100%;
 float:left;
 }
 
+.ShowBanner{}
+.hideBanner{}
+
 input[type="checkbox"]{height:40px;width:40px;}
