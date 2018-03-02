@@ -222,7 +222,6 @@ font-weight:bolder;
 width:10%;
 height:100%;	
 float:left;
-background-color:red;
 }
 
 input[type="checkbox"]{height:40px;width:40px;}

@@ -107,8 +107,8 @@ font-weight:bolder;
 	}
 
 .sets{
-	width:12%;x
-	height:60px;
+	width:12%;
+	height:100%;
 	float:left;
 	font-weight: bolder;
 	font-size:50px;
@@ -116,13 +116,13 @@ font-weight:bolder;
 	font-weight: 400;
 	text-rendering: optimizeLegibility;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
-    line-height: 1.3;
+   line-height: 1.3;
     
 	}
 
 .reps{
 	width:18%;
-	height:60px;
+	height:100%;
 	float:left;
 	font-weight: bolder;
 	font-size:10px;
