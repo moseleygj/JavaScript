@@ -229,3 +229,41 @@ float:left;
 .toolTip{}
 
 input[type="checkbox"]{height:40px;width:40px;}
+
+
+<!-- tool tip-->
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+}
+
+.btnClose{
+
+position:absolute;
+right:0;
+top:0;
+height:20px;
+width:20px;
+background-color:red;
+border-radius:50%;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
