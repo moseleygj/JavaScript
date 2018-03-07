@@ -238,7 +238,7 @@ input[type="checkbox"]{height:40px;width:40px;}
 
 .tooltiptext{
     visibility: hidden;
-    width: 400px;
+    width: 73%;
     height:auto;
     background-color: black;
     color: #fff;
@@ -251,7 +251,7 @@ input[type="checkbox"]{height:40px;width:40px;}
     right: 22%;
     border: 1px solid purple;
     opacity:0.9;
-    box-shadow:1px 1px 3px grey;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 		font-size: 24px;
 		font-weight: normal;
 }
