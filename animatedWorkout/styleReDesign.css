@@ -236,7 +236,7 @@ input[type="checkbox"]{height:40px;width:40px;}
     border-bottom: 1px dotted black;
 }
 
-.tooltiptext  {
+.tooltiptext{
     visibility: hidden;
     width: 400px;
     height:auto;
