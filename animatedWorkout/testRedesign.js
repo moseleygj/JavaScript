@@ -17,12 +17,12 @@ function showFit(exercise)
 {
 	if(exercise == null|| exercise == "" || exercise == "-"){
 alert("Opps!");
-return 0;	
+return 0;
 	}
 document.getElementById("exerciseImg").src="gifs/"+exercise;
 document.getElementById("imgExercise").style.zIndex = "1";
-document.getElementById("imgExercise").style.display = "block"; 
-document.getElementById("rightColumn").style.visibility = "hidden";  
+document.getElementById("imgExercise").style.display = "block";
+document.getElementById("rightColumn").style.visibility = "hidden";
 }
 
 
@@ -31,6 +31,14 @@ function randomPlaceHolder()
 var x= Math.floor(Math.random()* 11)+1;
 document.getElementById("exerciseImg").src="loading/loading"+x+".gif";
 
+}
+
+function showNote(){
+document.getElementById("tooltip").style.visibility="visible";
+}
+
+function hideNote(){
+document.getElementById("tooltip").style.visibility="hidden";
 }
 
 /*
@@ -52,6 +60,15 @@ function hideShowPreview()
 }
 */
 $(document).ready(function(){
+	var gen = document.getElementById('tooltip');
+	var note = document.getElementById('noteIcon');
+
+$("#tooltipBody").click(function()
+{
+	gen.style.visibility="hidden";
+	note.style.visibility="visible";
+
+});
 
 $("#hidePreview").click(function()
 {
