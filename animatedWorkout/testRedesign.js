@@ -19,6 +19,7 @@ function showFit(exercise)
 alert("Opps!");
 return 0;
 	}
+	//add this to jQuery and use FadeIn and fadeOut functions
 document.getElementById("exerciseImg").src="gifs/"+exercise;
 document.getElementById("imgExercise").style.zIndex = "1";
 document.getElementById("imgExercise").style.display = "block";
@@ -30,61 +31,54 @@ function randomPlaceHolder()
 {
 var x= Math.floor(Math.random()* 11)+1;
 document.getElementById("exerciseImg").src="loading/loading"+x+".gif";
-
 }
 
+
+function closeImg(){
+document.getElementById("rightColumn").style.visibility = "visible";
+document.getElementById("imgExercise").style.zIndex = "-1";
+document.getElementById("imgExercise").style.display = "none";
+}
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 function showNote(){
 document.getElementById("tooltip").style.visibility="visible";
+document.getElementById("tooltipBody").style.visibility="visible";
+
 }
+
 
 function hideNote(){
 document.getElementById("tooltip").style.visibility="hidden";
 }
 
-/*
-function hideShowPreview()
-{
-	if ( document.getElementById("showPreview").checked == true)
-	{
-		document.getElementById("exerciseImg").style.display="block";
-		//increase size of workout list;slide (left);
-	}
-	else if (document.getElementById("showPreview").checked == false)
-	{
-		document.getElementById("exerciseImg").style.display="none";
-		//decrearse workoutCell size ;slide-left(slow)
-	}
-	else{
-		alert("Error!");
-	}
-}
-*/
+
+
+
+
+
+
+
 $(document).ready(function(){
 	var gen = document.getElementById('tooltip');
-	var note = document.getElementById('noteIcon');
 
-$("#tooltipBody").click(function()
-{
-	gen.style.visibility="hidden";
-	note.style.visibility="visible";
+	$("#noteIcon").click(function()
+		{
+			//alert("You clicked me");
+			gen.style.visibility="visible";
 
-});
+		});
+$(".closeBtn").click(function()
+		{
+			//alert("You clicked me");
+			gen.style.visibility="hidden";
 
-$("#hidePreview").click(function()
-{
-	$(".rightColumn").removeClass("rightColumn");
-	$(".rightColumn").addClass("rightColumnMax");
-	$(".leftColumn").removeClass("leftColumn");
-	$(".leftColumn").addClass("leftColumnMin");
-});
-
-$("#showPreview").click(function()
-{
-	$(".leftColumn").removeClass("leftColumnMin");
-	$(".leftColumn").addClass("leftColumn");
-	$(".rightColumn").removeClass("rightColumnMax");
-	$(".rightColumn").addClass("rightColumn");
-});
+		});
+		
+	
 
 
 });
+//18556936765 HRA Renewal Mon-fri 9am-4pm

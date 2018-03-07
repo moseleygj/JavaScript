@@ -45,12 +45,6 @@ $('input[type="checkbox"]').click(function() {
 $(".container").fadeIn("slow");
 
 });
-
-function closeImg(){
-document.getElementById("rightColumn").style.visibility = "visible";
-document.getElementById("imgExercise").style.zIndex = "-1";
-document.getElementById("imgExercise").style.display = "none";
-}
 </script>
 
 
@@ -73,7 +67,7 @@ document.getElementById("imgExercise").style.display = "none";
 			<div class="subSectionNote"></div>
 			<div class="fitCheckBox"><input type="checkbox" id="toggleCheck"></div>
 		</div>
-<!--main Menu-->
+<!--main Menu above-->
 
 		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">5</div>
@@ -87,14 +81,14 @@ document.getElementById("imgExercise").style.display = "none";
 
 				<div class="subSectionNote">
 
-					<div class="tooltip" id="tooltipBody" onclick="showNote()"><img onClick="showNote()" src="note.png" height="64" width="64"></a>
-						<span class="tooltiptext" id="tooltip">
-						<div class="closeBtnFrame"><div class="noteTitle">NOTE:</div><div class="closeBtn" id="closeBtn"  onclick="hideNote()">x</div></div>
-						Tooltip text Once upon a time not lon ago where people wore pajamas and lives life slow. Lodi dodi , Snoop Dogg doggy Style</span>
+					<div class="tooltip" id="tooltipBody" >
+					<img onClick="showNote()" src="note.png" height="64" width="64" id="noteIcon"></a>
+						<span class="tooltiptext" id="tooltip" >
+						<div class="closeBtnFrame"><div class="noteTitle">NOTE:</div>
+						<div class="closeBtn" id="closeBtn"  onclick="hideNote()">x</div></div>
+					Tooltip text Once upon a time not lon ago where people wore pajamas and lives life slow. Lodi dodi , Snoop Dogg doggy Style</span>
 						</div>
 				</div>
-
-
 
 
 				<div class="fitCheckBox"><input type="checkbox" id=""></div>
@@ -109,8 +103,6 @@ document.getElementById("imgExercise").style.display = "none";
   Tooltip text Once upon a time not lon ago where people wore pajamas and lives life slow. Lodi dodi , Snoop Dogg doggy Style</span>
 </div>
 -->
-
-
 
 		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">5</div>
@@ -164,7 +156,6 @@ document.getElementById("imgExercise").style.display = "none";
 		</div>
 
 
-
 		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
@@ -178,7 +169,6 @@ document.getElementById("imgExercise").style.display = "none";
 		</div>
 
 
-
 		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
@@ -190,35 +180,6 @@ document.getElementById("imgExercise").style.display = "none";
 		   	<div class="subSectionNote"></div>
 				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
-
-
-
-		<div class="cellExercise" style="" id="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
-			<div class="fitName" id="">
-				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
-				<div class="subSectionFitSub">Some Small Note here</div>
-
-		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
-		   	<div class="subSectionNote"></div>
-				<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
-
-
-		<div class="cellExercise" style="" id="">
-			<div class="sets" id="">0</div>
-			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
-			<div class="fitName" id="">
-				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
-				<div class="subSectionFitSub">Some Small Note here</div>
-
-		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
-		   	<div class="subSectionNote"></div>
-				<div class="fitCheckBox"><input type="checkbox" id=""></div>
-		</div>
-
 
 
 		<div class="cellExercise" style="" id="">
@@ -247,6 +208,18 @@ document.getElementById("imgExercise").style.display = "none";
 		</div>
 
 
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
 
 		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
@@ -261,7 +234,6 @@ document.getElementById("imgExercise").style.display = "none";
 		</div>
 
 
-
 		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
@@ -273,8 +245,6 @@ document.getElementById("imgExercise").style.display = "none";
 		   	<div class="subSectionNote"></div>
 				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
-
-
 
 
 		<div class="cellExercise" style="" id="">
@@ -407,6 +377,18 @@ document.getElementById("imgExercise").style.display = "none";
 		</div>
 
 
+		<div class="cellExercise" style="" id="">
+			<div class="sets" id="">0</div>
+			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
+			<div class="fitName" id="">
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitSub">Some Small Note here</div>
+
+		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
+		   	<div class="subSectionNote"></div>
+				<div class="fitCheckBox"><input type="checkbox" id=""></div>
+		</div>
+
 
 		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">0</div>
@@ -419,12 +401,6 @@ document.getElementById("imgExercise").style.display = "none";
 		   	<div class="subSectionNote"></div>
 				<div class="fitCheckBox"><input type="checkbox" id=""></div>
 		</div>
-<!--
-		<div class="settingsBar" style="">
-Hide Preview<input type="radio" name="preview" value="showPreview" id="hidePreview" onclick="hideShowPreview()">
-Show Preview<input type="radio" name="preview" value="showPreview" id="showPreview" onclick="hideShowPreview()" checked>
-		</div>
-		-->
 
 	</div>
 </div>
