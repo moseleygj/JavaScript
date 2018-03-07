@@ -251,7 +251,7 @@ input[type="checkbox"]{height:40px;width:40px;}
     right: 22%;
     border: 1px solid purple;
     opacity:0.9;
-    box-shadow:1px 1px 3px grey;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 		font-size: 24px;
 		font-weight: normal;
 }
@@ -269,9 +269,6 @@ input[type="checkbox"]{height:40px;width:40px;}
 }
 
 .closeBtn{
-background-color:red;
-border-radius:50%;
-color:white;
 text-align:center;
 height:25px;
 width:25px;
@@ -297,4 +294,10 @@ font-weight:bolder;
 
 #noteIcon{
 	visibility: visible;
+}
+.exercisePreviewThumb{
+text-indent: 5px;
+height:32px;
+width:32px;
+display: inline-block;
 }
