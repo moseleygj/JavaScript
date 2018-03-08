@@ -58,7 +58,7 @@ case 4:
 return   "#009B2C";
 break;
 case 5:
-return  "blue";
+return  "#4c9ED9";
 break;
 case 6:
 return  "indigo";
