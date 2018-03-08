@@ -31,8 +31,12 @@ function color(){
  for (i= 1;i<5;i++)
   {
    var num =Math.floor(Math.random()*10)+1;
-   //colors =dynamicColor(num);
-   colors =dynamicColor(num);   
+   colors = dynamicColor(num);   
+   if (colors=="#222222"|| colors=="blue"|| colors=="#009B2C"|| colors== 
+"violet"){
+      document.getElementById("card"+i).style.backgroundColor=colors;
+      document.getElementById("card"+i).style.borderColor="white";
+   }
    document.getElementById("card"+i).style.backgroundColor=colors;
 
  }
@@ -42,31 +46,31 @@ function dynamicColor(n)
 {
 switch(n){
 case 1:
-return "red";
+return "#BD0000";
 break;
 case 2:
-return "orange";
+return "#FC6805";
 break;
 case 3:
 return  "yellow";
 break;
 case 4:
-colors = "green";
+return   "#009B2C";
 break;
 case 5:
-colors = "blue";
+return  "blue";
 break;
 case 6:
-colors = "indigo";
+return  "indigo";
 break;
 case 7:
-colors = "violet";
+return  "violet";
 break;
 case 8:
-colors = "black";
+return   "#222222";
 break;
 case 9:
-color = "white";
+return  "#009B2C";
 break;
 
 }
