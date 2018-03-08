@@ -1,0 +1,77 @@
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+</head>
+<style type="text/css">
+.card{
+height:200px;
+width:200px;
+float:left;
+margin-left:20px;
+background-color:red;
+border: 5px  dotted black;
+}
+</style>
+
+<body onload="color()">
+<div class="card" id="card1"></div>
+
+<div class="card" id="card2"></div>
+
+<div class="card" id="card3"></div>
+
+<div class="card" id="card4"></div>
+
+</body>
+
+<script type="text/javascript">
+var colors;
+function color(){
+ for (i= 1;i<5;i++)
+  {
+   var num =Math.floor(Math.random()*10)+1;
+   //colors =dynamicColor(num);
+   colors =dynamicColor(num);   
+   document.getElementById("card"+i).style.backgroundColor=colors;
+
+ }
+}
+
+function dynamicColor(n)
+{
+switch(n){
+case 1:
+return "red";
+break;
+case 2:
+return "orange";
+break;
+case 3:
+return  "yellow";
+break;
+case 4:
+colors = "green";
+break;
+case 5:
+colors = "blue";
+break;
+case 6:
+colors = "indigo";
+break;
+case 7:
+colors = "violet";
+break;
+case 8:
+colors = "black";
+break;
+case 9:
+color = "white";
+break;
+
+}
+
+}
+
+</script>
+</html>
