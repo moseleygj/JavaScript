@@ -296,7 +296,7 @@ font-weight:bolder;
 	visibility: visible;
 }
 .exercisePreviewThumb{
-text-indent: 5px;
+margin-left: 5px;
 height:32px;
 width:32px;
 display: inline-block;
