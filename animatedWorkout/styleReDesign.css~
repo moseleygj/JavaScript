@@ -234,9 +234,10 @@ input[type="checkbox"]{height:40px;width:40px;}
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
+    		 
 }
-
-.tooltiptext{
+.tooltop:hover{		 transition: opacity 5s;}
+.tooltiptext {
     visibility: hidden;
     width: 73%;
     height:auto;
@@ -254,6 +255,7 @@ input[type="checkbox"]{height:40px;width:40px;}
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 		font-size: 24px;
 		font-weight: normal;
+
 }
 
  .tooltiptext::after {
@@ -295,6 +297,7 @@ font-weight:bolder;
 #noteIcon{
 	visibility: visible;
 }
+
 .exercisePreviewThumb{
 margin-left: 5px;
 height:32px;
