@@ -2,7 +2,7 @@
 <head>
 	<title>W.O.D. - Login </title>
 	<link rel="icon" href="dumbbell.png">
-<link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
 <script src="jquery-3.3.1.min.js">
 </script>
 <script>
@@ -10,13 +10,17 @@ $(document).ready(function(){
 $(".card").slideDown(959).fadeIn(90000);
 
  $(".card").click(function(){
-                             //  alert("Welcome, $nameHere!");
-                               $(".card").not(this).fadeOut(800);
-								   	}
+             //  alert("Welcome, $nameHere!");
+             $(".card").not(this).fadeOut(800);
+						//show password box here
+					   $("#pw").css("display","block").css("margin-bottom","10px");
 
+					 }
 );
 
-});</script>
+});
+</script>
+
 <meta charset="UTF-8">
 </head>
 <style type="text/css">
@@ -27,14 +31,19 @@ body{
 	padding:0;margin:0;
 	background:url("bg.png");
 	background-repeat:repeat;
+	min-width: 400px;
 	}
-	
+
 .card{
-height:420px;
+height:auto;
 width:400px;
 margin:70px auto 0;
 background-color:#faf5f1;
-display:none
+display:none;
+
+
+border: 1px solid #434343;
+border-top: 1px solid white;
 }
 
 .card:hover{
@@ -44,14 +53,16 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 .mugshot{
 height:340px ;
 width:360px;
-margin:0 auto 0;
-padding:10px;
-display: block;
-background-color:none;
+background-color:white;
+margin: 10px 10px 10px 15px;
+border-left: 2px solid #d7d7d7;
+border-bottom: 2px solid #d7d7d7;
+border-right: 2px solid #b8b5b5;
+border-top: 2px solid #b8b5b5;
 }
 
 .credentials{
-height: 40px;
+height: 50px;
 width:100%;
 margin:0 auto 0;
 background-color:;
@@ -59,9 +70,53 @@ text-align: center;
 font-family: 'Sedgwick Ave', cursive;
 font-weight: bolder;
 font-size:50px;
+padding-bottom:14px;
 }
 
+input[type="password"]{
+height:49px;
+border:2px solid #bbbbbb;
+width:210px;
+font-size:25px;
+background: url('Lock-icon1.png') right center no-repeat;
+background-size:39px 39px;
+text-indent:11px;
+background-color: white;
+}
+
+input[type="password"]:hover{
+height:49px;
+border: 2px solid #66C8F7;
+background-color: white;
+}
+
+input[type="password"]:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 </style>
+
+
 
 <body>
 <!-- The Modal -->
@@ -71,8 +126,24 @@ font-size:50px;
 <img class="modal-content" id="img01">
 </div>
 <!--blue #4285f4;-->
-<div class="card" onclick="showPic()"><img src="testM.jpg" class="mugshot"><div class="credentials">John Doe</div></div></div>
+<div class="card" onclick="showPic()"><img src="testM.jpg" class="mugshot">
+	<div class="credentials">John Doe</div>
+<center><div id="pw" style="display:none;"><input style="" type="password" placeholder="Password"></div></center>
+</div>
+</div>
+
 <div class="card" onclick="showPic()"><img src="janeDoe1.png" class="mugshot"><div class="credentials">Jane Doe</div></div></div>
+
+<div class="card" onclick="showPic()"><img src="profilePhotos/placeholer.png" class="mugshot"><div class="credentials">Annonymous</div></div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/fireman.png" class="mugshot"><div class="credentials">Fire Guy</div></div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/avi.png	" class="mugshot"><div class="credentials">Fly Guy</div></div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/detective.png" class="mugshot"><div class="credentials">Detective Guy</div></div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/doctor-female.png" class="mugshot"><div class="credentials">Nurse Girl</div></div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/OfficeGuyW.png" class="mugshot"><div class="credentials">Business Guy</div></div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/avi2.png" class="mugshot"><div class="credentials">Sailor Officer</div></div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/031-boy-2.png" class="mugshot"><div class="credentials">Kid Guy</div></div></div>
+
+
 </body>
 
 <script type="text/javascript">
