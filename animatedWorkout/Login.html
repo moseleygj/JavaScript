@@ -13,11 +13,17 @@ $(".card").slideDown(959).fadeIn(90000);
              //  alert("Welcome, $nameHere!");
              $(".card").not(this).fadeOut(800);
 						//show password box here
-					   $("#pw").css("display","block").css("margin-bottom","10px");
-
+					   $("#pwDiv").css("display","block").css("margin-bottom","10px");
 					 }
 );
 
+/*  if (event.keyCode == 13) {
+    $("#submitPass").click( function(){
+			alert("Enter has been clicked!");
+		});
+  }
+});
+*/
 });
 </script>
 
@@ -89,13 +95,13 @@ height:49px;
 border: 2px solid #66C8F7;
 background-color: white;
 }
-
+/*
 input[type="password"]:hover {
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
+	  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	  transform: translate3d(0, 0, 0);
+	  backface-visibility: hidden;
+	  perspective: 1000px;
+	}
 
 @keyframes shake {
   10%, 90% {
@@ -114,9 +120,8 @@ input[type="password"]:hover {
     transform: translate3d(4px, 0, 0);
   }
 }
+*/
 </style>
-
-
 
 <body>
 <!-- The Modal -->
@@ -128,12 +133,11 @@ input[type="password"]:hover {
 <!--blue #4285f4;-->
 <div class="card" onclick="showPic()"><img src="testM.jpg" class="mugshot">
 	<div class="credentials">John Doe</div>
-<center><div id="pw" style="display:none;"><input style="" type="password" placeholder="Password"></div></center>
-</div>
+<center><div id="pwDiv" style="display:none;"><input style="" id="pwBox" type="password" placeholder="Password"></div></center>
+<button style="visibility:hidden;" id="submitPass" onlclick="javascript:alert('Enter key invoked!')">Click Here</button>
 </div>
 
 <div class="card" onclick="showPic()"><img src="janeDoe1.png" class="mugshot"><div class="credentials">Jane Doe</div></div></div>
-
 <div class="card" onclick="showPic()"><img src="profilePhotos/placeholer.png" class="mugshot"><div class="credentials">Annonymous</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/fireman.png" class="mugshot"><div class="credentials">Fire Guy</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/avi.png	" class="mugshot"><div class="credentials">Fly Guy</div></div></div>
@@ -143,7 +147,6 @@ input[type="password"]:hover {
 <div class="card" onclick="showPic()"><img src="profilePhotos/avi2.png" class="mugshot"><div class="credentials">Sailor Officer</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/031-boy-2.png" class="mugshot"><div class="credentials">Kid Guy</div></div></div>
 
-
 </body>
 
 <script type="text/javascript">
@@ -152,17 +155,19 @@ var modal = document.getElementById('myModal');
 //image and caption
 var modalImg = document.getElementById("img01");
 
-
 showPic = function(pic,picName){
     modal.style.display = "block";
-
-
 }
 
 function hidePic(){
 modal.style.display = "none";
-
 }
 
+var input = document.getElementById("pwBox");
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        document.getElementById("submitPass").click();
+    }
+});
 </script>
 </html>
