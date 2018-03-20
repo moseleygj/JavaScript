@@ -23,6 +23,7 @@ margin:0;
 border:3px solid black;
 background-color:white;
 }
+
 body{
 	background-color:#434343;
 	}
@@ -30,7 +31,7 @@ body{
 
 <body onload="doTricks()">
 
-<div class="mainBox">
+<div class="mainBox" onclick="doTricks()">
 <div class="box" id="b1"></div>
 <div class="box" id="b2"></div>
 <div class="box" id="b3"></div>
@@ -60,7 +61,7 @@ body{
 <div class="box" id="b23"></div>
 <div class="box" id="b24"></div>
 <div class="box" id="b25"></div>
-
+<button onclick="doTricks()">Generate new one</button>
 
 
 </div>
