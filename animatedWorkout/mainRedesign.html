@@ -4,7 +4,7 @@
 <title>Workout App</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="styleReDesign.css">
-<link rel="stylesheet" type="text/css" href="MediaQueires.css">
+<link rel="stylesheet" type="text/css" href="MediaQueries.css">
 <link rel="shortcut icon" href="Icons/dumbbell.png" type="image/png">
 <link href="https://fonts.googleapis.com/css?family=Exo+2:900|Luckiest+Guy" rel="stylesheet">
 <script src="jquery-3.3.1.min.js"></script>
@@ -62,9 +62,9 @@ $(".container").fadeIn("slow");
 <!--main Menu-->
 <div class="rightColumn" id="rightColumn">
 		<div class="cellExercise" style="border-bottom:1px solid grey;background-color:#4285f4;color:#fff;"  id="mainRow">
-			<div class="sets" style="border-right:1px solid #528ef1;font-size:45px;;">SETS</div>
-			<div class="reps"  style="border-right:1px solid #528ef1;font-size:45px">REPS</div>
-			<div class="fitName" style="text-align:center;font-size:45px">Exercise</div>
+			<div class="setsH" style="border-right:1px solid #528ef1;">SETS</div>
+			<div class="repsH"  style="border-right:1px solid #528ef1;">REPS</div>
+			<div class="fitNameH" style="text-align:center;">Exercise</div>
 			<div class="subSectionNote"></div>
 			<div class="fitCheckBox"><input type="checkbox" id="toggleCheck"></div>
 		</div>
@@ -72,7 +72,7 @@ $(".container").fadeIn("slow");
 
 		<div class="cellExercise" style="" id="">
 			<div class="sets" id="">5</div>
-			<div class="reps" style="font-size:24.3px" id="">10, 20, 30, 40, 50, 60, 70, 80. </div>
+			<div class="reps" style="font-size:" id="">10, 20, 30, 40, 50, 60, 70, 80. </div>
 			<div class="fitName" id="">
 				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' > Pull ups<img src="image2.png" class="exercisePreviewThumb"> </a></div>
 				<div class="subSectionFitSub">[CHECK  DESCRIPTION  NOTE]</div>
@@ -83,7 +83,7 @@ $(".container").fadeIn("slow");
 				<div class="subSectionNote">
 
 					<div class="tooltip" id="tooltipBody" >
-					<img onClick="showNote()" src="note.png" height="64" width="64" id="noteIcon"></a>
+					<img onClick="showNote()" src="note.png"  id="noteIcon"></a>
 						<span class="tooltiptext" id="tooltip" >
 						<div class="closeBtnFrame"><div class="noteTitle"><img src="lightBulb1.png" height="26" width="26">NOTE:</div>
 						<div class="closeBtn" id="closeBtn"  onclick="hideNote()"><img src="close.png" height="26" width="26"></div></div>
