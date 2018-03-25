@@ -6,6 +6,7 @@
 <link rel="manifest" href="/manifest.json">
 <title>Factorial Countdown</title>
 </head>
+
 <style>
 html{
 	padding:0;
@@ -28,7 +29,7 @@ body{
 	font-weight:bolder;
 	margin:0 auto 0;
 	top:50%;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
     color:white;
     text-shadow: 1px 1px 3px black;
     position: relative;
@@ -45,7 +46,8 @@ border-radius: 11px;
 .numberTotalTitle{color:white;font-weight: bold;height:60px;float:left;font-size:50px;margin:0px 10px;}
 .numberTotalAnswer{color:white;height:40px;float:left;font-size:50px;}
 .tallyBar{width:100%;height:120px;top:0;background-color:#212121;line-height:2;box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);<!--#313131-->}
-
+input[type="text"]{width: 105px;
+}
 
 @media screen and (max-width: 320px)
 {
@@ -143,10 +145,12 @@ if('serviceWorker' in navigator) {
 <div class="tallyBar">
 <div class="numberRemainCell"><div class="numberRemainTitle">Remaining: </div><div class="numberRemainAnswer" id="numberRemainAnswer">0</div></div>
 <div class="numberTotalCell"><div class="numberTotalTitle">Completed: </div><div class="numberTotalAnswer" id="numberTotalAnswer">0</div></div>
-</div>	
-	<input type="text" id="MainNum" style="height:60px;font-size:40px" value="10" autofocus>
-	<button onClick="magic()" id="btn" style="height:60px;" >Submit Number</button>
-	<div class="numberCurrent" id="numCurrent" onClick="magic()">0</div>
+</div>
+<div style="width:100%;height:60px;margin-top:50%" id="submitTotal">
+	<input type="text" id="MainNum" style="height:60px;font-size:40px;" value="10" autofocus onkeydown="if (event.keyCode==13)magic()">
+ <button onClick="magic()" id="btn" style="height:60px;float:left" >Submit Number</button>
+ </div>
+	<div class="numberCurrent" id="numCurrent" onClick="magic()" style="display:none;">0</div>
 </div>
 </body>
 <script>
@@ -158,17 +162,19 @@ var count=0;
 var counterStarted=0;
 var tog = 0;
 var countDownTotal;
-var numHold; //remove this later 
+var numHold; //remove this later
 var permanentA;
 var scratch;
-var tallyCounter=0;	
+var tallyCounter=0;
 
 function magic()
 {
 if (tog == 0)
-	{ 
+	{
 	tog=1;
-	numHold=parseInt(document.getElementById('MainNum').value); 
+  document.getElementById('numCurrent').style.display="block";
+document.getElementById("submitTotal").style.display='none';
+	numHold=parseInt(document.getElementById('MainNum').value);
 	document.getElementById("MainNum").style.display="none";
 	document.getElementById("btn").style.display="none";
 	document.getElementById('numCurrent').innerHTML=numHold;
@@ -181,15 +187,15 @@ else {
 	}
 }
 
-function doMath(mainNumber) 
+function doMath(mainNumber)
 	{
 	//check if tally count=max
 	if(tallyCounter==countDownTotal)
 	{
-	alert("complete");
+	alert("Completed challenge");
 	}
 	else {
-		
+
 tallyCounter=(tallyCounter+ mainNumber);
 			document.getElementById("numberTotalAnswer").innerHTML=tallyCounter;
 
@@ -199,23 +205,23 @@ tallyCounter=(tallyCounter+ mainNumber);
 			//reduce total by that number
 		A--;
 		numHold--;
+	   }
 	}
-	}
-		
+
 function grandTotal(startNum)
 	{
-	remainHolder= startNum; //send the Value of textBox
-	
+	remainHolder = startNum; //send the Value of textBox
+
 	if(counterStarted==0)																//check if the loop has been run before. 0=No,1=Yes;
 	{
-			counterStarted=1;		
-	
+			counterStarted=1;
+
 		for (var i=startNum;i>0;i--)													//run counting loop here;
 		{
 		parseInt(count+=i);
 		}
 		permanentA=count;
-		countDownTotal=count; 
+		countDownTotal=count;
 		return countDownTotal;
 	}
 	else {
