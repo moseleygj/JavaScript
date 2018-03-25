@@ -6,7 +6,7 @@
 @media  only screen
   and (min-device-width: 320px)
   and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 1)
+  /*and (-webkit-min-device-pixel-ratio: 1)*/
   {
 .topTitle{
 height:;
@@ -154,7 +154,7 @@ margin-top: 10px;
 @media  only screen
   and (min-device-width: 481px)
   and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
+  /*and (-webkit-min-device-pixel-ratio: 2)*/
   {
 .topTitle{
 height:;
@@ -300,7 +300,7 @@ margin-top: 10px;
 @media  only screen
   and (min-device-width: 668px)
   and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 2)
+/*  and (-webkit-min-device-pixel-ratio: 2)*/
   {
 .topTitle{
 height:;
@@ -445,7 +445,7 @@ margin-top: 4px;
 @media  only screen
   and (min-device-width: 813px)
   and (max-device-width: 2024px)
-  and (-webkit-min-device-pixel-ratio: 2)
+  /*and (-webkit-min-device-pixel-ratio: 2)*/
   {
 .topTitle{
 height:;
