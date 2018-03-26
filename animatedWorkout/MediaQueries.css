@@ -1,105 +1,45 @@
-
-
 /* ----------- iPhone 4 and 4S ----------- */
-
 /* Portrait and Landscape */
 @media  only screen
   and (min-device-width: 320px)
   and (max-device-width: 480px)
   /*and (-webkit-min-device-pixel-ratio: 1)*/
   {
-.topTitle{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;}
-
 .topTitleTextMain{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:50px;
-line-height:;
+    font-size:50px;
 }
 
 .topTitleTextSub{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:40px;
-line-height:;}
-
-.cellExercise{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;}
+    font-size:40px;
+}
 
 .sets{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:24px;
-line-height:2;}
+  font-size:24px;
+  line-height:2;
+}
 
 .reps{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:12px;
-line-height:1.5;
+  font-size:12px;
+  line-height:1.5;
 }
 
 .fitName{
-	height:;
-width:;
-color:;
-background-color: ;
-font-size:14px;
-line-height:;
-text-indent: 18px;
-}
-
-.subSectionNote{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;
+  font-size:14px;
+  text-indent: 18px;
 }
 
 .subSectionFitSub{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:9px;
-line-height:;
+    font-size:9px;
 }
 
 .subSectionFitMain{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:14px;
-line-height:;
+    font-size:14px;
 }
 
-
 #noteIcon{
-height:30px;
-width:30px;
-margin-top: 10px;
+    height:30px;
+    width:30px;
+    margin-top: 10px;
 }
 
 .fitNameH{
@@ -111,7 +51,7 @@ margin-top: 10px;
 	text-indent: 30px;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
 	text-transform: uppercase;
-      line-height: 4;
+  line-height: 4;
 	}
 
 .setsH{
@@ -140,107 +80,43 @@ margin-top: 10px;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
   line-height: 4;
   }
-
 }
 
-
-
-/*next set of phone med size */
-
-
-/* ----------- iPhone 4 and 4S ----------- */
-
-/* Portrait and Landscape */
+/* phone med size  481px-667px*/
 @media  only screen
   and (min-device-width: 481px)
   and (max-device-width: 667px)
   /*and (-webkit-min-device-pixel-ratio: 2)*/
   {
-.topTitle{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;}
-
 .topTitleTextMain{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:50px;
-line-height:;
+  font-size:50px;
 }
 
 .topTitleTextSub{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:40px;
-line-height:;}
-
-.cellExercise{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;}
+  font-size:40px;
+}
 
 .sets{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:24px;
-line-height:2;}
+    font-size:24px;
+    line-height:2;
+}
 
 .reps{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:18.5px;
-line-height:;
+  font-size:18.5px;
 }
 
 .fitName{
-	height:;
-width:;
-color:;
-background-color: ;
-font-size:14px;
-line-height:;
-text-indent: 18px;
-}
-
-.subSectionNote{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;
+    font-size:14px;
+    line-height:;
+    text-indent: 18px;
 }
 
 .subSectionFitSub{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:14px;
-line-height:;
+    font-size:14px;
 }
 
 .subSectionFitMain{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:24px;
-line-height:;
+    font-size:24px;
 }
 
 
@@ -302,93 +178,36 @@ margin-top: 10px;
   and (max-device-width: 812px)
 /*  and (-webkit-min-device-pixel-ratio: 2)*/
   {
-.topTitle{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;}
-
 .topTitleTextMain{
-height:;
-width:;
-color:;
-background-color: ;
 font-size:50px;
-line-height:;
 }
 
 .topTitleTextSub{
-height:;
-width:;
-color:;
-background-color: ;
 font-size:40px;
-line-height:;}
-
-.cellExercise{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;}
+}
 
 .sets{
-height:;
-width:;
-color:;
-background-color: ;
 font-size:30px;
 line-height:2;}
 
 .reps{
-height:;
-width:;
-color:;
-background-color: ;
 font-size:18.9px;
 line-height:;
 }
 
 .fitName{
-	height:;
-width:;
-color:;
-background-color: ;
 font-size:14px;
 line-height:;
 text-indent: 18px;
 }
 
-.subSectionNote{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;
-}
-
 .subSectionFitSub{
-height:;
-width:;
-color:;
-background-color: ;
 font-size:14px;
-line-height:;
 }
 
 .subSectionFitMain{
-height:;
-width:;
-color:;
-background-color: ;
 font-size:30px;
-line-height:;
 }
-
 
 #noteIcon{
 height:50px;
@@ -439,106 +258,48 @@ margin-top: 4px;
 }
 
 
-/*next set of phone med size 668 -812px */
-/*next set of phone med size */
-/* Portrait and Landscape */
+/*next set of phone med size 813-2024px */
 @media  only screen
   and (min-device-width: 813px)
   and (max-device-width: 2024px)
   /*and (-webkit-min-device-pixel-ratio: 2)*/
   {
-.topTitle{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;}
-
 .topTitleTextMain{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:50px;
-line-height:;
+  font-size:50px;
 }
 
 .topTitleTextSub{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:40px;
-line-height:;}
-
-.cellExercise{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;}
+  font-size:40px;
+}
 
 .sets{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:40px;
-line-height:1.6;}
+  font-size:40px;
+  line-height:1.6;
+}
 
 .reps{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:17px;
-line-height:1.5;
+  font-size:17px;
+  line-height:1.5;
 }
 
 .fitName{
-	height:;
-width:;
-color:;
-background-color: ;
-font-size:14px;
-line-height:;
-text-indent: 18px;
-}
-
-.subSectionNote{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:;
-line-height:;
+  font-size:14px;
+  text-indent: 18px;
 }
 
 .subSectionFitSub{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:14px;
-line-height:;
+  font-size:14px;
 }
 
 .subSectionFitMain{
-height:;
-width:;
-color:;
-background-color: ;
-font-size:30px;
-line-height:;
+  font-size:30px;
+  line-height:;
 }
 
-
 #noteIcon{
-height:50px;
-width:50px;
-margin-top: 4px;
+    height:50px;
+    width:50px;
+    margin-top: 4px;
 }
 
 .fitNameH{
@@ -578,7 +339,5 @@ margin-top: 4px;
 	font-weight: 400;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
   line-height: 2.1;
-
   }
-
 }

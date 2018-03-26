@@ -1,9 +1,7 @@
 <html>
 <head>
-
-	<title>W.O.D. - Login </title>
-	<link rel="icon" href="dumbbell.png">
-
+<title>W.O.D. - Login </title>
+<link rel="icon" href="dumbbell.png">
 <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
 <script src="jquery-3.3.1.min.js">
 </script>
@@ -18,8 +16,6 @@ $(".card").slideDown(959).fadeIn(90000);
 					  $("#pwBoxContainer").css("display","block").css("margin-bottom","10px");
 					 }
 );
-
-
 });
 </script>
 
@@ -136,12 +132,13 @@ input[type="password"]:hover {
 <!--blue #4285f4;-->
 <div class="card" onclick="showPic()"><img src="testM.jpg" class="mugshot">
 	<div class="credentials">John Doe</div>
-<center><div id="pwDiv" style="display:none;"><input style="" id="pwBox" type="password" placeholder="Password"></div></center>
+<!--<center>
+	<div id="pwDiv" style="display:none;">
+	<input style="" id="pwBox" type="password" placeholder="Password"></div>
+</center> -->
 </div>
 
 <div class="card" onclick="showPic()"><img src="janeDoe1.png" class="mugshot"><div class="credentials">Jane Doe</div></div></div>
-
-
 <div class="card" onclick="showPic()"><img src="profilePhotos/placeholer.png" class="mugshot"><div class="credentials">Annonymous</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/fireman.png" class="mugshot"><div class="credentials">Fire Guy</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/avi.png	" class="mugshot"><div class="credentials">Fly Guy</div></div></div>
@@ -151,18 +148,20 @@ input[type="password"]:hover {
 <div class="card" onclick="showPic()"><img src="profilePhotos/avi2.png" class="mugshot"><div class="credentials">Sailor Officer</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/031-boy-2.png" class="mugshot"><div class="credentials">Kid Guy</div></div></div>
 
-<!--must stay at the bottom so it can append to the dives above a a single picture -->
-<div id="pwBoxContainer"><center><div id="pwDiv" style=";"><input id="pwBox" type="password" placeholder="Password" autofocus></div></center>
+<!--This PW DIV must stay at the bottom so it can append to the DIVs aboves picture -->
+<div id="pwBoxContainer">
+	<center>
+		<div id="pwDiv" style=";"><input id="pwBox" type="password" placeholder="Password" autofocus></div>
+	</center>
 <button style="visibility:hidden;" id="submitPass"  onClick="javascript:alert('Enter key invoked!')">Click Here</button>
 </div>
 </body>
 
 <script type="text/javascript">
 //modal
-var modal = document.getElementById('myModal');
+//var modal = document.getElementById('myModal');
 //image and caption
-var modalImg = document.getElementById("img01");
-
+//var modalImg = document.getElementById("img01");
 showPic = function(pic,picName){
     modal.style.display = "block";
 }
@@ -171,13 +170,14 @@ function hidePic(){
 modal.style.display = "none";
 }
 
-
 var input = document.getElementById("pwBox");
+
 input.addEventListener("keyup", function(event) {
 	event.preventDefault();
 	if (event.keyCode === 13) {
       document.getElementById("submitPass").click();
     }
 });
+
 </script>
 </html>
