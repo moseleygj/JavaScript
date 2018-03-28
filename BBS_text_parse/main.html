@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>¯\_(ツ)_/¯ </title>
+<meta charset="UTF-8">
+</head>
+<style type="text/css">
+body{
+  padding:0;
+  margin:0;
+  background-color:#f2f2f2;
+}
+
+.container{
+  height:auto;
+  width:600px;
+  border:1px solid black;
+  background-color:white;
+  margin: 0 auto 0;
+  margin-top:10%;
+  tranform:translateY:(-50%);
+}
+#mainText{width:400px;
+margin-left:10px;
+margin-bottom:10px;
+margin-right:5px;
+
+}
+#mainText:hover{
+  border: 2px solid #66C8F7;
+  background-color: white;
+
+
+}
+#formattedText{
+  width:400px;
+  margin-left:10px;
+  margin-bottom:10px;
+  margin-right:5px;
+}
+
+#formattedText:hover{
+
+  border: 2px solid #66C8F7;
+  background-color: white;
+}
+
+.username{
+  margin-left:10px;
+}
+.unDivs{margin-left:10px;}
+</style>
+
+<body>
+<!--  ¯\_(ツ)_/¯
+//  (☉_☉) -->
+<div class="container">
+<center><h3> <color="#434343">Text Parser</color></h3><br/></center>
+
+  <div class="unDivs">UserName 1:($1)<input type="text" class="userName" id="UN1" placeholder="First User Name"></div><br/>
+  <div class="unDivs">UserName 2:($2)<input type="text" class="userName" id="UN2" placeholder="Second User Name"></div><br/>
+  <div class="unDivs">UserName 3:($3)<input type="text" class="userName" id="UN3" placeholder="Third User Name"></div><br/>
+
+  <div class=""><input type="text" id="mainText" placeholder="Enter your text here..." autofocus onchange="generateText()"><button onClick="generateText()">Generate New Text</button></div>
+  <div class=""><input type="text" id="formattedText" placeholder="Awaiting your text..." ><button onclick="copyText()"><img src="copy.png" style="height:15px;width:15px">COPY</button><button onclick="clearText()"><img src="clear.png" style="height:15px;width:15px">CLEAR</button></div>
+
+  <div class=""></div>
+
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+
+function clearText(){
+  document.getElementById("mainText").value=null;
+  document.getElementById("formattedText").value=null;
+}
+
+function copyText(){
+  var cp =  document.getElementById("formattedText");
+  cp.select();
+  document.execCommand("Copy");
+  alert("Text copied: "+ cp.value );
+}
+
+function generateText()
+{
+  var mainT = document.getElementById("mainText");
+  var newT = document.getElementById("formattedText");
+  var splitUpArray = mainT.value.split(" ");
+
+
+
+  for (var i=0;i<splitUpArray.length;i++)
+  {
+  //  alert (splitUpArray[i]);
+
+        //checkWord(splitUpArray[i]);
+        switch(splitUpArray[i].toLowerCase())
+        {
+        //  case "bitch": return "b[b]itch[/b]"
+        case "bitch": splitUpArray[i] = "b[b]itch[/b]";
+          break;
+        case "hoes": splitUpArray[i] = "h[b]oes[/b]";
+          break;
+        case "hoe": splitUpArray[i] = "h[b]oe[/b]";
+            break;
+        case "slut": splitUpArray[i] = "s[b]lut[/b]";
+            break;
+        case "whore": splitUpArray[i] = "w[b]hore[/b]";
+            break;
+        case "cunt": splitUpArray[i] = "c[b]unt[/b]";
+            break;
+        case "nigga": splitUpArray[i] = "n[b]igga[/b]";
+            break;
+        case "niggas": splitUpArray[i] = "n[b]iggas[/b]";
+            break;
+        case "cunt": splitUpArray[i] = "c[b]unt[/b]";
+            break;
+        case "nigger": splitUpArray[i] = "n[b]igger[/b]";
+            break;
+        case "pussy": splitUpArray[i] = "p[b]ussy[/b]";
+            break;
+        case "dick": splitUpArray[i] = "d[b]ick[/b]";
+              break;
+        case "titties": splitUpArray[i] = "t[b]itties[/b]";
+              break;
+        case "tits": splitUpArray[i] = "t[b]its[/b]";
+            break;
+        case "ass": splitUpArray[i] = "a[b]ss[/b]";
+            break;
+        case "asshole": splitUpArray[i] = "a[b]sshole[/b]";
+            break;
+        case "cum": splitUpArray[i] = "cu[b]m[/b]";
+            break;
+        case "fag": splitUpArray[i] = "fa[b]g[/b]";
+            break;
+        case "faggot": splitUpArray[i] = "f[b]aggot[/b]";
+              break;
+        case "homo": splitUpArray[i] = "h[b]omo[/b]";
+                    break;
+
+        //  default:return 0;
+          }
+      }
+
+//alert (splitUpArray);
+// next function
+detectNames(splitUpArray);
+//alert (splitUpArray);
+document.getElementById("formattedText").value = splitUpArray;
+
+//put array back together into one whole string
+var testArr="";
+for (var a=0;a<splitUpArray.length;a++)
+    {
+     testArr += splitUpArray[a] +" ";
+    }
+    //alert("TestArr: " + testArr);
+    document.getElementById("formattedText").value = testArr;
+}
+
+
+function detectNames(arr)
+    {
+      for (var i=0;i<arr.length;i++)
+      {
+        //check array varibles for names
+            switch(arr[i])
+            {
+              case "$1": arr[i] = "[c=CC0000]" + document.getElementById("UN1").value + "[/c]";
+              break;
+              case "$2": arr[i] = "[c=CC0000]" + document.getElementById("UN2").value + "[/c]";
+              break;
+              case "$3": arr[i] = "[c=CC0000]" + document.getElementById("UN3").value + "[/c]";
+              break;
+            }
+
+    }
+}
+
+</script>
+
+
+</html>

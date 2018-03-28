@@ -35,7 +35,9 @@
 .subSectionFitMain{
     font-size:14px;
 }
-
+.cellExercise{
+  background-color:white;
+}
 #noteIcon{
     height:30px;
     width:30px;
@@ -80,6 +82,11 @@
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
   line-height: 4;
   }
+
+  .imgExercise{
+    top:40%;
+    height:67%;
+  }
 }
 
 /* phone med size  481px-667px*/
@@ -118,7 +125,6 @@
 .subSectionFitMain{
     font-size:24px;
 }
-
 
 #noteIcon{
   height:30px;

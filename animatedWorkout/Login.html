@@ -132,10 +132,6 @@ input[type="password"]:hover {
 <!--blue #4285f4;-->
 <div class="card" onclick="showPic()"><img src="testM.jpg" class="mugshot">
 	<div class="credentials">John Doe</div>
-<!--<center>
-	<div id="pwDiv" style="display:none;">
-	<input style="" id="pwBox" type="password" placeholder="Password"></div>
-</center> -->
 </div>
 
 <div class="card" onclick="showPic()"><img src="janeDoe1.png" class="mugshot"><div class="credentials">Jane Doe</div></div></div>
@@ -175,9 +171,27 @@ var input = document.getElementById("pwBox");
 input.addEventListener("keyup", function(event) {
 	event.preventDefault();
 	if (event.keyCode === 13) {
-      document.getElementById("submitPass").click();
+      //document.getElementById("submitPass").click();
+			checkCreds();
     }
 });
+var userPW = document.getElementById("pwBox");
+function checkCreds()
+{
+	if (userPW.value =="" || userPW.value ==null){
+		alert("Please enter a valid password to continue");
+		userPW.autofocus;
+
+	}
+	else if (userPW.value.length < 4)
+	{
+		alert("I think your password should be a little longe than that...");
+		userPW.autofocus;
+	}
+	else{
+		return 0;
+	}
+}
 
 </script>
 </html>
