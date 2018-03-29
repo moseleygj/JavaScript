@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 </head>
 <style type="text/css">
+
 body{
   padding:0;
   margin:0;
@@ -12,25 +13,26 @@ body{
 
 .container{
   height:auto;
-  width:600px;
-  border:1px solid black;
+  width:700px;
+  border:1px solid #434343;
   background-color:white;
   margin: 0 auto 0;
   margin-top:10%;
   tranform:translateY:(-50%);
 }
-#mainText{width:400px;
-margin-left:10px;
-margin-bottom:10px;
-margin-right:5px;
 
+#mainText{
+    width:400px;
+    margin-left:10px;
+    margin-bottom:10px;
+    margin-right:5px;
 }
+
 #mainText:hover{
   border: 2px solid #66C8F7;
   background-color: white;
-
-
 }
+
 #formattedText{
   width:400px;
   margin-left:10px;
@@ -39,38 +41,44 @@ margin-right:5px;
 }
 
 #formattedText:hover{
-
   border: 2px solid #66C8F7;
   background-color: white;
 }
 
-.username{
+.userName{
   margin-left:10px;
 }
-.unDivs{margin-left:10px;}
+.unDivs{
+  margin-left:10px;
+}
 </style>
 
 <body>
-<!--  ¯\_(ツ)_/¯
-//  (☉_☉) -->
+
 <div class="container">
-<center><h3> <color="#434343">Text Parser</color></h3><br/></center>
+<center><h3><color="#434343">Text Parser</color></h3><br/></center>
 
-  <div class="unDivs">UserName 1:($1)<input type="text" class="userName" id="UN1" placeholder="First User Name"></div><br/>
-  <div class="unDivs">UserName 2:($2)<input type="text" class="userName" id="UN2" placeholder="Second User Name"></div><br/>
-  <div class="unDivs">UserName 3:($3)<input type="text" class="userName" id="UN3" placeholder="Third User Name"></div><br/>
+  <div class="unDivs">Name 1:($1)<input type="text" class="userName" id="UN1" placeholder="First User Name" >
+    <button onClick="copyName('UN1');"><img src="copy.png" style="height:15px;width:15px">COPY</button>
+  </div><br/>
+  <div class="unDivs">Name 2:($2)<input type="text" class="userName" id="UN2" placeholder="Second User Name"> <button onClick="copyName('UN2');"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
+  <div class="unDivs">Name 3:($3)<input type="text" class="userName" id="UN3" placeholder="Third User Name" > <button onClick="copyName('UN3');"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
+  <div class="unDivs">Name 4:($4)<input type="text" class="userName" id="UN4" placeholder="Fourth User Name"> <button onClick="copyName('UN4');"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
+  <div class="unDivs">Name 5:($5)<input type="text" class="userName" id="UN5" placeholder="Fifth User Name" > <button onClick="copyName('UN5');"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
 
-  <div class=""><input type="text" id="mainText" placeholder="Enter your text here..." autofocus onchange="generateText()"><button onClick="generateText()">Generate New Text</button></div>
+
+  <div class=""><input type="text" id="mainText" placeholder="Enter your text here..." autofocus onchange="generateText()"><button onClick="generateText()"><img src="gears.png" style="height:15px;width:15px">Generate New Text</button></div>
   <div class=""><input type="text" id="formattedText" placeholder="Awaiting your text..." ><button onclick="copyText()"><img src="copy.png" style="height:15px;width:15px">COPY</button><button onclick="clearText()"><img src="clear.png" style="height:15px;width:15px">CLEAR</button></div>
 
-  <div class=""></div>
-
 </div>
-
-
 </body>
 
 <script type="text/javascript">
+
+function copyName(UN)
+{
+document.getElementById("formattedText").value += "[c=CC0000]" +document.getElementById(UN).value+"[/c]"+", ";
+}
 
 function clearText(){
   document.getElementById("mainText").value=null;
@@ -82,6 +90,7 @@ function copyText(){
   cp.select();
   document.execCommand("Copy");
   alert("Text copied: "+ cp.value );
+  document.getElementById("mainText").value=null;
 }
 
 function generateText()
@@ -91,26 +100,33 @@ function generateText()
   var splitUpArray = mainT.value.split(" ");
 
 
-
   for (var i=0;i<splitUpArray.length;i++)
   {
-  //  alert (splitUpArray[i]);
-
-        //checkWord(splitUpArray[i]);
-        switch(splitUpArray[i].toLowerCase())
-        {
-        //  case "bitch": return "b[b]itch[/b]"
+        //checkWord(splitUpArray[i]);    
+        switch(splitUpArray[i].toLowerCase()) {
+        case "prick": splitUpArray[i] = "p[b]rick[/b]";
+          break;
+        case "vagina": splitUpArray[i] = "va[b]gina[/b]";
+          break;
         case "bitch": splitUpArray[i] = "b[b]itch[/b]";
           break;
+        case "bitches": splitUpArray[i] = "b[b]itches[/b]";
+            break;
         case "hoes": splitUpArray[i] = "h[b]oes[/b]";
-          break;
+            break;
         case "hoe": splitUpArray[i] = "h[b]oe[/b]";
             break;
         case "slut": splitUpArray[i] = "s[b]lut[/b]";
             break;
+        case "sluts": splitUpArray[i] = "s[b]luts[/b]";
+            break;
         case "whore": splitUpArray[i] = "w[b]hore[/b]";
             break;
+        case "whores": splitUpArray[i] = "w[b]hores[/b]";
+            break;
         case "cunt": splitUpArray[i] = "c[b]unt[/b]";
+            break;
+        case "cunts": splitUpArray[i] = "c[b]unt[/b]";
             break;
         case "nigga": splitUpArray[i] = "n[b]igga[/b]";
             break;
@@ -118,47 +134,56 @@ function generateText()
             break;
         case "cunt": splitUpArray[i] = "c[b]unt[/b]";
             break;
-        case "nigger": splitUpArray[i] = "n[b]igger[/b]";
-            break;
         case "pussy": splitUpArray[i] = "p[b]ussy[/b]";
             break;
         case "dick": splitUpArray[i] = "d[b]ick[/b]";
-              break;
+            break;
+        case "dicks": splitUpArray[i] = "d[b]icks[/b]";
+            break;
         case "titties": splitUpArray[i] = "t[b]itties[/b]";
-              break;
+            break;
         case "tits": splitUpArray[i] = "t[b]its[/b]";
             break;
         case "ass": splitUpArray[i] = "a[b]ss[/b]";
             break;
         case "asshole": splitUpArray[i] = "a[b]sshole[/b]";
             break;
+        case "assholes": splitUpArray[i] = "a[b]ssholes[/b]";
+            break;
         case "cum": splitUpArray[i] = "cu[b]m[/b]";
             break;
         case "fag": splitUpArray[i] = "fa[b]g[/b]";
             break;
         case "faggot": splitUpArray[i] = "f[b]aggot[/b]";
-              break;
+            break;
+        case "fuck": splitUpArray[i] = "f[b]uck[/b]";
+            break;
+        case "fucker": splitUpArray[i] = "f[b]ucker[/b]";
+            break;
+        case "fucking": splitUpArray[i] = "fuc[b]king[/b]";
+            break;
+        case "motherfucker": splitUpArray[i] = "motherfuc[b]ker[/b]";
+            break;
+        case "mother-fucker": splitUpArray[i] = "mother-fuc[b]er[/b]";
+            break;
+        case "motherfucking": splitUpArray[i] = "motherfuc[b]king[/b]";
+            break;
         case "homo": splitUpArray[i] = "h[b]omo[/b]";
-                    break;
-
-        //  default:return 0;
+            break;
           }
       }
 
-//alert (splitUpArray);
-// next function
 detectNames(splitUpArray);
-//alert (splitUpArray);
 document.getElementById("formattedText").value = splitUpArray;
 
 //put array back together into one whole string
 var testArr="";
+
 for (var a=0;a<splitUpArray.length;a++)
     {
      testArr += splitUpArray[a] +" ";
     }
-    //alert("TestArr: " + testArr);
-    document.getElementById("formattedText").value = testArr;
+document.getElementById("formattedText").value = testArr;
 }
 
 
@@ -175,12 +200,12 @@ function detectNames(arr)
               break;
               case "$3": arr[i] = "[c=CC0000]" + document.getElementById("UN3").value + "[/c]";
               break;
+              case "$4": arr[i] = "[c=CC0000]" + document.getElementById("UN4").value + "[/c]";
+              break;
+              case "$5": arr[i] = "[c=CC0000]" + document.getElementById("UN5").value + "[/c]";
+              break;
             }
-
     }
 }
-
 </script>
-
-
 </html>
