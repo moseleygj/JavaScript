@@ -123,7 +123,7 @@ html, body {margin:0;padding:0;height:100%;	min-width:320px;
 	height:100%;
 	float:left;
 	font-weight: bolder;
-	font-size:10px;
+	font-size:22px;
 	text-align: center;
 	word-wrap: break-word;
 	text-rendering: optimizeLegibility;
@@ -327,7 +327,7 @@ input[type="checkbox"]{height:40px;width:30px;}
 	height:100%;
 	float:left;
 	font-weight: bolder;
-	font-size:10px;
+	font-size:50px;
 	text-align: center;
 	word-wrap: break-word;
 	text-rendering: optimizeLegibility;

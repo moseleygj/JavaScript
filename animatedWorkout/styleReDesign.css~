@@ -7,18 +7,19 @@ body{
 html{
 	padding:0;
 }
-html, body {margin:0;padding:0;height:100%;}
+html, body {margin:0;padding:0;height:100%;	min-width:320px;
+}
 
 .container{
 	width: 100%;
-	height:110%;
+	height:100%;
 	max-width:1024px;
-min-height: 100%;
+	min-height: 100%;
+	min-width:320px;
 	background-color: white;
 	margin:0 auto 0;
 	border-radius: 5px;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-
 }
 
 .topTitle{
@@ -38,14 +39,13 @@ min-height: 100%;
 
 .topTitleTextSub{
 	width: 100%;
-	height:50%;
 	text-align: center;
 	color:#3e3e3e;
 	font-weight:bold ;
 	font-size:48px;
 	font-family: 'Exo 2', sans-serif;
+	height:50%;
 }
-
 
 .imgExercise{
 	width: 100%;
@@ -58,16 +58,16 @@ min-height: 100%;
 	top:50%;
 	transform:translateY(-50%);
 }
+
 .imgExerciseF{
 	width: 100%;
-	height:1366px;
+	height:100%;
 	max-width:1024px;
 	margin: 0px;
 	position: absolute;
 	z-index: 1;
 	background-color:white;
-
-}
+	}
 
 .cellExercise{
 	width:100%;
@@ -83,8 +83,8 @@ min-height: 100%;
 	height: 65px;
 	margin:0px 0px;
 	color:#616161;
-background-color: #F2F2F2;
-font-weight:bolder;
+	background-color: #F2F2F2;
+	font-weight:bolder;
 }
 
 .fitName{
@@ -115,8 +115,7 @@ font-weight:bolder;
 	font-weight: 400;
 	text-rendering: optimizeLegibility;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
-   line-height: 1.3;
-
+  line-height: 1.3;
 	}
 
 .reps{
@@ -124,13 +123,12 @@ font-weight:bolder;
 	height:100%;
 	float:left;
 	font-weight: bolder;
-	font-size:24.3px;
+	font-size:22px;
 	text-align: center;
 	word-wrap: break-word;
 	text-rendering: optimizeLegibility;
 	font-weight: 400;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
-
 	}
 
 .settingsBar{
@@ -161,7 +159,6 @@ font-weight:bolder;
 	float:left;
 	position: relative;
 	display: none;
-
 }
 
 .rightColumnMax{
@@ -189,16 +186,16 @@ font-weight:bolder;
 }
 
 .closeImage{
-position: absolute;
-right:20px;
-top:0;
-height:40px;
-width:40px;
-font-size: 40px;
-color:#434343;
-z-index:2;
-text-shadow: 1px 1px 3px;
-font-weight:bolder;
+	position: absolute;
+	right:20px;
+	top:0;
+	height:40px;
+	width:40px;
+	font-size: 40px;
+	color:#434343;
+	z-index:2;
+	text-shadow: 1px 1px 3px;
+	font-weight:bolder;
 }
 
 .subSectionFitMain{
@@ -218,24 +215,19 @@ font-weight:bolder;
 }
 
 .subSectionNote{
-width:10%;
-height:100%;
-float:left;
+		width:10%;
+		height:100%;
+		float:left;
 }
-
-.ShowBanner{}
-.hideBanner{}
-.toolTip{}
 
 input[type="checkbox"]{height:40px;width:30px;}
 
 
-<!-- tool tip-->
+/*<!-- tool tip-->*/
 .tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
-    		 
 }
 
 .tooltiptext {
@@ -253,10 +245,9 @@ input[type="checkbox"]{height:40px;width:30px;}
     right: 22%;
     border: 1px solid purple;
     opacity:0.9;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 		font-size: 24px;
 		font-weight: normal;
-
 }
 
  .tooltiptext::after {
@@ -268,51 +259,44 @@ input[type="checkbox"]{height:40px;width:30px;}
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent transparent black;
-
 }
 
 .closeBtn{
-text-align:center;
-height:25px;
-width:25px;
-position: absolute;
-right:8px;
-font-weight:bolder;
-font-size:20px;
+		text-align:center;
+		height:25px;
+		width:25px;
+		position: absolute;
+		right:8px;
+		font-weight:bolder;
+		font-size:20px;
 }
 
 .closeBtnFrame{
-width:100%;
-height:25px;
+		width:100%;
+		height:25px;
 }
 
 .noteTitle
 {
-text-align:center;
-float:left;
-width:100%;
-text-decoration: underline;
-font-weight:bolder;
+		text-align:center;
+		float:left;
+		width:100%;
+		text-decoration: underline;
+		font-weight:bolder;
 }
 
 #noteIcon{
 	visibility: visible;
 	height:64px;
-	 width:64px;
+ 	width:64px;
 }
 
 .exercisePreviewThumb{
-margin-left: 5px;
-height:32px;
-width:32px;
-display: inline-block;
+		margin-left: 5px;
+		height:32px;
+		width:32px;
+		display: inline-block;
 }
-
-
-
-
-
-
 
 .fitNameH{
 	width:49%;
@@ -335,7 +319,7 @@ display: inline-block;
 	font-weight: 400;
 	text-rendering: optimizeLegibility;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
-   line-height: 1.3;
+  line-height: 1.3;
 	}
 
 .repsH{
@@ -350,7 +334,3 @@ display: inline-block;
 	font-weight: 400;
 	font-family: 'Roboto',arial,'Noto Sans Japanese',sans-serif;
 	}
-
-@media (min-width:){
-
-}
