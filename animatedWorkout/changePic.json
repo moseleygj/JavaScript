@@ -1,0 +1,41 @@
+{
+	"aviator": {
+	"image":"avi.png"
+	},
+	"navalOfficer": {
+	"image":"avi2.png"
+	},
+	"detective": {
+	"image":"detective.png"
+	},
+	"doctor": {
+	"image":"doctor-female.png"
+	},
+	"fireman": {
+	"image":"fireman.png"
+	},
+			"OfficeGuyW": {
+	"image":"OfficeGuyW.png"
+	},
+		"placeholer": {
+	"image":"placeholer.png"
+	},
+			"janeDoeW": {
+	"image":"janeDoe1.png"
+	},
+			"johnDoeB": {
+	"image":"johnDoe.jpg"
+	},
+			"": {
+	"image":""
+	},
+			"": {
+	"image":""
+	},
+			"": {
+	"image":""
+	},
+		"": {
+	"image":""
+	},
+}

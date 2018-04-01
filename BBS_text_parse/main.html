@@ -102,7 +102,7 @@ function generateText()
 
   for (var i=0;i<splitUpArray.length;i++)
   {
-        //checkWord(splitUpArray[i]);    
+        //checkWord(splitUpArray[i]);
         switch(splitUpArray[i].toLowerCase()) {
         case "prick": splitUpArray[i] = "p[b]rick[/b]";
           break;
@@ -169,6 +169,8 @@ function generateText()
         case "motherfucking": splitUpArray[i] = "motherfuc[b]king[/b]";
             break;
         case "homo": splitUpArray[i] = "h[b]omo[/b]";
+            break;
+        case "cock": splitUpArray[i] = "c[b]ock[/b]";
             break;
           }
       }
