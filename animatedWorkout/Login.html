@@ -10,12 +10,19 @@ $(document).ready(function(){
 $(".card").slideDown(959).fadeIn(90000);
 
  $(".card").click(function(){
-             //  alert("Welcome, $nameHere!");
-             $(".card").not(this).fadeOut(800);
+            $(".card").not(this).fadeOut(800);
 						//show password box here
 					  $("#pwBoxContainer").fadeIn(1500);
+            $("#backBtn").fadeIn(1500);
 					 }
 				 );
+
+$("#backBtn").click(function(){
+    $(".card").fadeIn(800);
+    $("#pwBoxContainer").fadeOut(1500);
+    $("#backBtn").fadeOut(1000);
+
+  });
 });
 </script>
 
@@ -78,6 +85,14 @@ font-size:50px;
 padding-bottom:14px;
 }
 
+#backBtn{
+  position: absolute;
+  top:10px;
+  left:10px;
+  height:40px;
+  width:40px;
+}
+
 input[type="password"]{
 height:49px;
 border:2px solid #bbbbbb;
@@ -123,26 +138,18 @@ input[type="password"]:hover {
 </style>
 
 <body>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-<span class="close" onClick="hidePic()">&times;</span>
-
-<img class="modal-content" id="img01">
-</div>
+<img src="arrow-back-icon.png" id="backBtn" style="display:none">
 <!--blue #4285f4;-->
-<div class="card" onclick="showPic()"><img src="testM.jpg" class="mugshot">
-	<div class="credentials">John Doe</div>
-</div>
-
-<div class="card" onclick="showPic()"><img src="janeDoe1.png" class="mugshot"><div class="credentials">Jane Doe</div></div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/johnDoe.jpg" class="mugshot"><div class="credentials">John Doe</div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/janeDoe1.png" class="mugshot"><div class="credentials">Jane Doe</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/placeholer.png" class="mugshot"><div class="credentials">Annonymous</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/fireman.png" class="mugshot"><div class="credentials">Fire Guy</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/avi.png	" class="mugshot"><div class="credentials">Fly Guy</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/detective.png" class="mugshot"><div class="credentials">Detective Guy</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/doctor-female.png" class="mugshot"><div class="credentials">Nurse Girl</div></div></div>
 <div class="card" onclick="showPic()"><img src="profilePhotos/OfficeGuyW.png" class="mugshot"><div class="credentials">Business Guy</div></div></div>
-<div class="card" onclick="showPic()"><img src="profilePhotos/avi2.png" class="mugshot"><div class="credentials">Sailor Officer</div></div></div>
-<div class="card" onclick="showPic()"><img src="profilePhotos/031-boy-2.png" class="mugshot"><div class="credentials">Kid Guy</div></div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/navyOfficer.png" class="mugshot"><div class="credentials">Sailor Officer</div></div></div>
+<div class="card" onclick="showPic()"><img src="profilePhotos/018-boy-2.png" class="mugshot"><div class="credentials">Kid-1</div></div></div>
 
 <!--This PW DIV must stay at the bottom so it can append to the DIVs aboves picture -->
 <div id="pwBoxContainer">
@@ -154,27 +161,16 @@ input[type="password"]:hover {
 </body>
 
 <script type="text/javascript">
-//modal
-//var modal = document.getElementById('myModal');
-//image and caption
-//var modalImg = document.getElementById("img01");
-showPic = function(pic,picName){
-    modal.style.display = "block";
-}
-
-function hidePic(){
-modal.style.display = "none";
-}
 
 var input = document.getElementById("pwBox");
 
 input.addEventListener("keyup", function(event) {
 	event.preventDefault();
 	if (event.keyCode === 13) {
-      //document.getElementById("submitPass").click();
 			checkCreds();
     }
 });
+
 var userPW = document.getElementById("pwBox");
 function checkCreds()
 {
@@ -185,12 +181,12 @@ function checkCreds()
 	}
 	else if (userPW.value.length < 4)
 	{
-		alert("I think your password should be a little longe than that...");
+		alert("I think your password should be a little longer than that...");
 		userPW.autofocus;
 	}
 	else{
 		return 0;
-	}
+	   }
 }
 
 </script>

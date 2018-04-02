@@ -1,1 +1,103 @@
+{
+  "placeholer": {
+	"image":"placeholer.png"
+	},
+	"aviator": {
+	"image":"avi.png"
+	},
+	"navalOfficer": {
+	"image":"avi2.png"
+	},
+	"detective": {
+	"image":"detective.png"
+	},
+	"doctor": {
+	"image":"doctor-female.png"
+	},
+	"fireman": {
+	"image":"fireman.png"
+	},
+			"OfficeGuyW": {
+	"image":"OfficeGuyW.png"
+	},
 
+			"janeDoeW": {
+	"image":"janeDoe1.png"
+	},
+			"johnDoeB": {
+	"image":"johnDoe.jpg"
+	},
+			"001-boy-1.png
+": {
+	"image":"001-boy-1.png
+"
+	},
+			"": {
+	"image":"002-boy.png
+"
+	},
+			"": {
+	"image":"003-doctor.png
+"
+	},
+		"": {
+	"image":"005-girl-3.png
+"
+	},
+				"": {
+	"image":"006-girl-2.png
+"
+	},
+			"": {
+	"image":"007-girl-1.png
+"
+	},
+			"": {
+	"image":"008-girl.png
+"
+	},
+		"": {
+	"image":"009-people-1.png
+"
+	},
+				"": {
+	"image":"010-boss.png
+"
+	},
+			"": {
+	"image":"011-people.png
+"
+	},
+			"": {
+	"image":"012-man-1.png
+"
+	},
+		"": {
+	"image":"013-boy-6.png
+"
+	},
+				"": {
+	"image":"014-boy-5.png
+"
+	},
+			"": {
+	"image":"015-boy-4.png
+"
+	},
+			"": {
+	"image":"016-boy-3.png
+"
+	},
+		"": {
+	"image":"017-man.png
+"
+	},
+	"": {
+	"image":"018-boy-2.png
+"{
+	"image":""
+	}{
+	"image":""
+	}{
+	"image":""
+	}
