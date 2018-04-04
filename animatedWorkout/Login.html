@@ -3,8 +3,9 @@
 <title>W.O.D. - Login </title>
 <link rel="icon" href="dumbbell.png">
 <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
-<script src="jquery-3.3.1.min.js">
-</script>
+<link rel="stylesheet" href="mainLoginWindow.css">
+<script src="mainLoginWindow.js" type="text/javascript"></script>
+<script src="jquery-3.3.1.min.js"></script>
 <script>
 $(document).ready(function(){
 $(".card").slideDown(959).fadeIn(90000);
@@ -25,117 +26,8 @@ $("#backBtn").click(function(){
   });
 });
 </script>
-
 <meta charset="UTF-8">
 </head>
-<style type="text/css">
-
-body{
-	font-family:"Roboto Mono",Roboto,sans-serif;
-	letter-spacing: .25px;
-	padding:0;margin:0;
-	background:url("bg.png");
-	background-repeat:repeat;
-	min-width: 400px;
-	}
-
-.card{
-height:432px;/*changed from....auto;*/
-width:400px;
-margin:70px auto 0;
-background-color:#faf5f1;
-display:none;
-border: 1px solid #434343;
-border-top: 1px solid white;
-}
-
-.card:hover{
-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-.mugshot{
-height:340px ;
-width:360px;
-background-color:white;
-margin: 10px 10px 10px 15px;
-border-left: 2px solid #d7d7d7;
-border-bottom: 2px solid #d7d7d7;
-border-right: 2px solid #b8b5b5;
-border-top: 2px solid #b8b5b5;
-}
-
-#pwBoxContainer{
-	height:auto;
-	width:400px;
-	margin:-1px auto 0;
-	background-color:#faf5f1;
-	display:none;
-	border: 1px solid #434343;
-	border-top: 1px solid #faf5f1;
-}
-.credentials{
-height: 50px;
-width:100%;
-margin:0 auto 0;
-background-color:;
-text-align: center;
-font-family: 'Sedgwick Ave', cursive;
-font-weight: bolder;
-font-size:50px;
-padding-bottom:14px;
-}
-
-#backBtn{
-  position: absolute;
-  top:10px;
-  left:10px;
-  height:40px;
-  width:40px;
-}
-
-input[type="password"]{
-height:49px;
-border:2px solid #bbbbbb;
-width:210px;
-font-size:25px;
-background: url('Lock-icon1.png') right center no-repeat;
-background-size:39px 39px;
-text-indent:11px;
-background-color: white;
-}
-
-input[type="password"]:hover{
-height:49px;
-border: 2px solid #66C8F7;
-background-color: white;
-}
-/* Invoke this if password is wrong
-input[type="password"]:hover {
-	  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-	  transform: translate3d(0, 0, 0);
-	  backface-visibility: hidden;
-	  perspective: 1000px;
-	}
-
-@keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-*/
-</style>
 
 <body>
 <img src="arrow-back-icon.png" id="backBtn" style="display:none">
@@ -162,32 +54,6 @@ input[type="password"]:hover {
 
 <script type="text/javascript">
 
-var input = document.getElementById("pwBox");
-
-input.addEventListener("keyup", function(event) {
-	event.preventDefault();
-	if (event.keyCode === 13) {
-			checkCreds();
-    }
-});
-
-var userPW = document.getElementById("pwBox");
-function checkCreds()
-{
-	if (userPW.value =="" || userPW.value ==null){
-		alert("Please enter a valid password to continue");
-		userPW.autofocus;
-
-	}
-	else if (userPW.value.length < 4)
-	{
-		alert("I think your password should be a little longer than that...");
-		userPW.autofocus;
-	}
-	else{
-		return 0;
-	   }
-}
 
 </script>
 </html>
