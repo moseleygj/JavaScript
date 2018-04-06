@@ -1,25 +1,3 @@
-$(document).ready(function(){
-$(".card").slideDown(959).fadeIn(90000);
-
- $(".card").click(function(){
-            $(".card").not(this).fadeOut(800);
-						//show password box here
-					  $("#pwBoxContainer").fadeIn(1500);
-            $("#backBtn").fadeIn(1500);
-					 }
-				 );
-
-$("#backBtn").click(function(){
-    $(".card").fadeIn(800);
-    $("#pwBoxContainer").fadeOut(1500);
-    $("#backBtn").fadeOut(1000);
-
-  });
-});
-
-
-
-
 var input = document.getElementById("pwBox");
 
 input.addEventListener("keyup", function(event) {

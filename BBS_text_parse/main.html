@@ -67,20 +67,20 @@ body{
   <div class="unDivs">Name 5:($5)<input type="text" class="userName" id="UN5" placeholder="Fifth User Name" > <button onClick="copyName('UN5');"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
 
 <hr/>
-<div class="unDivs">Private Message: <input type="text" class="userName" id="PRIV" placeholder="Private Message" > <button onClick="copyName('UN5');"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
-<input class="userName" type="text" id="" placeholder="persons name">
+<div class="unDivs">Private Message: <input type="text" class="userName" id="PPRIV" placeholder="Private Message" > <button onClick="privateMessage();"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
+<input class="userName" type="text" id="PperName" placeholder="persons name">
 
 <hr/>
 
 
-<div class="unDivs">Ignored Message: <input type="text" class="userName" id="PRIV" placeholder="Private Message" > <button onClick="copyName('UN5');"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
-<input type="text" id="" placeholder="persons name">
+<div class="unDivs">Ignored Message: <input type="text" class="userName" id="PRIV" placeholder="Private Message" > <button onClick="ignorePerson();"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
+<input type="text" id="personIG" placeholder="persons name">
 
 <hr/>
 
 
-<div class="unDivs">colorful chars prefix/sufix <input type="text" class="userName" id="PRIV" placeholder="Original Message" > <button onClick="copyName('UN5');"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
-<input type="text" id="" placeholder="special characters">
+<div class="unDivs">colorful chars prefix/sufix <input type="text" class="userName" id="colorMsg" placeholder="Original Message" > <button onClick="textSufPre();"><img src="copy.png" style="height:15px;width:15px">COPY</button> </div><br/>
+<input type="text" id="specialChar" placeholder="★">
 
 <hr/>
   <div class=""><input type="text" id="mainText" placeholder="Enter your text here..." autofocus onchange="generateText()"><button onClick="generateText()"><img src="gears.png" style="height:15px;width:15px">Generate New Text</button></div>
@@ -90,6 +90,32 @@ body{
 </body>
 
 <script type="text/javascript">
+
+function textSufPre(){
+var sCchar = document.getElementById("specialChar").value;
+if ( sCchar== null || sCchar=="" ) {
+  sCchar="★";
+  document.getElementById("specialChar").value= sCchar;
+}
+var pvname =document.getElementById("formattedText").value = "[c=000066]"+sCchar+"[/c][c=0000ff]"+sCchar+"[/c][c=0066ff]"+sCchar+"[/c][b][c=333333] "+
+document.getElementById("colorMsg").value+
+" [c=0066ff]"+sCchar+"[/c][c=0000ff]"+sCchar+"[/c][c=000066]"+sCchar+"[/c][b][c=333333] ";
+
+
+}
+function ignorePerson()
+{
+  var IGname =document.getElementById("personIG").value;
+
+document.getElementById("formattedText").value = "*** USER: [c=ff0000][b][i]"+IGname+"[/c][/b][/i], has been ignored: "+Date();
+}
+function privateMessage(){
+var pvname =document.getElementById("PperName").value;
+var privMsg =document.getElementById("PPRIV").value ;
+var myName ="romeo0718";
+document.getElementById("formattedText").value = "[b][c=b8853f]"+pvname+"[/b]"+" whispers to "+"[b][c=0000ff][i]"+myName+"[/i][/c][/b][c=b8853f] :[/c]"+privMsg;
+
+}
 
 function copyName(UN)
 {
