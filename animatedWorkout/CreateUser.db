@@ -1,0 +1,7 @@
+CREATE TABLE regUsers(
+email char(25) not null UNIQUE, 
+password char(25) NOT NULL,
+UID INT(225) NOT NULL auto_increment, 
+forgotPass char(1) DEFAULT 'N', 
+sex char(1) DEFAULT 'M',
+PRIMARY KEY(UID));
