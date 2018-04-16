@@ -2,17 +2,25 @@
 <head>
 <title>Binary Clock</title>
 <style>
-.clock{width: 470px;height:420px;background-color: green;}
-.HourCells{width:33.3%; height:420px;}
-.hourCell1{}
-.hourCell2{}
-.MinCells{width:33.3%; height:420px;}
+.clock{width:470px;height:420px;background-color: green;}
+
+.HourCells{width:33.3%; height:420px;float:left;}
+.hourCell1{height:100%;width:50%;float:left;}
+.hourCell2{height:100%;width:50%;float:left}
+.HSquare1{height:70px;width:50%;border:1px solid white;padding:;float:;margin:;background-color:red;}
+.HSquare2{height:70px;width:50%;border:1px solid white;padding:;float:;background-color:red;}
+.HSquare3{height:70px;width:50%;border:1px solid white;padding:;float:;background-color:none;}
+
+.MinCells{width:33.3%; height:420px;float:left;}
+.MSquare1{height:70px;width:50%;border:1px solid white;padding:;float:;margin:;background-color:red;}
+.MSquare2{height:70px;width:50%;border:1px solid white;padding:;float:;background-color:red;}
+.MSquare3{height:70px;width:50%;border:1px solid white;padding:;float:;background-color:none;}
+
 .minCell1{}
 .minCell2{}
 
-.SecondCells{width:33.3%; height:420px;}
-.HSquare1{height:210px;width:98%;border:1px solid white;padding:;float:;margin:;background-color:red;}
-.HSquare2{height:210px;width:98%;border:1px solid white;padding:;float:;background-color:red;}
+.SecondCells{width:33.3%; height:420px;float:left;}
+
 .MSquare1{height:;width:;border:;padding:;float:;margin:;background-color:red;}
 .MSquare2{height:;width:;border:;padding:;float:;background-color:red;}
 .SSquare1{height:;width:;border:;padding:;float:;margin:;color:red;}
@@ -21,14 +29,32 @@
 </style>
 </head>
 
-
 <body>
 <div class="clock">
-  <div class="HourCells">  <div class="HSquare1"></div> <div class="HSquare2"></div> </div>
-  <div class="MinCells">  <div class="MSquare1"><div class="MSquare2"></div> </div> </div>
-  <div class="SecondCells">  <div class="SSquare1"></div><div class="SSquare2"></div>  </div>
-
+<div class="HourCells">
+  <div class="hourCell1">
+    <div class="HSquare3"></div>
+    <div class="HSquare3"></div>
+    <div class="HSquare3"></div>
+    <div class="HSquare3"></div>
+    <div class="HSquare1"></div>
+    <div class="HSquare1"></div>
 </div>
+  <div class="hourCell2">
+    <div class="HSquare3"></div>
+    <div class="HSquare3"></div>
+    <div class="HSquare1"></div>
+    <div class="HSquare1"></div>
+    <div class="HSquare1"></div>
+    <div class="HSquare1"></div>
+</div>
+</div>
+
+<div class="MinCells"></div>
+<div class="SecondCells"></div>
+</div>
+
+
 <script type="">
 
 </script>
