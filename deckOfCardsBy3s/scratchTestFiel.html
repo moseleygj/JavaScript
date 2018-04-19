@@ -10,35 +10,60 @@
 <body>
 
 <div id="results"></div>
+<div id="used"></div>
+<div id="logs"></div>
 <button onclick="randomN()">Click Me</button>
 
 </body>
 
 <script type="text/javascript">
-document.getElementById("results").innerHTML=randomN();
-var card = ["A","J","K","Q",2,3,4,5,6,7,8,9,10];
-
+var card = ["A","K","Q","J",2,3,4,5,6,7,8,9,10];
+var cardsUsed=[];
+var size = card.length;
 
 function randomN()
 {
-  var size = card.length;
-if(card[randNum] !== "undefined"||card[randNum] !== 0 || card[randNum] !== null)
-{
-  alert("theirs something in there");
-  card[randNum]=0;
-  delete card[randNum];
-
-  alert(card);
-
-}
-else {
-  alert("nothing!");
-}
 var randNum;
-randNum = Math.floor(Math.random()*size)+1;
-//get the length of the array first
-return document.getElementById("results").innerHTML = randNum;
+randNum = Math.floor(Math.random()*size)+0;
+  if (card[randNum] == 0){
+    checkZero();
+     // checck if all values are equal to 0 if not run the loop again
+     }
+  else if (card[randNum] !==0){
+      cardsUsed.push(card[randNum]);
+      card[randNum] = 0;
+
+    document.getElementById("used").innerHTML="<b>cards Used:</b> "+cardsUsed;
+    document.getElementById("results").innerHTML="<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
+document.getElementById("logs").innerHTML=card;  }
+
+  else{
+    console.log("error");
+  }
+
+  function checkZero()
+  {
+var counter;
+    var i;
+    for (i=0; i<size;i++){
+    counter +=card[i];
+      console.log(card[i]);
+      console.log(card);
+
+    }
+    if (counter == 0) //if all values equal 0 continue
+    {
+      alert("complete");
+     }
+    else{
+      randomN();
+    }
+  }
+
  }
+document.getElementById("results").innerHTML;
+document.getElementById("used").innerHTML;
+
 
 </script>
 </html>
