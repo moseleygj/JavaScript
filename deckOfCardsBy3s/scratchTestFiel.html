@@ -22,6 +22,7 @@ var cardsUsed=[];
 var size = card.length;
 
 function randomN()
+//add a fumnction to replace facecards with numbers than back to facecards
 {
 var randNum=0;
 randNum = Math.floor(Math.random()*size)+0;
@@ -43,7 +44,7 @@ randNum = Math.floor(Math.random()*size)+0;
 
   function checkZero()
   {
-var counter=0;
+    var counter=0;
 
     for (var i=4; i<size;i++){
     counter += parseInt(card[i]);
