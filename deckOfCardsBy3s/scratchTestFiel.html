@@ -17,55 +17,82 @@
 </body>
 
 <script type="text/javascript">
-var card = ["A","K","Q","J",2,3,4,5,6,7,8,9,10];
-var cardsUsed=[];
+var card = ["A", "K", "Q", "J", 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//11=A, 12=K, 13=Q, 14=J
+var cardsUsed = [];
 var size = card.length;
 
 function randomN()
-//add a fumnction to replace facecards with numbers than back to facecards
 {
-var randNum=0;
+var randNum = 0;
 randNum = Math.floor(Math.random()*size)+0;
+
   if (card[randNum] == 0){
-    checkZero();
-     // checck if all values are equal to 0 if not run the loop again
+    checkZero();     // checck if all values are equal to 0 if not run the loop again
      }
-  else if (card[randNum] !==0){
-      cardsUsed.push(parseInt(card[randNum]));
-      card[randNum] = 0;
+  else if (card[randNum] !== 0){
+        //add if statement  if number 11,12,13,14
+                if(card[randNum] == 11){
+                        cardsUsed.push("A");
+                        card[randNum] = 0;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
+                        document.getElementById("logs").innerHTML = card;
+                      }
+                  else if(card[randNum] == 12){
+                        cardsUsed.push("K");
+                        card[randNum] = 0;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
+                        document.getElementById("logs").innerHTML = card;
+                      }
 
-    document.getElementById("used").innerHTML="<b>cards Used:</b> "+cardsUsed;
-    document.getElementById("results").innerHTML="<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
-    document.getElementById("logs").innerHTML=card;  }
+                  else if(card[randNum] == 13){
+                        cardsUsed.push("Q");
+                        card[randNum] = 0;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
+                        document.getElementById("logs").innerHTML = card;
+                      }
 
-  else{
-    console.log("error");
-  }
+                  else if(card[randNum] == 14){
+                        cardsUsed.push("J");
+                        card[randNum] = 0;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
+                        document.getElementById("logs").innerHTML = card;
+                  }
 
-  function checkZero()
-  {
-    var counter=0;
+                  else{
+                      cardsUsed.push(parseInt(card[randNum]));
+                      card[randNum] = 0;
+                      document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                      document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
+                      document.getElementById("logs").innerHTML = card;
+                    }
+              }
+      else{
+            console.log("Error");
+      }
 
-    for (var i=4; i<size;i++){
-    counter += parseInt(card[i]);
-    //  console.log(card[i]);
-      console.log(card);
+  function checkZero(){
+                      var counter = 0;
+                      for (var i = 4; i<size; i++){
+                        counter += parseInt(card[i]);
+                        console.log(card);
+                      }
+                      if (counter == 0) //if all values equal 0 continue
+                      {
+                        alert("Sequence Complete!");
+                       }
+                      else{
+                        randomN();
+                      }
+      }
 
-    }
-    if (counter == 0) //if all values equal 0 continue
-    {
-      alert("complete");
-     }
-    else{
-    //  counter=0;
-      randomN();
-    }
-  }
-
- }
+}
 document.getElementById("results").innerHTML;
 document.getElementById("used").innerHTML;
-
 
 </script>
 </html>
