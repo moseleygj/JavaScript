@@ -12,7 +12,7 @@
 <div id="results"></div>
 <div id="used"></div>
 <div id="logs"></div>
-<button onclick="randomA()">Click Me</button>
+<button onclick="randomA()">Click Me</button> //change gere to pull card pullRandCard();
 
 </body>
 
@@ -31,6 +31,10 @@ var size = card.length;
 fucntion pullRandCard()
 {
   //call random 3. 4 sets
+  var deck = Math.ceil(Math.random()*4)+1;
+  card[deck];  //select a card out of suits 1-4
+  suit+deck(); //change a to a number
+    
 }
 
 function randomA() //card1
