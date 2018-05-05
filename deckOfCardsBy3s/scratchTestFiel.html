@@ -33,6 +33,7 @@ fucntion pullRandCard()
   var deck = Math.ceil(Math.random()*4)+1;
   card[deck];  //select a card out of suits 1-4
   suit+deck(); //change a to a number
+  ///loop through them all until they equal 0;
 
 }
 //<!-- start -->
@@ -294,7 +295,7 @@ randNum = Math.floor(Math.random()*size)+0;
                       //  //document.getElementById("logs").innerHTML = card;
                   }
 
-                  else{fabric
+                  else{
                       cardsUsed4.push(parseInt(card[randNum]));
                       card[randNum] = 0;
                       document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed4;
