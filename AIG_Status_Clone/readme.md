@@ -1,1 +1,2 @@
-#AIG Operational status clone UI
+**AIG Operational status** clone-UI :chart_with_upwards_trend: [incomplete] <br/><br/><br/>
+![screenshot](https://github.com/moseleygj/JavaScript/blob/master/AIG_Status_Clone/ScreenShot.png)

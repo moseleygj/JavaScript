@@ -12,18 +12,17 @@
 <div id="results"></div>
 <div id="used"></div>
 <div id="logs"></div>
-<button onclick="randomA()">Click Me</button> <!--change gere to pull card pullRandCard();-->
+<button onclick="fucntion pullRandCard()">Click Me</button> <!--change gere to pull card pullRandCard();-->
 
 </body>
 
 <script type="text/javascript">
-var card = [11, 12, 13, 14, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-//11=A, 12=K, 13=Q, 14=J
+var card = [11, 12, 13, 14, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //11=A, 12=K, 13=Q, 14=J
 var card2 = [11, 12, 13, 14, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var card3 = [11, 12, 13, 14, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var card4 = [11, 12, 13, 14, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-var cardsUsed = [];
+var cardsUsed1 = [];
 var cardsUsed2 = [];
 var cardsUsed3 = [];
 var cardsUsed4 = [];
@@ -34,6 +33,7 @@ fucntion pullRandCard()
   var deck = Math.ceil(Math.random()*4)+1;
   card[deck];  //select a card out of suits 1-4
   suit+deck(); //change a to a number
+  ///loop through them all until they equal 0;
 
 }
 //<!-- start -->
@@ -48,41 +48,41 @@ randNum = Math.floor(Math.random()*size)+0;
   else if (card[randNum] !== 0) {
  //add if statement  if number 11,12,13,14
                 if(card[randNum] == 11) {
-                        cardsUsed.push("A");
+                        cardsUsed1.push("A");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed1;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
-///go back to callinging function and do series`
+                        ///go back to callinging function and do series`
                       }
                   else if(card[randNum] == 12) {
-                        cardsUsed.push("K");
+                        cardsUsed1.push("K");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed1;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
                   }
 
                   else if(card[randNum] == 13) {
-                        cardsUsed.push("Q");
+                        cardsUsed1.push("Q");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed1;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
                      }
 
                   else if(card[randNum] == 14) {
-                        cardsUsed.push("J");
+                        cardsUsed1.push("J");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed1;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                       //  //document.getElementById("logs").innerHTML = card;
                   }
 
                   else{
-                      cardsUsed.push(parseInt(card[randNum]));
+                      cardsUsed1.push(parseInt(card[randNum]));
                       card[randNum] = 0;
-                      document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                      document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed1;
                       document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                     //  //document.getElementById("logs").innerHTML = card;
                     }
@@ -104,10 +104,10 @@ randNum = Math.floor(Math.random()*size)+0;
                       else{
                         randomA();
                       }
-      }//end of checkZero()
+      } //end of checkZero()
 
 }
-//<!-- End of Function -->
+//<!-- End of Function suit1-->
 //<!-- start -->
 function suit2() //card1
 {
@@ -120,41 +120,41 @@ randNum = Math.floor(Math.random()*size)+0;
   else if (card[randNum] !== 0) {
  //add if statement  if number 11,12,13,14
                 if(card[randNum] == 11) {
-                        cardsUsed.push("A");
+                        cardsUsed2.push("A");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed2;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
 ///go back to callinging function and do series`
                       }
                   else if(card[randNum] == 12) {
-                        cardsUsed.push("K");
+                        cardsUsed2.push("K");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed2;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
                   }
 
                   else if(card[randNum] == 13) {
-                        cardsUsed.push("Q");
+                        cardsUsed2.push("Q");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed2;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
                      }
 
                   else if(card[randNum] == 14) {
-                        cardsUsed.push("J");
+                        cardsUsed2.push("J");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed2;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                       //  //document.getElementById("logs").innerHTML = card;
                   }
 
                   else{
-                      cardsUsed.push(parseInt(card[randNum]));
+                      cardsUsed2.push(parseInt(card[randNum]));
                       card[randNum] = 0;
-                      document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                      document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed2;
                       document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                     //  //document.getElementById("logs").innerHTML = card;
                     }
@@ -192,41 +192,41 @@ randNum = Math.floor(Math.random()*size)+0;
   else if (card[randNum] !== 0) {
  //add if statement  if number 11,12,13,14
                 if(card[randNum] == 11) {
-                        cardsUsed.push("A");
+                        cardsUsed3.push("A");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed3;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
 ///go back to callinging function and do series`
                       }
                   else if(card[randNum] == 12) {
-                        cardsUsed.push("K");
+                        cardsUsed3.push("K");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed3;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
                   }
 
                   else if(card[randNum] == 13) {
-                        cardsUsed.push("Q");
+                        cardsUsed3.push("Q");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed3;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
                      }
 
                   else if(card[randNum] == 14) {
-                        cardsUsed.push("J");
+                        cardsUsed3.push("J");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed3;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                       //  //document.getElementById("logs").innerHTML = card;
                   }
 
                   else{
-                      cardsUsed.push(parseInt(card[randNum]));
+                      cardsUsed3.push(parseInt(card[randNum]));
                       card[randNum] = 0;
-                      document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                      document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed3;
                       document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                     //  //document.getElementById("logs").innerHTML = card;
                     }
@@ -264,47 +264,47 @@ randNum = Math.floor(Math.random()*size)+0;
   else if (card[randNum] !== 0) {
  //add if statement  if number 11,12,13,14
                 if(card[randNum] == 11) {
-                        cardsUsed.push("A");
+                        cardsUsed4.push("A");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed4;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
 ///go back to callinging function and do series`
                       }
                   else if(card[randNum] == 12) {
-                        cardsUsed.push("K");
+                        cardsUsed4.push("K");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed4;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
                   }
 
                   else if(card[randNum] == 13) {
-                        cardsUsed.push("Q");
+                        cardsUsed4.push("Q");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed4;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                         //document.getElementById("logs").innerHTML = card;
                      }
 
                   else if(card[randNum] == 14) {
-                        cardsUsed.push("J");
+                        cardsUsed4.push("J");
                         card[randNum] = 0;
-                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                        document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed4;
                         document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                       //  //document.getElementById("logs").innerHTML = card;
                   }
 
                   else{
-                      cardsUsed.push(parseInt(card[randNum]));
+                      cardsUsed4.push(parseInt(card[randNum]));
                       card[randNum] = 0;
-                      document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed;
+                      document.getElementById("used").innerHTML = "<b>Cards Used:</b> " +cardsUsed4;
                       document.getElementById("results").innerHTML = "<b>cards:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b> "+card;
                     //  //document.getElementById("logs").innerHTML = card;
                     }
               }
       else{
-            console.log("Error");
+             console.log("Error");
       }
 
   function checkZero() {
