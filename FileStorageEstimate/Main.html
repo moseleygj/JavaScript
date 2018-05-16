@@ -3,13 +3,23 @@
 <meta charset="UTF-8">
 <title>Capacity Quota</title>
 <style>
-html{}
-body{margin:0;padding:0;}
-#container{height:;width:768px;margin:0 auto 0;}
+html{margin:0;padding:0;height:100%;}
+body{margin:0;padding:0;background-color:#f2f2f2;height:100%;position: relative;}
+#container{
+
+	position:relative;
+	height:540px;
+	width:768px;
+	margin:0 auto 0;
+	transform: translatey(-50%);
+	margin-top: 50%;
+	background-color:white;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 .leftIconArea{height:460px;width:30%;margin:;float:left;}
 .rightIconArea{height:460px;width:70%;margin:;float:left;}
 .bottomStatusArea{height:auto;width:100%;margin:;clear:both;}
-.iconArea{height:58%;width:100%;margin:;}
+.iconArea{height:58%;width:100%;margin:9px;}
 .selectionArea{height:40px;width:100%;margin-left:30px;margin-top:10px;}
 .stats{height:300px;width:100%;}
 .statMp3{height:36px;width:100%;}
@@ -21,13 +31,24 @@ body{margin:0;padding:0;}
 .resultHdd{height:;width:;font-weight:;font-family:;text-align:;color:;}
 .resultMin{}
 .resultRec{}
+footer{padding:50px 0px;
+	background-color:#434343;
+	width: 100%;
+	color:white;
+	position:absolute;
+left:0;
+bottom:0;
+clear:both;
+}
+footer ul{text-align:center;}
+footer ul li{list-style:none;display:inline-block;padding: 0 20px;cursor :pointer;}
+footer ul li a{text-decoration: none;color:white;}
+footer ul li a:hover{text-decoration: none;color:#ed2d5b;}
 
 </style>
 </head>
 
 <body>
-
-<div class=""></div>
 <div id="container">
 	<div class="leftIconArea">
 <img src="question.png" class="iconArea" id="mainIcon">
@@ -75,6 +96,15 @@ body{margin:0;padding:0;}
 
 	<div class="bottomStatusArea"></div>
 </div>
+<footer>
+	<ul>
+		<li><a href="#">About us</a></li>
+		<li><a href="#">Other Products</a></li>
+		<li><a href="#">Contact US</a></li>
+		<li><a href="#">Copyright</a></li>
+		<li><a href="#">Parent Company</a></li>
+	</ul>
+</footer>
 </body>
 
 <script type="text/javascript">
