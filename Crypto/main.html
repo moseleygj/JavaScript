@@ -72,6 +72,7 @@
 
 
         function doMagic() {
+            var stopExec = 0;
             if (document.getElementById("pwSize").value == "") {
                 alert("Password length not set");
                 return null;
@@ -107,7 +108,7 @@
 
                 var lCaseCounter = 0;
                 var uCaseCounter = 0;
-            //Check for  upper and lowercase characters -->
+                //Check for  upper and lowercase characters -->
                 for (i in document.getElementById("pw").value) {
                     // alert(document.getElementById("pw").value[i]);
                     if (document.getElementById("pw").value[i] == document.getElementById("pw").value[i].toUpperCase()) {
@@ -126,23 +127,24 @@
                     }
 
                     function cc() {
+                        //  var stopExec;
                         var tally = lCaseCounter + uCaseCounter;
                         if (tally == 2) {
+                            if (stopExec = 1) {
+                                return 0;
+                            }
                             alert("Lower and Upper-Case Letters found!");
+                            stopExec = 1;
                             return 0;
-                        }
-                        else if (tally == 1) {
+                            //make code to skips this after it reaches 2
+                        } else if (tally == 1) {
                             alert("Password lacks Upper-case and Lower-case complexity");
-                        }
-                        else{
-                          alert("No upper case or Lower-case letters found");
+                        } else {
+                            alert("No upper case or Lower-case letters found");
                         }
                     }
-
                 }
             }
-
-
         }
         $(document).ready(function() {
             $(document).on('input', '#pwSize', function() {
