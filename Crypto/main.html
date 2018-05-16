@@ -61,7 +61,7 @@
 	top:1px;
 }
 
-} 
+}
 </style>
 </head>
 <body>
@@ -84,8 +84,8 @@
 <div class="tb"><input type="textbox" id="pw" placeholder="Random Password" title="" text="" readonly style="width:350px"></div>
 </div>
 
-<div class="right-cell"><div class="tb"> 
-Yes<input type="radio" name="toggle" id="special_yes">&nbsp 
+<div class="right-cell"><div class="tb">
+Yes<input type="radio" name="toggle" id="special_yes">&nbsp
 No <input type="radio" name="toggle" id="special_no"></div>
 </div>
 
@@ -95,11 +95,11 @@ No <input type="radio" name="toggle" id="special_no"></div>
 
 </div>
 <div class="bottom"><input class="mybutton" type="button" value="Generate Password" style="margin:15px auto 0;display:block; " onclick="doMagic();""></input></div>
-
+<div class="pwStrengthH">Password strength:&nbsp<div class="pwStrength" id="pwStrength"> </div> </div>
 </div>
 
 <script>
-var noSpecialChars = 
+var noSpecialChars =
 ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
 
 var specialChars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9","!","@","#","$","%","^","&","*","(",")","_","-","+","=","[","]","{","}","\\","|",":",";","\"","<",">","?",",",".","/","~","`"];
@@ -150,6 +150,12 @@ else{
 	alert("select if you would like special characters or not!");
 }
 
+<!-- check the password length, special characters and upper/lowrcase -->
+alert("pw value is: "+document.getElementById("pw").length);
+if (document.getElementById("pw").length > 6){alert("password passes length test");}
+else{alert("error");}
+
+<!--end of password check -->
 /*document.getElementById("pw").value="";
 var pw=document.getElementById("pwSize").value;
 var dynamicArray=[];
