@@ -1,179 +1,162 @@
 <html>
-<head>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<title>Password  Generator 1.0</title>
-<meta charset="UTF-8">
-<style>
-		body{width: 100%;height:100%;
-		background:url("pof-web-header-top-bg.png");background-repeat: repeat;
-	}
-	.img{margin:0 auto 0;height:180px;width:200px;display:block;}
-	.holder{height:;width:700px;margin: 20px auto 0;background-color:white;font-family: arial;line-height: 2;border:1px #434343 solid; position: relative;
-  top: 50%;
-  transform: translateY(-50%);}
-	.top{height:200px;width:100%;clear:both;margin: 0 auto 0;}
-	.left{height:auto;width:35%;float:left;}
-	.left-cell{height:35px;width:100%;line-height: 2;margin-left:10px;}
-	.right{height:auto;width:64%;float:right;}
-	.right-cell{height:35px;width:100%;line-height: 2;}
-	.tb{font-size:18px;font-weight: bold;margin-left:5px;color:#434343;}
-	.bottom{height:60px;width:100%;clear:both;margin: 10px auto 0px;}
-	.titlebar{height:60px;width:100%;clear:both;margin: 0 auto 0;text-align:center;font-size :30 ;font-weight:bold;text-shadow:1px 1px 3px grey ;}
-	input[type="textbox"]{line-height: 27px;background-color: white;margin-top:1px;border-width:2px; border-color:#cccccc; border-style:solid; padding:0px; font-size:22px; border-radius:3px; color:red; text-align :center;}
-	.myButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
-	background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
-	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
-	background:-o-linear-gradient(top, #79bbff 5%, #378de5 100%);
-	background:-ms-linear-gradient(top, #79bbff 5%, #378de5 100%);
-	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
-	background-color:#79bbff;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #84bbf3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #528ecc;
-}
-.myButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
-	background:-moz-linear-gradient(top, #378de5 5%, #79bbff 100%);
-	background:-webkit-linear-gradient(top, #378de5 5%, #79bbff 100%);
-	background:-o-linear-gradient(top, #378de5 5%, #79bbff 100%);
-	background:-ms-linear-gradient(top, #378de5 5%, #79bbff 100%);
-	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
-	background-color:#378de5;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
 
-}
-</style>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator 1.0</title>
+    <meta charset="UTF-8">
+    <style>
+    </style>
 </head>
+
 <body>
 
-<div class="holder">
-<div class="titlebar">Password Generator 1.0</div>
-<div class="top"><img class="img" src="vault.png"></div>
-<div class="left">
-<div class="left-cell"><div class="tb">Password:</div>
-</div>
-<div class="left-cell"><div class="tb">Special Characters:</div>
-</div>
-<div class="left-cell"><div class="tb">Password Length:</div>
-</div>
+    <div class="holder">
+        <div class="titlebar">Password Generator 1.0</div>
+        <div class="top"><img class="img" src="vault.png"></div>
+        <div class="left">
+            <div class="left-cell">
+                <div class="tb">Password:</div>
+            </div>
+            <div class="left-cell">
+                <div class="tb">Special Characters:</div>
+            </div>
+            <div class="left-cell">
+                <div class="tb">Password Length:</div>
+            </div>
 
-</div>
-<div class="right">
-<div class="right-cell">
+        </div>
+        <div class="right">
+            <div class="right-cell">
 
-<div class="tb"><input type="textbox" id="pw" placeholder="Random Password" title="" text="" readonly style="width:350px"></div>
-</div>
+                <div class="tb"><input type="textbox" id="pw" placeholder="Random Password" title="" text="" readonly style="width:350px"></div>
+            </div>
 
-<div class="right-cell"><div class="tb">
-Yes<input type="radio" name="toggle" id="special_yes">&nbsp
-No <input type="radio" name="toggle" id="special_no"></div>
-</div>
+            <div class="right-cell">
+                <div class="tb">
+                    Yes<input type="radio" name="toggle" id="special_yes">&nbsp No <input type="radio" name="toggle" id="special_no"></div>
+            </div>
 
-<div class="right-cell"><div class="tb"><input type="textbox" id="pwSize" value="8" maxlength="2" min="4" size="2" required></div>
-</div>
-
-
-</div>
-<div class="bottom"><input class="mybutton" type="button" value="Generate Password" style="margin:15px auto 0;display:block; " onclick="doMagic();""></input></div>
-<div class="pwStrengthH">Password strength:&nbsp<div class="pwStrength" id="pwStrength"> </div> </div>
-</div>
-
-<script>
-var noSpecialChars =
-["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
-
-var specialChars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9","!","@","#","$","%","^","&","*","(",")","_","-","+","=","[","]","{","}","\\","|",":",";","\"","<",">","?",",",".","/","~","`"];
-
-var a = randchar();
-
-document.getElementById("pw").value="";
-var pw=document.getElementById("pwSize").value;
-var dynamicArray=[];
-dynamicArray[pw]="";
-function randchar()
-{
-return Math.floor((Math.random()* noSpecialChars.length-1)+1);
-			   //change this to  Math.floor(Math.random()* noSpecialChars.length-1)+1;
-}
-function randchar_special()
-{
-return Math.floor(Math.random()* specialChars.length+1);
-}
+            <div class="right-cell">
+                <div class="tb"><input type="textbox" id="pwSize" value="8" maxlength="2" min="4" size="2" required></div>
+            </div>
 
 
-function doMagic()
-{
-if (document.getElementById("pwSize").value == ""){
-	alert("Password length not set");
-	return null;
-}
+        </div>
+        <div class="bottom"><input class="mybutton" type="button" value="Generate Password" style="margin:15px auto 0;display:block; " onclick="doMagic();"></input>
+        </div>
+        <div class="left-cell" style="float:left;width:21%">Password strength:&nbsp&nbsp</div>
+        <div style="float:left" id="pwStrength"> </div>
+    </div>
 
-if ( document.getElementById('special_yes').checked ){
-document.getElementById("pw").value="";
-for (var i= 1;i<dynamicArray.length;i++)
-{
+    <script>
+        var noSpecialChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-	dynamicArray[i] = specialChars[randchar_special()];
-document.getElementById("pw").value+=dynamicArray[i];
-}
-}
+        var specialChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "[", "]", "{", "}", "\\", "|", ":", ";", "\"", "<", ">", "?", ",", ".", "/", "~", "`"];
 
-else if (document.getElementById('special_no').checked){
-	document.getElementById("pw").value="";
-for (var i= 1;i<dynamicArray.length;i++)
-{
-	dynamicArray[i] = noSpecialChars[randchar()];
-document.getElementById("pw").value+=dynamicArray[i];
-}
-}
-else{
-	alert("select if you would like special characters or not!");
-}
+        var a = randchar();
 
-<!-- check the password length, special characters and upper/lowrcase -->
-alert("pw value is: "+document.getElementById("pw").length);
-if (document.getElementById("pw").length > 6){alert("password passes length test");}
-else{alert("error");}
+        document.getElementById("pw").value = "";
+        var pw = document.getElementById("pwSize").value;
+        var dynamicArray = [];
+        dynamicArray[pw] = "";
 
-<!--end of password check -->
-/*document.getElementById("pw").value="";
-var pw=document.getElementById("pwSize").value;
-var dynamicArray=[];
-dynamicArray[pw]="";*/
-
-//alert(dynamicArray);
-
-}
-$(document).ready(function(){
-    $(document).on('input', '#pwSize', function(){
-        var i = $(this);
-        var value = i.val();
-        if(!$.isNumeric( value )) {
-            alert("not a number");
-            $(this).val("");
+        function randchar() {
+            return Math.floor((Math.random() * noSpecialChars.length - 1) + 1);
+            //change this to  Math.floor(Math.random()* noSpecialChars.length-1)+1;
         }
-    });
-});
-</script>
+
+        function randchar_special() {
+            return Math.floor(Math.random() * specialChars.length + 1);
+        }
+
+
+        function doMagic() {
+            var stopExec = 0;
+            if (document.getElementById("pwSize").value == "") {
+                alert("Password length not set");
+                return null;
+            }
+
+            if (document.getElementById('special_yes').checked) {
+                document.getElementById("pw").value = "";
+
+                for (var i = 1; i < dynamicArray.length; i++) {
+                    dynamicArray[i] = specialChars[randchar_special()];
+                    document.getElementById("pw").value += dynamicArray[i];
+                    checkchar();
+
+                }
+            } else if (document.getElementById('special_no').checked) {
+                document.getElementById("pw").value = "";
+                for (var i = 1; i < dynamicArray.length; i++) {
+                    dynamicArray[i] = noSpecialChars[randchar()];
+                    document.getElementById("pw").value += dynamicArray[i];
+                }
+                checkchar();
+            } else {
+                alert("select if you would like special characters or not!");
+            }
+
+            // check the password length
+            function checkchar() {
+                if (document.getElementById("pw").value.length > 6) {
+                    document.getElementById("pwStrength").innerHTML = "<font color='green'>Password passes length test.</font>";
+                } else {
+                    document.getElementById("pwStrength").innerHTML = " <font color='red'>Password fails length test.</font>";
+                }
+
+                var lCaseCounter = 0;
+                var uCaseCounter = 0;
+                //Check for  upper and lowercase characters -->
+                for (i in document.getElementById("pw").value) {
+                    // alert(document.getElementById("pw").value[i]);
+                    if (document.getElementById("pw").value[i] == document.getElementById("pw").value[i].toUpperCase()) {
+                        //add code to skip if =1;
+                        if (uCaseCounter == 1) {
+                            continue;
+                        }
+                        // alert(document.getElementById("pw").value[i]+" :Upper Case");
+                        uCaseCounter = 1;
+                    } else if (document.getElementById("pw").value[i] == document.getElementById("pw").value[i].toLowerCase()) {
+                        if (lCaseCounter == 1) {
+                            cc();
+                        }
+                        //alert(document.getElementById("pw").value[i]+" :Lower Case");
+                        lCaseCounter = 1;
+                    }
+
+                    function cc() {
+                        //  var stopExec;
+                        var tally = lCaseCounter + uCaseCounter;
+                        if (tally == 2) {
+                            if (stopExec = 1) {
+                                return 0;
+                            }
+                            alert("Lower and Upper-Case Letters found!");
+                            stopExec = 1;
+                            return 0;
+                            //make code to skips this after it reaches 2
+                        } else if (tally == 1) {
+                            alert("Password lacks Upper-case and Lower-case complexity");
+                        } else {
+                            alert("No upper case or Lower-case letters found");
+                        }
+                    }
+                }
+            }
+        }
+        $(document).ready(function() {
+            $(document).on('input', '#pwSize', function() {
+                var i = $(this);
+                var value = i.val();
+                if (!$.isNumeric(value)) {
+                    alert("not a number");
+                    $(this).val("");
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
