@@ -2,58 +2,91 @@
 <head>
 <title>Binary Clock</title>
 <style>
-.clock{width:470px;height:420px;background-color: green;}
+body{
+  background-color:black;
+}
+.container{
+  background-color:black;
+  margin: 0 auto 0;
+}
+.r
+{
+  height:100px;
+  width:100px;
+  background-color:red;
+  border-radius:50%;
+  border: 5px solid ;
+  border-color:white;
+  margin:5px;
 
-.HourCells{width:33.3%; height:420px;float:left;}
-.hourCell1{height:100%;width:50%;float:left;}
-.hourCell2{height:100%;width:50%;float:left}
-.HSquare1{height:70px;width:50%;border:1px solid white;padding:;float:;margin:;background-color:red;}
-.HSquare2{height:70px;width:50%;border:1px solid white;padding:;float:;background-color:red;}
-.HSquare3{height:70px;width:50%;border:1px solid white;padding:;float:;background-color:none;}
+}
+.vBar{
+  height:100%;
+  width:120px;  float:left;
+  background-color:black;
 
-.MinCells{width:33.3%; height:420px;float:left;}
-.MSquare1{height:70px;width:50%;border:1px solid white;padding:;float:;margin:;background-color:red;}
-.MSquare2{height:70px;width:50%;border:1px solid white;padding:;float:;background-color:red;}
-.MSquare3{height:70px;width:50%;border:1px solid white;padding:;float:;background-color:none;}
+}
+.filler{
+  height:100px;
+  width:100px;
+  background-color:black;
+  border-radius:50%;
+  border: 5px solid ;
+  border-color:black;
+  margin:5px;
 
-.minCell1{}
-.minCell2{}
 
-.SecondCells{width:33.3%; height:420px;float:left;}
-
-.MSquare1{height:;width:;border:;padding:;float:;margin:;background-color:red;}
-.MSquare2{height:;width:;border:;padding:;float:;background-color:red;}
-.SSquare1{height:;width:;border:;padding:;float:;margin:;color:red;}
-.SSquare2{height:;width:;border:;padding:;float:;margin:;color:red;}
-
+}
 </style>
 </head>
 
 <body>
-<div class="clock">
-<div class="HourCells">
-  <div class="hourCell1">
-    <div class="HSquare3"></div>
-    <div class="HSquare3"></div>
-    <div class="HSquare3"></div>
-    <div class="HSquare3"></div>
-    <div class="HSquare1"></div>
-    <div class="HSquare1"></div>
-</div>
-  <div class="hourCell2">
-    <div class="HSquare3"></div>
-    <div class="HSquare3"></div>
-    <div class="HSquare1"></div>
-    <div class="HSquare1"></div>
-    <div class="HSquare1"></div>
-    <div class="HSquare1"></div>
-</div>
-</div>
+  <div class="container">
+    <!-- hours -->
+    <div class="vBar" id="hour" >
+      <div class="filler" ></div>
+      <div class="filler" ></div>
+      <div class="r" id="h01"></div>
+      <div class="r" id="h02"></div>
+    </div>
 
-<div class="MinCells"></div>
-<div class="SecondCells"></div>
-</div>
+      <div class="vBar" id="hour">
+       <div class="filler" ></div>
+        <div class="filler"></div>
 
+      <div class="r" id="h1"></div>
+      <div class="r" id="h2" ></div>
+    </div>
+    <!--Mins -->
+    <div class="vBar" id="mins">
+      <div class="r" id="M01"></div>
+      <div class="r" id="M02"></div>
+      <div class="r" id="M03"></div>
+      <div class="r" id="M04"></div>
+    </div>
+
+      <div class="vBar" id="mins">
+      <div class="r" id="M1"></div>
+      <div class="r" id="M2"></div>
+      <div class="r" id="M3"></div>
+      <div class="r" id="M4"></div>
+    </div>
+    <!--seconds -->
+      <div class="vBar" id="secs">
+      <div class="r" id="S01"></div>
+      <div class="r" id="S02"></div>
+      <div class="r" id="S03"></div>
+      <div class="r" id="S04"></div>
+    </div>
+
+        <div class="vBar" id="secs">
+      <div class="r" id="S1"></div>
+      <div class="r" id="S2"></div>
+      <div class="r" id="S3"></div>
+      <div class="r" id="S4"></div>
+    </div>
+
+    </div>
 
 <script type="">
 
