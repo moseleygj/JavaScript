@@ -40,7 +40,7 @@ body{
 </style>
 </head>
 
-<body>
+<body  onload="startTime()">
   <div class="container">
     <!-- hours -->
     <div class="vBar" id="hour" >
@@ -54,29 +54,29 @@ body{
        <div class="filler" ></div>
         <div class="filler"></div>
 
-      <div class="r" id="h1"></div>
-      <div class="r" id="h2" ></div>
+      <div class="r" id="h2"></div>
+      <div class="r" id="h1" ></div>
     </div>
     <!--Mins -->
     <div class="vBar" id="mins">
-      <div class="r" id="M01"></div>
-      <div class="r" id="M02"></div>
-      <div class="r" id="M03"></div>
       <div class="r" id="M04"></div>
+      <div class="r" id="M03"></div>
+      <div class="r" id="M02"></div>
+      <div class="r" id="M01"></div>
     </div>
 
       <div class="vBar" id="mins">
-      <div class="r" id="M1"></div>
-      <div class="r" id="M2"></div>
-      <div class="r" id="M3"></div>
       <div class="r" id="M4"></div>
+      <div class="r" id="M3"></div>
+      <div class="r" id="M2"></div>
+      <div class="r" id="M1"></div>
     </div>
     <!--seconds -->
       <div class="vBar" id="secs">
-      <div class="r" id="S01"></div>
-      <div class="r" id="S02"></div>
-      <div class="r" id="S03"></div>
       <div class="r" id="S04"></div>
+      <div class="r" id="S03"></div>
+      <div class="r" id="S02"></div>
+      <div class="r" id="S01"></div>
     </div>
 
         <div class="vBar" id="secs">
@@ -88,8 +88,93 @@ body{
 
     </div>
 
-<script type="">
+<script>
+function startTime()
+{
+var h02 = document.getElemenyByhId("h02");
+var h01 = document.getElemenyByhId("h01");
 
+var h2 = document.getElemenyByhId("h2");
+var h1 = document.getElemenyByhId("h1");
+
+
+var m04 = document.getElemenyByhId("M04");
+var m03 = document.getElemenyByhId("M03");
+var m02 = document.getElemenyByhId("M02");
+var m01 = document.getElemenyByhId("M01");
+
+var m4 = document.getElemenyByhId("M4");
+var m3 = document.getElemenyByhId("M3");
+var m2 = document.getElemenyByhId("M2");
+var m1 = document.getElemenyByhId("M1");
+
+var s4 = document.getElemenyByhId("S4");
+var s3 = document.getElemenyByhId("S3");
+var s2 = document.getElemenyByhId("S2");
+var s1 = document.getElemenyByhId("S1");
+
+var time = new Date();
+var today = new Date();
+var h = today.getHours();
+var m = today.getMinutes();
+var s = today.getSeconds();
+//   h = checkTime(h);
+   m = checkTime(m);
+   s = checkTime(s);
+console.log(h +":"+ m +":"+s);
+
+var t = setTimeout(startTime, 500);
+/*
+switch(s)
+  {
+      case "01": s02.style.backgroundColor="black";
+               s01.style.backgroundColor="black";
+      break;
+      case "02": s02.style.backgroundColor="black";
+               s01.style.backgroundColor="black";
+      break;
+        case "03": m02.style.backgroundColor="black";
+               m01.style.backgroundColor="black";
+      break;
+        case "04": m02.style.backgroundColor="black";
+               m01.style.backgroundColor="black";
+      break;
+        case "05": m02.style.backgroundColor="black";
+               m01.style.backgroundColor="black";
+      break;
+        case "06": m02.style.backgroundColor="black";
+               m01.style.backgroundColor="black";
+      break;
+        case "07": m02.style.backgroundColor="black";
+               m01.style.backgroundColor="black";
+      break;
+        case "08": m02.style.backgroundColor="black";
+               m01.style.backgroundColor="black";
+      break;
+        case "09": m02.style.backgroundColor="black";
+               m01.style.backgroundColor="black";
+      break;
+        case "10": m02.style.backgroundColor="black";
+               m01.style.backgroundColor="black";
+      break;
+        case "11": m02.style.backgroundColor="black";
+               m01.style.backgroundColor="black";
+      break;
+        case "12": m02.style.backgroundColor="black";
+               m01.style.backgroundColor="black";
+      break;
+    default:console.log("error!");
+  }
+  */
+
+function checkTime(i) {
+    if (i < 10)
+    {
+      i = "0" + i
+    };  // add zero in front of numbers < 10
+    return i;
+}
+}
 </script>
 
 </body>
