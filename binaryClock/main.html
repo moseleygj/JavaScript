@@ -1,14 +1,19 @@
 <html>
 <head>
-<title>Binary Clock</title>
+<meta charset="utf-8">
+<title>Binary Clock 1.0</title>
 <style>
 body{
   background-color:black;
 }
+
 .container{
   background-color:black;
-  margin: 0 auto 0;
+  margin: 50% auto 0;
+  width:728px;
+  transform:translateY(-50%);
 }
+
 .r
 {
   height:100px;
@@ -18,14 +23,14 @@ body{
   border: 5px solid ;
   border-color:white;
   margin:5px;
-
 }
+
 .vBar{
   height:100%;
   width:120px;  float:left;
   background-color:black;
-
 }
+
 .filler{
   height:100px;
   width:100px;
@@ -34,8 +39,6 @@ body{
   border: 5px solid ;
   border-color:black;
   margin:5px;
-
-
 }
 </style>
 </head>
@@ -44,22 +47,21 @@ body{
   <div class="container">
     <!-- hours -->
     <div class="vBar" id="hour" >
-      <div class="filler" ></div>
-      <div class="filler" ></div>
-      <div class="r" id="h01"></div>
+      <div class="filler"></div>
+      <div class="filler"></div>
       <div class="r" id="h02"></div>
+      <div class="r" id="h01"></div>
     </div>
 
       <div class="vBar" id="hour">
-       <div class="filler" ></div>
-        <div class="filler"></div>
-
+      <div class="r" id="h4"></div>
+      <div class="r" id="h3"></div>
       <div class="r" id="h2"></div>
       <div class="r" id="h1" ></div>
     </div>
     <!--Mins -->
     <div class="vBar" id="mins">
-      <div class="r" id="M04"></div>
+      <div class="filler" ></div>
       <div class="r" id="M03"></div>
       <div class="r" id="M02"></div>
       <div class="r" id="M01"></div>
@@ -73,109 +75,1191 @@ body{
     </div>
     <!--seconds -->
       <div class="vBar" id="secs">
-      <div class="r" id="S04"></div>
+      <div class="filler" ></div>
       <div class="r" id="S03"></div>
       <div class="r" id="S02"></div>
       <div class="r" id="S01"></div>
     </div>
 
         <div class="vBar" id="secs">
-      <div class="r" id="S1"></div>
-      <div class="r" id="S2"></div>
-      <div class="r" id="S3"></div>
       <div class="r" id="S4"></div>
+      <div class="r" id="S3"></div>
+      <div class="r" id="S2"></div>
+      <div class="r" id="S1"></div>
     </div>
 
-    </div>
+</div>
 
 <script>
 function startTime()
 {
-var h02 = document.getElemenyByhId("h02");
-var h01 = document.getElemenyByhId("h01");
 
-var h2 = document.getElemenyByhId("h2");
-var h1 = document.getElemenyByhId("h1");
+  var h02 = document.getElementById("h02");
+  var h01 = document.getElementById("h01");
+
+  var h2 = document.getElementById("h2");
+  var h1 = document.getElementById("h1");
 
 
-var m04 = document.getElemenyByhId("M04");
-var m03 = document.getElemenyByhId("M03");
-var m02 = document.getElemenyByhId("M02");
-var m01 = document.getElemenyByhId("M01");
+  var m04 = document.getElementById("M04");
+  var m03 = document.getElementById("M03");
+  var m02 = document.getElementById("M02");
+  var m01 = document.getElementById("M01");
 
-var m4 = document.getElemenyByhId("M4");
-var m3 = document.getElemenyByhId("M3");
-var m2 = document.getElemenyByhId("M2");
-var m1 = document.getElemenyByhId("M1");
+  var m4 = document.getElementById("M4");
+  var m3 = document.getElementById("M3");
+  var m2 = document.getElementById("M2");
+  var m1 = document.getElementById("M1");
 
-var s4 = document.getElemenyByhId("S4");
-var s3 = document.getElemenyByhId("S3");
-var s2 = document.getElemenyByhId("S2");
-var s1 = document.getElemenyByhId("S1");
+  var s4 = document.getElementById("S4");
+  var s3 = document.getElementById("S3");
+  var s2 = document.getElementById("S2");
+  var s1 = document.getElementById("S1");
 
-var time = new Date();
-var today = new Date();
-var h = today.getHours();
-var m = today.getMinutes();
-var s = today.getSeconds();
-//   h = checkTime(h);
-   m = checkTime(m);
-   s = checkTime(s);
-console.log(h +":"+ m +":"+s);
+  var s04 = document.getElementById("S04");
+  var s03 = document.getElementById("S03");
+  var s02 = document.getElementById("S02");
+  var s01 = document.getElementById("S01");
 
-var t = setTimeout(startTime, 500);
-/*
-switch(s)
-  {
-      case "01": s02.style.backgroundColor="black";
-               s01.style.backgroundColor="black";
-      break;
-      case "02": s02.style.backgroundColor="black";
-               s01.style.backgroundColor="black";
-      break;
-        case "03": m02.style.backgroundColor="black";
-               m01.style.backgroundColor="black";
-      break;
-        case "04": m02.style.backgroundColor="black";
-               m01.style.backgroundColor="black";
-      break;
-        case "05": m02.style.backgroundColor="black";
-               m01.style.backgroundColor="black";
-      break;
-        case "06": m02.style.backgroundColor="black";
-               m01.style.backgroundColor="black";
-      break;
-        case "07": m02.style.backgroundColor="black";
-               m01.style.backgroundColor="black";
-      break;
-        case "08": m02.style.backgroundColor="black";
-               m01.style.backgroundColor="black";
-      break;
-        case "09": m02.style.backgroundColor="black";
-               m01.style.backgroundColor="black";
-      break;
-        case "10": m02.style.backgroundColor="black";
-               m01.style.backgroundColor="black";
-      break;
-        case "11": m02.style.backgroundColor="black";
-               m01.style.backgroundColor="black";
-      break;
-        case "12": m02.style.backgroundColor="black";
-               m01.style.backgroundColor="black";
-      break;
-    default:console.log("error!");
-  }
-  */
+  var time = new Date();
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+     h = checkTime(h);
+     m = checkTime(m);
+     s = checkTime(s);
+  console.log(h +":"+ m +":"+s);
 
-function checkTime(i) {
-    if (i < 10)
+  var t = setTimeout(startTime, 500);
+
+  switch(s)
     {
-      i = "0" + i
-    };  // add zero in front of numbers < 10
-    return i;
-}
-}
-</script>
+        case "01": s01.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s03.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+
+
+        break;
+        case "02":s01.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s03.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+          case "03": s01.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s03.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+          case "04": s01.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s03.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+          case "05":s01.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s03.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+          case "06": s01.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s03.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+          case "07": s01.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s03.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+          case "08": s01.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s03.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+          case "09": s01.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s03.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+          case "10": s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+                case "11": s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+          case "12":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+           case "13":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+               case "14":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+               case "15":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+               case "16":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+               case "17":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+               case "18":s01.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s03.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+               case "19":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+               case "20":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+                 case "21":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+                 case "22":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+                 case "23":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+                 case "24":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+                 case "25":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+                 case "26":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+                 case "27":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+         case "28":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+         case "29":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+         case "29":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+               case "30":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+
+                 case "31":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+                 case "32":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+                 case "33":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+                 case "34":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+                 case "35":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+                 case "36":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+                 case "37":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+                 case "38":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+                 case "39":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="red";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+                 case "40":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+                      case "41":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+           case "42":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+          case "43":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+          case "44":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+          case "45":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+          case "46":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+         case "47":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+         case "48":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+        case "49":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+        case "50":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+              case "51":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+
+        case "52":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+        case "53":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+        case "54":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+        case "55":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+        case "56":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="black";
+        break;
+        case "57":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="red";
+                   s2.style.backgroundColor="red";
+                   s1.style.backgroundColor="red";
+        break;
+        case "58":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+        case "59":s03.style.backgroundColor="red";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="red";
+                   s4.style.backgroundColor="red";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="red";
+        break;
+        case "00":s03.style.backgroundColor="black";
+                   s02.style.backgroundColor="black";
+                   s01.style.backgroundColor="black";
+                   s4.style.backgroundColor="black";
+                   s3.style.backgroundColor="black";
+                   s2.style.backgroundColor="black";
+                   s1.style.backgroundColor="black";
+        break;
+
+
+      default:console.log("error!");
+    }
+  //mins
+    switch(m)
+    {
+        case "01": M01.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M03.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+
+
+        break;
+        case "02":M01.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M03.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+          case "03": M01.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M03.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+          case "04": M01.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M03.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+          case "05":M01.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M03.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+          case "06": M01.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M03.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+          case "07": M01.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M03.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+          case "08": M01.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M03.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+          case "09": M01.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M03.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+          case "10": M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+                case "11": M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+          case "12":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+           case "13":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+               case "14":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+               case "15":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+               case "16":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+               case "17":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+               case "18":M01.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M03.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+               case "19":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+               case "20":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+                 case "21":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+                 case "22":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+                 case "23":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+                 case "24":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+                 case "25":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+                 case "26":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+                 case "27":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+         case "28":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+         case "29":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+         case "29":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+               case "30":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+
+                 case "31":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+                 case "32":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+                 case "33":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+                 case "34":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+                 case "35":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+                 case "36":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+                 case "37":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+                 case "38":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+                 case "39":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="red";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+                 case "40":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+                      case "41":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+           case "42":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+          case "43":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+          case "44":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+          case "45":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+          case "46":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+         case "47":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+         case "48":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+        case "49":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+        case "50":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+              case "51":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+
+        case "52":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+        case "53":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+        case "54":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+        case "55":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+        case "56":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="black";
+        break;
+        case "57":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="red";
+                   M2.style.backgroundColor="red";
+                   M1.style.backgroundColor="red";
+        break;
+        case "58":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+        case "59":M03.style.backgroundColor="red";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="red";
+                   M4.style.backgroundColor="red";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="red";
+        break;
+        case "00":M03.style.backgroundColor="black";
+                   M02.style.backgroundColor="black";
+                   M01.style.backgroundColor="black";
+                   M4.style.backgroundColor="black";
+                   M3.style.backgroundColor="black";
+                   M2.style.backgroundColor="black";
+                   M1.style.backgroundColor="black";
+        break;
+
+
+      default:console.log("error!");
+    }
+    //end of mins
+
+    //start of hours
+    switch(h)
+    {
+        case "01": h01.style.backgroundColor="black";
+                   h02.style.backgroundColor="black";
+
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="black";
+                   h2.style.backgroundColor="black";
+                   h1.style.backgroundColor="red";
+
+
+        break;
+        case "02":h01.style.backgroundColor="black";
+                   h02.style.backgroundColor="black";
+
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="black";
+                   h2.style.backgroundColor="red";
+                   h1.style.backgroundColor="black";
+        break;
+          case "03": h01.style.backgroundColor="black";
+                   h02.style.backgroundColor="black";
+
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="black";
+                   h2.style.backgroundColor="red";
+                   h1.style.backgroundColor="red";
+        break;
+          case "04": h01.style.backgroundColor="black";
+                   h02.style.backgroundColor="black";
+
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="red";
+                   h2.style.backgroundColor="black";
+                   h1.style.backgroundColor="black";
+        break;
+          case "05":h01.style.backgroundColor="black";
+                   h02.style.backgroundColor="black";
+
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="red";
+                   h2.style.backgroundColor="black";
+                   h1.style.backgroundColor="red";
+        break;
+          case "06": h01.style.backgroundColor="black";
+                   h02.style.backgroundColor="black";
+
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="red";
+                   h2.style.backgroundColor="red";
+                   h1.style.backgroundColor="black";
+        break;
+          case "07": h01.style.backgroundColor="black";
+                   h02.style.backgroundColor="black";
+
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="red";
+                   h2.style.backgroundColor="red";
+                   h1.style.backgroundColor="red";
+        break;
+          case "08": h01.style.backgroundColor="black";
+                   h02.style.backgroundColor="black";
+
+                   h4.style.backgroundColor="red";
+                   h3.style.backgroundColor="black";
+                   h2.style.backgroundColor="black";
+                   h1.style.backgroundColor="black";
+        break;
+          case "09": h01.style.backgroundColor="black";
+                   h02.style.backgroundColor="black";
+
+                   h4.style.backgroundColor="red";
+                   h3.style.backgroundColor="black";
+                   h2.style.backgroundColor="black";
+                   h1.style.backgroundColor="red";
+        break;
+          case "10":
+                   h02.style.backgroundColor="black";
+                   h01.style.backgroundColor="red";
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="black";
+                   h2.style.backgroundColor="black";
+                   h1.style.backgroundColor="black";
+        break;
+                case "11":
+                   h02.style.backgroundColor="black";
+                   h01.style.backgroundColor="red";
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="black";
+                   h2.style.backgroundColor="black";
+                   h1.style.backgroundColor="red";
+        break;
+                      case "12":
+                   h02.style.backgroundColor="black";
+                   h01.style.backgroundColor="red";
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="black";
+                   h2.style.backgroundColor="red";
+                   h1.style.backgroundColor="black";
+        break;
+
+        case "00":
+                   h02.style.backgroundColor="black";
+                   h01.style.backgroundColor="black";
+                   h4.style.backgroundColor="black";
+                   h3.style.backgroundColor="black";
+                   h2.style.backgroundColor="black";
+                   h1.style.backgroundColor="black";
+        break;
+
+
+      default:console.log("error!");
+    }
+    //end of hours
+  function checkTime(i) {
+      if (i < 10)
+      {
+        i = "0" + i
+      };  // add zero in front of numbers < 10
+      return ""+i+"";
+   }
+  }
+  </script>
 
 </body>
 </html>
