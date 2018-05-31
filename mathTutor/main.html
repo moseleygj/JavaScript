@@ -25,6 +25,8 @@
                 width:300px;
                 background-color:white;
                 margin: 50px auto 0;
+                float:left;
+                margin:0;
             }
 
             .topNumber{
@@ -58,7 +60,7 @@
                 border-top: 5px solid black;
                 height:100px;
                 width:300px;
-                background-color:orange;
+                background-color:yellow;
                 font-size:90px;
                 text-align: right;
                 margin:0;
@@ -72,7 +74,12 @@
                 border-bottom:none;
                 border-left:none;
                 }
-
+            
+            .status{float:left;height:20px;font-weight: bold;margin-left:10px;}  
+            .statusA{float:left;height:20px;color:blue;margin-left:10px;}          
+            .grade{float:left;height:20px;font-weight: bold;margin-left:10px;}
+            .gradeA{float:left;height:20px;color:blue;margin-left:10px;}
+            .cellHolder{width:100%;height:20px;}
 </style>
     </head>
     <body>
@@ -83,6 +90,25 @@
                 <div class="bottomNumber" id="bNum">0000</div>
                 <input class="answer" type="text" autofocus id="ans"/>
             </div>
+            <div class="eq" style="margin:0;float:left;">
+                <div class="cellHolder">
+                        <div class="status">Status:</div>
+                        <div class="statusA" id="statResponse">-/-</div>                        
+                </div>
+                <div class="cellHolder">
+                        <div class="grade">State:</div>
+                        <div class="gradeA" id="statResponse">-/-</div>                        
+                </div>
+                <div class="cellHolder">
+                        <div class="status">Grade:</div>
+                        <div class="statusA" id="statResponse">-/-</div>                        
+                </div>
+                <div class="cellHolder" style="height:205px;margin:0 auto 0">
+                <img src="happy.png" id="statusImg" height="205px" width="300px">
+            </div>
+                <button>Reset</button>
+            </div>
+
         </div>
     </body>
 </html>
