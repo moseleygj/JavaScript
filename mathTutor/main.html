@@ -1,0 +1,91 @@
+<html>
+    <head>
+<title>Math Tutor</title>
+<meta charset="UTF-8">
+<style>
+body{
+    margin:0;
+    padding:0;
+}
+
+html{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:100%;
+    height:100%;
+    background-color: #434343;
+    position: absolute;;
+}
+
+.eq{
+    height:300px;
+    width:300px;
+    background-color:white;
+    margin: 50px auto 0;
+}
+
+.topNumber{
+    height:100px;
+    width:300px;
+    font-size:90px;
+    background-color:white;
+    text-align: right;
+}
+
+.bottomNumber{
+    height:100px;
+    width:225px;
+    float:right;
+    background-color:#fff;
+    font-size:90px;
+    text-align: right;
+}
+
+.sign{
+    height:100px;
+    width:75px;
+    background-color:white;
+    color:black;
+    font-size: 90px;
+    float:left;
+    text-align: center;
+    }
+
+.answer{
+    border-top: 5px solid black;
+    height:100px;
+    width:300px;
+    background-color:orange;
+    font-size:90px;
+    text-align: right;
+    margin:0;
+    padding:0;
+}
+
+input[type="text"]{
+    color:red;
+    padding:0;
+    border-right:none;
+    border-bottom:none;
+    border-left:none;
+    }
+
+</style>
+    </head>
+    <body>
+        <div class="container">
+<div class="eq">
+
+    <div class="topNumber" id="tNum">0000</div>
+    <div class="sign">-</div>
+    <div class="bottomNumber" id="bNum">0000</div>
+    <input class="answer" type="text" autofocus id="ans"/>
+
+
+</div>
+        </div>
+    </body>
+</html>
