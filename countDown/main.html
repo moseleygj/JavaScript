@@ -1,234 +1,114 @@
 <html>
+
 <head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="abacus16.png" type="image/png">
-<link rel="manifest" href="/manifest.json">
-<title>Factorial Countdown</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="abacus16.png" type="image/png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <title>Factorial Countdown</title>
 </head>
 
 <style>
-html{
-	padding:0;
-	margin:0;
-}
-body{
-	padding:0;
-	margin:0;
-		min-width:320px;
-}
-.container{
-	height:100%;
-	width:100%;
-	background-color: #303030;
-	<!--background:linear-gradient(orange,#c17321);-->
-
-}
-.numberCurrent{
-	font-size:400px;
-	font-weight:bolder;
-	margin:0 auto 0;
-	top:50%;
-    transform: translateY(-50%);
-    color:white;
-    text-shadow: 1px 1px 3px black;
-    position: relative;
-    text-align:center;
-  background-color: #ff6F00;
-width: 80%;
-border-radius: 11px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
-.btn{font-size: 60px;}
-.numberRemainCell{width:50%;height:40px;float:left;}
-.numberRemainTitle{color:white;font-weight: bold;height:55px;float:left;font-size:50px;margin:0px 10px;}
-.numberRemainAnswer{color:white;height:40px;float:left;font-size:50px;}
-.numberTotalCell{width:50%;height:40px;float:left}
-.numberTotalTitle{color:white;font-weight: bold;height:60px;float:left;font-size:50px;margin:0px 10px;}
-.numberTotalAnswer{color:white;height:40px;float:left;font-size:50px;}
-.tallyBar{width:100%;height:120px;top:0;background-color:#212121;line-height:2;box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);<!--#313131-->}
-input[type="text"]{width: 105px;
-}
-
-@media screen and (max-width: 320px)
-{
-.numberCurrent{font-size:110px;}
-.numberTotalTitle{font-size:15px;}
-.numberRemainAnswer{font-size:15px;}
-.numberRemainTitle{font-size:15px;}
-.numberTotalAnswer{font-size:15px;}
-.tallyBar{height:34px;}
-.btn{font-size:39px;}
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px)
-{
-.numberCurrent{font-size:110px;}
-.numberTotalTitle{font-size:15px;}
-.numberRemainAnswer{font-size:15px;}
-.numberRemainTitle{font-size:15px;}
-.numberTotalAnswer{font-size:15px;}
-.tallyBar{height:34px;}
-.btn{font-size:39px;}
-}
-
-@media screen and (min-width: 360px) and (max-width:640px)
-{
-.numberCurrent{font-size:150px;}
-.numberTotalTitle{font-size:16px;}
-.numberRemainAnswer{font-size:16px;}
-.numberRemainTitle{font-size:16px;}
-.numberTotalAnswer{font-size:16px;}
-.tallyBar{height:40px;}
-}
-
-
-@media screen and (min-width:768px) and (max-width:1024px)
-{
-.numberCurrent{font-size:260px;}
-.numberTotalTitle{font-size:30px;}
-.numberRemainAnswer{font-size:30px;}
-.numberRemainTitle{font-size:30px;}
-.numberTotalAnswer{font-size:30px;}
-.tallyBar{height:60px;}
-}
-@media screen and (min-width:641px) and (max-width:767px)
-{
-.numberCurrent{font-size:260px;}
-.numberTotalTitle{font-size:30px;}
-.numberRemainAnswer{font-size:30px;}
-.numberRemainTitle{font-size:30px;}
-.numberTotalAnswer{font-size:30px;}
-.tallyBar{height:60px;}
-}
-
-@media screen and (min-width: px) and (max-width: px)
-{
-.numberCurrent{font-size:;}
-.numberTotalAnswer{font-size: ;}
-.numberRemainAnswer{font-size:;}
-.numberRemainTitle{font-size:;}
-.numberTotalAnswer{font-size:;}
-.tallyBar{height:;}
-}
-
-@media screen and (min-width: px) and (max-width: px)
-{
-.numberCurrent{font-size:;}
-.numberTotalAnswer{font-size: ;}
-.numberRemainAnswer{font-size:;}
-.numberRemainTitle{font-size:;}
-.numberTotalAnswer{font-size:;}
-.tallyBar{height:;}
-}
-
-@media screen and (min-width: px) and (max-width: px)
-{
-.numberCurrent{font-size:;}
-.numberTotalAnswer{font-size: ;}
-.numberRemainAnswer{font-size:;}
-.numberRemainTitle{font-size:;}
-.numberTotalAnswer{font-size:;}
-.tallyBar{height:;}
-}
-
 
 </style>
 <script>
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker
-           .register('/sw.js')
-           .then(function() { console.log("Service Worker Registered"); });
-}
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/sw.js')
+            .then(function() {
+                console.log("Service Worker Registered");
+            });
+    }
 </script>
+
 <body>
-<div class="container">
-<div class="tallyBar">
-<div class="numberRemainCell"><div class="numberRemainTitle">Remaining: </div><div class="numberRemainAnswer" id="numberRemainAnswer">0</div></div>
-<div class="numberTotalCell"><div class="numberTotalTitle">Completed: </div><div class="numberTotalAnswer" id="numberTotalAnswer">0</div></div>
-</div>
-<div style="width:100%;height:60px;margin-top:50%" id="submitTotal">
-	<input type="text" id="MainNum" style="height:60px;font-size:40px;" value="10" autofocus onkeydown="if (event.keyCode==13)magic()">
- <button onClick="magic()" id="btn" style="height:60px;float:left" >Submit Number</button>
- </div>
-	<div class="numberCurrent" id="numCurrent" onClick="magic()" style="display:none;">0</div>
-</div>
+    <div class="container">
+        <div class="tallyBar">
+            <div class="numberRemainCell">
+                <div class="numberRemainTitle">Remaining: </div>
+                <div class="numberRemainAnswer" id="numberRemainAnswer">0</div>
+            </div>
+            <div class="numberTotalCell">
+                <div class="numberTotalTitle">Completed: </div>
+                <div class="numberTotalAnswer" id="numberTotalAnswer">0</div>
+            </div>
+        </div>
+        <div style="width:100%;height:60px;margin-top:50%" id="submitTotal">
+            <input type="text" id="MainNum" style="height:60px;font-size:40px;" value="10" autofocus onkeydown="if (event.keyCode==13)magic()">
+            <button onClick="magic()" id="btn" style="height:60px;float:left">Submit Number</button>
+        </div>
+        <div class="numberCurrent" id="numCurrent" onClick="magic()" style="display:none;">0</div>
+    </div>
 </body>
 <script>
-var counter=0;
-var A;
-var remainHolder;
-var remain;
-var count=0;
-var counterStarted=0;
-var tog = 0;
-var countDownTotal;
-var numHold; //remove this later
-var permanentA;
-var scratch;
-var tallyCounter=0;
+    var counter = 0;
+    var A;
+    var remainHolder;
+    var remain;
+    var count = 0;
+    var counterStarted = 0;
+    var tog = 0;
+    var countDownTotal;
+    var numHold; //remove this later
+    var permanentA;
+    var scratch;
+    var tallyCounter = 0;
 
-function magic()
-{
-if (tog == 0)
-	{
-	tog=1;
-  document.getElementById('numCurrent').style.display="block";
-document.getElementById("submitTotal").style.display='none';
-	numHold=parseInt(document.getElementById('MainNum').value);
-	document.getElementById("MainNum").style.display="none";
-	document.getElementById("btn").style.display="none";
-	document.getElementById('numCurrent').innerHTML=numHold;
-	remainHolder = parseInt(grandTotal(numHold));
-	document.getElementById('numberRemainAnswer').innerHTML=remainHolder;
-A=numHold;
-	}
-else {
-	doMath(A); //give textbox number to  doMath
-	}
-}
+    function magic() {
+        if (tog == 0) {
+            tog = 1;
+            document.getElementById('numCurrent').style.display = "block";
+            document.getElementById("submitTotal").style.display = 'none';
+            numHold = parseInt(document.getElementById('MainNum').value);
+            document.getElementById("MainNum").style.display = "none";
+            document.getElementById("btn").style.display = "none";
+            document.getElementById('numCurrent').innerHTML = numHold;
+            remainHolder = parseInt(grandTotal(numHold));
+            document.getElementById('numberRemainAnswer').innerHTML = remainHolder;
+            A = numHold;
+        } else {
+            doMath(A); //give textbox number to  doMath
+        }
+    }
 
-function doMath(mainNumber)
-	{
-	//check if tally count=max
-	if(tallyCounter==countDownTotal)
-	{
-	alert("Completed challenge");
-	}
-	else {
+    function doMath(mainNumber) {
+        //check if tally count=max
+        if (tallyCounter == countDownTotal) {
+            alert("Completed challenge");
+        } else {
 
-tallyCounter=(tallyCounter+ mainNumber);
-			document.getElementById("numberTotalAnswer").innerHTML=tallyCounter;
+            tallyCounter = (tallyCounter + mainNumber);
+            document.getElementById("numberTotalAnswer").innerHTML = tallyCounter;
 
-			document.getElementById('numCurrent').innerHTML--;
-				//increase tally
-			document.getElementById('numberRemainAnswer').innerHTML-=parseInt(mainNumber);
-			//reduce total by that number
-		A--;
-		numHold--;
-	   }
-	}
+            document.getElementById('numCurrent').innerHTML--;
+            //increase tally
+            document.getElementById('numberRemainAnswer').innerHTML -= parseInt(mainNumber);
+            //reduce total by that number
+            A--;
+            numHold--;
+        }
+    }
 
-function grandTotal(startNum)
-	{
-	remainHolder = startNum; //send the Value of textBox
+    function grandTotal(startNum) {
+        remainHolder = startNum; //send the Value of textBox
 
-	if(counterStarted==0)																//check if the loop has been run before. 0=No,1=Yes;
-	{
-			counterStarted=1;
+        if (counterStarted == 0) //check if the loop has been run before. 0=No,1=Yes;
+        {
+            counterStarted = 1;
 
-		for (var i=startNum;i>0;i--)													//run counting loop here;
-		{
-		parseInt(count+=i);
-		}
-		permanentA=count;
-		countDownTotal=count;
-		return countDownTotal;
-	}
-	else {
-	return 0;
-	}
-}
-
+            for (var i = startNum; i > 0; i--) //run counting loop here;
+            {
+                parseInt(count += i);
+            }
+            permanentA = count;
+            countDownTotal = count;
+            return countDownTotal;
+        } else {
+            return 0;
+        }
+    }
 </script>
 </body>
+
 </html>

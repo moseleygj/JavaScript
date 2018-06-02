@@ -147,11 +147,11 @@
     var bottomNum = document.getElementById("bNum").innerHTML;
 
     var TN = Math.floor((Math.random() * 9999) + 1);
-    var topNum = document.getElementById("tNum").innerHTML;
+    document.getElementById("tNum").innerHTML = TN;
 
     var BN = Math.floor((Math.random() * 9999) + 1);
 
-    if (BN > TN) {
+    while (BN > TN) {
         BN = Math.floor((Math.random() * 9999) + 1);
         document.getElementById("bNum").innerHTML = BN;
     }

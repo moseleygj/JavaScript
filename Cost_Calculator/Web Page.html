@@ -1,29 +1,134 @@
-function checkForNumbers(price, tax, tip, total)
-{
-		    var numbers = /^[0-9]+$/; 
-		    
-		    var arr = [price.value, tax.value, tip.value, total.value];
-		    for (var i=0;i<arr.length;i++)
-		    {
-		    	if (arr[i] != numbers){
-		    //alert("Enter only Numbers!: 2"+arr[i]);
-		    	}
-		    }
+<html>
 
-}
-// you can turn to an actual percentage into computer equivalent by multiply or dividing by 100
-function doMagic(price, tax, tip, total)
-{
-	var t = document.getElementById("tip");
-	var ti = parseFloat(t.options[t.selectedIndex].value );//use this value
-	//alert(ti);
-checkForNumbers(price, tax, tip, total);
-	//calculate Tax
-var Tax = parseFloat(tax.value)*parseFloat(price.value);
-	//calculate Tip
-var Tip = parseFloat(tip.value)*parseFloat(price.value);
-	//calculate total
-alert("Tip: $"+Tip.toFixed(2));
-var n=parseFloat(parseFloat(Tax)+parseFloat(Tip)+parseFloat(price.value));
-total.value = n.toFixed(2);
-}
+<head>
+    <meta charset="utf-8">
+    <title>Pay how much do I pay?</title>
+    <style>
+        html {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: lightgrey;
+        }
+        
+        .container {
+            min-width: 320px;
+            max-width: 100%;
+        }
+        
+        .sideL {
+            min-width: 50%;
+            float: left;
+        }
+        
+        .sideLContent {
+            height: 24px;
+            width: 100%;
+            font-size: 12px;
+            font-weight: bold;
+            color: #434343;
+            margin-bottom: 12px;
+            line-height: 2;
+            text-align: center;
+        }
+        
+        .sideR {
+            min-width: 50%;
+            float: right;
+        }
+        
+        .sideRContent {
+            height: 24px;
+            width: 100%;
+            font-size: 28px;
+            font-weight: bold;
+            color: #434343;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        
+        .box {
+            height: 180px;
+            width: 480px;
+            text-align: center;
+            margin: 0 auto 0;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+        
+        #tax:hover {
+            background-color: rgb(243, 243, 142);
+            transition: 300ms ease-in;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="sideL">
+                <div class="sideLContent">AMOUNT:</div>
+                <div class="sideLContent">TAX %:</div>
+                <div class="sideLContent">TIP %:</div>
+                <div class="sideLContent">TOTAL:</div>
+                <div class="sideLContent"><button onClick="doMagic(price,tax,tip, total);">Get Total</button>
+                </div>
+
+            </div>
+            <div class="sideR">
+                <div class="sideRContent"><input type="textbox" name="price" id="price" style="width:120px"><br/></div>
+                <div class="sideRContent"><input type="textbox" name="tax" id="tax" value=".08825" style="width:120px"><br/></div>
+                <div class="sideRContent">
+                    <form>
+                        <select id="tip" style="width:120px">
+                        <option value="0.10">10%</option>
+                        <option value="0.15">15%</option>
+                        <option value="0.20">20%</option>
+                    </select>
+                    </form><br/></div>
+                <div class="sideRContent">
+                    <input type="textbox" name="total" id="total" style="width:120px;font-weight: bold;color:red;"><br/></div>
+                <div class="sideRContent"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function checkForNumbers(price, tax, tip, total) {
+            var numbers = /^[0-9]+$/;
+            //fix this regex to acces decimal
+            var arr = [price.value, tax.value, tip.value, total.value];
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] != numbers) {
+                    alert("Error: Enter only Numbers!");
+
+                }
+            }
+            alert(price.value + ", " + tax.value + ", " + tip.value + ", " + total.value);
+        }
+
+        // you can turn to an actual percentage into computer equivalent by multiply or dividing by 100
+        function doMagic(price, tax, tip, total) {
+            var t = document.getElementById("tip");
+            var ti = t.options[t.selectedIndex].value; //use this value
+            alert(ti);
+            checkForNumbers(price, tax, tip, total);
+            //calculate Tax
+            var Tax = parseFloat(tax.value) * parseFloat(price.value);
+            //calculate Tip
+            var Tip = parseFloat(tip.value) * parseFloat(price.value);
+            //calculate total
+            alert("Tip: $" + Tip.toFixed(2));
+            var n = parseFloat(parseFloat(Tax) + parseFloat(Tip) + parseFloat(price.value));
+            total.value = n.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

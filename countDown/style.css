@@ -1,0 +1,204 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-width: 320px;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: #303030;
+}
+
+.numberCurrent {
+    font-size: 400px;
+    font-weight: bolder;
+    margin: 0 auto 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    position: relative;
+    text-align: center;
+    background-color: #ff6F00;
+    width: 80%;
+    border-radius: 11px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn {
+    font-size: 60px;
+}
+
+.numberRemainCell {
+    width: 50%;
+    height: 40px;
+    float: left;
+}
+
+.numberRemainTitle {
+    color: white;
+    font-weight: bold;
+    height: 55px;
+    float: left;
+    font-size: 50px;
+    margin: 0px 10px;
+}
+
+.numberRemainAnswer {
+    color: white;
+    height: 40px;
+    float: left;
+    font-size: 50px;
+}
+
+.numberTotalCell {
+    width: 50%;
+    height: 40px;
+    float: left
+}
+
+.numberTotalTitle {
+    color: white;
+    font-weight: bold;
+    height: 60px;
+    float: left;
+    font-size: 50px;
+    margin: 0px 10px;
+}
+
+.numberTotalAnswer {
+    color: white;
+    height: 40px;
+    float: left;
+    font-size: 50px;
+}
+
+.tallyBar {
+    width: 100%;
+    height: 120px;
+    top: 0;
+    background-color: #212121;
+    line-height: 2;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+input[type="text"] {
+    width: 105px;
+}
+
+@media screen and (max-width: 320px) {
+    .numberCurrent {
+        font-size: 110px;
+    }
+    .numberTotalTitle {
+        font-size: 15px;
+    }
+    .numberRemainAnswer {
+        font-size: 15px;
+    }
+    .numberRemainTitle {
+        font-size: 15px;
+    }
+    .numberTotalAnswer {
+        font-size: 15px;
+    }
+    .tallyBar {
+        height: 34px;
+    }
+    .btn {
+        font-size: 39px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .numberCurrent {
+        font-size: 110px;
+    }
+    .numberTotalTitle {
+        font-size: 15px;
+    }
+    .numberRemainAnswer {
+        font-size: 15px;
+    }
+    .numberRemainTitle {
+        font-size: 15px;
+    }
+    .numberTotalAnswer {
+        font-size: 15px;
+    }
+    .tallyBar {
+        height: 34px;
+    }
+    .btn {
+        font-size: 39px;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width:640px) {
+    .numberCurrent {
+        font-size: 150px;
+    }
+    .numberTotalTitle {
+        font-size: 16px;
+    }
+    .numberRemainAnswer {
+        font-size: 16px;
+    }
+    .numberRemainTitle {
+        font-size: 16px;
+    }
+    .numberTotalAnswer {
+        font-size: 16px;
+    }
+    .tallyBar {
+        height: 40px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .numberCurrent {
+        font-size: 260px;
+    }
+    .numberTotalTitle {
+        font-size: 30px;
+    }
+    .numberRemainAnswer {
+        font-size: 30px;
+    }
+    .numberRemainTitle {
+        font-size: 30px;
+    }
+    .numberTotalAnswer {
+        font-size: 30px;
+    }
+    .tallyBar {
+        height: 60px;
+    }
+}
+
+@media screen and (min-width:641px) and (max-width:767px) {
+    .numberCurrent {
+        font-size: 260px;
+    }
+    .numberTotalTitle {
+        font-size: 30px;
+    }
+    .numberRemainAnswer {
+        font-size: 30px;
+    }
+    .numberRemainTitle {
+        font-size: 30px;
+    }
+    .numberTotalAnswer {
+        font-size: 30px;
+    }
+    .tallyBar {
+        height: 60px;
+    }
+}
