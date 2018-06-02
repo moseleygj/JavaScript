@@ -1,114 +1,160 @@
 <html>
-    <head>
-        <title>Math Tutor</title>
-        <meta charset="UTF-8">
-        <style>
-            body{
-                margin:0;
-                padding:0;
-            }
 
-            html{
-                margin:0;
-                padding:0;
-            }
+<head>
+    <title>Math Tutor</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: #434343;
+            position: absolute;
+            ;
+        }
+        
+        .eq {
+            height: 300px;
+            width: 300px;
+            background-color: white;
+            margin: 50px auto 0;
+            float: left;
+            margin: 0;
+        }
+        
+        .topNumber {
+            height: 100px;
+            width: 300px;
+            font-size: 90px;
+            background-color: white;
+            text-align: right;
+        }
+        
+        .bottomNumber {
+            height: 100px;
+            width: 225px;
+            float: right;
+            background-color: #fff;
+            font-size: 90px;
+            text-align: right;
+        }
+        
+        .sign {
+            height: 100px;
+            width: 75px;
+            background-color: white;
+            color: black;
+            font-size: 90px;
+            float: left;
+            text-align: center;
+        }
+        
+        .answer {
+            border-top: 5px solid black;
+            height: 100px;
+            width: 300px;
+            background: linear-gradient(white, yellow);
+            font-size: 90px;
+            text-align: right;
+            margin: 0;
+            padding: 0;
+        }
+        
+        input[type="text"] {
+            color: navy;
+            padding: 0;
+            border-right: none;
+            border-bottom: none;
+            border-left: none;
+        }
+        
+        .status {
+            float: left;
+            height: 20px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .statusA {
+            float: left;
+            height: 20px;
+            color: blue;
+            margin-left: 10px;
+        }
+        
+        .grade {
+            float: left;
+            height: 20px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .gradeA {
+            float: left;
+            height: 20px;
+            color: blue;
+            margin-left: 10px;
+        }
+        
+        .cellHolder {
+            width: 100%;
+            height: 20px;
+        }
+    </style>
+</head>
 
-            .container{
-                width:100%;
-                height:100%;
-                background-color: #434343;
-                position: absolute;;
-            }
-
-            .eq{
-                height:300px;
-                width:300px;
-                background-color:white;
-                margin: 50px auto 0;
-                float:left;
-                margin:0;
-            }
-
-            .topNumber{
-                height:100px;
-                width:300px;
-                font-size:90px;
-                background-color:white;
-                text-align: right;
-            }
-
-            .bottomNumber{
-                height:100px;
-                width:225px;
-                float:right;
-                background-color:#fff;
-                font-size:90px;
-                text-align: right;
-            }
-
-            .sign{
-                height:100px;
-                width:75px;
-                background-color:white;
-                color:black;
-                font-size: 90px;
-                float:left;
-                text-align: center;
-                }
-
-            .answer{
-                border-top: 5px solid black;
-                height:100px;
-                width:300px;
-                background-color:yellow;
-                font-size:90px;
-                text-align: right;
-                margin:0;
-                padding:0;
-            }
-
-            input[type="text"]{
-                color:red;
-                padding:0;
-                border-right:none;
-                border-bottom:none;
-                border-left:none;
-                }
-            
-            .status{float:left;height:20px;font-weight: bold;margin-left:10px;}  
-            .statusA{float:left;height:20px;color:blue;margin-left:10px;}          
-            .grade{float:left;height:20px;font-weight: bold;margin-left:10px;}
-            .gradeA{float:left;height:20px;color:blue;margin-left:10px;}
-            .cellHolder{width:100%;height:20px;}
-</style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="eq">
-                <div class="topNumber" id="tNum">0000</div>
-                <div class="sign">-</div>
-                <div class="bottomNumber" id="bNum">0000</div>
-                <input class="answer" type="text" autofocus id="ans"/>
-            </div>
-            <div class="eq" style="margin:0;float:left;">
-                <div class="cellHolder">
-                        <div class="status">Status:</div>
-                        <div class="statusA" id="statResponse">-/-</div>                        
-                </div>
-                <div class="cellHolder">
-                        <div class="grade">State:</div>
-                        <div class="gradeA" id="statResponse">-/-</div>                        
-                </div>
-                <div class="cellHolder">
-                        <div class="status">Grade:</div>
-                        <div class="statusA" id="statResponse">-/-</div>                        
-                </div>
-                <div class="cellHolder" style="height:205px;margin:0 auto 0">
-                <img src="happy.png" id="statusImg" height="205px" width="300px">
-            </div>
-                <button>Reset</button>
-            </div>
-
+<body>
+    <div class="container">
+        <div class="eq">
+            <div class="topNumber" id="tNum">0000</div>
+            <div class="sign">-</div>
+            <div class="bottomNumber" id="bNum">0000</div>
+            <input class="answer" type="text" autofocus id="ans" />
         </div>
-    </body>
+        <div class="eq" style="margin:0;float:left;">
+            <div class="cellHolder">
+                <div class="status">Status:</div>
+                <div class="statusA" id="statResponse">-/-</div>
+            </div>
+            <div class="cellHolder">
+                <div class="grade">State:</div>
+                <div class="gradeA" id="statResponse">-/-</div>
+            </div>
+            <div class="cellHolder">
+                <div class="status">Grade:</div>
+                <div class="statusA" id="statResponse">-/-</div>
+            </div>
+            <div class="cellHolder" style="height:205px;margin:0 auto 0;text-align:center;">
+                <img src="happy.png" id="statusImg" height="205px" width="225px">
+            </div>
+            <button>Reset</button>
+        </div>
+
+    </div>
+</body>
+<script>
+    var ans = document.getElementById("ans").value;
+    var topNum = document.getElementById("tNum").innerHTML;
+    var bottomNum = document.getElementById("bNum").innerHTML;
+
+    var TN = Math.floor((Math.random() * 9999) + 1);
+    var topNum = document.getElementById("tNum").innerHTML;
+
+    var BN = Math.floor((Math.random() * 9999) + 1);
+
+    if (BN > TN) {
+        BN = Math.floor((Math.random() * 9999) + 1);
+        document.getElementById("bNum").innerHTML = BN;
+    }
+</script>
+
 </html>
