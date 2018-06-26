@@ -1,5 +1,5 @@
 # :large_orange_diamond:JavaScript
-My miscellaneous JavaScript files
+My miscellaneous JavaScript files.
 
 
 
