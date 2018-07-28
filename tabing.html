@@ -8,7 +8,54 @@ $(document).ready(function(){
     $(".tab tab1").click(function(){
         $("p:last").removeClass("tabInactive").addClass("active");
     });
+
+$("#tab1").click(
+function()
+{
+alert("You clicked button 2");
+$("#tab1").removeClass("tabInactive").addClass("tabactive");
+$("#tab0").removeClass("tabActive").addClass("tabInactive");
+$("#tab2").removeClass("tabInactive").addClass("tabInactive");
+$("#tab3").removeClass("tabInactive").addClass("tabInactive");
+
 });
+
+$("#tab0").click(
+function()
+{
+alert("You clicked button 1");
+$("#tab1").removeClass("tabActive").addClass("tabInactive");
+$("#tab0").removeClass("tabInactive").addClass("tabActive");
+$("#tab2").removeClass("tabInactive").addClass("tabInactive");
+$("#tab3").removeClass("tabInactive").addClass("tabInactive");
+
+});
+
+$("#tab2").click(
+function()
+{
+alert("You clicked button 3");
+$("#tab1").removeClass("tabInactive").addClass("tabInactive");
+$("#tab0").removeClass("tabInactive").addClass("tabInactive");
+$("#tab2").removeClass("tabInactive").addClass("tabActive");
+$("#tab3").removeClass("tabInactive").addClass("tabInactive");
+
+});
+
+$("#tab3").click(
+function()
+{
+alert("You clicked button 4");
+$("#tab1").removeClass("tabInactive").addClass("tabInactive");
+$("#tab0").removeClass("tabInactive").addClass("tabInactive");
+$("#tab2").removeClass("tabInactive").addClass("tabInactive");
+$("#tab3").removeClass("tabInactive").addClass("tabActive");
+
+});
+
+
+});
+
 </script>
 <style>
 
