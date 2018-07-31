@@ -8,7 +8,54 @@ $(document).ready(function(){
     $(".tab tab1").click(function(){
         $("p:last").removeClass("tabInactive").addClass("active");
     });
+
+$("#tab1").click(
+function()
+{
+alert("You clicked button 2");
+$("#tab1").removeClass("tabInactive").addClass("tabactive");
+$("#tab0").removeClass("tabActive").addClass("tabInactive");
+$("#tab2").removeClass("tabInactive").addClass("tabInactive");
+$("#tab3").removeClass("tabInactive").addClass("tabInactive");
+
 });
+
+$("#tab0").click(
+function()
+{
+alert("You clicked button 1");
+$("#tab1").removeClass("tabActive").addClass("tabInactive");
+$("#tab0").removeClass("tabInactive").addClass("tabActive");
+$("#tab2").removeClass("tabInactive").addClass("tabInactive");
+$("#tab3").removeClass("tabInactive").addClass("tabInactive");
+
+});
+
+$("#tab2").click(
+function()
+{
+alert("You clicked button 3");
+$("#tab1").removeClass("tabInactive").addClass("tabInactive");
+$("#tab0").removeClass("tabInactive").addClass("tabInactive");
+$("#tab2").removeClass("tabInactive").addClass("tabActive");
+$("#tab3").removeClass("tabInactive").addClass("tabInactive");
+
+});
+
+$("#tab3").click(
+function()
+{
+alert("You clicked button 4");
+$("#tab1").removeClass("tabInactive").addClass("tabInactive");
+$("#tab0").removeClass("tabInactive").addClass("tabInactive");
+$("#tab2").removeClass("tabInactive").addClass("tabInactive");
+$("#tab3").removeClass("tabInactive").addClass("tabActive");
+
+});
+
+
+});
+
 </script>
 <style>
 
@@ -26,7 +73,7 @@ $(document).ready(function(){
 		margin-right:3px
 	}
 
-	.tab{
+	.tabActive{
 		height:100%;
 		width:20%;
 		margin-left:20px;
@@ -35,6 +82,8 @@ $(document).ready(function(){
 		border-top:2px solid skyblue;
 		background-color: white;
 		float:left;
+		text-align:center;
+		line-height:2;
 	}
 
 	.tabInactive{
@@ -45,6 +94,9 @@ $(document).ready(function(){
 		border-top-right-radius:5px ;
 		background-color: grey;
 		float:left;
+		text-align:center;
+		color:white;
+		line-height:2;
 	}
 
 .contentArea
@@ -53,7 +105,7 @@ $(document).ready(function(){
 	width:100%;
 	background-color:white;
 }
-}
+
 </style>
 </head>
 
@@ -61,12 +113,12 @@ $(document).ready(function(){
 <body>
 <div class="container">
 	<div class="tabArea">
-		<div class="tab"></div>
-		<div class="tabInactive" id="tab1" onClick=""></div>
-		<div class="tabInactive" id="tab2" onClick=""></div>
-		<div class="tabInactive" id="tab3" onClick=""></div>
+		<div class="tabActive" id="tab0" onClick="">One</div>
+		<div class="tabInactive" id="tab1" onClick="">Two</div>
+		<div class="tabInactive" id="tab2" onClick="">Three</div>
+		<div class="tabInactive" id="tab3" onClick="">Four</div>
+</div>
 
-	</div>
 	<div class="contentArea"></div>
 
 
