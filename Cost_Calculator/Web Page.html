@@ -18,6 +18,7 @@
         .container {
             min-width: 320px;
             max-width: 100%;
+            position: relative;
         }
         
         .sideL {
@@ -56,8 +57,10 @@
             width: 480px;
             text-align: center;
             margin: 0 auto 0;
-            transform: translateY(-50%);
+            transform: translateY(-50%, -50%);
             top: 50%;
+            left: 50%;
+            position: absolute;
         }
         
         #tax:hover {
@@ -77,7 +80,6 @@
                 <div class="sideLContent">TOTAL:</div>
                 <div class="sideLContent"><button onClick="doMagic(price,tax,tip, total);">Get Total</button>
                 </div>
-
             </div>
             <div class="sideR">
                 <div class="sideRContent"><input type="textbox" name="price" id="price" style="width:120px"><br/></div>
@@ -89,10 +91,10 @@
                         <option value="0.15">15%</option>
                         <option value="0.20">20%</option>
                     </select>
-                    </form><br/></div>
+                    </form><br/>
+                </div>
                 <div class="sideRContent">
                     <input type="textbox" name="total" id="total" style="width:120px;font-weight: bold;color:red;"><br/></div>
-                <div class="sideRContent"></div>
             </div>
         </div>
     </div>
@@ -100,33 +102,38 @@
 
     <script type="text/javascript">
         function checkForNumbers(price, tax, tip, total) {
-            var numbers = /^[0-9]+$/;
-            //fix this regex to acces decimal
+            var numbers = /^[0-9.$]/;
+
             var arr = [price.value, tax.value, tip.value, total.value];
 
             for (var i = 0; i < arr.length; i++) {
                 if (arr[i] != numbers) {
-                    alert("Error: Enter only Numbers!");
-
+                    alert("Error: Enter only Numbers!:" + arr[i]);
+                    exit
+                } else {
+                    alert("good");
                 }
             }
             alert(price.value + ", " + tax.value + ", " + tip.value + ", " + total.value);
         }
 
-        // you can turn to an actual percentage into computer equivalent by multiply or dividing by 100
+
         function doMagic(price, tax, tip, total) {
-            var t = document.getElementById("tip");
-            var ti = t.options[t.selectedIndex].value; //use this value
-            alert(ti);
-            checkForNumbers(price, tax, tip, total);
-            //calculate Tax
-            var Tax = parseFloat(tax.value) * parseFloat(price.value);
-            //calculate Tip
-            var Tip = parseFloat(tip.value) * parseFloat(price.value);
-            //calculate total
-            alert("Tip: $" + Tip.toFixed(2));
-            var n = parseFloat(parseFloat(Tax) + parseFloat(Tip) + parseFloat(price.value));
-            total.value = n.toFixed(2);
+            alert("PRICE: " + price.value +
+                " TAX: " + tax.value +
+                " TIP: " + tip.value
+            );
+            if (price.value == "") {
+                alert("Sorry, Looks like you forgot to enter an amount!");
+            }
+            // checkForNumbers(price, tax, tip, total);
+            /* else if (isNaN(price.value)){
+                alert("The 'AMOUNT' section is invalid: NUMBERS ONLY!");
+              }*/
+            else {
+                alert("you are here");
+                checkForNumbers(price, tax, tip, total);
+            }
         }
     </script>
 </body>
