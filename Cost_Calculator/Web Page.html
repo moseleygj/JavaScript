@@ -67,6 +67,12 @@
             background-color: rgb(243, 243, 142);
             transition: 300ms ease-in;
         }
+        
+        button {
+            font-weight: bold;
+            font-size: 18px;
+            color: #434343;
+        }
     </style>
 </head>
 
@@ -78,7 +84,7 @@
             <div class="sideLContent">TIP %:</div>
             <div class="sideLContent">TOTAL:</div>
             <div class="sideLContent">
-                <button onClick="doMagic(price,tax,total)">Get Total!</button>
+                <button onClick="doMagic(price,tax,total)">CALCULATE TOTAL!</button>
             </div>
         </div>
 
@@ -108,7 +114,6 @@
         function doMagic(price, tax, total) {
             var result = price.value.match(numbers);
 
-            alert(price.value);
             //check if text-box is empty
             if (result == null) {
                 alert("Non-numeric results: Please enter only numbers!");
@@ -124,16 +129,16 @@
 
         }
 
+
         function checkChars(result, price) {
-            alert("Result = " + price.value);
             for (i = 0; i < result.length; i++) {
-                alert("i=" + result[i]);
+                // alert("i="+result[i]);
                 if (result[i] == "$") {
-                    alert("Looks like a Dollar-sign($) was found!");
+                    //alert("Looks like a Dollar-sign($) was found!");
                     exit //extract the dollar sign and proceed.
                     //call calculateTip(price);
                 } else {
-                    alert("Not a Dollar-sign"); //continue with math
+                    //alert("Not a Dollar-sign");//continue with math
                     calculateTip(price, tax, total);
                 }
             } //end of for loop
@@ -145,7 +150,7 @@
             //calculate Tip
             var Tip = parseFloat(tip.value) * parseFloat(price.value);
             //calculate total
-            alert("Tip: $" + Tip.toFixed(2));
+            // alert("Tip: $" + Tip.toFixed(2));
             var n = parseFloat(parseFloat(Tax) + parseFloat(Tip) + parseFloat(price.value));
             total.value = n.toFixed(2);
             document.getElementById("demo").innerHTML = "$" + Tip.toFixed(2);
@@ -154,7 +159,7 @@
 
         function checkEmpty(price) {
             if (price.value == 0 || price.value == "0.0" || price.value == "0.00" || price.value == "00") {
-                alert("You cant start from zero");
+                alert("You can't start from zero");
                 document.getElementById("price").value = "";
                 exit;
 
