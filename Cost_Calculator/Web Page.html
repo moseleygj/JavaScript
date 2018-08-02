@@ -10,15 +10,26 @@
         }
         
         body {
-            padding: 0;
-            margin: 0;
             background-color: lightgrey;
         }
         
         .container {
-            min-width: 320px;
+            min-width: 100%;
             max-width: 100%;
+            min-height: 100%;
             position: relative;
+        }
+        
+        .box {
+            height: 180px;
+            width: 480px;
+            text-align: center;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            background-color: tan;
+            border-radius: 5px;
         }
         
         .sideL {
@@ -29,7 +40,7 @@
         .sideLContent {
             height: 24px;
             width: 100%;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
             color: #434343;
             margin-bottom: 12px;
@@ -52,17 +63,6 @@
             margin-bottom: 12px;
         }
         
-        .box {
-            height: 180px;
-            width: 480px;
-            text-align: center;
-            margin: 0 auto 0;
-            transform: translateY(-50%, -50%);
-            top: 50%;
-            left: 50%;
-            position: absolute;
-        }
-        
         #tax:hover {
             background-color: rgb(243, 243, 142);
             transition: 300ms ease-in;
@@ -71,68 +71,94 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="box">
-            <div class="sideL">
-                <div class="sideLContent">AMOUNT:</div>
-                <div class="sideLContent">TAX %:</div>
-                <div class="sideLContent">TIP %:</div>
-                <div class="sideLContent">TOTAL:</div>
-                <div class="sideLContent"><button onClick="doMagic(price,tax,tip, total);">Get Total</button>
-                </div>
-            </div>
-            <div class="sideR">
-                <div class="sideRContent"><input type="textbox" name="price" id="price" style="width:120px"><br/></div>
-                <div class="sideRContent"><input type="textbox" name="tax" id="tax" value=".08825" style="width:120px"><br/></div>
-                <div class="sideRContent">
-                    <form>
-                        <select id="tip" style="width:120px">
-                        <option value="0.10">10%</option>
-                        <option value="0.15">15%</option>
-                        <option value="0.20">20%</option>
-                    </select>
-                    </form><br/>
-                </div>
-                <div class="sideRContent">
-                    <input type="textbox" name="total" id="total" style="width:120px;font-weight: bold;color:red;"><br/></div>
+    <div class="box">
+        <div class="sideL">
+            <div class="sideLContent">AMOUNT:</div>
+            <div class="sideLContent">TAX %:</div>
+            <div class="sideLContent">TIP %:</div>
+            <div class="sideLContent">TOTAL:</div>
+            <div class="sideLContent">
+                <button onClick="doMagic(price,tax,total)">Get Total!</button>
             </div>
         </div>
+
+        <div class="sideR">
+            <div class="sideRContent"><input type="textbox" name="price" id="price" style="width:120px"><br/></div>
+            <div class="sideRContent"><input type="textbox" name="tax" id="tax" value=".08825" style="width:120px"><br/></div>
+
+            <div class="sideRContent">
+                <form>
+                    <select id="tip" style="width:120px">
+                    <option value="0.10">10%</option>
+                    <option value="0.15">15%</option>
+                    <option value="0.20">20%</option>
+                    </select>
+                </form><br/>
+            </div>
+            <div class="sideRContent">
+                <input type="textbox" name="total" id="total" style="width:120px;font-weight: bold;color:red;"><br/></div>
+        </div>
+        <p id="demo">-</p>
+
     </div>
 
 
     <script type="text/javascript">
-        function checkForNumbers(price, tax, tip, total) {
-            var numbers = /^[0-9.$]/;
+        var numbers = /[0-9.$]/g;
 
-            var arr = [price.value, tax.value, tip.value, total.value];
+        function doMagic(price, tax, total) {
+            var result = price.value.match(numbers);
 
-            for (var i = 0; i < arr.length; i++) {
-                if (arr[i] != numbers) {
-                    alert("Error: Enter only Numbers!:" + arr[i]);
-                    exit
-                } else {
-                    alert("good");
-                }
+            alert(price.value);
+            //check if text-box is empty
+            if (result == null) {
+                alert("Non-numeric results: Please enter only numbers!");
+                document.getElementById("price").value = "";
             }
-            alert(price.value + ", " + tax.value + ", " + tip.value + ", " + total.value);
+            //check if text-box has valid characters
+            else if (result !== null) {
+                alert("Textbox isn't empty");
+                checkChars(result, price);
+                checkEmpty(price);
+                calculateTip(price, tax, total);
+            }
+
+            document.getElementById("demo").innerHTML = result;
         }
 
 
-        function doMagic(price, tax, tip, total) {
-            alert("PRICE: " + price.value +
-                " TAX: " + tax.value +
-                " TIP: " + tip.value
-            );
-            if (price.value == "") {
-                alert("Sorry, Looks like you forgot to enter an amount!");
-            }
-            // checkForNumbers(price, tax, tip, total);
-            /* else if (isNaN(price.value)){
-                alert("The 'AMOUNT' section is invalid: NUMBERS ONLY!");
-              }*/
-            else {
-                alert("you are here");
-                checkForNumbers(price, tax, tip, total);
+        function checkChars(result, price) {
+            alert("Result = " + price.value);
+            for (i = 0; i < result.length; i++) {
+                alert("i=" + result[i]);
+                if (result[i] == "$") {
+                    alert("Looks like a Dollar-sign($) was found!");
+                    exit //extract the dollar sign and proceed.
+                    //call calculateTip(price);
+                } else {
+                    alert("Not a Dollar-sign"); //continue with math
+                    calculateTip(price, tax, total);
+                }
+            } //end of for loop
+        }
+
+        function calculateTip(price, tax, total) {
+            //Calculate Tax
+            var Tax = parseFloat(tax.value) * parseFloat(price.value);
+            //calculate Tip
+            var Tip = parseFloat(tip.value) * parseFloat(price.value);
+            //calculate total
+            alert("Tip: $" + Tip.toFixed(2));
+            var n = parseFloat(parseFloat(Tax) + parseFloat(Tip) + parseFloat(price.value));
+            total.value = n.toFixed(2);
+        }
+
+        function checkEmpty(price) {
+            if (price.value == 0 || price.value == "0.0" || price.value == "0.00" || price.value == "00") {
+                alert("You cant start from zero");
+                document.getElementById("price").value = "";
+                exit;
+
             }
         }
     </script>
