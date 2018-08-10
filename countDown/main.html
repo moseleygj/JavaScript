@@ -68,14 +68,14 @@
             document.getElementById('numberRemainAnswer').innerHTML = remainHolder;
             A = numHold;
         } else {
-            doMath(A); //give textbox number to  doMath
+            doMath(A); //give textbox number to doMath
         }
     }
 
     function doMath(mainNumber) {
         //check if tally count=max
         if (tallyCounter == countDownTotal) {
-            alert("Completed challenge");
+            alert("Challenge completed!");
         } else {
 
             tallyCounter = (tallyCounter + mainNumber);
