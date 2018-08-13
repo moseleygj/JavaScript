@@ -3,36 +3,82 @@
 </head>
 <style>
 
-body{}
+body{margin:0;padding:0;}
 html{}
-layerC{
+
+.layerC{
 position:absolute;
 height:100%;
 width:100%;
 background-color:yellow;
+z-index:2;
+background: rgba(0, 0, 0, 0.8);
 }
 
-layerB{
+.layerB{
 position:absolute;
 height:100%;
 width:100%;
 background-color:orange;
+z-index:1;
 }
-layerA{
+
+.layerA{
 height:100%;
 width:100%;
 position:absolute;
 background-color:red;
+z-index:-1;
 }
 
+button{
+color:white;
+background-color:yellow;
+}
+
+
+pop{
+height:100px;
+width:200px;
+background-color:white;
+top:50%;
+transform:translateY(-50%);
+display:block;
+position:absolute;
+left:50%;
+}
 </style>
-<title></title>
+<title>z-Index Template</title>
 <body>
-<div class=></div>
-<div class=></div>
-<div class=></div>
+<div class="layerC" id="layerC" name="layerC">
+	<button  type="button" onClick="toggle()">Click Me!</button>
+<div class="pop"></div>
+
+<h3>layer C - Modal(Top)</h3>
+</div>
+<div class="layerB" id="layerB">
+	<button  type="button" onClick="toggleB()">Click Me!</button>
+<h3>layer B - Middle</h3>
+</div>
+<div class="layerA" id="layerA">
+	<button  type="button" onClick="toggleA()">Click Me!</button>
+<h3>layer A - Main!</h3>
+</div>
 </body>
 <script>
+function toggle()
+{
+alert("Im clicked");
+document.getElementById("layerC").style.display="none";
+
+}
+function toggleB()
+{
+alert("Im clicked");
+document.getElementById("layerB").style.display="none";
+
+}
+
 </script>
 </html>
 
