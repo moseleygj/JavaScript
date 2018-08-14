@@ -21,6 +21,7 @@ height:100%;
 width:100%;
 background-color:orange;
 z-index:1;
+display:none;
 }
 
 .layerA{
@@ -29,6 +30,7 @@ width:100%;
 position:absolute;
 background-color:red;
 z-index:-1;
+/*display:none;*/
 }
 
 button{
@@ -37,15 +39,17 @@ background-color:yellow;
 }
 
 
-pop{
-height:100px;
-width:200px;
+.pop{
+height:200px;
+width:400px;
 background-color:white;
 top:50%;
 transform:translateY(-50%);
 display:block;
-position:absolute;
-left:50%;
+position:relative;
+/*left:50%;*/
+border-radius:3.5px;
+margin: 0 auto 0;
 }
 </style>
 <title>z-Index Template</title>
@@ -70,12 +74,14 @@ function toggle()
 {
 alert("Im clicked");
 document.getElementById("layerC").style.display="none";
+document.getElementById("layerB").style.display="block";
 
 }
 function toggleB()
 {
 alert("Im clicked");
 document.getElementById("layerB").style.display="none";
+document.getElementById("layerA").style.display="block";
 
 }
 
