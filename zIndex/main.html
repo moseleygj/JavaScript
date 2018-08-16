@@ -12,7 +12,7 @@ height:100%;
 width:100%;
 background-color:yellow;
 z-index:2;
-background: rgba(0, 0, 0, 0.8);
+background: rgba(0, 0, 0, 0.7);
 }
 
 .layerB{
@@ -30,33 +30,56 @@ width:100%;
 position:absolute;
 background-color:red;
 z-index:-1;
+background-image:url("clouds_in_blue_sky-wallpaper-2880x1620.jpg");
+background-position:center;
 /*display:none;*/
 }
 
 button{
-color:white;
+color:navy;
 background-color:yellow;
 }
 
 
 .pop{
-height:200px;
-width:400px;
+height:250px;
+width:450px;
 background-color:white;
 top:50%;
 transform:translateY(-50%);
 display:block;
 position:relative;
-/*left:50%;*/
+/*document*/
 border-radius:3.5px;
 margin: 0 auto 0;
+background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
 }
+.tBox{background-color:black;color:#f2f2f2;display:block;text-indent:20px;margin:0 auto 0;padding-top:5px;}
+
+.popProfilePic{width:100%;height:30%;}
+.popInput{width:100%;height:30%;background-color:skyblue;}
+.popPassOptions{width:100%;height:15%;}
+.popLoginButton{width:100%;height:25%;}
+.popPic{height:120px;width:120px;top:-81%;display:block;margin:0 auto 0;position:relative;}
+.loginBtn{margin:0 auto 0;background-color:lightgrey;padding:0;color:#434343;border:0;height:50px;font-weight:bolder;width:315px;display:block;font-size:22px;letter-spacing:1.2px;border-radius:3px;}
+
+.popRem{width:50%;height:100%;float:left;color:silver;line-height: 2;}
+.popForgotPass{width:50%;height:100%;float:left;line-height: 2;color:white;}
+a{color:silver;text-decoration:none;}
+a:active{color:#414141;text-decoration:none;}
+a:hover{color:skyblue;}
 </style>
 <title>z-Index Template</title>
 <body>
 <div class="layerC" id="layerC" name="layerC">
-	<button  type="button" onClick="toggle()">Click Me!</button>
-<div class="pop"></div>
+
+<div class="pop">
+<div class="popProfilePic"><img src="profile.png" class="popPic"></div>
+<div class="popInput"><input type="text" placeholder="Username" class="tBox"/>
+<input type="password" placeholder="password" class="tBox"/></div>
+<div class="popPassOptions"><div class="popRem"><input type="checkbox">Remember me</div><div class="popForgotPass"><a href="#">Forgot Password?</a></div></div>
+<div class="popLoginButton"><button class="loginBtn" onClick="toggle()">LOGIN</button></div>
+</div>
 
 <h3>layer C - Modal(Top)</h3>
 </div>
