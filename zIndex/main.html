@@ -1,146 +1,240 @@
 <html>
+
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-$(".pop").fadeIn(800);
-	$(".layerB").hide();
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".pop").fadeIn(800);
+            $(".layerB").hide();
 
-
-	$(".loginBtn").click(function(){
-	$(".layerC").fadeOut(800);
-	$(".layerB").fadeIn(800);
-	});
-});
-</script>
+            $(".loginBtn").click(function() {
+                $(".layerC").fadeOut(800);
+                $(".layerB").fadeIn(800);
+            });
+            $("#usrn").click(function() {
+                alert("focused");
+            });
+        });
+    </script>
 </head>
 <style>
-
-body{margin:0;padding:0;}
-html{}
-
-.layerC{
-position:absolute;
-height:100%;
-width:100%;
-background-color:yellow;
-z-index:2;
-background: rgba(0, 0, 0, 0.7);
-}
-
-.layerB{
-position:absolute;
-height:100%;
-width:100%;
-background-color:orange;
-z-index:1;
-display:none;
-}
-
-.layerA{
-height:100%;
-width:100%;
-position:absolute;
-background-color:red;
-z-index:-1;
-background-image:url("clouds_in_blue_sky-wallpaper-2880x1620.jpg");
-background-position:center;
-/*display:none;*/
-}
-
-button{
-color:navy;
-background-color:yellow;
-}
-
-.pop{
-opacity:0%;
-height:310px;
-width:396px;none
-background-color:none;
-top:50%;
-transform:translateY(-50%);
-display:none;
-position:relative;
-border-radius:3.5px;
-margin: 0 auto 0;
-background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.pop:hover{box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-.tBox{
-background-color:black;
-color:#f2f2f2;
-display:block;
-text-indent:20px;
-margin:10px auto 0;
-width:325px;
-font-size:20px;
-border:0;
-border-radius:2.5px;
-height:auto;
-padding:6px;
-border: 1px solid #6c6c6c;
-}
-
-.tbox:hover{
-box-shadow:0px 0px 7px white;
-}
-
-input[type="checkbox"]{background:black;}
-.popProfilePic{width:100%;height:30%;}
-.popInput{width:100%;height:30%;overflow:hidden;}
-.popPassOptions{width:100%;height:15%;}
-.popLoginButton{width:100%;height:25%;}
-.popPic{height:120px;width:120px;top:-60%;display:block;margin:0 auto 0;position:relative;}
-.loginBtn{margin:4px auto 0;background-color:lightgrey;padding:0;color:#434343;border:0;height:40px;font-weight:bolder;width:325px;display:block;font-size:18px;letter-spacing:1.2px;border-radius:3px;}
-.loginBtn:hover{background-color:#e3e3e3;color:#434343;
-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
-.popRem{text-indent:32px;width:50%;height:100%;float:left;color:silver;line-height: 3.7;font-size: 13px;}
-.popForgotPass{width:50%;height:100%;float:left;line-height: 3.7;color:white;text-indent: 45px;font-size: 13px;}
-a{color:silver;text-decoration:none;}
-a:active{color:#414141;text-decoration:none;}
-a:hover{color:skyblue;}
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .layerC {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: yellow;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .layerB {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: orange;
+        z-index: 1;
+        display: none;
+    }
+    
+    .layerA {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        /*background-color: red;*/
+        z-index: -1;
+        background-image: url("clouds_in_blue_sky-wallpaper-2880x1620.jpg");
+        background-position: center;
+        /*display:none;*/
+    }
+    
+    button {
+        color: navy;
+        background-color: yellow;
+    }
+    
+    .pop {
+        opacity: 0%;
+        height: 310px;
+        width: 396px;
+        background-color: none;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+        position: relative;
+        border-radius: 3.5px;
+        margin: 0 auto 0;
+        background: linear-gradient(to bottom, #7d7e7d 0%, #0e0e0e 100%);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    }
+    
+    .pop:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    
+    .tBox {
+        background-color: black;
+        color: #f2f2f2;
+        display: block;
+        text-indent: 40px;
+        margin: 10px auto 0;
+        width: 325px;
+        font-size: 20px;
+        border-radius: 2.5px;
+        height: auto;
+        padding: 6px;
+        border: 1px solid #6c6c6c;
+        background-image: url("download.png");
+        background-size: 20px;
+        background-position: 4% 50%;
+        background-repeat: no-repeat;
+    }
+    
+    .tBox:hover {
+        box-shadow: 0px 0px 7px white;
+    }
+    
+    input[type="checkbox"] {
+        background: black;
+    }
+    
+    .popProfilePic {
+        width: 100%;
+        height: 30%;
+    }
+    
+    .popInput {
+        width: 100%;
+        height: 30%;
+        overflow: hidden;
+    }
+    
+    .popPassOptions {
+        width: 100%;
+        height: 15%;
+    }
+    
+    .popLoginButton {
+        width: 100%;
+        height: 25%;
+    }
+    
+    .popPic {
+        height: 120px;
+        width: 120px;
+        top: -60%;
+        display: block;
+        margin: 0 auto 0;
+        position: relative;
+    }
+    
+    .loginBtn {
+        margin: 4px auto 0;
+        background: linear-gradient(#6FA8D6, #4182C4);
+        padding: 0;
+        color: rgb(228, 228, 228);
+        border: 0;
+        height: 40px;
+        font-weight: bolder;
+        width: 325px;
+        display: block;
+        font-size: 18px;
+        letter-spacing: 1.2px;
+        border-radius: 3px;
+        text-shadow: 1px 1px 1px black;
+    }
+    
+    .loginBtn:hover {
+        background-color: #e3e3e3;
+        color: white;
+        box-shadow: 0px 0px 25px lightgreen;
+        text-shadow: 1px 1px 3px black;
+        border: 1px solid lightgreen;
+    }
+    
+    .popRem {
+        text-indent: 32px;
+        width: 50%;
+        height: 100%;
+        float: left;
+        color: silver;
+        line-height: 3.7;
+        font-size: 13px;
+    }
+    
+    .popForgotPass {
+        width: 50%;
+        height: 100%;
+        float: left;
+        line-height: 3.7;
+        color: white;
+        text-indent: 45px;
+        font-size: 13px;
+    }
+    
+    a {
+        color: silver;
+        text-decoration: none;
+    }
+    
+    a:active {
+        color: #414141;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: skyblue;
+    }
 </style>
 <title>z-Index Template</title>
-<body>
-<div class="layerC" id="layerC" name="layerC">
 
-<div class="pop">
-<div class="popProfilePic"><img src="profile.png" class="popPic"></div>
-<div class="popInput"><input type="text" placeholder="Username" class="tBox" style="margin-top: 4;"/>
-<input type="password" placeholder="password" class="tBox"/></div>
-<div class="popPassOptions"><div class="popRem"><input type="checkbox">Remember me</div><div class="popForgotPass"><a href="#">Forgot Password?</a></div></div>
-<div class="popLoginButton"><button class="loginBtn" onClick="toggle()">LOGIN</button></div>
-</div>
-</div>
-<div class="layerB" id="layerB">
-	<button  type="button" onClick="toggleB()">Click Me!</button>
-<h3>layer B - Middle</h3>
-</div>
-<div class="layerA" id="layerA">
-	<!--<button  type="button" onClick="toggleA()">Click Me!</button>-->
-<!--<h3>layer A - Main!</h3>-->
-</div>
+<body>
+    <div class="layerC" id="layerC" name="layerC">
+
+        <div class="pop">
+            <div class="popProfilePic"><img src="profile.png" class="popPic"></div>
+            <div class="popInput">
+                <input type="text" style='background-image: url("head.png");background-size:17px;' placeholder="Username" class="tBox" style="margin-top: 4" required="required" id="usrn" />
+                <input type="password" placeholder="password" class="tBox" id="pass" focus/></div>
+            <div class="popPassOptions">
+                <div class="popRem"><input type="checkbox">Remember me</div>
+                <div class="popForgotPass"><a href="#">Forgot Password?</a></div>
+            </div>
+            <div class="popLoginButton"><button class="loginBtn" onClick="toggle()" disabled>LOGIN</button></div>
+        </div>
+    </div>
+    <div class="layerB" id="layerB">
+        <button type="button" onClick="toggleB()">Click Me!</button>
+        <h3>layer B - Middle</h3>
+    </div>
+    <div class="layerA" id="layerA">
+        <!--<button  type="button" onClick="toggleA()">Click Me!</button>-->
+        <!--<h3>layer A - Main!</h3>-->
+    </div>
 </body>
 <script>
-function toggle()
-{
-alert("Im clicked");
-//document.getElementById("layerC").style.display="none";
-//document.getElementById("layerB").style.display="block";
+    /* window.onload = function() {
+                        document.getElementById("usrn").focus();
+                    };*/
 
-}
-function toggleB()
-{
-alert("Im clicked");
-document.getElementById("layerB").style.display="none";
-document.getElementById("layerA").style.display="block";
+    function toggle() {
+        alert("Im clicked");
+        //document.getElementById("layerC").style.display="none";
+        //document.getElementById("layerB").style.display="block";
 
-}
+    }
 
+    function toggleB() {
+        alert("Im clicked");
+        document.getElementById("layerB").style.display = "none";
+        document.getElementById("layerA").style.display = "block";
+
+    }
 </script>
+
 </html>
