@@ -11,8 +11,9 @@
                 $(".layerC").fadeOut(800);
                 $(".layerB").fadeIn(800);
             });
-            $("#usrn").click(function() {
+            $("#usrn").focus(function() {
                 alert("focused");
+                $(this).css("background-image", "url(headBlue.png)").fadeIn(2000);
             });
         });
     </script>
@@ -89,7 +90,7 @@
         height: auto;
         padding: 6px;
         border: 1px solid #6c6c6c;
-        background-image: url("download.png");
+        background-image: url("keyWhite.png");
         background-size: 20px;
         background-position: 4% 50%;
         background-repeat: no-repeat;
@@ -219,8 +220,8 @@
 </body>
 <script>
     /* window.onload = function() {
-                        document.getElementById("usrn").focus();
-                    };*/
+                                                    document.getElementById("usrn").focus();
+                                                };*/
 
     function toggle() {
         alert("Im clicked");
@@ -233,7 +234,6 @@
         alert("Im clicked");
         document.getElementById("layerB").style.display = "none";
         document.getElementById("layerA").style.display = "block";
-
     }
 </script>
 
