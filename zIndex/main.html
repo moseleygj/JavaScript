@@ -11,10 +11,7 @@
                 $(".layerC").fadeOut(800);
                 $(".layerB").fadeIn(800);
             });
-            $("#usrn").focus(function() {
-                alert("focused");
-                $(this).css("background-image", "url(headBlue.png)").fadeIn(2000);
-            });
+
         });
     </script>
 </head>
@@ -132,6 +129,7 @@
         display: block;
         margin: 0 auto 0;
         position: relative;
+        border-radius: 50%
     }
     
     .loginBtn {
@@ -200,8 +198,8 @@
         <div class="pop">
             <div class="popProfilePic"><img src="profile.png" class="popPic"></div>
             <div class="popInput">
-                <input type="text" style='background-image: url("head.png");background-size:17px;' placeholder="Username" class="tBox" style="margin-top: 4" required="required" id="usrn" />
-                <input type="password" placeholder="password" class="tBox" id="pass" focus/></div>
+                <input type="text" style='background-image: url("head.png");background-size:17px;' placeholder="Username" class="tBox" style="margin-top: 4" required="required" id="usrn" onFocus="showUN()" onBlur="hideUN()" />
+                <input type="password" placeholder="password" class="tBox" id="pass" onFocus="showPass()" onBlur="hidePass()" focus/></div>
             <div class="popPassOptions">
                 <div class="popRem"><input type="checkbox">Remember me</div>
                 <div class="popForgotPass"><a href="#">Forgot Password?</a></div>
@@ -220,14 +218,34 @@
 </body>
 <script>
     /* window.onload = function() {
-                                                    document.getElementById("usrn").focus();
-                                                };*/
+                        document.getElementById("usrn").focus();
+                     };*/
+    function showUN() {
+        document.getElementById("usrn").style.transition = "all 1s";
+
+        document.getElementById("usrn").style.backgroundImage = "url('headBlue.png')";
+        document.getElementById("usrn").style.backgroundSize = "17px";
+    }
+
+    function hideUN() {
+        document.getElementById("usrn").style.backgroundImage = "url('head.png')";
+        document.getElementById("usrn").style.backgroundSize = "17px";
+    }
+
+    function showPass() {
+        document.getElementById("pass").style.transition = "all 1s";
+
+        document.getElementById("pass").style.backgroundImage = "url('keyBlue.png')";
+    }
+
+    function hidePass() {
+        document.getElementById("pass").style.backgroundImage = "url('keyWhite.png')";
+    }
 
     function toggle() {
         alert("Im clicked");
         //document.getElementById("layerC").style.display="none";
         //document.getElementById("layerB").style.display="block";
-
     }
 
     function toggleB() {
