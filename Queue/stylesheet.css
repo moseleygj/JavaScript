@@ -1,0 +1,32 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.leftMenu {
+    height: 100%;
+    width: 176px;
+    background-color: purple;
+    background: ;
+    float: left;
+    position: relative;
+}
+
+.rightMain {
+    height: 100%;
+    width: 100%;
+    background-color: ;
+    background: powderblue;
+    float: left;
+    position: relative;
+}
