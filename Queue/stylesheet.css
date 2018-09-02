@@ -113,8 +113,8 @@
                                                 }
                                                 
                                                 .searchFirstName {
-                                                    height: ;
-                                                    width: ;
+                                                    height: 80px;
+                                                    width: 100%;
                                                     min-width: ;
                                                     background: ;
                                                     background-color: ;
@@ -128,8 +128,8 @@
                                                 }
                                                 
                                                 .searchLastName {
-                                                    height: ;
-                                                    width: ;
+                                                    height: 80px;
+                                                    width: 100%;
                                                     min-width: ;
                                                     background: ;
                                                     background-color: ;
@@ -143,8 +143,8 @@
                                                 }
                                                 
                                                 .searchPhone {
-                                                    height: ;
-                                                    width: ;
+                                                    height: 80px;
+                                                    width: 100%;
                                                     min-width: ;
                                                     background: ;
                                                     background-color: ;
@@ -155,4 +155,15 @@
                                                     font-weight: ;
                                                     margin: ;
                                                     padding: ;
+                                                }
+                                                
+                                                .mainTitle {
+                                                    width: 100%;
+                                                    text-align: center;
+                                                    height: 53px;
+                                                    font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+                                                    font-weight: bold;
+                                                    font-size: 32px;
+                                                    color: #6c6c6c;
+                                                    line-height: 2;
                                                 }
