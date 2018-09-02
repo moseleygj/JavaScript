@@ -1,32 +1,158 @@
-html {
-    height: 100%;
-}
-
-body {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-}
-
-.leftMenu {
-    height: 100%;
-    width: 176px;
-    background-color: purple;
-    background: ;
-    float: left;
-    position: relative;
-}
-
-.rightMain {
-    height: 100%;
-    width: 100%;
-    background-color: ;
-    background: powderblue;
-    float: left;
-    position: relative;
-}
+                                                html {
+                                                    height: 100%;
+                                                }
+                                                
+                                                body {
+                                                    min-height: 100%;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    background-color: #f6f6f6
+                                                }
+                                                
+                                                a {
+                                                    text-decoration: none;
+                                                }
+                                                
+                                                a:visited {}
+                                                
+                                                a:active {}
+                                                
+                                                a:hover {}
+                                                
+                                                .container {
+                                                    width: 1024px;
+                                                    min-width: 1024px;
+                                                    height: 100%;
+                                                }
+                                                
+                                                .leftMenu {
+                                                    height: 100%;
+                                                    width: 256px;
+                                                    background: linear-gradient( lightgray, white);
+                                                    background-color: ;
+                                                    float: left;
+                                                    position: relative;
+                                                }
+                                                
+                                                .rightMain {
+                                                    height: 100%;
+                                                    width: 736px;
+                                                    background-color: ;
+                                                    background: #f6f6f6;
+                                                    float: left;
+                                                    position: relative;
+                                                }
+                                                
+                                                .contactHolder {
+                                                    height: 50px;
+                                                    width: 100%;
+                                                    border-bottom: 1px solid rgb(206, 206, 206);
+                                                    background-color: white;
+                                                    display: block;
+                                                }
+                                                
+                                                .contactHolder:hover {
+                                                    background-color: #f2f2f2;
+                                                    color: red
+                                                }
+                                                
+                                                .contactPhoto {
+                                                    height: 45px;
+                                                    width: 45px;
+                                                    float: left;
+                                                    border-radius: 50%;
+                                                    padding: 3px;
+                                                    padding-right: 13px;
+                                                    padding-left: 13px;
+                                                }
+                                                
+                                                .contactName {
+                                                    width: 175px;
+                                                    font-size: 18px;
+                                                    font-weight: bolder;
+                                                    font-family: Arial, Helvetica, sans-serif;
+                                                    color: #434343;
+                                                    float: left;
+                                                    line-height: 2.6;
+                                                }
+                                                
+                                                .contactName a:link {
+                                                    color: #3C94ED;
+                                                }
+                                                
+                                                .alphaMenu {
+                                                    width: 32px;
+                                                    height: 100%;
+                                                    background-color: white;
+                                                    color: red;
+                                                    border-bottom: 1px solid grey;
+                                                    float: left;
+                                                    overflow: scroll;
+                                                }
+                                                
+                                                .alphaMenuOpt {
+                                                    height: 20px;
+                                                    width: 100%;
+                                                    background-color: ;
+                                                    color: rgb(182, 182, 182);
+                                                    text-align: center;
+                                                    font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+                                                }
+                                                
+                                                .alphaMenuOpt:hover {
+                                                    color: #39c4ed;
+                                                    font-weight: bolder;
+                                                }
+                                                
+                                                .alphaMenuOpt:active {
+                                                    text-decoration: none;
+                                                }
+                                                
+                                                .alphaMenuOpt:vistied {
+                                                    text-decoration: none;
+                                                }
+                                                
+                                                .searchFirstName {
+                                                    height: ;
+                                                    width: ;
+                                                    min-width: ;
+                                                    background: ;
+                                                    background-color: ;
+                                                    border: ;
+                                                    color: ;
+                                                    border-radius: ;
+                                                    font-family: ;
+                                                    font-weight: ;
+                                                    margin: ;
+                                                    padding: ;
+                                                }
+                                                
+                                                .searchLastName {
+                                                    height: ;
+                                                    width: ;
+                                                    min-width: ;
+                                                    background: ;
+                                                    background-color: ;
+                                                    border: ;
+                                                    color: ;
+                                                    border-radius: ;
+                                                    font-family: ;
+                                                    font-weight: ;
+                                                    margin: ;
+                                                    padding: ;
+                                                }
+                                                
+                                                .searchPhone {
+                                                    height: ;
+                                                    width: ;
+                                                    min-width: ;
+                                                    background: ;
+                                                    background-color: ;
+                                                    border: ;
+                                                    color: ;
+                                                    border-radius: ;
+                                                    font-family: ;
+                                                    font-weight: ;
+                                                    margin: ;
+                                                    padding: ;
+                                                }
