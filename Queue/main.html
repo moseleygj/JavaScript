@@ -29,7 +29,7 @@
 
         </div>
         <div class="alphaMenu">
-            <div class="alphaMenuOpt"><a class="alphaMenuOpt" href="#">A</a></div>
+            <div class="alphaMenuOpt" style="margin-top:14px;"><a class="alphaMenuOpt" href="#">A</a></div>
             <div class="alphaMenuOpt"><a class="alphaMenuOpt" href="#">B</a></div>
             <div class="alphaMenuOpt"><a class="alphaMenuOpt" href="#">C</a></div>
             <div class="alphaMenuOpt"><a class="alphaMenuOpt" href="#">D</a></div>
@@ -58,13 +58,35 @@
         </div>
         <div class="rightMain">
             <div class="mainTitle">SEARCH SYSTEM</div>
-            <div class="searchFirstName"></div>
-            <div class="searchLastName"></div>
-            <div class="searchPhone"></div>
+            <div class="searchFirstNameSec">
+                <input style="margin:0 auto 0" type="text" placeholder="Search FIRST NAME" id="SFN">
+
+
+            </div>
+            <div class="searchLastNameSec">
+                <input style="margin:0 auto 0" type="text" placeholder="Search LAST NAME" id="SLN">
+
+            </div>
+            <div class="searchPhoneSec">
+                <input style="margin:0 auto 0" type="text" placeholder="Search PHONE" id="SPN">
+
+            </div>
+            <div class="adduserSec">
+                <a href=""><img src="addUserGREY.png" id="addUser" height="64px" width="64" onmouseout="addUserO()" onmouseover="addUser()" style="display: block;margin:0 auto 0;"></a>
+            </div>
+
 
         </div>
     </div>
 </body>
-<script></script>
+<script>
+    function addUser() {
+        document.getElementById("addUser").src = "addUser.png";
+    }
+
+    function addUserO() {
+        document.getElementById("addUser").src = "addUserGREY.png";
+    }
+</script>
 
 </html>
