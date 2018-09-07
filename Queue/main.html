@@ -59,7 +59,7 @@
         <div class="rightMain">
             <div class="mainTitle">SEARCH SYSTEM</div>
             <div class="searchFirstNameSec">
-                <input style="margin:0 auto 0" type="text" placeholder="Search FIRST NAME" id="SFN">
+                <input style="margin:2px auto 0" type="text" placeholder="Search FIRST NAME" id="SFN">
 
 
             </div>
@@ -68,7 +68,7 @@
 
             </div>
             <div class="searchPhoneSec">
-                <input style="margin:0 auto 0" type="text" placeholder="Search PHONE" id="SPN">
+                <input style="margin:2px auto 0" type="text" placeholder="Search PHONE" id="SPN">
 
             </div>
             <div class="adduserSec">
@@ -85,6 +85,14 @@
     }
 
     function addUserO() {
+        document.getElementById("addUser").src = "addUserGREY.png";
+    }
+
+    function spn() {
+        document.getElementById("addUser").src = "addUser.png";
+    }
+
+    function spnO() {
         document.getElementById("addUser").src = "addUserGREY.png";
     }
 </script>
