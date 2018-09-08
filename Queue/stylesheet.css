@@ -6,18 +6,24 @@
                                                     min-height: 100%;
                                                     margin: 0;
                                                     padding: 0;
-                                                    background-color: #f6f6f6
+                                                    background-color: #f6f6f6;
                                                 }
                                                 
                                                 a {
                                                     text-decoration: none;
                                                 }
                                                 
-                                                a:visited {}
+                                                a:visited {
+                                                    text-decoration: none;
+                                                }
                                                 
-                                                a:active {}
+                                                a:active {
+                                                    text-decoration: none;
+                                                }
                                                 
-                                                a:hover {}
+                                                a:hover {
+                                                    text-decoration: none;
+                                                }
                                                 
                                                 .container {
                                                     width: 1024px;
@@ -29,7 +35,6 @@
                                                     height: 100%;
                                                     width: 256px;
                                                     background: linear-gradient( lightgray, white);
-                                                    background-color: ;
                                                     float: left;
                                                     position: relative;
                                                 }
@@ -37,7 +42,6 @@
                                                 .rightMain {
                                                     height: 100%;
                                                     width: 736px;
-                                                    background-color: ;
                                                     background: #f6f6f6;
                                                     float: left;
                                                     position: relative;
@@ -53,7 +57,7 @@
                                                 
                                                 .contactHolder:hover {
                                                     background-color: #f2f2f2;
-                                                    color: red
+                                                    color: red;
                                                 }
                                                 
                                                 .contactPhoto {
@@ -93,7 +97,6 @@
                                                 .alphaMenuOpt {
                                                     height: 20px;
                                                     width: 100%;
-                                                    background-color: ;
                                                     color: rgb(182, 182, 182);
                                                     text-align: center;
                                                     font-family: SF Pro Text, SF Pro Icons, AOS Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -119,108 +122,41 @@
                                                 .searchFirstNameSec {
                                                     height: 100px;
                                                     width: 100%;
-                                                    min-width: ;
-                                                    background: ;
-                                                    background-color: ;
-                                                    border: ;
-                                                    color: ;
-                                                    border-radius: ;
-                                                    font-family: ;
-                                                    font-weight: ;
-                                                    margin: ;
                                                     margin-top: 36px;
-                                                    padding: ;
                                                 }
                                                 
                                                 .searchLastNameSec {
                                                     height: 100px;
                                                     width: 100%;
-                                                    min-width: ;
-                                                    background: ;
-                                                    background-color: ;
-                                                    border: ;
-                                                    color: ;
-                                                    border-radius: ;
-                                                    font-family: ;
-                                                    font-weight: ;
-                                                    margin: ;
-                                                    padding: ;
                                                 }
                                                 
                                                 .searchPhoneSec {
                                                     height: 100px;
                                                     width: 100%;
-                                                    min-width: ;
-                                                    background: ;
-                                                    background-color: ;
-                                                    border: ;
-                                                    color: ;
-                                                    border-radius: ;
-                                                    font-family: ;
-                                                    font-weight: ;
-                                                    margin: ;
-                                                    padding: ;
                                                 }
                                                 
                                                 .addUserSec {
                                                     height: 100px;
                                                     width: 100%;
-                                                    min-width: ;
-                                                    background: ;
-                                                    background-color: ;
-                                                    border: ;
-                                                    color: ;
-                                                    border-radius: ;
-                                                    font-family: ;
-                                                    font-weight: ;
-                                                    margin: ;
-                                                    padding: ;
                                                 }
                                                 
                                                 .searchFirstName {
                                                     height: 100%;
                                                     width: 100%;
-                                                    min-width: ;
-                                                    background: ;
                                                     background-color: pink;
-                                                    border: ;
-                                                    color: ;
-                                                    border-radius: ;
-                                                    font-family: ;
-                                                    font-weight: ;
-                                                    margin: ;
-                                                    padding: ;
                                                     margin-top: 35px;
                                                 }
                                                 
                                                 .searchLastName {
                                                     height: 100%;
                                                     width: 100%;
-                                                    min-width: ;
-                                                    background: ;
                                                     background-color: skyblue;
-                                                    border: ;
-                                                    color: ;
-                                                    border-radius: ;
-                                                    font-family: ;
-                                                    font-weight: ;
-                                                    margin: ;
-                                                    padding: ;
                                                 }
                                                 
                                                 .searchPhone {
                                                     height: 100%;
                                                     width: 100%;
-                                                    min-width: ;
-                                                    background: ;
                                                     background-color: yellow;
-                                                    border: ;
-                                                    color: ;
-                                                    border-radius: ;
-                                                    font-family: ;
-                                                    font-weight: ;
-                                                    margin: ;
-                                                    padding: ;
                                                 }
                                                 
                                                 .mainTitle {
@@ -232,6 +168,7 @@
                                                     font-size: 32px;
                                                     color: #6c6c6c;
                                                     line-height: 2;
+                                                    margin-top: 50px;
                                                 }
                                                 
                                                 [id=SFN] {
@@ -242,31 +179,31 @@
                                                     width: 339px;
                                                     padding: 0;
                                                     border-radius: 25px;
-                                                    text-indent: 50px;
+                                                    text-indent: 61px;
                                                     border: 1px solid lightgrey;
-                                                    font-size: 24px;
-                                                    background: url('searchGrey.png');
+                                                    font-size: 23px;
+                                                    background: url('gender-neutral-userGrey.png');
                                                     background-size: 32px;
                                                     background-repeat: no-repeat;
-                                                    background-position: 1.5%, 0%;
+                                                    background-position: 4.5%, 0%;
+                                                    transition: border 1s, font-size 0.5s ease;
                                                 }
                                                 
                                                 [id=SFN]:hover {
-                                                    background: url('search.png');
+                                                    background: url('gender-neutral-user.png');
                                                     background-color: white;
                                                     display: block;
                                                     height: 45px;
                                                     width: 339px;
                                                     padding: 0;
                                                     border-radius: 25px;
-                                                    text-indent: 50px;
-                                                    border: 2px solid #434343;
+                                                    text-indent: 61px;
+                                                    border: 1.7px solid #434343;
                                                     font-size: 24px;
                                                     background-size: 32px;
                                                     background-repeat: no-repeat;
-                                                    background-position: 1.5%, 0%;
+                                                    background-position: 4.5%, 0%;
                                                     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-                                                    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
                                                 }
                                                 
                                                 [id=SLN] {
@@ -277,17 +214,18 @@
                                                     width: 339px;
                                                     padding: 0;
                                                     border-radius: 25px;
-                                                    text-indent: 50px;
+                                                    text-indent: 61px;
                                                     border: 1px solid lightgrey;
-                                                    font-size: 24px;
-                                                    background: url('searchGrey.png');
+                                                    font-size: 22px;
+                                                    background: url('gender-neutral-userGrey.png');
                                                     background-size: 32px;
                                                     background-repeat: no-repeat;
-                                                    background-position: 1.5%, 0%;
+                                                    background-position: 4.5%, 0%;
+                                                    transition: border 1s, font-size 0.5s ease;
                                                 }
                                                 
                                                 [id=SLN]:hover {
-                                                    background: url('search.png');
+                                                    background: url('gender-neutral-user.png');
                                                     background-color: white;
                                                     margin: 15px auto;
                                                     display: block;
@@ -295,14 +233,14 @@
                                                     width: 339px;
                                                     padding: 0;
                                                     border-radius: 25px;
-                                                    text-indent: 50px;
+                                                    text-indent: 61px;
                                                     border: 2px solid #434343;
                                                     font-size: 24px;
                                                     background-size: 32px;
                                                     background-repeat: no-repeat;
-                                                    background-position: 1.5%, 0%;
+                                                    background-position: 4.5%, 0%;
                                                     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-                                                    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                                                    border: 1.7px solid #434343;
                                                 }
                                                 
                                                 [id=SPN] {
@@ -315,11 +253,12 @@
                                                     border-radius: 25px;
                                                     text-indent: 50px;
                                                     border: 1px solid lightgrey;
-                                                    font-size: 24px;
+                                                    font-size: 22px;
                                                     background: url('phoneGrey.png');
                                                     background-size: 32px;
                                                     background-repeat: no-repeat;
                                                     background-position: 1.5%, 0%;
+                                                    transition: border 1s, font-size 0.5s ease;
                                                 }
                                                 
                                                 [id=SPN]:hover {
@@ -337,8 +276,7 @@
                                                     background-repeat: no-repeat;
                                                     background-position: 1.5%, 0%;
                                                     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-                                                    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-                                                    border: 2px solid #434343;
+                                                    border: 1.7px solid #434343;
                                                 }
                                                 
                                                 .divider {
