@@ -80,7 +80,7 @@
         color: #f2f2f2;
         display: block;
         text-indent: 40px;
-        margin: 10px auto 0;
+        margin: 4px auto 6px;
         width: 325px;
         font-size: 20px;
         border-radius: 2.5px;
@@ -103,12 +103,12 @@
     
     .popProfilePic {
         width: 100%;
-        height: 30%;
+        height: 29%;
     }
     
     .popInput {
         width: 100%;
-        height: 30%;
+        height: 35%;
         overflow: hidden;
     }
     
@@ -119,7 +119,7 @@
     
     .popLoginButton {
         width: 100%;
-        height: 25%;
+        height: 20%;
     }
     
     .popPic {
@@ -162,7 +162,7 @@
         height: 100%;
         float: left;
         color: silver;
-        line-height: 3.7;
+        line-height: 2.9;
         font-size: 13px;
     }
     
@@ -170,7 +170,7 @@
         width: 50%;
         height: 100%;
         float: left;
-        line-height: 3.7;
+        line-height: 2.9;
         color: white;
         text-indent: 45px;
         font-size: 13px;
@@ -198,7 +198,7 @@
         <div class="pop">
             <div class="popProfilePic"><img src="profileSample.png" class="popPic"></div>
             <div class="popInput">
-                <input type="text" style='background-image: url("head.png");background-size:17px;' placeholder="Username" class="tBox" style="margin-top: 4" required="required" id="usrn" onFocus="showUN()" onBlur="hideUN()" />
+                <input type="text" style='background-image: url("head.png");background-size:17px;margin-top: 9px;margin-bottom: 11px;' placeholder="Username" class="tBox"  required="required" id="usrn" onFocus="showUN()" onBlur="hideUN()" />
                 <input type="password" placeholder="password" class="tBox" id="pass" onFocus="showPass()" onBlur="hidePass()" focus/></div>
             <div class="popPassOptions">
                 <div class="popRem"><input type="checkbox">Remember me</div>
@@ -221,7 +221,7 @@
                                 document.getElementById("usrn").focus();
                              };*/
     function showUN() {
-        document.getElementById("usrn").style.transition = "all 1s";
+        document.getElementById("usrn").style.transition = "all 0.1s";
 
         document.getElementById("usrn").style.backgroundImage = "url('headBlue.png')";
         document.getElementById("usrn").style.backgroundSize = "17px";
@@ -233,7 +233,7 @@
     }
 
     function showPass() {
-        document.getElementById("pass").style.transition = "all 1s";
+        document.getElementById("pass").style.transition = "all 0.1s";
 
         document.getElementById("pass").style.backgroundImage = "url('keyBlue.png')";
     }
