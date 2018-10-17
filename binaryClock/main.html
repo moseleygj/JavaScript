@@ -3,15 +3,27 @@
 <meta charset="utf-8">
 <title>Binary Clock 1.0</title>
 <style>
+*{transition:all 0.125s ease-in;}
 body{
   background-color:black;
+  height:100%;
+  position:absolute;
+	  width:100%;
+}
+html{
+	height:100%;
+	width:100%;
+	position:absolute;
+margin:0;padding:0;
 }
 
 .container{
   background-color:black;
-  margin: 50% auto 0;
+  margin:0 auto 0;
   width:728px;
   transform:translateY(-50%);
+  position:relative;
+	  top:50%;
 }
 
 .r
@@ -26,7 +38,7 @@ body{
 }
 
 .vBar{
-  height:100%;
+  height:481px;
   width:120px;  float:left;
   background-color:black;
 }
@@ -40,11 +52,13 @@ body{
   border-color:black;
   margin:5px;
 }
+    .contain{width:760px;height:500px;transform:translateY(-50%);top:50%;margin-left:auto;margin-right:auto;position:relative;}
 </style>
 </head>
 
 <body  onload="startTime()">
-  <div class="container">
+	
+  <div class="contain">
     <!-- hours -->
     <div class="vBar" id="hour" >
       <div class="filler"></div>
@@ -81,7 +95,7 @@ body{
       <div class="r" id="S01"></div>
     </div>
 
-        <div class="vBar" id="secs">
+      <div class="vBar" id="secs">
       <div class="r" id="S4"></div>
       <div class="r" id="S3"></div>
       <div class="r" id="S2"></div>
@@ -89,7 +103,7 @@ body{
     </div>
 
 </div>
-
+	
 <script>
 function startTime()
 {
