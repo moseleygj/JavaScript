@@ -1,64 +1,157 @@
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Capacity Quota</title>
-<style>
-html{margin:0;padding:0;height:100%;}
-body{margin:0;padding:0;background-color:#f2f2f2;height:100%;position: relative;}
-#container{
-
-	position:relative;
-	height:540px;
-	width:768px;
-	margin:0 auto 0;
-	transform: translatey(-50%);
-	margin-top: 50%;
-	background-color:white;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-.leftIconArea{height:460px;width:30%;margin:;float:left;}
-.rightIconArea{height:460px;width:70%;margin:;float:left;}
-.bottomStatusArea{height:auto;width:100%;margin:;clear:both;}
-.iconArea{height:58%;width:100%;margin:9px;}
-.selectionArea{height:40px;width:100%;margin-left:30px;margin-top:10px;}
-.stats{height:300px;width:100%;}
-.statMp3{height:36px;width:100%;}
-.statDoc{height:36px;width:100%;}
-.statVid{height:36px;width:100%;}
-.statHdd{height:36px;width:100%;}
-.statPhoto{height:36px;width:100%;}
-
-.resultHdd{height:;width:;font-weight:;font-family:;text-align:;color:;}
-.resultMin{}
-.resultRec{}
-footer{padding:50px 0px;
-	background-color:#434343;
-	width: 100%;
-	color:white;
-	position:absolute;
-left:0;
-bottom:0;
-clear:both;
-}
-footer ul{text-align:center;}
-footer ul li{list-style:none;display:inline-block;padding: 0 20px;cursor :pointer;}
-footer ul li a{text-decoration: none;color:white;}
-footer ul li a:hover{text-decoration: none;color:#ed2d5b;}
-
-</style>
+    <meta charset="UTF-8">
+    <title>Capacity Quota</title>
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e3e2e2;
+            min-height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+        
+        #container {
+            position: relative;
+            height: 100%;
+            width: 768px;
+            margin: 0 auto 0;
+            transform: translatey(-50%);
+            margin-top: 50%;
+            background-color: white;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+        
+        .leftIconArea {
+            height: 460px;
+            width: 30%;
+            margin: ;
+            float: left;
+        }
+        
+        .rightIconArea {
+            height: 460px;
+            width: 70%;
+            margin: ;
+            float: left;
+        }
+        
+        .bottomStatusArea {
+            height: auto;
+            width: 100%;
+            margin: ;
+            clear: both;
+        }
+        
+        .iconArea {
+            height: 58%;
+            width: 100%;
+            margin: 9px;
+        }
+        
+        .selectionArea {
+            height: 40px;
+            width: 100%;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        
+        .stats {
+            height: 300px;
+            width: 100%;
+        }
+        
+        .statMp3 {
+            height: 36px;
+            width: 100%;
+        }
+        
+        .statDoc {
+            height: 36px;
+            width: 100%;
+        }
+        
+        .statVid {
+            height: 36px;
+            width: 100%;
+        }
+        
+        .statHdd {
+            height: 36px;
+            width: 100%;
+        }
+        
+        .statPhoto {
+            height: 36px;
+            width: 100%;
+        }
+        
+        .resultHdd {
+            height: ;
+            width: ;
+            font-weight: ;
+            font-family: ;
+            text-align: ;
+            color: ;
+        }
+        
+        .resultMin {}
+        
+        .resultRec {}
+        
+        footer {
+            padding: 50px 0px;
+            background-color: #434343;
+            width: 100%;
+            color: white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            clear: both;
+        }
+        
+        footer ul {
+            text-align: center;
+        }
+        
+        footer ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+        
+        footer ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        footer ul li a:hover {
+            text-decoration: none;
+            color: #ed2d5b;
+        }
+    </style>
 </head>
 
 <body>
-<div id="container">
-	<div class="leftIconArea">
-<img src="question.png" class="iconArea" id="mainIcon">
-	</div>
+    <div id="container">
+        <div class="leftIconArea">
+            <img src="question.png" class="iconArea" id="mainIcon">
+        </div>
 
-	<div class="rightIconArea">
-		<div class="selectionArea" style="margin-top:30px">
-	<b>Device Type:</b>&nbsp
+        <div class="rightIconArea">
+            <div class="selectionArea" style="margin-top:30px">
+                <b>Device Type:</b>&nbsp
 
-	<select id="devSelection" onchange="devSelect()">
+                <select id="devSelection" onchange="devSelect()">
 		<option value="none" selected=selected>-Select an option-</option>
 			<option value="mp3">MP3</option>
 			<option value="photo">Photo</option>
@@ -67,253 +160,238 @@ footer ul li a:hover{text-decoration: none;color:#ed2d5b;}
 			<option value="hdd">HardDrive</option>
 	</select>
 
-		<!--<button onclick="devSelect()" id="">Click Me</button>-->
+                <!--<button onclick="devSelect()" id="">Click Me</button>-->
 
-</div>
+            </div>
 
-		<br/>
-		<div class="selectionArea">
-<div class="stats">
-<div class="statMp3" id="statMp3"><b>Number of MP3s:</b>&nbsp<input type="textbox" id="txtMp3" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statPhoto" id="statPhoto"><b>Number of Photos:</b>&nbsp<input type="textbox" id="txtPhoto" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statDoc" id="statDoc"><b>Number of Documents:</b>&nbsp<input type="textbox" id="txtDoc" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statVid" id="statVid"><b>Number of Videos:</b>&nbsp<input type="textbox" id="txtVid" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statVidQ" id="statVidQ"><b>Quality of Videos:</b>&nbsp<input type="textbox" id="txtVidQ" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statDVD" id="statDVD"><b>DVD Estimate:</b>&nbsp<input type="textbox" id="txtVidDvd" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statVidS" id="statVidS"><b>Total size of all videos(GB):</b>&nbsp<input type="textbox" id="txtVidS" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statVMW" id="statVMW"><b>Virtual Machine(s)(Windows) Total:</b>&nbsp<input type="textbox" id="txtVMW" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<div class="statVML" id="statVML"><b>Virtual Machine(s)(Linux) Total:</b>&nbsp<input type="textbox" id="txtVML" maxlength="6" max="999999" size="6" placeholder="0"></div>
-<button onclick="photo()" id="btnPhoto">Get Photo Quota</button>
-<button onclick="mp3()" id="btnMp3">Get Mp3 Quota</button>
-<button onclick="doc()" id="btnDoc">Get Document Quota</button>
-<button onclick="vid()" id="btnVid">Get Video Quota</button>
-<button onclick="hdd()" id="btnHdd">Get Hard Drive Quota</button>
+            <br/>
+            <div class="selectionArea">
+                <div class="stats">
+                    <div class="statMp3" id="statMp3"><b>Number of MP3s:</b>&nbsp<input type="textbox" id="txtMp3" maxlength="6" max="999999" size="6" placeholder="0"></div>
+                    <div class="statPhoto" id="statPhoto"><b>Number of Photos:</b>&nbsp<input type="textbox" id="txtPhoto" maxlength="6" max="999999" size="6" placeholder="0"></div>
+                    <div class="statDoc" id="statDoc"><b>Number of Documents:</b>&nbsp<input type="textbox" id="txtDoc" maxlength="6" max="999999" size="6" placeholder="0"></div>
+                    <div class="statVid" id="statVid"><b>Number of Videos:</b>&nbsp<input type="textbox" id="txtVid" maxlength="6" max="999999" size="6" placeholder="0"></div>
+                    <div class="statVidQ" id="statVidQ"><b>Quality of Videos:</b>&nbsp<input type="textbox" id="txtVidQ" maxlength="6" max="999999" size="6" placeholder="0"></div>
+                    <div class="statDVD" id="statDVD"><b>DVD Estimate:</b>&nbsp<input type="textbox" id="txtVidDvd" maxlength="6" max="999999" size="6" placeholder="0"></div>
+                    <div class="statVidS" id="statVidS"><b>Total size of all videos(GB):</b>&nbsp<input type="textbox" id="txtVidS" maxlength="6" max="999999" size="6" placeholder="0"></div>
+                    <div class="statVMW" id="statVMW"><b>Virtual Machine(s)(Windows) Total:</b>&nbsp<input type="textbox" id="txtVMW" maxlength="6" max="999999" size="6" placeholder="0"></div>
+                    <div class="statVML" id="statVML"><b>Virtual Machine(s)(Linux) Total:</b>&nbsp<input type="textbox" id="txtVML" maxlength="6" max="999999" size="6" placeholder="0"></div>
+                    <button onclick="photo()" id="btnPhoto">Get Photo Quota</button>
+                    <button onclick="mp3()" id="btnMp3">Get Mp3 Quota</button>
+                    <button onclick="doc()" id="btnDoc">Get Document Quota</button>
+                    <button onclick="vid()" id="btnVid">Get Video Quota</button>
+                    <button onclick="hdd()" id="btnHdd">Get Hard Drive Quota</button>
 
 
-</div>
-	</div>
-	</div>
+                </div>
+            </div>
+        </div>
 
-	<div class="bottomStatusArea"></div>
-</div>
-<footer>
-	<ul>
-		<li><a href="#">About us</a></li>
-		<li><a href="#">Other Products</a></li>
-		<li><a href="#">Contact US</a></li>
-		<li><a href="#">Copyright</a></li>
-		<li><a href="#">Parent Company</a></li>
-	</ul>
-</footer>
+        <div class="bottomStatusArea"></div>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Other Products</a></li>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="#">Copyright</a></li>
+            <li><a href="#">Parent Company</a></li>
+        </ul>
+    </footer>
 </body>
 
 <script type="text/javascript">
-//display="none"; doesnt utilize uneeded space;
-//visibilibility is a bad choice, it utltizes unnecessary space
-document.getElementById("statMp3").style.display="none";
-document.getElementById("statPhoto").style.display="none";
-document.getElementById("statDoc").style.display="none";
-document.getElementById("statVid").style.display="none";
-document.getElementById("statVidQ").style.display="none";
-document.getElementById("statVidS").style.display="none";
-document.getElementById("statDVD").style.display="none";
-document.getElementById("statVML").style.display="none";
-document.getElementById("statVMW").style.display="none";
-document.getElementById("btnPhoto").style.display="none";
-document.getElementById("btnMp3").style.display="none";
-document.getElementById("btnDoc").style.display="none";
-document.getElementById("btnVid").style.display="none";
-document.getElementById("btnHdd").style.display="none";
+    //display="none"; doesnt utilize uneeded space;
+    //visibilibility is a bad choice, it utltizes unnecessary space
+    document.getElementById("statMp3").style.display = "none";
+    document.getElementById("statPhoto").style.display = "none";
+    document.getElementById("statDoc").style.display = "none";
+    document.getElementById("statVid").style.display = "none";
+    document.getElementById("statVidQ").style.display = "none";
+    document.getElementById("statVidS").style.display = "none";
+    document.getElementById("statDVD").style.display = "none";
+    document.getElementById("statVML").style.display = "none";
+    document.getElementById("statVMW").style.display = "none";
+    document.getElementById("btnPhoto").style.display = "none";
+    document.getElementById("btnMp3").style.display = "none";
+    document.getElementById("btnDoc").style.display = "none";
+    document.getElementById("btnVid").style.display = "none";
+    document.getElementById("btnHdd").style.display = "none";
 
-function devSelect(){
+    function devSelect() {
 
-	var e = document.getElementById("devSelection");
-	var icon = document.getElementById("mainIcon");
-	var option = e.options[e.selectedIndex].value;
-if(option =="none"){
-	icon.src="question.png";
-	document.getElementById("statMp3").style.display="none";
-	document.getElementById("statPhoto").style.display="none";
-	document.getElementById("statDoc").style.display="none";
-	document.getElementById("statVid").style.display="none";
-	document.getElementById("statVidQ").style.display="none";
-	document.getElementById("statVidS").style.display="none";
-	document.getElementById("statDVD").style.display="none";
-	document.getElementById("statVML").style.display="none";
-	document.getElementById("statVMW").style.display="none";
-	document.getElementById("btnPhoto").style.display="none";
-	document.getElementById("btnMp3").style.display="none";
-	document.getElementById("btnDoc").style.display="none";
-	document.getElementById("btnVid").style.display="none";
-	document.getElementById("btnHdd").style.display="none";
+        var e = document.getElementById("devSelection");
+        var icon = document.getElementById("mainIcon");
+        var option = e.options[e.selectedIndex].value;
+        if (option == "none") {
+            icon.src = "question.png";
+            document.getElementById("statMp3").style.display = "none";
+            document.getElementById("statPhoto").style.display = "none";
+            document.getElementById("statDoc").style.display = "none";
+            document.getElementById("statVid").style.display = "none";
+            document.getElementById("statVidQ").style.display = "none";
+            document.getElementById("statVidS").style.display = "none";
+            document.getElementById("statDVD").style.display = "none";
+            document.getElementById("statVML").style.display = "none";
+            document.getElementById("statVMW").style.display = "none";
+            document.getElementById("btnPhoto").style.display = "none";
+            document.getElementById("btnMp3").style.display = "none";
+            document.getElementById("btnDoc").style.display = "none";
+            document.getElementById("btnVid").style.display = "none";
+            document.getElementById("btnHdd").style.display = "none";
 
-}
-		else if (option =="mp3")
-		{
-		icon.src="mp3s.ico";
-		document.getElementById("statMp3").style.display="block";
-		document.getElementById("statPhoto").style.display="none";
-		document.getElementById("statDoc").style.display="none";
-		document.getElementById("statVid").style.display="none";
-		document.getElementById("statVidQ").style.display="none";
-		document.getElementById("statVidS").style.display="none";
-		document.getElementById("statDVD").style.display="none";
-		document.getElementById("statVML").style.display="none";
-		document.getElementById("statVMW").style.display="none";
-		document.getElementById("btnPhoto").style.display="none";
-		document.getElementById("btnMp3").style.display="block";
-		document.getElementById("btnDoc").style.display="none";
-		document.getElementById("btnVid").style.display="none";
-		document.getElementById("btnHdd").style.display="none";
+        } else if (option == "mp3") {
+            icon.src = "mp3s.ico";
+            document.getElementById("statMp3").style.display = "block";
+            document.getElementById("statPhoto").style.display = "none";
+            document.getElementById("statDoc").style.display = "none";
+            document.getElementById("statVid").style.display = "none";
+            document.getElementById("statVidQ").style.display = "none";
+            document.getElementById("statVidS").style.display = "none";
+            document.getElementById("statDVD").style.display = "none";
+            document.getElementById("statVML").style.display = "none";
+            document.getElementById("statVMW").style.display = "none";
+            document.getElementById("btnPhoto").style.display = "none";
+            document.getElementById("btnMp3").style.display = "block";
+            document.getElementById("btnDoc").style.display = "none";
+            document.getElementById("btnVid").style.display = "none";
+            document.getElementById("btnHdd").style.display = "none";
 
-		}
-		else if (option=="photo")
-		{
-		icon.src="photos.png";
-		document.getElementById("statMp3").style.display="none";
-		document.getElementById("statPhoto").style.display="block";
-		document.getElementById("statDoc").style.display="none";
-		document.getElementById("statVid").style.display="none";
-		document.getElementById("statVidQ").style.display="none";
-		document.getElementById("statVidS").style.display="none";
-		document.getElementById("statVML").style.display="none";
-		document.getElementById("statVMW").style.display="none";
-		document.getElementById("btnPhoto").style.display="block";
-		document.getElementById("btnMp3").style.display="none";
-		document.getElementById("btnDoc").style.display="none";
-		document.getElementById("btnVid").style.display="none";
-		document.getElementById("btnHdd").style.display="none";
-				}
-		else if(option == "doc")
-		{
-		icon.src="google_docs_icon.png";
-		document.getElementById("statMp3").style.display="none";
-		document.getElementById("statPhoto").style.display="none";
-		document.getElementById("statDoc").style.display="block";
-		document.getElementById("statVid").style.display="none";
-		document.getElementById("statVidQ").style.display="none";
-		document.getElementById("statVidS").style.display="none";
-		document.getElementById("statVML").style.display="none";
-		document.getElementById("statVMW").style.display="none";
-		document.getElementById("btnPhoto").style.display="none";
-		document.getElementById("btnMp3").style.display="none";
-		document.getElementById("btnDoc").style.display="block";
-		document.getElementById("btnVid").style.display="none";
-		document.getElementById("btnHdd").style.display="none";
-		document.getElementById("statDVD").style.display="none";
+        } else if (option == "photo") {
+            icon.src = "photos.png";
+            document.getElementById("statMp3").style.display = "none";
+            document.getElementById("statPhoto").style.display = "block";
+            document.getElementById("statDoc").style.display = "none";
+            document.getElementById("statVid").style.display = "none";
+            document.getElementById("statVidQ").style.display = "none";
+            document.getElementById("statVidS").style.display = "none";
+            document.getElementById("statVML").style.display = "none";
+            document.getElementById("statVMW").style.display = "none";
+            document.getElementById("btnPhoto").style.display = "block";
+            document.getElementById("btnMp3").style.display = "none";
+            document.getElementById("btnDoc").style.display = "none";
+            document.getElementById("btnVid").style.display = "none";
+            document.getElementById("btnHdd").style.display = "none";
+        } else if (option == "doc") {
+            icon.src = "google_docs_icon.png";
+            document.getElementById("statMp3").style.display = "none";
+            document.getElementById("statPhoto").style.display = "none";
+            document.getElementById("statDoc").style.display = "block";
+            document.getElementById("statVid").style.display = "none";
+            document.getElementById("statVidQ").style.display = "none";
+            document.getElementById("statVidS").style.display = "none";
+            document.getElementById("statVML").style.display = "none";
+            document.getElementById("statVMW").style.display = "none";
+            document.getElementById("btnPhoto").style.display = "none";
+            document.getElementById("btnMp3").style.display = "none";
+            document.getElementById("btnDoc").style.display = "block";
+            document.getElementById("btnVid").style.display = "none";
+            document.getElementById("btnHdd").style.display = "none";
+            document.getElementById("statDVD").style.display = "none";
 
 
-		}
-		else if(option =="vid")
-		{
-		icon.src="10-video-camera-png-image.png";
-		document.getElementById("statMp3").style.display="none";
-		document.getElementById("statPhoto").style.display="none";
-		document.getElementById("statDoc").style.display="none";
-		document.getElementById("statVid").style.display="none";
-		document.getElementById("statVidQ").style.display="none";
-		document.getElementById("statVidS").style.display="block";
-		document.getElementById("statVML").style.display="none";
-		document.getElementById("statVMW").style.display="none";
-		document.getElementById("btnPhoto").style.display="none";
-		document.getElementById("btnMp3").style.display="none";
-		document.getElementById("btnDoc").style.display="none";
-		document.getElementById("btnVid").style.display="block";
-		document.getElementById("btnHdd").style.display="none";
-		document.getElementById("statDVD").style.display="block";
+        } else if (option == "vid") {
+            icon.src = "10-video-camera-png-image.png";
+            document.getElementById("statMp3").style.display = "none";
+            document.getElementById("statPhoto").style.display = "none";
+            document.getElementById("statDoc").style.display = "none";
+            document.getElementById("statVid").style.display = "none";
+            document.getElementById("statVidQ").style.display = "none";
+            document.getElementById("statVidS").style.display = "block";
+            document.getElementById("statVML").style.display = "none";
+            document.getElementById("statVMW").style.display = "none";
+            document.getElementById("btnPhoto").style.display = "none";
+            document.getElementById("btnMp3").style.display = "none";
+            document.getElementById("btnDoc").style.display = "none";
+            document.getElementById("btnVid").style.display = "block";
+            document.getElementById("btnHdd").style.display = "none";
+            document.getElementById("statDVD").style.display = "block";
 
-				}
-		else if(option =="hdd"){
-		icon.src="HDD.png";
-		document.getElementById("statMp3").style.display="block";
-		document.getElementById("statPhoto").style.display="block";
-		document.getElementById("statDoc").style.display="block";
-		document.getElementById("statVid").style.display="block";
-		document.getElementById("statVidQ").style.display="block";
-		document.getElementById("statVidS").style.display="block";
-		document.getElementById("statDVD").style.display="block";
-		document.getElementById("statVML").style.display="block";
-		document.getElementById("statVMW").style.display="block";
-		document.getElementById("btnPhoto").style.display="none";
-		document.getElementById("btnMp3").style.display="none";
-		document.getElementById("btnDoc").style.display="none";
-		document.getElementById("btnVid").style.display="none";
-		document.getElementById("btnHdd").style.display="block";}
-		else{
-		alert("error!");
-		icon.src="error.png";
-		}
+        } else if (option == "hdd") {
+            icon.src = "HDD.png";
+            document.getElementById("statMp3").style.display = "block";
+            document.getElementById("statPhoto").style.display = "block";
+            document.getElementById("statDoc").style.display = "block";
+            document.getElementById("statVid").style.display = "block";
+            document.getElementById("statVidQ").style.display = "block";
+            document.getElementById("statVidS").style.display = "block";
+            document.getElementById("statDVD").style.display = "block";
+            document.getElementById("statVML").style.display = "block";
+            document.getElementById("statVMW").style.display = "block";
+            document.getElementById("btnPhoto").style.display = "none";
+            document.getElementById("btnMp3").style.display = "none";
+            document.getElementById("btnDoc").style.display = "none";
+            document.getElementById("btnVid").style.display = "none";
+            document.getElementById("btnHdd").style.display = "block";
+        } else {
+            alert("error!");
+            icon.src = "error.png";
+        }
 
-	}
-	var txtMp3 = document.getElementById("txtMp3");
-	var txtPhoto = document.getElementById("txtPhoto");
-	var txtDoc = document.getElementById("txtDoc");
-	var txtVid = document.getElementById("txtVid");
-	var txtVidDvd = document.getElementById("txtVidDvd");
-	var txtVidS = document.getElementById("txtVidS");
-	var txtVMW = document.getElementById("txtVMW");
-	var txtVML = document.getElementById("txtVML");
+    }
+    var txtMp3 = document.getElementById("txtMp3");
+    var txtPhoto = document.getElementById("txtPhoto");
+    var txtDoc = document.getElementById("txtDoc");
+    var txtVid = document.getElementById("txtVid");
+    var txtVidDvd = document.getElementById("txtVidDvd");
+    var txtVidS = document.getElementById("txtVidS");
+    var txtVMW = document.getElementById("txtVMW");
+    var txtVML = document.getElementById("txtVML");
 
 
-	function hdd(){//add them all
-	}
-	function vid(){
-		alert("Minimum: "+ numberCop(Number(txtVidDvd.value)*4812.8)+" Video Size in GB: "+ numberCop1(Number(txtVidS.value)+" Total: "+
-		numberCop0(numCrunch(txtVidDvd.value,txtVidS.value))));
-//		numberCop(numberCop1(Number(txtVidDvd.value)*4812.8)+numberCop1(Number(txtVidS.value)*4812.8))));
+    function hdd() { //add them all
+    }
 
-	}
-	function photo(){
-		alert("Minimum: "+ numberCop(Number(txtPhoto.value)*1.7)+" Maximum: "+ numberCop(Number(txtPhoto.value)*2.3));
-	}
-	function mp3(){
-		alert("Minimum(160kps): "+ numberCop((Number(txtMp3.value)*3.51))+" Medium(192kps): "+numberCop(Number(txtMp3.value*4.21))+" Medium-High(256kps): "+numberCop(Number(txtMp3.value*5.61))+" High(320kps): "+numberCop(Number(txtMp3.value*7.02)));
-	}
-	function doc(){}
+    function vid() {
+        alert("Minimum: " + numberCop(Number(txtVidDvd.value) * 4812.8) + " Video Size in GB: " + numberCop1(Number(txtVidS.value) + " Total: " +
+            numberCop0(numCrunch(txtVidDvd.value, txtVidS.value))));
+        //		numberCop(numberCop1(Number(txtVidDvd.value)*4812.8)+numberCop1(Number(txtVidS.value)*4812.8))));
 
-	function numberCop0(num)
-	{
-		if (num > 1)
-		{
-			return (num).toFixed(2)+" GBs ";
-		}
-		else
-		{
-		return "Error";
-		}
-	}
-function numberCop(num)
-{
-	if (num > 1024)
-	{
-		num/=1024;
-		return (num).toFixed(2)+" GBs ";
-	}
-	else
-	{
-		return (num).toFixed(2)+" MBs 	";
-	}
-}
+    }
 
-function numCrunch(a, b)
-{
-	var totalDVD = Number(a*4.7);
-	var totalVideoSize = Number(b);
-	var overAllTotal=Number(totalDVD + totalVideoSize);
-	alert(overAllTotal);
-	return overAllTotal;
-}
-function numberCop1(num)
-{
-	if (num > 1024)
-	{
-		num/=1024;
-		return num;
-	}
-	else
-	{
-		return num;
-	}
-}
+    function photo() {
+        alert("Minimum: " + numberCop(Number(txtPhoto.value) * 1.7) + " Maximum: " + numberCop(Number(txtPhoto.value) * 2.3));
+    }
+
+    function mp3() {
+        alert("Minimum(160kps): " + numberCop((Number(txtMp3.value) * 3.51)) + " Medium(192kps): " + numberCop(Number(txtMp3.value * 4.21)) + " Medium-High(256kps): " + numberCop(Number(txtMp3.value * 5.61)) + " High(320kps): " + numberCop(Number(txtMp3.value * 7.02)));
+    }
+
+    function doc() {}
+
+    function numberCop0(num) {
+        if (num > 1) {
+            return (num).toFixed(2) + " GBs ";
+        } else {
+            return "Error";
+        }
+    }
+
+    function numberCop(num) {
+        if (num > 1024) {
+            num /= 1024;
+            return (num).toFixed(2) + " GBs ";
+        } else {
+            return (num).toFixed(2) + " MBs 	";
+        }
+    }
+
+    function numCrunch(a, b) {
+        var totalDVD = Number(a * 4.7);
+        var totalVideoSize = Number(b);
+        var overAllTotal = Number(totalDVD + totalVideoSize);
+        alert(overAllTotal);
+        return overAllTotal;
+    }
+
+    function numberCop1(num) {
+        if (num > 1024) {
+            num /= 1024;
+            return num;
+        } else {
+            return num;
+        }
+    }
 </script>
+
 </html>

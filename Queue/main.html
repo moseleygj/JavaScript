@@ -73,7 +73,7 @@
             </div>
             <div class="divider"></div>
             <div class="adduserSec">
-                <a href=""><img src="addUserGREY.png" id="addUser" height="64px" width="64" onmouseout="addUserO()" onmouseover="addUser()" style="display: block;margin:0 auto 0;"></a>
+                <a href=""><img src="addUserGREY.png" title="Add new user" id="addUser" height="64px" width="64" onmouseout="addUserO()" onmouseover="addUser()" style="display: block;margin:0 auto 0;"></a>
             </div>
 
 
@@ -82,7 +82,10 @@
 </body>
 <script>
     function addUser() {
+        document.getElementById("addUser").style.transition = "transition: all 2s ease";
         document.getElementById("addUser").src = "addUser.png";
+
+
     }
 
     function addUserO() {
