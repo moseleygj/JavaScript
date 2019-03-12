@@ -3,17 +3,40 @@
 <body>
     <script>
     
-    //button
+    let s1 = ["A", "K", "Q", "J", 10, 9, 8, 7, 6, 4, 3, 2, 1];
 
-    //toggele 3 categories
+function head() {
+  //add array to see if it equals 0;
+  //if not continue.
+  function getTotal(total, num) {
+    return total + num;
+  }
+}
+function bdy(){
+  
+}
+  let r = Math.floor(Math.random() * s1.length) + 0;
 
-    //array suite1
+  //if 0 run again
+  if (r == 0) {
+    p2();
+  }
+  console.log(r);
+  s1[r] = 0; //set used variable to 0;
+  console.log(s1);
+  
+  if (s1.reduce(getTotal) == 0) {
+    console.log("Goal Reached!");
+    alert("Goal Reached!");
+  } else {
+    //go back to the start of p2
+  }
+  document.getElementById("showTime").innerHTML = s1.reduce(getTotal);
+}
 
-    //array suite2
-
-    //array suite3
-
-    //array suite4
+function p1() {
+  console.log("Hi from:p1!");
+}
 
         
     </script>
