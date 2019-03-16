@@ -1,13 +1,17 @@
 <html>
-<head>Deck Algorithom
+<head>
+  <meta charset="UTF-8">
+    <title>Deck Algorithom</title>
+    
+</head>
     <style>
-    button{
+button{
   height:50px;
   width:100px;
   font-size:14px;
   font-weight:bold;
   border:red 1px solid;
-  border-radius:5px
+  border-radius:5px;
 }
 
 button:hover{
@@ -18,44 +22,49 @@ button:hover{
   border:grey 1px solid;
   border-radius:5px;
   background-color:red;
-  color:white
-}</style>
-</head>
-<body>
-        <button onClick="bdy()">Try Me!</button>
-        <button onClick="p1()">Try Me!</button>
-        <p id="showTime"></p>
-    <script>
-let s1 = ["A", "K", "Q", "J", 10, 9, 8, 7, 6, 4, 3, 2, 1];
-
-
-  //add array to see if it equals 0; //if not continue.
-  function getTotal(total, num) {
-    return total + num;
-  }
-  
-function bdy(){
- if(s1.reduce(getTotal) == 0){//if entire array element = 0
-    console.log("Goal Reached!");
-    alert("Goal Reached!");
- }else{//keep running ,draw card
-   drawCard();
+  color:white;
 }
-  
-  function drawCard(){
-      let r = Math.floor(Math.random() * s1.length) + 0;
-if (r == 0) { //if the number of car is 0 
-    bdy();
-  }
- else{
-    document.getElementById("showTime").innerHTML = s1[r];
-    s1[r] = 0; //set that  element to 0 to not be used again
-      }
-  }
+</style>
 
-function p1() {
-  console.log("Hi from:p1!");
-} 
-    </script>
-</body>
+<body>
+        <button onClick="bdy(s1)">Try Me!</button>
+        <p id="showTime1"></p>
+        <p id="cardCounter"></p>
+        <script>
+            let s1 = ["A", "K", "Q", "J", 10, 9, 8, 7, 6, 5, 4, 3, 2];
+            let s2 = ["A", "K", "Q", "J", 10, 9, 8, 7, 6, 5, 4, 3, 2];
+            let s3 = ["A", "K", "Q", "J", 10, 9, 8, 7, 6, 5, 4, 3, 2];
+            let s4 = ["A", "K", "Q", "J", 10, 9, 8, 7, 6, 5, 4, 3, 2];
+            let cardCounter = 0;
+            let countCards = document.querySelector('#cardCounter');
+            
+            function getTotal(total, num) {
+              return total + num;
+            }
+            
+            function bdy(suite){
+            if( suite.reduce(getTotal) == "#############" ){
+                console.log("Goal Reached!"); alert("Goal Reached!");   
+            }
+            else{
+             drawCard(suite);
+              }
+            }
+            
+            function drawCard(suite){
+                let r = Math.floor(Math.random() * suite.length) + 0;
+                  if (suite[r] == "#") { 
+                    bdy(suite);
+                  }
+                  else{
+                    document.getElementById("showTime1").innerHTML += suite[r]+", ";console.log(s1);  
+                    suite[r] = "#";
+                    cardCounter++; 
+                    countCards.innerHTML = cardCounter;
+                    return 0; //send to next suite e.g s2,s3,s4
+                  }  
+            }
+          </script>
+</body>  
+
 </html>
