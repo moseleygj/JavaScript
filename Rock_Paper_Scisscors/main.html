@@ -3,18 +3,24 @@
 <title>Rock Paper Scissors</title>
 <meta charset="UTF-8">
 <style>
-	
+
 	.container{height:300px;width:80%;min-height: ;min-width: ;float:;margin:0 auto 0;}
 	.left{height:200px;width:20%;min-height: ;min-width: ;float:;}
 	.versus{height:200px;width:15%min-height: ;min-width: ;float:;}
 	.middle{height:200px;width:20%:;min-height: ;min-width: ;float:;}
 	.equal{height:200px;width:20%;min-height: ;min-width: ;float:;}
 	.right{height:200px;width:20%;min-height: ;min-width: ;float:;}
-	.btn{margin: 0 auto 0;display:block;}
+	.btn{ 
+	margin: 0 auto 0;
+	display: block;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: bolder;
+}
 </style>
 </head>
 <body>
-	
+
 	<div class="container">
 	<img class="left" id="opt1" src="Lol_question_mark.png"></img>
 	<img class="versus" src="Personal_N7_vs.png"></img>
@@ -52,7 +58,7 @@ else if (optOne == 2)
 		document.getElementById("opt1").src="paper.png";
 	}
 else {
-		
+
 		document.getElementById("opt1").src="rock.png";
 	}
 
@@ -64,7 +70,7 @@ else if (optTwo == 2)
 	{
 		document.getElementById("opt2").src="paper.png";
 	}
-else 
+else
 	{
 		document.getElementById("opt2").src="rock.png";
 	}
@@ -74,7 +80,7 @@ result(optOne,optTwo);
 
 function result(a,b)
 {
-	
+
 //1=scissor
 if (a == 1 && b==1)
 {
@@ -87,7 +93,7 @@ else if (a == 2 && b == 2){
 		document.getElementById("result").src="paper.png";
 }
 //3=rock
-else if(a==3&& 	b==3) 
+else if(a==3&& 	b==3)
 {
 		alert("Rock: draw!!!!!!!!");
 		document.getElementById("result").src="rock.png";
