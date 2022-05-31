@@ -1,5 +1,5 @@
 
-:cookie: Rock Paper Scissors 
+🪨 📰 ✂️ Rock Paper Scissors 
 ==============
 ***Project status:***
 ==============
@@ -12,9 +12,9 @@ Rock, Paper Scissors games in JS
 Screenshots
 ===========
 
-<img src="https://github.com/moseleygj/WebPages/blob/master/PROJECT_NAME/.png" alt="screenshot2" width="300px"/>
+<img src="https://github.com/moseleygj/JavaScript/blob/master/Rock_Paper_Scisscors/Screenshot%20from%202022-05-31%2012-48-58.png" width="300px"/>
 
-<img src="https://github.com/moseleygj/WebPages/blob/master/PROJECT_NAME/.png" alt="screenshot1" width="300px"/>
+<img src="https://github.com/moseleygj/JavaScript/blob/master/Rock_Paper_Scisscors/Screenshot%20from%202022-05-31%2012-49-06.png" alt="screenshot1" width="300px"/>
 
 
  :unlock:License:
