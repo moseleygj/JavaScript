@@ -3,36 +3,49 @@
 <title>Rock Paper Scissors</title>
 <meta charset="UTF-8">
 <style>
+html{border:0;padding:0;margin:0}
+body{border:0;padding:0;margin:0}
 
-	.container{height:300px;width:80%;min-height: ;min-width: ;float:;margin:0 auto 0;}
+	.container{height:100%;width:100%;min-height: ;min-width: ;float:;margin:0 auto 0;background: linear-gradient(#e66465, #9198e5);}
 	.left{height:200px;width:20%;min-height: ;min-width: ;float:;}
-	.versus{height:200px;width:15%min-height: ;min-width: ;float:;}
+	.versus{height:200px;width:15%;min-height: ;min-width: ;float:;}
 	.middle{height:200px;width:20%:;min-height: ;min-width: ;float:;}
 	.equal{height:200px;width:20%;min-height: ;min-width: ;float:;}
 	.right{height:200px;width:20%;min-height: ;min-width: ;float:;}
-	.btn{ 
+	.btn{
 	margin: 0 auto 0;
 	display: block;
 	padding: 20px;
 	font-size: 20px;
 	font-weight: bolder;
 }
+#holder{
+	margin:0 auto 0;
+	top:50%;
+	transform:translateY(-50%);
+	position:relative;
+	height:500px;
+	width:1500px;
+}
 </style>
 </head>
 <body>
 
 	<div class="container">
+		<div id="holder">
 	<img class="left" id="opt1" src="Lol_question_mark.png"></img>
-	<img class="versus" src="Personal_N7_vs.png"></img>
+	<img class="versus" src="VS1.png"></img>
 	<img class="middle" id="opt2" src="Lol_question_mark.png"></img>
 	<img class="equal" src="Blue_equals.png"></img>
 	<img class="right" id="result" src="Lol_question_mark.png"></img>
-	</div>
-	<label><button class="btn" onclick="go()">Go!</button></label>
 
+	<label><button class="btn" onclick="go()">Go!</button></label>
+</div>	</div>
 <script>
 //		var optionOne=Math.floor(Math.random()*3)+1;
 //var optTwo=Math.floor(Math.random()*3)+1;
+let results = document.getElementById("result");
+
 function rand()
 {
 var myArray=[1,2,3];
@@ -85,34 +98,33 @@ function result(a,b)
 if (a == 1 && b==1)
 {
 	alert("Scissors: draw!!!!!!!!");
-	document.getElementById("result").src="scissors_PNG27.png";
+	document.getElementById("result").src="draw.png";
 }
 //2=paper
 else if (a == 2 && b == 2){
 		alert("Paper: draw!!!!!!!!");
-		document.getElementById("result").src="paper.png";
+		document.getElementById("result").src="draw.png";
 }
 //3=rock
 else if(a==3&& 	b==3)
 {
 		alert("Rock: draw!!!!!!!!");
-		document.getElementById("result").src="rock.png";
+		document.getElementById("result").src="draw.png";
 }
 
-else if (a==3 && b==1){alert("Rock:Wins!");		document.getElementById("result").src="rock.png";
+else if (a==3 && b==1){
+	alert("Rock:Wins!");	document.getElementById("result").src="rock.png";
 }
 else if (b==1 && a==3){alert("Rock:Wins!");document.getElementById("result").src="rock.png";}
 else if (a==1 && b==3){alert("Rock:Wins!");document.getElementById("result").src="rock.png";}
 
 else if (a==2 && b==1){alert("Scissors:Wins!");document.getElementById("result").src="scissors_PNG27.png";}
-else if (a==1 && b==2){alert("Scissors:Wins!");document.getElementById("result").src="scissors_PNG27.png";}
+else if (a==1 && b==2){alert("Scissors:Wins!"); results.src ="scissors_PNG27.png";}
 else if (a==2 && b==3){alert("Paper :Wins!");document.getElementById("result").src="paper.png";}
 else if (b==2 && a==3){alert("Paper:Wins!");document.getElementById("result").src="paper.png";}
 else {	return null;}
 
 	//document.getElementById("result").src="roc.png";
-
-
 }
 </script>
 </body>
