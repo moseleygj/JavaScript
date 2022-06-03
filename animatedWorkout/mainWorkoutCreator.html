@@ -4,13 +4,13 @@
 <title>Workout App</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="styleReDesign.css">
-<link rel="shortcut icon" href="Icons/dumbbell.png" type="image/png">
+<link rel="shortcut icon" href="dumbbell.png" type="image/png">
 <link href="https://fonts.googleapis.com/css?family=Exo+2:900|Luckiest+Guy" rel="stylesheet">
 <script src="jquery-3.3.1.min.js"></script>
 <script src="testRedesign.js"></script>
 </head>
 
-<body onload="randomPlaceHolder()">
+<body onload="">
 <script>
 var check=0;
 $(document).ready(function(){
@@ -47,8 +47,13 @@ $(".container").fadeIn("slow");
 });
 </script>
 
+<div id="subContdivainter" style="position:absolute;width:100%;height:100%;opacity:;background-color:black;z-index:1;display:none">
+	<div id="pic" style="height:500px;width:800px;border:1px solid red;z-index:0;top:50%;transform: translateY(-50%);
+    margin: 0 auto 0;position:relative"><img id="sampExercise"  onClick=goAway()  src="loading.gif" style="height:500px;width:800px;border:1px solid red;margin:0 auto 0;top:50%;transform:translateY(-50%);position:relative"></div>
+<button onClick="goAway()">close</button>
+</div>
+<div class="container" style="display:none;z-index:1;">
 
-<div class="container" style="display:none;">
 	<div class="topTitle">
 		<div class="topTitleTextMain" style="background-color:#356ac2;color:#fff">MAIN TITLE</div>
 		<div class="topTitleTextSub" style="background-color:#356ac2;color:#e0e0e0">SUB TITLE</div>
@@ -85,13 +90,13 @@ $(".container").fadeIn("slow");
 			</select></div>
 			<div class="reps" style="font-size:24.3px" id="">10, 20, 30, 40, 50, 60, 70, 80. </div>
 			<div class="fitName" id="">
-				<div class="subSectionFitMain" style="line-height:0.5"> 
+				<div class="subSectionFitMain" style="line-height:0.5">
 				<form><select name="exercises">
 <!-- Calisthenics-->
-					<option value="null">-----[Calisthenics]-----</option>					
+					<option value="null">-----[Calisthenics]-----</option>
 					<option value="pullUp">Pull Ups</option>
-					<option value="pushUps">Push Ups</option>			
-					<option value="Dips">Dips</option>					
+					<option value="pushUps">Push Ups</option>
+					<option value="Dips">Dips</option>
 				   <option value=""> Free Squat</option>
 				   <option value=""> Burpees</option>
 				   <option value=""> Jumping Jacks</option>
@@ -100,12 +105,12 @@ $(".container").fadeIn("slow");
 					<option value=""> spiderman pushup</option>
 					<option value=""> Jog</option>
 <!-- Legs-->
-					<option value="null">-----[Legs]-----</option>					
+					<option value="null">-----[Legs]-----</option>
 					<option value=""> Weighted Squat</option>
 					<option value=""> Leg Extensions</option>
 					<option value=""> Calve Raises</option>
 					<option value=""> Goblet Squat</option>
-<!--Biceps -->										<option value="null">-----[Biceps]-----</option>	
+<!--Biceps -->										<option value="null">-----[Biceps]-----</option>
 					<option value="">barbell curls </option>
 					<option value="">dumbbell curls </option>
 					<option value="">dumbbell alternating curls </option>
@@ -115,7 +120,7 @@ $(".container").fadeIn("slow");
 					<option value=""> Dumbbell cross-over curl</option>
 					<option value=""> zottman curl</option>
 <!--Triceps-->
-										<option value="null">-----[Triceps]-----</option>					
+										<option value="null">-----[Triceps]-----</option>
 					<option value=""> Tricep pushdown</option>
 					<option value=""> Tricep Rope Pushdown</option>
 					<option value=""> Tricep Reverse Pushdown</option>
@@ -123,13 +128,13 @@ $(".container").fadeIn("slow");
 					<option value=""> Diamond Pushup</option>
 `					<option value=""> Weighted Dips</option>
 					<option value=""> one-arm dumbbell Extension</option>
-					<option value=""> skull crusher</option>	
+					<option value=""> skull crusher</option>
 					<option value=""> Skull Crusher Dumbbell</option>
 					<option value=""> reverse grip pushdown</option>
 					<option value=""> reverse one arm pushdown</option>
 					<option value=""> Standing overhead DB extension</option>
 <!--Chest -->
-	<option value="null">-----[Chest]-----</option>	
+	<option value="null">-----[Chest]-----</option>
 					<option value=""> Bench Press Incline</option>
 					<option value=""> Bench Press  Flat</option>
 					<option value=""> Bench Press Decline</option>
@@ -138,7 +143,7 @@ $(".container").fadeIn("slow");
 					<option value=""> Flyes Incline</option>
 					<option value=""> Bench Press Barbell </option>
 					<option value=""> Cable flyes</option>
-<!--Shoulders --><option value="null">-----[shoulders]-----</option>	
+<!--Shoulders --><option value="null">-----[shoulders]-----</option>
 					<option value=""> DB Side Lateral</option>
 					<option value=""> DB Front Lateral</option>
 					<option value=""> DB Rear Lateral</option>
@@ -153,7 +158,7 @@ $(".container").fadeIn("slow");
 
 <!-- Abs -->
 
-<option value="null">-----[abs]-----</option>	
+<option value="null">-----[abs]-----</option>
 					<option value=""> knee tuck crunch</option>
 					<option value=""> side Crunches</option>
 					<option value=""> Situps</option>
@@ -162,9 +167,9 @@ $(".container").fadeIn("slow");
 					<option value=""> crunches</option>
 					<option value=""> toe-touch crunch</option>
 					<option value=""> Weighted Dips</option>
-		
 
-<option value="null">-----[back]-----</option>	
+
+<option value="null">-----[back]-----</option>
 					<option value=""> Hyper Extensions</option>
 					<option value=""> T-Bar Rows</option>
 					<option value=""> Chin Ups</option>
@@ -172,9 +177,9 @@ $(".container").fadeIn("slow");
 					<option value=""> v-bar pulldown</option>
 					<option value=""> Close-grip Pulldown</option>
 					<option value=""> Row (Dumbbell)</option>
-					<option value=""> T-Bar Row</option>	
-					<option value=""> weighted Pullups</option>	
-					<option value=""> Lat pulldown</option>		
+					<option value=""> T-Bar Row</option>
+					<option value=""> weighted Pullups</option>
+					<option value=""> Lat pulldown</option>
 				</select></form></div>
 				<div class="subSectionFitSub"><input type="textbox" placeholder="[short Description here]"></div>
 
@@ -210,8 +215,13 @@ $(".container").fadeIn("slow");
 			<div class="sets" id="">5</div>
 			<div class="reps" style="font-size:24.3px" id="">10, 20, 30, 40, 50, 60, 70, 80. </div>
 			<div class="fitName" id="">
-				<div class="subSectionFitMain"><a onclick='showFit(myObj.pushup.image)' hover="click me"> Push ups<img src="image2.png" class="exercisePreviewThumb"> </a></div>
-				<div class="subSectionFitSub">Some Small Note here</div>
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pushups)' hover="click me"> Push ups<img src="image2.png" class="exercisePreviewThumb"> </a></div>
+				<div class="subSectionFitSub" onClick="showNote()">Some Small Note here</div>
+
+
+
+
+
 
 		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
 		   	<div class="subSectionNote"></div>
@@ -223,7 +233,7 @@ $(".container").fadeIn("slow");
 			<div class="sets" id="">5</div>
 			<div class="reps" style="font-size:24.3px" id="">10, 20, 30, 40, 50, 60, 70, 80. </div>
 			<div class="fitName" id="">
-				<div class="subSectionFitMain"><a onclick='showFit(myObj.dips.image)' hover="click me"> Dips<img src="image2.png" class="exercisePreviewThumb"> </a></div>
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.dips)' hover="click me"> Dips<img src="image2.png" class="exercisePreviewThumb"> </a></div>
 				<div class="subSectionFitSub">Some Small Note here</div>
 
 		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
@@ -236,7 +246,7 @@ $(".container").fadeIn("slow");
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
 			<div class="fitName" id="">
-				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups)' hover="click me"> Pullups </a></div>
 				<div class="subSectionFitSub">Some Small Note here</div>
 
 		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
@@ -249,7 +259,7 @@ $(".container").fadeIn("slow");
 			<div class="sets" id="">0</div>
 			<div class="reps" style="font-size:24.3px" id=""> , , , , </div>
 			<div class="fitName" id="">
-				<div class="subSectionFitMain"><a onclick='showFit(myObj.pullups.image)' hover="click me"> - </a></div>
+				<div class="subSectionFitMain"><a onclick='showFit(myObj.burpees)' hover="click me"> burpees </a></div>
 				<div class="subSectionFitSub">Some Small Note here</div>
 
 		   </div> <!--<a href="#"><img src="note.png" height="64" width="64"></a> -->
