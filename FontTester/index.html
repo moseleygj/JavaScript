@@ -18,16 +18,16 @@ border:0;
 }
 
 .A{
-height:30%;
+height:146px;
 width:100%;
-background-color:Blue; 
+background-color:#434343;
 color:white;
 font-weight:bolder;
 
 }
 
 .B{
-height:70%;
+height:100%;
 width:100%;
 background-color:red;
 color:white;
@@ -39,6 +39,11 @@ text-align:center;
 display:block;
 position:relative;
 top:50px;
+
+
+}
+p{margin:0;
+padding:0;
 }
 </style>
 
@@ -46,16 +51,17 @@ top:50px;
 
 <div class="A">
 Font Type: <input type="textbox" id="fontBox">
-<button onClick="updateFont()">Test Font</button> 
+<button onClick="updateFont()">Test Font</button>
 <br/>
 Background Color: <input type="textbox" id="bgColor">
-Font Size: <input type="textbox" id="bgColor"><br/>
-Font Size:<input type="range" min="1" max="128" step="1" id="fs" onchange="updateFont()"><br/><p id="showFontSize"></p> 
+<br/>
+Font Size:<input type="range" min="1" max="512" step="1" id="fs" onchange="updateFont()"><br/><p id="showFontSize"></p>
+<input type="checkbox" id="check" onclick=checkme()>BOLD </input>
+
 </div>
 <div class="B" id="B">
 
 <center><p id="fontPreviewBox">This is just a test</p></center>
-
 </div>
 
 
@@ -72,7 +78,17 @@ var pageBG = document.getElementById("B");
 var fontS = document.getElementById("fs");
 
 var displayFontSize = document.getElementById("showFontSize");
+var checkB = document.getElementById("check");
 
+function checkme(){
+  if (checkB.checked == true ) {
+    fontP.style.fontWeight="bold"
+  }
+  else if(checkB.checked == false) {
+    fontP.style.fontWeight="normal"
+    }
+    else{return 0;}
+  }
 
 function updateFont()
 {
